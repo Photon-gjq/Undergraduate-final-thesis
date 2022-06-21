@@ -1,10 +1,10 @@
 # Undergraduate-final-thesis
 
-This is my undergraduate thesis written in LaTeX. I copy Spinor and Spacetime Vol 1,Penrose 1984 (partically) to Chinese, and explain why massless spin 3/2 Rarita Schwinger Field can only exist in Ricci Flat spacetime(don't consider the backreaction with gravity, the background field). Moreover, the tex code of including a vectorized mathcha logo(tikz) is included.
+This is my undergraduate thesis written in LaTeX. I copy Spinor and Spacetime Vol 1,Penrose 1984 (partially) to Chinese, and explain why massless spin 3/2 Rarita Schwinger Field can only exist in Ricci Flat spacetime(don't consider the backreaction with gravity, the background field). Moreover, the tex code of including a vectorized mathcha logo(tikz) is included.
 
 # 本科毕业论文
 
-这个库包含了本人的本科毕业论文《弯曲时空背景下的Rarita-Schwinger场及其纽曼-彭罗斯形式》，使用了来自 [@Xiangdong Zeng](https://github.com/stone-zeng) 的[复旦大学毕业论文模板](https://github.com/stone-zeng/fduthesis) （的物理系本科毕业版）。本文前半部分将彭罗斯1984年所著《旋量与时空》部分翻译成了中文版。第七章开始是本人自己的工作，用二分量旋量体系解释了为什么无质量的自旋$3/2$场，即Rarita-Schwinger场只能存在于里奇平坦时空中（不考虑对背景引力场的反作用）。除此之外，还包含了可以在LaTeX中插入矢量mathcha-logo的代码，感谢[@Xiangdong Zeng](https://github.com/stone-zeng)。
+这个库包含了本人的本科毕业论文《弯曲时空背景下的Rarita-Schwinger场及其纽曼-彭罗斯形式》，使用了来自 [@Xiangdong Zeng](https://github.com/stone-zeng) 的[复旦大学毕业论文模板](https://github.com/stone-zeng/fduthesis)（的物理系本科毕业版）。本文前半部分将彭罗斯1984年所著《旋量与时空》部分翻译成了中文版（当然需要澄清这只是自嘲，并不是真的在逐字翻译...）。第七章开始是本人自己的工作，用二分量旋量体系解释了为什么无质量的自旋$3/2$场，即Rarita-Schwinger场只能存在于里奇平坦时空中（不考虑对背景引力场的反作用）。除此之外，还包含了可以在LaTeX中插入矢量mathcha-logo的代码，感谢[@Xiangdong Zeng](https://github.com/stone-zeng)。
 
 ## 库内文档简介
 
