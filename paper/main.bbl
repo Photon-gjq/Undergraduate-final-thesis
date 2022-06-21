@@ -1,0 +1,371 @@
+\begin{thebibliography}{48}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Penrose et~al.(1984)Penrose and Rindler]{penrose_spinors_1984}
+PENROSE R, RINDLER W.
+\newblock Cambridge monographs on mathematical physics: Spinors and
+  space-time\allowbreak[M].
+\newblock Cambridge [Cambridgeshire] ; New York: Cambridge University Press,
+  1984.
+
+\bibitem[Weinberg(1995)]{weinberg1995quantum}
+WEINBERG S.
+\newblock The quantum theory of fields: volume~2\allowbreak[M].
+\newblock Cambridge university press, 1995.
+
+\bibitem[Chandrasekhar et~al.(1998)Chandrasekhar and
+  Chandrasekhar]{chandrasekhar1998mathematical}
+CHANDRASEKHAR S, CHANDRASEKHAR S.
+\newblock The mathematical theory of black holes: volume~69\allowbreak[M].
+\newblock Oxford university press, 1998.
+
+\bibitem[Rarita et~al.(1941)Rarita and Schwinger]{rarita1941theory}
+RARITA W, SCHWINGER J.
+\newblock On a theory of particles with half-integral spin\allowbreak[J].
+\newblock Physical Review, 1941, 60\allowbreak (1): 61.
+
+\bibitem[Frauendiener(1995)]{frauendiener_spin32_1995}
+FRAUENDIENER J.
+\newblock On spin‐(3/2) systems in {Ricci} flat
+  space–times\allowbreak[J/OL].
+\newblock Journal of Mathematical Physics, 1995, 36\allowbreak (6):
+  3012-3022\allowbreak[2022-06-19].
+\newblock \url{http://aip.scitation.org/doi/10.1063/1.531008}.
+
+\bibitem[Deser et~al.(1976)Deser and Zumino]{deser_consistent_1976}
+DESER S, ZUMINO B.
+\newblock Consistent supergravity\allowbreak[J/OL].
+\newblock Physics Letters B, 1976, 62\allowbreak (3):
+  335-337\allowbreak[2022-06-04].
+\newblock \url{https://linkinghub.elsevier.com/retrieve/pii/0370269376900897}.
+\newblock DOI: \doi{10.1016/0370-2693(76)90089-7}.
+
+\bibitem[Freedman et~al.(1976)Freedman, van Nieuwenhuizen, and
+  Ferrara]{freedman_progress_1976}
+FREEDMAN D~Z, VAN NIEUWENHUIZEN P, FERRARA S.
+\newblock Progress toward a theory of supergravity\allowbreak[J/OL].
+\newblock Physical Review D, 1976, 13\allowbreak (12):
+  3214-3218\allowbreak[2022-06-04].
+\newblock \url{https://link.aps.org/doi/10.1103/PhysRevD.13.3214}.
+
+\bibitem[Geroch(1968)]{geroch1968spinor}
+GEROCH R.
+\newblock Spinor structure of space-times in general relativity.
+  i\allowbreak[J].
+\newblock Journal of Mathematical Physics, 1968, 9\allowbreak (11): 1739-1744.
+
+\bibitem[Penrose et~al.(1986)Penrose, Rindler, and
+  Goldberg]{penrose_spinors_1986}
+PENROSE R, RINDLER W, GOLDBERG J~N.
+\newblock \textit{{Spinors} and {Space}‐{Time}, {Volume} 2: {Spinor} and
+  {Twistor} {Methods} in {Space}‐{Time} {Geometry}}\allowbreak[J/OL].
+\newblock Physics Today, 1986, 39\allowbreak (12):
+  79-81\allowbreak[2022-06-19].
+\newblock \url{http://physicstoday.scitation.org/doi/10.1063/1.2815249}.
+
+\bibitem[Penrose(1991)]{zichichi_twistors_1991}
+PENROSE R.
+\newblock Twistors as {Spin} 3/2 {Charges}\allowbreak[M/OL]//\allowbreak
+ZICHICHI A, DE~SABBATA V, SáNCHEZ N.
+\newblock Gravitation and {Modern} {Cosmology}.
+\newblock Boston, MA: Springer US, 1991: 129-137\allowbreak[2022-06-05].
+\newblock \url{http://link.springer.com/10.1007/978-1-4899-0620-5_12}.
+
+\bibitem[O'donnell(2003)]{o2003introduction}
+O'DONNELL P~J.
+\newblock Introduction to 2-spinors in general relativity\allowbreak[M].
+\newblock World Scientific, 2003.
+
+\bibitem[Alessio(2018)]{alessio2018asymptotic}
+ALESSIO F.
+\newblock Asymptotic structure and bondi-metzner-sachs group in general
+  relativity\allowbreak[A].
+\newblock 2018.
+
+\bibitem[Dirac(1936)]{noauthor_relativistic_1936}
+DIRAC P.
+\newblock Relativistic wave equations\allowbreak[J/OL].
+\newblock Proceedings of the Royal Society of London. Series A - Mathematical
+  and Physical Sciences, 1936, 155\allowbreak (886):
+  447-459\allowbreak[2022-06-04].
+\newblock \url{https://royalsocietypublishing.org/doi/10.1098/rspa.1936.0111}.
+
+\bibitem[Schwartz(2014)]{schwartz2014quantum}
+SCHWARTZ M~D.
+\newblock Quantum field theory and the standard model\allowbreak[M].
+\newblock Cambridge University Press, 2014.
+
+\bibitem[Edgar et~al.(1997)Edgar and Ludwig]{edgar_integration_1997}
+EDGAR S~B, LUDWIG G.
+\newblock Integration in the {GHP} {Formalism} {III}: {Finding} {Conformally}
+  {Flat} {Radiation} {Metrics} as an {Example} of an “{Optimal}
+  {Situation}”\allowbreak[J/OL].
+\newblock General Relativity and Gravitation, 1997, 29\allowbreak (10):
+  1309-1328\allowbreak[2022-06-04].
+\newblock \url{http://link.springer.com/10.1023/A:1018820031537}.
+
+\bibitem[Petrov(1966)]{petrov1966new}
+PETROV A.
+\newblock New methods in general relativity theory\allowbreak[J].
+\newblock Moscow, 1966.
+
+\bibitem[Goldberg et~al.(2009)Goldberg and Sachs]{goldberg2009republication}
+GOLDBERG J, SACHS R.
+\newblock Republication of: A theorem on petrov types\allowbreak[J].
+\newblock General Relativity and Gravitation, 2009, 41\allowbreak (2): 433-444.
+
+\bibitem[Teukolsky(2015)]{teukolsky2015kerr}
+TEUKOLSKY S~A.
+\newblock The kerr metric\allowbreak[J].
+\newblock Classical and Quantum Gravity, 2015, 32\allowbreak (12): 124006.
+
+\bibitem[Hasmani et~al.(2011)Hasmani and Andharia]{hasmani_algebraic_2011}
+HASMANI A, ANDHARIA P.
+\newblock Algebraic {Computation} of {Spin} {Coefficients} in
+  {Newman}-{Penrose} {Formalism} using {Mathematica}\allowbreak[J/OL].
+\newblock Journal of Dynamical Systems and Geometric Theories, 2011,
+  9\allowbreak (1): 27-36\allowbreak[2022-06-19].
+\newblock
+  \url{http://www.tandfonline.com/doi/abs/10.1080/1726037X.2011.10698589}.
+
+\bibitem[G{\'o}mez-Lobo et~al.(2012)G{\'o}mez-Lobo and
+  Mart{\'\i}n-Garc{\'\i}a]{gomez2012spinors}
+G{\'O}MEZ-LOBO A~G~P, MART{\'I}N-GARC{\'I}A J~M.
+\newblock Spinors: a mathematica package for doing spinor calculus in general
+  relativity\allowbreak[J].
+\newblock Computer Physics Communications, 2012, 183\allowbreak (10):
+  2214-2225.
+
+\bibitem[Teukolsky(1973)]{teukolsky_perturbations_1973}
+TEUKOLSKY S~A.
+\newblock Perturbations of a {Rotating} {Black} {Hole}. {I}. {Fundamental}
+  {Equations} for {Gravitational}, {Electromagnetic}, and {Neutrino}-{Field}
+  {Perturbations}\allowbreak[J/OL].
+\newblock The Astrophysical Journal, 1973, 185: 635\allowbreak[2022-06-04].
+\newblock \url{http://adsabs.harvard.edu/doi/10.1086/152444}.
+
+\bibitem[Weinberg(2005)]{weinberg2005quantum}
+WEINBERG S.
+\newblock The quantum theory of fields: volume 3, supersymmetry\allowbreak[M].
+\newblock Cambridge university press, 2005.
+
+\bibitem[Buchdahl(1958)]{buchdahl_compatibility_1958}
+BUCHDAHL H~A.
+\newblock On the compatibility of relativistic wave equations for particles of
+  higher spin in the presence of a gravitational field\allowbreak[J/OL].
+\newblock Il Nuovo Cimento, 1958, 10\allowbreak (1):
+  96-103\allowbreak[2022-06-04].
+\newblock \url{http://link.springer.com/10.1007/BF02859608}.
+
+\bibitem[Christensen et~al.(1979)Christensen and Duff]{christensen_new_1979}
+CHRISTENSEN S, DUFF M.
+\newblock New gravitational index theorems and super theorems\allowbreak[J/OL].
+\newblock Nuclear Physics B, 1979, 154\allowbreak (2):
+  301-342\allowbreak[2022-06-04].
+\newblock \url{https://linkinghub.elsevier.com/retrieve/pii/0550321379905169}.
+\newblock DOI: \doi{10.1016/0550-3213(79)90516-9}.
+
+\bibitem[Barth et~al.(1983)Barth and Christensen]{barth_arbitrary_1983}
+BARTH N~H, CHRISTENSEN S~M.
+\newblock Arbitrary spin field equations on curved manifolds with
+  torsion\allowbreak[J/OL].
+\newblock Journal of Physics A: Mathematical and General, 1983, 16\allowbreak
+  (3): 543-563\allowbreak[2022-06-04].
+\newblock \url{https://iopscience.iop.org/article/10.1088/0305-4470/16/3/014}.
+
+\bibitem[G\"uven()]{giiven_black_nodate}
+G\"UVEN R.
+\newblock Black holes have no superhair\allowbreak[Z].
+\newblock 4.
+
+\bibitem[Dowker et~al.(1966)Dowker and Dowker]{dowker_particles_1966}
+DOWKER J~S, DOWKER Y~P.
+\newblock Particles of arbitrary spin in curved spaces\allowbreak[J/OL].
+\newblock Proceedings of the Physical Society, 1966, 87\allowbreak (1):
+  65-78\allowbreak[2022-06-04].
+\newblock \url{https://iopscience.iop.org/article/10.1088/0370-1328/87/1/308}.
+
+\bibitem[Fierz et~al.(1939)Fierz and Pauli]{noauthor_relativistic_1939}
+FIERZ M, PAULI W.
+\newblock On relativistic wave equations for particles of arbitrary spin in an
+  electromagnetic field\allowbreak[J/OL].
+\newblock Proceedings of the Royal Society of London. Series A. Mathematical
+  and Physical Sciences, 1939, 173\allowbreak (953):
+  211-232\allowbreak[2022-06-04].
+\newblock \url{https://royalsocietypublishing.org/doi/10.1098/rspa.1939.0140}.
+
+\bibitem[Illge(1992)]{illge_massless_1992}
+ILLGE R.
+\newblock On {Massless} {Fields} with {Arbitrary} {Spin}\allowbreak[J/OL].
+\newblock Zeitschrift für Analysis und ihre Anwendungen, 1992, 11\allowbreak
+  (1): 25-35\allowbreak[2022-06-04].
+\newblock \url{http://www.ems-ph.org/doi/10.4171/ZAA/629}.
+
+\bibitem[Fang et~al.(1978)Fang and Fronsdal]{fang_massless_1978}
+FANG J, FRONSDAL C.
+\newblock Massless fields with half-integral spin\allowbreak[J/OL].
+\newblock Physical Review D, 1978, 18\allowbreak (10):
+  3630-3633\allowbreak[2022-06-04].
+\newblock \url{https://link.aps.org/doi/10.1103/PhysRevD.18.3630}.
+
+\bibitem[Bengtsson et~al.(1986)Bengtsson and
+  Bengtsson]{bengtsson_massless_1986}
+BENGTSSON A~K~H, BENGTSSON I.
+\newblock Massless higher-spin fields revisited\allowbreak[J/OL].
+\newblock Classical and Quantum Gravity, 1986, 3\allowbreak (5):
+  927-936\allowbreak[2022-06-04].
+\newblock \url{https://iopscience.iop.org/article/10.1088/0264-9381/3/5/022}.
+
+\bibitem[Robinson(1995)]{robinson_differential_1995}
+ROBINSON D~C.
+\newblock Differential forms, spin-3/2 fields and {Einstein}'s
+  equations\allowbreak[J/OL].
+\newblock General Relativity and Gravitation, 1995, 27\allowbreak (6):
+  679-689\allowbreak[2022-06-04].
+\newblock \url{http://link.springer.com/10.1007/BF02108070}.
+
+\bibitem[Frauendiener et~al.(1999)Frauendiener and
+  Sparling]{frauendiener_class_1999}
+FRAUENDIENER J, SPARLING G~A~J.
+\newblock On a class of consistent linear higher spin equations on curved
+  manifolds\allowbreak[J/OL].
+\newblock Journal of Geometry and Physics, 1999, 30\allowbreak (1):
+  54-101\allowbreak[2022-06-05].
+\newblock \url{http://arxiv.org/abs/gr-qc/9511036}.
+\newblock DOI: \doi{10.1016/S0393-0440(98)00050-3}.
+
+\bibitem[Illge(1993)]{illge_massive_1993}
+ILLGE R.
+\newblock Massive fields of arbitrary spin in curved
+  space-times\allowbreak[J/OL].
+\newblock Communications in Mathematical Physics, 1993, 158\allowbreak (3):
+  433-457\allowbreak[2022-06-04].
+\newblock \url{http://link.springer.com/10.1007/BF02096798}.
+
+\bibitem[Fierz et~al.(1939)Fierz and Pauli]{fierz1939relativistic}
+FIERZ M, PAULI W~E.
+\newblock On relativistic wave equations for particles of arbitrary spin in an
+  electromagnetic field\allowbreak[J].
+\newblock Proceedings of the Royal Society of London. Series A. Mathematical
+  and Physical Sciences, 1939, 173\allowbreak (953): 211-232.
+
+\bibitem[Torres~del Castillo(1989)]{torres_del_castillo_spin32_1989}
+TORRES~DEL CASTILLO G~F.
+\newblock Spin‐3/2 perturbations of algebraically special solutions of the
+  {Einstein}–{Maxwell} equations\allowbreak[J/OL].
+\newblock Journal of Mathematical Physics, 1989, 30\allowbreak (9):
+  2114-2119\allowbreak[2022-06-04].
+\newblock \url{http://aip.scitation.org/doi/10.1063/1.528212}.
+
+\bibitem[del Castillo et~al.(1990)del Castillo and
+  Silva-Ortigoza]{del_castillo_rarita-schwinger_1990}
+DEL CASTILLO G~F~T, SILVA-ORTIGOZA G.
+\newblock Rarita-{Schwinger} fields in the {Kerr} geometry\allowbreak[J/OL].
+\newblock Physical Review D, 1990, 42\allowbreak (12):
+  4082-4086\allowbreak[2022-06-04].
+\newblock \url{https://link.aps.org/doi/10.1103/PhysRevD.42.4082}.
+
+\bibitem[del Castillo et~al.(1992)del Castillo and
+  Silva-Ortigoza]{del_castillo_spin-_1992}
+DEL CASTILLO G~F~T, SILVA-ORTIGOZA G.
+\newblock Spin- $3/2$ perturbations of the {Kerr}-{Newman}
+  solution\allowbreak[J/OL].
+\newblock Physical Review D, 1992, 46\allowbreak (12):
+  5395-5398\allowbreak[2022-06-04].
+\newblock \url{https://link.aps.org/doi/10.1103/PhysRevD.46.5395}.
+
+\bibitem[Einstein et~al.(1979)Einstein and
+  Finkelstein]{einstein_solutions_1979}
+EINSTEIN S, FINKELSTEIN R.
+\newblock Solutions of the {Rarita}–{Schwinger} equation in the
+  {Kerr}–{Newman} space\allowbreak[J/OL].
+\newblock Journal of Mathematical Physics, 1979, 20\allowbreak (9):
+  1972-1976\allowbreak[2022-06-04].
+\newblock \url{http://aip.scitation.org/doi/10.1063/1.524308}.
+
+\bibitem[Szereszewski et~al.(2002)Szereszewski and
+  Tafel]{szereszewski_solutions_2002}
+SZERESZEWSKI A, TAFEL J.
+\newblock Solutions of the {Rarita}–{Schwinger} equation in {Einstein}
+  spaces\allowbreak[J/OL].
+\newblock Physics Letters A, 2002, 297\allowbreak (5-6):
+  359-362\allowbreak[2022-06-04].
+\newblock \url{https://linkinghub.elsevier.com/retrieve/pii/S0375960102002839}.
+\newblock DOI: \doi{10.1016/S0375-9601(02)00283-9}.
+
+\bibitem[Chen et~al.(2015)Chen, Cho, Cornell, Harmsen, and
+  Naylor]{chen_gravitino_2015}
+CHEN C~H, CHO H~T, CORNELL A~S, et~al.
+\newblock Gravitino fields in {Schwarzschild} black hole
+  spacetimes\allowbreak[M/OL].
+\newblock arXiv, 2015\allowbreak[2022-06-04].
+\newblock \url{http://arxiv.org/abs/1504.02579}.
+
+\bibitem[Torres~del Castillo(1989)]{torres_del_castillo_debye_1989}
+TORRES~DEL CASTILLO G~F.
+\newblock Debye potentials for {Rarita}–{Schwinger} fields in curved
+  space‐times\allowbreak[J/OL].
+\newblock Journal of Mathematical Physics, 1989, 30\allowbreak (6):
+  1323-1328\allowbreak[2022-06-04].
+\newblock \url{http://aip.scitation.org/doi/10.1063/1.528312}.
+
+\bibitem[Fordy(1977)]{fordy_zero-rest-mass_1977}
+FORDY A~P.
+\newblock Zero-rest-mass fields in an algebraically special curved
+  space-time\allowbreak[J/OL].
+\newblock General Relativity and Gravitation, 1977, 8\allowbreak (4):
+  227-243\allowbreak[2022-06-04].
+\newblock \url{http://link.springer.com/10.1007/BF00765810}.
+
+\bibitem[Zecca(1996)]{zecca_separation_1996}
+ZECCA A.
+\newblock Separation of the massless field equations for arbitrary spin in the
+  {Robertson}–{Walker} space–time\allowbreak[J/OL].
+\newblock Journal of Mathematical Physics, 1996, 37\allowbreak (7):
+  3539-3547\allowbreak[2022-06-04].
+\newblock \url{http://aip.scitation.org/doi/10.1063/1.531580}.
+
+\bibitem[Zecca(2006)]{zecca_massive_2006}
+ZECCA A.
+\newblock Massive field equations of arbitrary spin in schwarzschild geometry:
+  Separation induced by spin - $3/2$ case\allowbreak[J/OL].
+\newblock International Journal of Theoretical Physics, 2006, 45\allowbreak
+  (12): 2208-2214\allowbreak[2022-06-04].
+\newblock \url{http://link.springer.com/10.1007/s10773-006-9185-1}.
+
+\bibitem[Açık(2018)]{acik_spin-12_2018}
+AçıK O.
+\newblock Spin-1/2 and spin-3/2 field solutions in plane wave
+  spacetimes\allowbreak[J/OL].
+\newblock General Relativity and Gravitation, 2018, 50\allowbreak (3):
+  33\allowbreak[2022-06-04].
+\newblock \url{http://link.springer.com/10.1007/s10714-018-2356-6}.
+
+\bibitem[Schenkel et~al.(2012)Schenkel and
+  Uhlemann]{schenkel_quantization_2012}
+SCHENKEL A, UHLEMANN C~F.
+\newblock Quantization of the massive gravitino on {FRW}
+  spacetimes\allowbreak[J/OL].
+\newblock Physical Review D, 2012, 85\allowbreak (2):
+  024011\allowbreak[2022-06-04].
+\newblock \url{https://link.aps.org/doi/10.1103/PhysRevD.85.024011}.
+
+\bibitem[Hayashi(2001)]{hayashi_spin-32_2001}
+HAYASHI M~J.
+\newblock {SPIN}-3/2 {FERMIONS} {IN} {TWISTOR} {FORMALISM}\allowbreak[J/OL].
+\newblock Modern Physics Letters A, 2001, 16\allowbreak (32):
+  2103-2113\allowbreak[2022-06-05].
+\newblock
+  \url{https://www.worldscientific.com/doi/abs/10.1142/S0217732301005412}.
+
+\end{thebibliography}

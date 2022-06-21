@@ -1,0 +1,1598 @@
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.8)  12 JUN 2022 01:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**chap6.tex
+(./chap6.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24>
+! Undefined control sequence.
+l.1 \chapter
+            {物理的东西——时空中的场}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \chapter{物
+              理的东西——时空中的场}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 物 ("7269) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 东 ("4E1C) in font nullfont!
+Missing character: There is no 西 ("897F) in font nullfont!
+Missing character: There is no — ("2014) in font nullfont!
+Missing character: There is no — ("2014) in font nullfont!
+Missing character: There is no 时 ("65F6) in font nullfont!
+Missing character: There is no 空 ("7A7A) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[] 
+ []
+
+! Undefined control sequence.
+l.4 \section
+            {电磁场及其导数}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 \section{电
+              磁场及其导数}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 电 ("7535) in font nullfont!
+Missing character: There is no 磁 ("78C1) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 及 ("53CA) in font nullfont!
+Missing character: There is no 其 ("5176) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--5
+[] 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 在
+     前面我们已经看到，引力场可以用一个对称旋量$\upPsi _{\boldsymbol{ABCD}}$刻画，同样的，电磁场也可以用一个对称旋量$...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 前 ("524D) in font nullfont!
+Missing character: There is no 面 ("9762) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 已 ("5DF2) in font nullfont!
+Missing character: There is no 经 ("7ECF) in font nullfont!
+Missing character: There is no 看 ("770B) in font nullfont!
+Missing character: There is no 到 ("5230) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 引 ("5F15) in font nullfont!
+Missing character: There is no 力 ("529B) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 对 ("5BF9) in font nullfont!
+Missing character: There is no 称 ("79F0) in font nullfont!
+Missing character: There is no 旋 ("65CB) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 6.
+! Undefined control sequence.
+<recently read> \upPsi 
+                       
+l.6 在前面我们已经看到，引力场可以用一个对称旋量$\upPsi
+                                  _{\boldsymbol{ABCD}}$刻画，同样的，电磁场也可以用一个对称旋量$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.6 在前面我们已经看到，引力场可以用一个对称旋量$\upPsi _{\boldsymbol
+                                               {ABCD}}$刻画，同样的，电磁场也可以用一个对称旋量$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 刻 ("523B) in font nullfont!
+Missing character: There is no 画 ("753B) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 样 ("6837) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 电 ("7535) in font nullfont!
+Missing character: There is no 磁 ("78C1) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 也 ("4E5F) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 对 ("5BF9) in font nullfont!
+Missing character: There is no 称 ("79F0) in font nullfont!
+Missing character: There is no 旋 ("65CB) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+! Undefined control sequence.
+l.6 ...$刻画，同样的，电磁场也可以用一个对称旋量$\varphi _{\boldsymbol
+                                                  {AB}}$刻画。这个类比可以进一步扩展，每一个场都...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 刻 ("523B) in font nullfont!
+Missing character: There is no 画 ("753B) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 这 ("8FD9) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 类 ("7C7B) in font nullfont!
+Missing character: There is no 比 ("6BD4) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 进 ("8FDB) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 步 ("6B65) in font nullfont!
+Missing character: There is no 扩 ("6269) in font nullfont!
+Missing character: There is no 展 ("5C55) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 每 ("6BCF) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 都 ("90FD) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 从 ("4ECE) in font nullfont!
+Missing character: There is no 其 ("5176) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 对 ("5BF9) in font nullfont!
+Missing character: There is no 易 ("6613) in font nullfont!
+Missing character: There is no 子 ("5B50) in font nullfont!
+Missing character: There is no 获 ("83B7) in font nullfont!
+Missing character: There is no 得 ("5F97) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 引 ("5F15) in font nullfont!
+Missing character: There is no 力 ("529B) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 情 ("60C5) in font nullfont!
+Missing character: There is no 况 ("51B5) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 就 ("5C31) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 普 ("666E) in font nullfont!
+Missing character: There is no 通 ("901A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 协 ("534F) in font nullfont!
+Missing character: There is no 变 ("53D8) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 而 ("800C) in font nullfont!
+Missing character: There is no 电 ("7535) in font nullfont!
+Missing character: There is no 磁 ("78C1) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 情 ("60C5) in font nullfont!
+Missing character: There is no 况 ("51B5) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 修 ("4FEE) in font nullfont!
+Missing character: There is no 改 ("6539) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 协 ("534F) in font nullfont!
+Missing character: There is no 变 ("53D8) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 平 ("5E73) in font nullfont!
+Missing character: There is no 直 ("76F4) in font nullfont!
+Missing character: There is no 时 ("65F6) in font nullfont!
+Missing character: There is no 空 ("7A7A) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 只 ("53EA) in font nullfont!
+Missing character: There is no 需 ("9700) in font nullfont!
+Missing character: There is no 要 ("8981) in font nullfont!
+Missing character: There is no 加 ("52A0) in font nullfont!
+Missing character: There is no 上 ("4E0A) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 项 ("9879) in font nullfont!
+Missing character: There is no 四 ("56DB) in font nullfont!
+Missing character: There is no 矢 ("77E2) in font nullfont!
+Missing character: There is no 势 ("52BF) in font nullfont!
+! Undefined control sequence.
+l.6 ...改定义的协变导数。在平直时空中，我们只需要加上一项四矢势$A_{\boldsymbol
+                                                  {a}}$，即：
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 即 ("5373) in font nullfont!
+Missing character: There is no ： ("FF1A) in font nullfont!
+
+Overfull \hbox (77.65291pt too wide) in paragraph at lines 6--7
+[]$[]$$\OML/cmm/m/it/10 '[]$$A[]$ 
+ []
+
+! Undefined control sequence.
+l.8 ^^I\mathbf{\nabla }_{\boldsymbol
+                                    {a}} \equiv \partial _{\boldsymbol{a}} -...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.8 ...oldsymbol{a}} \equiv \partial _{\boldsymbol
+                                                  {a}} -\mathrm{i} eA_{\bold...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.8 ...\boldsymbol{a}} -\mathrm{i} eA_{\boldsymbol
+                                                  {a}} ,
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (66.97821pt too wide) detected at line 9
+\OMS/cmsy/m/n/10 r[] ^^Q \OML/cmm/m/it/10 @[] \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n
+/10 i\OML/cmm/m/it/10 eA[];
+ []
+
+Missing character: There is no 这 ("8FD9) in font nullfont!
+Missing character: There is no 里 ("91CC) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 电 ("7535) in font nullfont!
+Missing character: There is no 荷 ("8377) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 现 ("73B0) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+Missing character: There is no 麦 ("9EA6) in font nullfont!
+Missing character: There is no 克 ("514B) in font nullfont!
+Missing character: There is no 斯 ("65AF) in font nullfont!
+Missing character: There is no 韦 ("97E6) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 强 ("5F3A) in font nullfont!
+! Undefined control sequence.
+l.10 这里$e$是电荷。现在，我们定义麦克斯韦场的场强$F_{\boldsymbol
+                                            {ab}}$为$A_{\boldsymbol{a}}$的旋度：
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 为 ("4E3A) in font nullfont!
+! Undefined control sequence.
+l.10 ...韦场的场强$F_{\boldsymbol{ab}}$为$A_{\boldsymbol
+                                                  {a}}$的旋度：
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 旋 ("65CB) in font nullfont!
+Missing character: There is no 度 ("5EA6) in font nullfont!
+Missing character: There is no ： ("FF1A) in font nullfont!
+
+! LaTeX Error: Environment equation* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 \begin{equation*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: \mathrm allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ^^I\mathrm
+               {i}\mathbf{\nabla }_{[\boldsymbol{a}}\mathbf{\nabla }_{\bolds...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no i ("69) in font nullfont!
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ^^I\mathrm{i}\mathbf{\nabla }
+                                  _{[\boldsymbol{a}}\mathbf{\nabla }_{\bolds...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.12 ^^I\mathrm{i}\mathbf{\nabla }
+                                  _{[\boldsymbol{a}}\mathbf{\nabla }_{\bolds...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\select@group ...pandafter \non@alpherr \fi #1{#4}
+                                                  }
+l.12 ^^I\mathrm{i}\mathbf{\nabla }
+                                  _{[\boldsymbol{a}}\mathbf{\nabla }_{\bolds...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\select@group ...andafter \non@alpherr \fi #1{#4}}
+                                                  
+l.12 ^^I\mathrm{i}\mathbf{\nabla }
+                                  _{[\boldsymbol{a}}\mathbf{\nabla }_{\bolds...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Undefined control sequence.
+l.12 ^^I\mathrm{i}\mathbf{\nabla }_{[\boldsymbol
+                                                {a}}\mathbf{\nabla }_{\bolds...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.12 ...oldsymbol{a}}\mathbf{\nabla }_{\boldsymbol
+                                                  {b}]} \theta ^{\mathcal{A}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.12 ...eta ^{\mathcal{A}} \partial _{[\boldsymbol
+                                                  {a}} A_{\boldsymbol{b}]} =...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.12 ...\partial _{[\boldsymbol{a}} A_{\boldsymbol
+                                                  {b}]} =\frac{1}{2} e\theta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.12 ...}{2} e\theta ^{\mathcal{A}} F_{\boldsymbol
+                                                  {ab}} .
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \end{equation*}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.13 \end{equation*}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.13 \end{equation*}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.13 \end{equation*}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no 如 ("5982) in font nullfont!
+Missing character: There is no 果 ("679C) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 希 ("5E0C) in font nullfont!
+Missing character: There is no 望 ("671B) in font nullfont!
+Missing character: There is no 电 ("7535) in font nullfont!
+Missing character: There is no 磁 ("78C1) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 和 ("548C) in font nullfont!
+Missing character: There is no 引 ("5F15) in font nullfont!
+Missing character: There is no 力 ("529B) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 时 ("65F6) in font nullfont!
+Missing character: There is no 存 ("5B58) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 这 ("8FD9) in font nullfont!
+Missing character: There is no 意 ("610F) in font nullfont!
+Missing character: There is no 味 ("5473) in font nullfont!
+Missing character: There is no 着 ("7740) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 需 ("9700) in font nullfont!
+Missing character: There is no 要 ("8981) in font nullfont!
+Missing character: There is no 将 ("5C06) in font nullfont!
+Missing character: There is no ( ("28) in font nullfont!
+Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+! Undefined control sequence.
+l.14 ...同时存在，这意味着我们需要将(1)中的$\partial _{\boldsymbol
+                                                  {a}}$变为普通的协变导数算符。 \
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 变 ("53D8) in font nullfont!
+Missing character: There is no 为 ("4E3A) in font nullfont!
+Missing character: There is no 普 ("666E) in font nullfont!
+Missing character: There is no 通 ("901A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 协 ("534F) in font nullfont!
+Missing character: There is no 变 ("53D8) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 算 ("7B97) in font nullfont!
+Missing character: There is no 符 ("7B26) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+
+Overfull \hbox (31.7788pt too wide) in paragraph at lines 9--15
+$\OML/cmm/m/it/10 e$$F[]$$A[]$
+ []
+
+
+Overfull \hbox (52.49979pt too wide) in paragraph at lines 9--15
+\OMS/cmsy/m/n/10 r[]r[]\OML/cmm/m/it/10 ^^R[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (53.29839pt too wide) in paragraph at lines 9--15
+\OML/cmm/m/it/10 e^^R[]@[]A[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (40.50049pt too wide) in paragraph at lines 9--15
+[]\OML/cmm/m/it/10 e^^R[]F[]:$
+ []
+
+
+Overfull \hbox (10.14668pt too wide) in paragraph at lines 9--15
+\OML/cmm/m/it/10 @[]$
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.18 在
+      经典理论中，我们的势能“$A_{\boldsymbol{a}}$”没有物理意义，同样的，$\upGamma {_{ab}}^{c}$对引力理...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 经 ("7ECF) in font nullfont!
+Missing character: There is no 典 ("5178) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 势 ("52BF) in font nullfont!
+Missing character: There is no 能 ("80FD) in font nullfont!
+Missing character: There is no “ ("201C) in font nullfont!
+! Undefined control sequence.
+l.18 在经典理论中，我们的势能“$A_{\boldsymbol
+                                 {a}}$”没有物理意义，同样的，$\upGamma {_{ab}}^{c}$对引力理...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ” ("201D) in font nullfont!
+Missing character: There is no 没 ("6CA1) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no 物 ("7269) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 意 ("610F) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 样 ("6837) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+! Undefined control sequence.
+<recently read> \upGamma 
+                         
+l.18 ...“$A_{\boldsymbol{a}}$”没有物理意义，同样的，$\upGamma
+                                                   {_{ab}}^{c}$对引力理论也没有直接的物理...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 对 ("5BF9) in font nullfont!
+Missing character: There is no 引 ("5F15) in font nullfont!
+Missing character: There is no 力 ("529B) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 也 ("4E5F) in font nullfont!
+Missing character: There is no 没 ("6CA1) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no 直 ("76F4) in font nullfont!
+Missing character: There is no 接 ("63A5) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 物 ("7269) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 意 ("610F) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+! Undefined control sequence.
+\@footnotetext ...tins {\reset@font \footnotesize 
+                                                  \interlinepenalty \interfo...
+l.18 ...义\footnote{但是在量子理论中（？），非单连通的时空会导致AB效应的存在。}
+                                                  。因此，类似于我们在引力理论中所做的，我们不认为$\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\@footnotetext ...}\color@begingroup \@makefntext 
+                                                  {\rule \z@ \footnotesep \i...
+l.18 ...义\footnote{但是在量子理论中（？），非单连通的时空会导致AB效应的存在。}
+                                                  。因此，类似于我们在引力理论中所做的，我们不认为$\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 但 (U+4F46) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 是 (U+662F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 在 (U+5728) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 量 (U+91CF) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 子 (U+5B50) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 理 (U+7406) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 论 (U+8BBA) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 中 (U+4E2D) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no （ (U+FF08) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ？ (U+FF1F) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ） (U+FF09) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 非 (U+975E) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 单 (U+5355) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 连 (U+8FDE) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 通 (U+901A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 时 (U+65F6) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 空 (U+7A7A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 会 (U+4F1A) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 导 (U+5BFC) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 致 (U+81F4) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 效 (U+6548) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 应 (U+5E94) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 存 (U+5B58) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 在 (U+5728) in font [lmroman10-regular]:mapping=t
+ex-text;!
+Missing character: There is no 。 (U+3002) in font [lmroman10-regular]:mapping=t
+ex-text;!
+
+Overfull \hbox (92.98001pt too wide) in paragraph at lines 18--18
+[][]\TU/lmr/m/n/10 但是在量子理论中（？），非单连通的时空会导致AB效应的存在。| 
+ []
+
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 因 ("56E0) in font nullfont!
+Missing character: There is no 此 ("6B64) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 类 ("7C7B) in font nullfont!
+Missing character: There is no 似 ("4F3C) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 引 ("5F15) in font nullfont!
+Missing character: There is no 力 ("529B) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 所 ("6240) in font nullfont!
+Missing character: There is no 做 ("505A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 不 ("4E0D) in font nullfont!
+Missing character: There is no 认 ("8BA4) in font nullfont!
+Missing character: There is no 为 ("4E3A) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no “ ("201C) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 质 ("8D28) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no ” ("201D) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 对 ("5BF9) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no 带 ("5E26) in font nullfont!
+Missing character: There is no 荷 ("8377) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 样 ("6837) in font nullfont!
+Missing character: There is no 如 ("5982) in font nullfont!
+Missing character: There is no 此 ("6B64) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 它 ("5B83) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 依 ("4F9D) in font nullfont!
+Missing character: There is no 赖 ("8D56) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no “ ("201C) in font nullfont!
+Missing character: There is no 规 ("89C4) in font nullfont!
+Missing character: There is no 范 ("8303) in font nullfont!
+Missing character: There is no ” ("201D) in font nullfont!
+Missing character: There is no 选 ("9009) in font nullfont!
+Missing character: There is no 取 ("53D6) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 因 ("56E0) in font nullfont!
+Missing character: There is no 此 ("6B64) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 希 ("5E0C) in font nullfont!
+Missing character: There is no 望 ("671B) in font nullfont!
+Missing character: There is no 构 ("6784) in font nullfont!
+Missing character: There is no 建 ("5EFA) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 更 ("66F4) in font nullfont!
+Missing character: There is no 加 ("52A0) in font nullfont!
+Missing character: There is no “ ("201C) in font nullfont!
+Missing character: There is no 基 ("57FA) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no ” ("201D) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 协 ("534F) in font nullfont!
+Missing character: There is no 变 ("53D8) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 算 ("7B97) in font nullfont!
+Missing character: There is no 符 ("7B26) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 使 ("4F7F) in font nullfont!
+Missing character: There is no 得 ("5F97) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 它 ("5B83) in font nullfont!
+Missing character: There is no 构 ("6784) in font nullfont!
+Missing character: There is no 建 ("5EFA) in font nullfont!
+Missing character: There is no 出 ("51FA) in font nullfont!
+Missing character: There is no 来 ("6765) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no 都 ("90FD) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no “ ("201C) in font nullfont!
+Missing character: There is no 物 ("7269) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no ” ("201D) in font nullfont!
+Missing character: There is no 或 ("6216) in font nullfont!
+Missing character: There is no 者 ("8005) in font nullfont!
+Missing character: There is no “ ("201C) in font nullfont!
+Missing character: There is no 几 ("51E0) in font nullfont!
+Missing character: There is no 何 ("4F55) in font nullfont!
+Missing character: There is no ” ("201D) in font nullfont!
+Missing character: There is no 意 ("610F) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 节 ("8282) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 会 ("4F1A) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 代 ("4EE3) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 方 ("65B9) in font nullfont!
+Missing character: There is no 法 ("6CD5) in font nullfont!
+Missing character: There is no 给 ("7ED9) in font nullfont!
+Missing character: There is no 出 ("51FA) in font nullfont!
+Missing character: There is no 这 ("8FD9) in font nullfont!
+Missing character: There is no 样 ("6837) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 协 ("534F) in font nullfont!
+Missing character: There is no 变 ("53D8) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 构 ("6784) in font nullfont!
+Missing character: There is no 造 ("9020) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 并 ("5E76) in font nullfont!
+Missing character: There is no 且 ("4E14) in font nullfont!
+Missing character: There is no 这 ("8FD9) in font nullfont!
+Missing character: There is no 样 ("6837) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 构 ("6784) in font nullfont!
+Missing character: There is no 造 ("9020) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 适 ("9002) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no 弯 ("5F2F) in font nullfont!
+Missing character: There is no 曲 ("66F2) in font nullfont!
+Missing character: There is no 时 ("65F6) in font nullfont!
+Missing character: There is no 空 ("7A7A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 版 ("7248) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+
+Overfull \hbox (59.3954pt too wide) in paragraph at lines 18--19
+[]$\OML/cmm/m/it/10 A[]$$[][]$[]$@[]$ 
+ []
+
+! Undefined control sequence.
+l.21 \section
+             {带荷的场}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \section{带
+               荷的场}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 带 ("5E26) in font nullfont!
+Missing character: There is no 荷 ("8377) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 21--22
+[] 
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 我
+      们之前曾经给出了流形上的$\mathbb{C}^{\infty }$旋量场——$\mathfrak{S}^{\mathcal{A}}$的定义...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 之 ("4E4B) in font nullfont!
+Missing character: There is no 前 ("524D) in font nullfont!
+Missing character: There is no 曾 ("66FE) in font nullfont!
+Missing character: There is no 经 ("7ECF) in font nullfont!
+Missing character: There is no 给 ("7ED9) in font nullfont!
+Missing character: There is no 出 ("51FA) in font nullfont!
+Missing character: There is no 了 ("4E86) in font nullfont!
+Missing character: There is no 流 ("6D41) in font nullfont!
+Missing character: There is no 形 ("5F62) in font nullfont!
+Missing character: There is no 上 ("4E0A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+! Undefined control sequence.
+<recently read> \mathbb 
+                        
+l.23 我们之前曾经给出了流形上的$\mathbb
+                          {C}^{\infty }$旋量场——$\mathfrak{S}^{\mathcal{A}}$的定义...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 旋 ("65CB) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no 场 ("573A) in font nullfont!
+Missing character: There is no — ("2014) in font nullfont!
+Missing character: There is no — ("2014) in font nullfont!
+! Undefined control sequence.
+<recently read> \mathfrak 
+                          
+l.23 ...了流形上的$\mathbb{C}^{\infty }$旋量场——$\mathfrak
+                                                  {S}^{\mathcal{A}}$的定义，本章我们...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 章 ("7AE0) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 需 ("9700) in font nullfont!
+Missing character: There is no 要 ("8981) in font nullfont!
+Missing character: There is no 扩 ("6269) in font nullfont!
+Missing character: There is no 展 ("5C55) in font nullfont!
+Missing character: There is no 其 ("5176) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+Missing character: There is no ： ("FF1A) in font nullfont!
+Missing character: There is no 对 ("5BF9) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no 每 ("6BCF) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no “ ("201C) in font nullfont!
+Missing character: There is no 荷 ("8377) in font nullfont!
+Missing character: There is no ” ("201D) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 值 ("503C) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 都 ("90FD) in font nullfont!
+Missing character: There is no 对 ("5BF9) in font nullfont!
+Missing character: There is no 应 ("5E94) in font nullfont!
+Missing character: There is no 了 ("4E86) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 模 ("6A21) in font nullfont!
+! Undefined control sequence.
+<recently read> \mathfrak 
+                          
+l.23 ...义，本章我们需要扩展其定义：对于每一个“荷”的值，都对应了一个模$\mathfrak
+                                                  {S}^{\mathcal{A}}$，而协变导数算符...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 而 ("800C) in font nullfont!
+Missing character: There is no 协 ("534F) in font nullfont!
+Missing character: There is no 变 ("53D8) in font nullfont!
+Missing character: There is no 导 ("5BFC) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 算 ("7B97) in font nullfont!
+Missing character: There is no 符 ("7B26) in font nullfont!
+! Undefined control sequence.
+l.23 ...A}}$，而协变导数算符$\mathbf{\nabla }_{\boldsymbol
+                                                  {a}}$对于每一个版本都不同。我们引入带荷的模（c...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 对 ("5BF9) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no 每 ("6BCF) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 版 ("7248) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 都 ("90FD) in font nullfont!
+Missing character: There is no 不 ("4E0D) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 引 ("5F15) in font nullfont!
+Missing character: There is no 入 ("5165) in font nullfont!
+Missing character: There is no 带 ("5E26) in font nullfont!
+Missing character: There is no 荷 ("8377) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 模 ("6A21) in font nullfont!
+Missing character: There is no （ ("FF08) in font nullfont!
+Missing character: There is no c ("63) in font nullfont!
+Missing character: There is no h ("68) in font nullfont!
+Missing character: There is no a ("61) in font nullfont!
+Missing character: There is no r ("72) in font nullfont!
+Missing character: There is no g ("67) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no m ("6D) in font nullfont!
+Missing character: There is no o ("6F) in font nullfont!
+Missing character: There is no d ("64) in font nullfont!
+Missing character: There is no u ("75) in font nullfont!
+Missing character: There is no l ("6C) in font nullfont!
+Missing character: There is no e ("65) in font nullfont!
+Missing character: There is no s ("73) in font nullfont!
+Missing character: There is no ） ("FF09) in font nullfont!
+Missing character: There is no ： ("FF1A) in font nullfont!
+
+! LaTeX Error: Environment equation* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.24 \begin{equation*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.25 ^^I\prescript
+                  {e}{}{}\mathfrak{S} ,\prescript{e}{}{}\mathfrak{S}^{\bolds...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e ("65) in font nullfont!
+! Undefined control sequence.
+l.25 ^^I\prescript{e}{}{}\mathfrak
+                                  {S} ,\prescript{e}{}{}\mathfrak{S}^{\bolds...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no S ("53) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+! Undefined control sequence.
+l.25 ^^I\prescript{e}{}{}\mathfrak{S} ,\prescript
+                                                 {e}{}{}\mathfrak{S}^{\bolds...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e ("65) in font nullfont!
+! Undefined control sequence.
+l.25 ...{}\mathfrak{S} ,\prescript{e}{}{}\mathfrak
+                                                  {S}^{\boldsymbol{A}} ,\cdo...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no S ("53) in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.25 ...athfrak{S} ,\prescript{e}{}{}\mathfrak{S}^
+                                                  {\boldsymbol{A}} ,\cdots ,...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Undefined control sequence.
+l.25 ...\prescript{e}{}{}\mathfrak{S}^{\boldsymbol
+                                                  {A}} ,\cdots ,\prescript{e...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 ...ak{S}^{\boldsymbol{A}} ,\cdots ,\prescript
+                                                  {e}{}{}\mathfrak{S}_{\bold...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 ...ol{A}} ,\cdots ,\prescript{e}{}{}\mathfrak
+                                                  {S}_{\boldsymbol{B} \cdots...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 ...\prescript{e}{}{}\mathfrak{S}_{\boldsymbol
+                                                  {B} \cdots \boldsymbol{D} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 ...frak{S}_{\boldsymbol{B} \cdots \boldsymbol
+                                                  {D} '\cdots }^{\boldsymbol...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 ...dots \boldsymbol{D} '\cdots }^{\boldsymbol
+                                                  {A} \cdots \boldsymbol{C} ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 ...cdots }^{\boldsymbol{A} \cdots \boldsymbol
+                                                  {C} '\cdots } ,\cdots
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \end{equation*}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.26 \end{equation*}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 先 ("5148) in font nullfont!
+Missing character: There is no 前 ("524D) in font nullfont!
+Missing character: There is no 讨 ("8BA8) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 情 ("60C5) in font nullfont!
+Missing character: There is no 况 ("51B5) in font nullfont!
+Missing character: There is no 就 ("5C31) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 情 ("60C5) in font nullfont!
+Missing character: There is no 况 ("51B5) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 原 ("539F) in font nullfont!
+Missing character: There is no 则 ("5219) in font nullfont!
+Missing character: There is no 上 ("4E0A) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 取 ("53D6) in font nullfont!
+Missing character: There is no 任 ("4EFB) in font nullfont!
+Missing character: There is no 意 ("610F) in font nullfont!
+Missing character: There is no 复 ("590D) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 但 ("4F46) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 因 ("56E0) in font nullfont!
+Missing character: There is no 为 ("4E3A) in font nullfont!
+Missing character: There is no 各 ("5404) in font nullfont!
+Missing character: There is no 种 ("79CD) in font nullfont!
+Missing character: There is no 原 ("539F) in font nullfont!
+Missing character: There is no 因 ("56E0) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 将 ("5C06) in font nullfont!
+Missing character: There is no 其 ("5176) in font nullfont!
+Missing character: There is no 取 ("53D6) in font nullfont!
+Missing character: There is no 为 ("4E3A) in font nullfont!
+Missing character: There is no 整 ("6574) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 即 ("5373) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 取 ("53D6) in font nullfont!
+Missing character: There is no 值 ("503C) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 重 ("91CD) in font nullfont!
+Missing character: There is no 点 ("70B9) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+! Undefined control sequence.
+<recently read> \prescript 
+                           
+l.27 ...0,\pm \varepsilon ,\cdots $。重点是$\prescript
+                                                  {e}{}{}\mathfrak{S}$中的元素，当...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 ...n ,\cdots $。重点是$\prescript{e}{}{}\mathfrak
+                                                  {S}$中的元素，当$e\neq 0$的时候，在$\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 元 ("5143) in font nullfont!
+Missing character: There is no 素 ("7D20) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 当 ("5F53) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 时 ("65F6) in font nullfont!
+Missing character: There is no 候 ("5019) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 每 ("6BCF) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 点 ("70B9) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 它 ("5B83) in font nullfont!
+Missing character: There is no 并 ("5E76) in font nullfont!
+Missing character: There is no 不 ("4E0D) in font nullfont!
+Missing character: There is no 取 ("53D6) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 具 ("5177) in font nullfont!
+Missing character: There is no 体 ("4F53) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 值 ("503C) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 而 ("800C) in font nullfont!
+! Undefined control sequence.
+<recently read> \prescript 
+                           
+l.27 ...$\mathcal{M}$的每一点，它并不取一个具体的数值，而$\prescript
+                                                  {e}{}{}\mathfrak{S}[ P]$是一...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 ...点，它并不取一个具体的数值，而$\prescript{e}{}{}\mathfrak
+                                                  {S}[ P]$是一个抽象的一维可加的复向量空间，但...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 抽 ("62BD) in font nullfont!
+Missing character: There is no 象 ("8C61) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 维 ("7EF4) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 加 ("52A0) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 复 ("590D) in font nullfont!
+Missing character: There is no 向 ("5411) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no 空 ("7A7A) in font nullfont!
+Missing character: There is no 间 ("95F4) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 但 ("4F46) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 能 ("80FD) in font nullfont!
+Missing character: There is no 没 ("6CA1) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no 唯 ("552F) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 乘 ("4E58) in font nullfont!
+Missing character: There is no 法 ("6CD5) in font nullfont!
+Missing character: There is no 单 ("5355) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 元 ("5143) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 样 ("6837) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+! Undefined control sequence.
+<recently read> \prescript 
+                           
+l.27 ...象的一维可加的复向量空间，但是可能没有唯一的乘法单位元。同样，$\prescript
+                                                  {e}{}{}\mathfrak{S}[ P]$在两...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 ...能没有唯一的乘法单位元。同样，$\prescript{e}{}{}\mathfrak
+                                                  {S}[ P]$在两个不同的点处的取值也没有什么系统...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 两 ("4E24) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 不 ("4E0D) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 点 ("70B9) in font nullfont!
+Missing character: There is no 处 ("5904) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 取 ("53D6) in font nullfont!
+Missing character: There is no 值 ("503C) in font nullfont!
+Missing character: There is no 也 ("4E5F) in font nullfont!
+Missing character: There is no 没 ("6CA1) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no 什 ("4EC0) in font nullfont!
+Missing character: There is no 么 ("4E48) in font nullfont!
+Missing character: There is no 系 ("7CFB) in font nullfont!
+Missing character: There is no 统 ("7EDF) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 联 ("8054) in font nullfont!
+Missing character: There is no 系 ("7CFB) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 而 ("800C) in font nullfont!
+Missing character: There is no 正 ("6B63) in font nullfont!
+Missing character: There is no 如 ("5982) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 矢 ("77E2) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 选 ("9009) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 基 ("57FA) in font nullfont!
+Missing character: There is no 底 ("5E95) in font nullfont!
+Missing character: There is no 后 ("540E) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 字 ("5B57) in font nullfont!
+Missing character: There is no 描 ("63CF) in font nullfont!
+Missing character: There is no 述 ("8FF0) in font nullfont!
+Missing character: There is no 其 ("5176) in font nullfont!
+Missing character: There is no 分 ("5206) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+! Undefined control sequence.
+<recently read> \prescript 
+                           
+l.27 ...么系统的联系。而正如一个矢量在选定基底后可以用数字描述其分量，$\prescript
+                                                  {e}{}{}\mathfrak{S}[ P]$中的...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 ...定基底后可以用数字描述其分量，$\prescript{e}{}{}\mathfrak
+                                                  {S}[ P]$中的元素在一个适当的\textbf{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 元 ("5143) in font nullfont!
+Missing character: There is no 素 ("7D20) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 适 ("9002) in font nullfont!
+Missing character: There is no 当 ("5F53) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 规 (U+89C4) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 范 (U+8303) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 选 (U+9009) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 取 (U+53D6) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 后 ("540E) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 也 ("4E5F) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 某 ("67D0) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 值 ("503C) in font nullfont!
+Missing character: There is no 标 ("6807) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no 描 ("63CF) in font nullfont!
+Missing character: There is no 述 ("8FF0) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 除 ("9664) in font nullfont!
+Missing character: There is no 了 ("4E86) in font nullfont!
+Missing character: There is no 正 ("6B63) in font nullfont!
+Missing character: There is no 常 ("5E38) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 构 ("6784) in font nullfont!
+Missing character: There is no 建 ("5EFA) in font nullfont!
+Missing character: There is no 模 ("6A21) in font nullfont!
+! Undefined control sequence.
+<recently read> \mathfrak 
+                          
+l.27 ...tbf{规范选取}后，也可以用某个数值标量描述。除了正常的构建模$\mathfrak
+                                                  {S}$的条件（包括各种操作，加乘缩并共轭），我们还...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 条 ("6761) in font nullfont!
+Missing character: There is no 件 ("4EF6) in font nullfont!
+Missing character: There is no （ ("FF08) in font nullfont!
+Missing character: There is no 包 ("5305) in font nullfont!
+Missing character: There is no 括 ("62EC) in font nullfont!
+Missing character: There is no 各 ("5404) in font nullfont!
+Missing character: There is no 种 ("79CD) in font nullfont!
+Missing character: There is no 操 ("64CD) in font nullfont!
+Missing character: There is no 作 ("4F5C) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 加 ("52A0) in font nullfont!
+Missing character: There is no 乘 ("4E58) in font nullfont!
+Missing character: There is no 缩 ("7F29) in font nullfont!
+Missing character: There is no 并 ("5E76) in font nullfont!
+Missing character: There is no 共 ("5171) in font nullfont!
+Missing character: There is no 轭 ("8F6D) in font nullfont!
+Missing character: There is no ） ("FF09) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 还 ("8FD8) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 下 ("4E0B) in font nullfont!
+Missing character: There is no 几 ("51E0) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 额 ("989D) in font nullfont!
+Missing character: There is no 外 ("5916) in font nullfont!
+Missing character: There is no 条 ("6761) in font nullfont!
+Missing character: There is no 件 ("4EF6) in font nullfont!
+Missing character: There is no 来 ("6765) in font nullfont!
+Missing character: There is no 构 ("6784) in font nullfont!
+Missing character: There is no 建 ("5EFA) in font nullfont!
+! Undefined control sequence.
+<recently read> \prescript 
+                           
+l.27 ...（包括各种操作，加乘缩并共轭），我们还有以下几个额外条件来构建$\prescript
+                                                  {e}{}{}\mathfrak{S}$。
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.27 ...我们还有以下几个额外条件来构建$\prescript{e}{}{}\mathfrak
+                                                  {S}$。
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 。 ("3002) in font nullfont!
+)
+! Emergency stop.
+<*> chap6.tex
+             
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 39 strings out of 476179
+ 680 string characters out of 5813073
+ 299507 words of memory out of 5000000
+ 20884 multiletter control sequences out of 15000+600000
+ 470210 words of font info for 34 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 21i,5n,16p,538b,96s stack positions out of 10000i,1000n,20000p,200000b,200000s
+No pages of output.

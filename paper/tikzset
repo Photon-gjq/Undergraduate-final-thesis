@@ -1,0 +1,65 @@
+% Gradient Info
+
+\tikzset {_ahkgnj71m/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{262.5 bp } { 228 bp }  }  \pgftransformscale{3 }  }}}
+\pgfdeclareradialshading{_bn94sccyc}{\pgfpoint{-88bp}{-56bp}}{rgb(0bp)=(0.96,0.96,0.96);
+	rgb(0bp)=(0.96,0.96,0.96);
+	rgb(5.25bp)=(0.86,0.86,0.89);
+	rgb(12.25bp)=(0.72,0.73,0.78);
+	rgb(20bp)=(0.87,0.87,0.89);
+	rgb(25bp)=(0.96,0.96,0.96);
+	rgb(400bp)=(0.96,0.96,0.96)}
+
+% Gradient Info
+
+\tikzset {_8s0cjt0cb/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{-69 bp } { 489 bp }  }  \pgftransformscale{3 }  }}}
+\pgfdeclareradialshading{_arll6v0fl}{\pgfpoint{24bp}{-192bp}}{rgb(0bp)=(0.96,0.96,0.96);
+	rgb(0bp)=(0.96,0.96,0.96);
+	rgb(5.25bp)=(0.86,0.86,0.89);
+	rgb(12.25bp)=(0.72,0.73,0.78);
+	rgb(20bp)=(0.87,0.87,0.89);
+	rgb(25bp)=(0.96,0.96,0.96);
+	rgb(400bp)=(0.96,0.96,0.96)}
+
+% Gradient Info
+
+\tikzset {_xb2d8cp10/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_9gf5dp3f7}{150bp}{rgb(0bp)=(0.6,0.85,1);
+	rgb(37.5bp)=(0.6,0.85,1);
+	rgb(62.5bp)=(0,0.5,0.5);
+	rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+
+\tikzset {_jwa1tz4np/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_k1lfmkpnc}{150bp}{rgb(0bp)=(0.6,0.85,1);
+	rgb(37.5bp)=(0.6,0.85,1);
+	rgb(62.5bp)=(0,0.5,0.5);
+	rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+
+\tikzset {_lmp8db242/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformscale{1 }  }}}
+\pgfdeclareradialshading{_pt7yztjpq}{\pgfpoint{0bp}{0bp}}{rgb(0bp)=(1,1,1);
+	rgb(0bp)=(1,1,1);
+	rgb(25bp)=(0,0,0);
+	rgb(400bp)=(0,0,0)}
+
+% Gradient Info
+
+\tikzset {_ksf0j3lzx/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformscale{1 }  }}}
+\pgfdeclareradialshading{_sd0lfnh1v}{\pgfpoint{0bp}{0bp}}{rgb(0bp)=(1,1,1);
+	rgb(0bp)=(1,1,1);
+	rgb(25bp)=(0,0,0);
+	rgb(400bp)=(0,0,0)}
+
+% Gradient Info
+
+\tikzset {_sfydnlf8x/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{-246 bp } { -414 bp }  }  \pgftransformscale{2 }  }}}
+\pgfdeclareradialshading{_xedxn5b0y}{\pgfpoint{136bp}{224bp}}{rgb(0bp)=(0.96,0.96,0.96);
+	rgb(0bp)=(0.96,0.96,0.96);
+	rgb(5.25bp)=(0.86,0.86,0.89);
+	rgb(12.25bp)=(0.72,0.73,0.78);
+	rgb(20bp)=(0.87,0.87,0.89);
+	rgb(25bp)=(0.96,0.96,0.96);
+	rgb(400bp)=(0.96,0.96,0.96)}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt   

@@ -1,0 +1,871 @@
+\chapter{弯曲时空中的不自洽性——高自旋场}
+
+在给出了一般弯曲时空中的场方程后，一个很自然的问题就是：这些场如何在弯曲时空中传播？本节我们会用微扰论的方法，将引力场当做背景场，而不同自旋的场当做对于背景场的微扰，用纽曼-彭罗斯形式给出处理弯曲时空中场的不同方式。然而，随后我们也会看到，如果我们尝试使用同样的方法处理弯曲时空中的RS场，会碰到所谓自洽条件的限制，这导致我们只能用同样的方法处理里奇平坦时空中的RS场。
+\section{用纽曼-彭罗斯形式处理时空扰动}
+
+在上一章中，我们已经给出了一种处理引力扰动的方法：从真空的比安基恒等式（或爱因斯坦场方程）$\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{ABCD}} =0$出发，选取适当的规范条件，给出关于度规扰动$h$的方程：\begin{equation}
+	\mathbf{\nabla }_{\boldsymbol{a}}\mathbf{\nabla }^{\boldsymbol{a}} h_{\boldsymbol{bc}} -\mathbf{\nabla }_{\boldsymbol{a}}\mathbf{\nabla }_{\boldsymbol{b}} h{_{\boldsymbol{c}}}^{\boldsymbol{a}} -\mathbf{\nabla }_{\boldsymbol{a}}\mathbf{\nabla }_{\boldsymbol{c}} h{_{\boldsymbol{b}}}^{\boldsymbol{a}} +\mathbf{\nabla }_{\boldsymbol{b}}\mathbf{\nabla }_{\boldsymbol{c}} h{_{\boldsymbol{a}}}^{\boldsymbol{a}} =0
+	\label{eq:7.1}
+\end{equation}
+
+并尝试解此方程。显然，这个方程是一个二阶偏微分方程，并不好处理。而通过纽曼-彭罗斯形式，我们可以将二阶偏微分方程转化为对于微扰量的线性齐次微分方程。我们首先将不同自旋的场化成NP形式。对于引力场，无源场方程即为真空中的比安基恒等式，已在\ref{eq:5.84}中给出，其中物质部分$\upPhi $的标量分量全部为零。现在，我们来给出狄拉克场和电磁场方程的NP形式。
+
+
+\subsection{狄拉克场与电磁场方程的NP形式}
+
+我们已经知道，狄拉克场可以用一个旋量$\psi _{\boldsymbol{A}}$描述。如果我们选取一个旋量基$\epsilon {_{0}}^{\boldsymbol{A}} =o^{\boldsymbol{A}} ,\epsilon {_{1}}^{\boldsymbol{A}} =\iota ^{\boldsymbol{A}}$，那么这个场会有两个标量分量：
+\begin{equation*}
+	\psi _{0} =\psi _{\boldsymbol{A}} \epsilon {_{0}}^{\boldsymbol{A}} =\psi _{\boldsymbol{A}} o^{\boldsymbol{A}} ,\quad \psi _{1} =\psi _{\boldsymbol{A}} \epsilon {_{1}}^{\boldsymbol{A}} =\psi _{\boldsymbol{A}} \iota ^{\boldsymbol{A}} .
+\end{equation*}
+即这是将旋量$\psi _{\boldsymbol{A}}$在两个基底下展开的分量：
+\begin{equation*}
+	\psi _{\boldsymbol{A}} =\epsilon {_{\boldsymbol{A}}}^{B} \psi _{B} =\epsilon {_{\boldsymbol{A}}}^{0} \psi _{0} +\epsilon {_{\boldsymbol{A}}}^{1} \psi _{1} =\psi _{1} o_{\boldsymbol{A}} -\psi _{0} \iota _{\boldsymbol{A}} .
+\end{equation*}
+同理：
+\begin{equation*}
+	\psi ^{\boldsymbol{A}} =\epsilon {_{B}}^{\boldsymbol{A}} \psi ^{B} =\psi ^{0} o^{\boldsymbol{A}} +\psi ^{1} \iota ^{\boldsymbol{A}} .
+\end{equation*}
+注意，由于
+\begin{equation*}
+	\psi ^{\boldsymbol{A}} =\epsilon ^{\boldsymbol{AB}} \psi _{\boldsymbol{B}} =\epsilon ^{\boldsymbol{AB}} (\psi _{1} o_{\boldsymbol{B}} -\psi _{0} \iota _{\boldsymbol{B}} )=\psi _{1} o^{\boldsymbol{A}} -\psi _{0} \iota ^{\boldsymbol{A}} ,
+\end{equation*}
+我们有关系
+\begin{equation*}
+	\psi ^{0} =\psi _{1} ,\quad \psi ^{1} =-\psi _{0} .
+\end{equation*}
+
+
+那么$( 1/2,0)$表示的狄拉克场方程
+\begin{equation*}
+	\mathbf{\nabla }_{\boldsymbol{AA} '} \psi ^{\boldsymbol{A}} =0
+\end{equation*}
+的分量为
+\begin{equation*}
+	0=\epsilon {_{A}}^{\boldsymbol{A}} \epsilon {_{A'}}^{\boldsymbol{A} '} \epsilon {_{\boldsymbol{B}}}^{B}\mathbf{\nabla }_{\boldsymbol{AA} '} \psi ^{\boldsymbol{B}} \epsilon {_{B}}^{A} =\mathbf{\nabla }_{AA'} \psi ^{A} +\psi ^{C} \gamma {_{AA'C}}^{A}
+\end{equation*}
+当$A'=0'$，我们有
+\begin{equation*}
+	\begin{aligned}
+		0 & =\mathbf{\nabla }_{00'} \psi ^{0} +\mathbf{\nabla }_{10'} \psi ^{1} +\psi ^{0} (\gamma {_{00'0}}^{0} +\gamma {_{10'0}}^{1} )+\psi ^{1} (\gamma {_{00'1}}^{0} +\gamma {_{10'1}}^{1} )\\
+		& =D\psi ^{0} +\delta '\psi ^{1} +\psi ^{0} (\epsilon -\rho )+\psi ^{1} (\pi -\alpha ),
+	\end{aligned}
+\end{equation*}
+即
+\begin{equation}
+	( D+\epsilon -\rho ) \psi ^{0} +( \delta '+\pi -\alpha ) \psi ^{1} =0.
+	\label{eq:7.2}
+\end{equation}
+当$A'=1'$，我们有：
+\begin{equation*}
+	\begin{aligned}
+		0 & =\mathbf{\nabla }_{01'} \psi ^{0} +\mathbf{\nabla }_{11'} \psi ^{1} +\psi ^{0} (\gamma {_{01'0}}^{0} +\gamma {_{11'0}}^{1} )+\psi ^{1} (\gamma {_{01'1}}^{0} +\gamma {_{11'1}}^{1} )\\
+		& =\delta \psi ^{0} +D'\psi ^{1} +\psi ^{0}( \beta -\tau ) +\psi ^{1}( \mu -\gamma ) ,
+	\end{aligned}
+\end{equation*}
+即
+\begin{equation}
+	( \delta +\beta -\tau ) \psi ^{0} +( D'+\mu -\gamma ) \psi ^{1} =0.
+	\label{eq:7.3}
+\end{equation}
+方程\ref{eq:7.2}，\ref{eq:7.3}以及它们的共轭
+\begin{equation}
+	\begin{cases}
+		( D+\epsilon -\rho ) \psi ^{0} +( \delta '+\pi -\alpha ) \psi ^{1} & =0\\
+		( \delta +\beta -\tau ) \psi ^{0} +( D'+\mu -\gamma ) \psi ^{1} & =0\\
+		( D+\overline{\epsilon } -\overline{\rho }) \psi ^{0'} +( \delta '+\overline{\pi } -\overline{\alpha }) \psi ^{1'} & =0\\
+		( \delta +\overline{\beta } -\overline{\tau }) \psi ^{0'} +( D'+\overline{\mu } -\overline{\gamma }) \psi ^{1'} & =0
+	\end{cases}
+	\label{eq:7.4}
+\end{equation}
+即为狄拉克方程的纽曼-彭罗斯形式。这里
+\begin{equation*}
+	\psi ^{\boldsymbol{A} '} =\psi ^{0'} o^{\boldsymbol{A} '} +\psi ^{1'} \iota ^{\boldsymbol{A} '} .
+\end{equation*}
+
+
+对于电磁场，我们可以用一个对称旋量$\varphi _{\boldsymbol{AB}}$描述，它可以给出三个标量分量：
+\begin{equation*}
+	\begin{aligned}
+		\varphi _{0} & \equiv F_{\boldsymbol{ab}} l^{\boldsymbol{a}} m^{\boldsymbol{b}} =(\varphi _{\boldsymbol{AB}} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '} +\epsilon _{\boldsymbol{AB}}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} )o^{\boldsymbol{A}} o^{\boldsymbol{A} '} o^{\boldsymbol{B}} \iota ^{\boldsymbol{B} '} =\varphi _{\boldsymbol{AB}} o^{\boldsymbol{A}} o^{\boldsymbol{B}} =\varphi _{00} .\\
+		\varphi _{1} & \equiv \frac{1}{2} F_{\boldsymbol{ab}} (l^{\boldsymbol{a}} n^{\boldsymbol{b}} +\overline{m}^{\boldsymbol{a}} m^{\boldsymbol{b}} )=\frac{1}{2} (\varphi _{01} +\overline{\varphi }_{0'1'}) +\frac{1}{2} (\varphi _{10} -\overline{\varphi }_{0'1'} )=\varphi _{01} ,\\
+		\varphi _{2} & \equiv F_{\boldsymbol{ab}}\overline{m}^{\boldsymbol{a}} n^{\boldsymbol{b}} =(\varphi _{\boldsymbol{AB}} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '} +\epsilon _{\boldsymbol{AB}}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} )\iota ^{\boldsymbol{A}} o^{\boldsymbol{A} '} \iota ^{\boldsymbol{B}} \iota ^{\boldsymbol{B} '} =\varphi _{11} .
+	\end{aligned}
+\end{equation*}
+即
+\begin{equation*}
+	\begin{aligned}
+		\varphi _{\boldsymbol{AB}} =\epsilon {_{\boldsymbol{A}}}^{A} \epsilon {_{\boldsymbol{B}}}^{B} \varphi _{AB} & =\epsilon {_{\boldsymbol{A}}}^{0} \epsilon {_{\boldsymbol{B}}}^{0} \varphi _{00} +2\epsilon {_{\boldsymbol{A}}}^{0} \epsilon {_{\boldsymbol{B}}}^{1} \varphi _{01} +\epsilon {_{\boldsymbol{A}}}^{1} \epsilon {_{\boldsymbol{B}}}^{1} \varphi _{11}\\
+		& =\varphi _{0} \iota _{\boldsymbol{A}} \iota _{\boldsymbol{A}} -\varphi _{1}( \iota _{\boldsymbol{A}} o_{\boldsymbol{B}} +o_{\boldsymbol{A}} \iota _{\boldsymbol{B}}) +\varphi _{2} o_{\boldsymbol{A}} o_{\boldsymbol{B}} .
+	\end{aligned}
+\end{equation*}
+同样的，利用
+\begin{equation*}
+	\begin{aligned}
+		\varphi _{\boldsymbol{AB}} =\epsilon _{\boldsymbol{CA}} \epsilon _{\boldsymbol{DB}} \varphi ^{\boldsymbol{CD}} & =\epsilon _{\boldsymbol{CA}} \epsilon _{\boldsymbol{DB}} (\varphi ^{00} o^{\boldsymbol{C}} o^{\boldsymbol{D}} +\varphi ^{01} (o^{\boldsymbol{C}} \iota ^{\boldsymbol{D}} +\iota ^{\boldsymbol{C}} o^{\boldsymbol{D}} )+\varphi ^{11} \iota ^{\boldsymbol{C}} \iota ^{\boldsymbol{D}} )\\
+		& =\varphi ^{00} o^{\boldsymbol{A}} o^{\boldsymbol{B}} +\varphi ^{01} (o^{\boldsymbol{A}} \iota ^{\boldsymbol{B}} +\iota ^{\boldsymbol{A}} o^{\boldsymbol{B}} )+\varphi ^{11} \iota ^{\boldsymbol{A}} \iota ^{\boldsymbol{B}} .
+	\end{aligned}
+\end{equation*}
+即
+\begin{equation*}
+	\begin{cases}
+		\varphi _{0} =\varphi _{00} =\varphi ^{11} & \\
+		\varphi _{1} =\varphi _{01} =-\varphi ^{01} & \\
+		\varphi _{2} =\varphi _{11} =\varphi ^{00} . & 
+	\end{cases}
+\end{equation*}
+
+
+此时，根据无源电磁场方程：
+\begin{equation*}
+	\mathbf{\nabla }_{\boldsymbol{AA} '} \varphi ^{\boldsymbol{AB}} =0,
+\end{equation*}
+其分量为：
+\begin{equation*}
+	0=\epsilon {_{A}}^{\boldsymbol{A}} \epsilon {_{A'}}^{\boldsymbol{A} '} \epsilon {_{\boldsymbol{B}}}^{B} \epsilon {_{\boldsymbol{C}}}^{C}\mathbf{\nabla }_{\boldsymbol{AA} '} \varphi ^{\boldsymbol{BC}} \epsilon {_{C}}^{A} =\mathbf{\nabla }_{AA'} \varphi ^{AB} +\varphi ^{B_{0} A} \gamma {_{AA'B_{0}}}^{B} +\varphi ^{BC_{0}} \gamma {_{AA'C_{0}}}^{A}
+\end{equation*}
+例如取分量$A'=0',B=0$，我们有：
+\begin{equation*}
+	\begin{aligned}
+		0 & =\mathbf{\nabla }_{A0'} \varphi ^{A0} +\varphi ^{B_{0} A} \gamma {_{A0'B_{0}}}^{0} +\varphi ^{0C_{0}} \gamma {_{A0'C_{0}}}^{A}\\
+		& =\mathbf{\nabla }_{00'} \varphi ^{00} +\mathbf{\nabla }_{10'} \varphi ^{10} +\varphi ^{B_{0} 0} \gamma {_{00'B_{0}}}^{0} +\varphi ^{B_{0} 1} \gamma {_{10'B_{0}}}^{0} +\varphi ^{0C_{0}} \gamma {_{00'C_{0}}}^{0} +\varphi ^{0C_{0}} \gamma {_{10'C_{0}}}^{1}\\
+		& =D\varphi ^{00} +\delta '\varphi ^{10} +\varphi ^{00} (2\gamma {_{00'0}}^{0} +\gamma {_{10'0}}^{1} )+\varphi ^{10} (2\gamma {_{00'1}}^{0} +\gamma {_{10'0}}^{0} +\gamma {_{10'1}}^{1} )+\varphi ^{11} \gamma {_{10'1}}^{0}\\
+		& =D\varphi ^{00} +\delta '\varphi ^{10} +\varphi ^{00} (2\epsilon -\rho )+\varphi ^{10} (-2\tau '+\alpha +\beta ')-\varphi ^{11} \sigma '\\
+		& =D\varphi _{2} -\delta '\varphi _{1} +(2\epsilon -\rho )\varphi _{2} -2\pi \varphi _{1} +\lambda \varphi _{0} .
+	\end{aligned}
+\end{equation*}
+即：
+\begin{equation}
+	D\varphi _{2} -\delta '\varphi _{1} =-\lambda \varphi _{0} +2\pi \varphi _{1} +( \rho -2\epsilon ) \varphi _{2} .
+	\label{eq:7.5}
+\end{equation}
+同样的，我们可以给出其他三个分量的方程：
+\begin{equation}
+	\begin{cases}
+		D\varphi _{1} -\delta '\varphi _{0} & =(\pi -2\alpha )\varphi _{0} +2\rho \varphi _{1} -\kappa \varphi _{2} ,\\
+		\delta \varphi _{1} -D'\varphi _{0} & =(\mu -2\gamma )\varphi _{0} +2\tau \varphi _{1} -\sigma \varphi _{2} ,\\
+		\delta \varphi _{2} -D'\varphi _{1} & =-\nu \varphi _{0} +2\mu \varphi _{1} +(\tau -2\beta )\varphi _{2} .
+	\end{cases}
+	\label{eq:7.6}
+\end{equation}
+方程\ref{eq:7.5}，\ref{eq:7.6}以及它们的复共轭就是麦克斯韦方程的NP形式。
+
+
+\subsection{克尔时空中的物质波}
+
+下面我们给出一个用NP形式处理时空背景场中物质场的微扰的例子，同时也为前几章的形式理论提供一个具体的算例。考虑克尔时空，在通常的Boyer–Lindquist坐标下，其形式为\parencite{teukolsky2015kerr}
+\begin{equation}
+	\begin{aligned}
+		\mathrm{d} s^{2} = & \left( 1-\frac{2Mr}{\upSigma }\right)\mathrm{d} t^{2} +\frac{4Mar\sin^{2} \theta }{\upSigma }\mathrm{d} t\mathrm{d} \varphi -\frac{\upSigma }{\upDelta }\mathrm{d} r^{2} -\upSigma \mathrm{d} \theta ^{2}\\
+		& -\left( r^{2} +a^{2} +\frac{2Ma^{2} r\sin^{2} \theta }{\upSigma }\right)\sin^{2} \theta \mathrm{d} \varphi ^{2} ,
+	\end{aligned}
+	\label{eq:7.7}
+\end{equation}
+其中$M$为黑洞的质量。这里采用的坐标和平面直角坐标的转换关系为
+\begin{equation*}
+	\begin{aligned}
+		x & =\sqrt{r^{2} +a^{2}}\sin \theta \cos \varphi \\
+		y & =\sqrt{r^{2} +a^{2}}\sin \theta \sin \varphi \\
+		z & =r\cos \theta ,
+	\end{aligned}
+\end{equation*}
+而各个参数为
+\begin{equation*}
+	\begin{aligned}
+		a & =\frac{J}{Mc}\\
+		\upSigma  & =r^{2} +a^{2}\cos^{2} \theta \\
+		\upDelta  & =r^{2} -2Mr+a^{2} .
+	\end{aligned}
+\end{equation*}
+注意这里我们使用了自然单位制，$c=1,G=1$，故史瓦西半径为
+\begin{equation*}
+	r_{s} =\frac{2GM}{c^{2}} =2M.
+\end{equation*}
+但是为了后续计算方便，我们在这里重新定义\ref{eq:7.7}中的参数，将度规\ref{eq:7.7}写为\parencite{chandrasekhar1998mathematical}
+\begin{equation}
+	\mathrm{d} s^{2} =\rho ^{2}\frac{\upDelta }{\upSigma ^{2}}\mathrm{d} t^{2} -\frac{\upSigma ^{2}}{\rho ^{2}}\left(\mathrm{d} \varphi -\frac{2aMr}{\upSigma ^{2}}\mathrm{d} t\right)^{2}\sin^{2} \theta -\frac{\rho ^{2}}{\upDelta }\mathrm{d} r^{2} -\rho ^{2}\mathrm{d} \theta ^{2} ,
+	\label{eq:7.8}
+\end{equation}
+其中我们对参数做了变换\footnote{注意，我们这里引入了参数$\rho ^{2} =r^{2} +a^{2}\sin^{2} \theta $，这并不是自旋系数$\rho $。为了避免冲突，在有关克尔黑洞的地方，我们记$\rho $始终为$\rho ^{2} =r^{2} +\sin^{2} \theta $，而自旋系数则用$\tilde{\rho }$表示。}：
+\begin{equation*}
+	\begin{aligned}
+		\upSigma  & \rightarrow \rho ^{2}\\
+		\upDelta  & \rightarrow \upDelta ,
+	\end{aligned}
+\end{equation*}
+除此之外，式\ref{eq:7.8}中的新$\upSigma $（注意原来的$\upSigma $已经被代换为$\rho ^{2}$）的定义为
+\begin{equation*}
+	\upSigma ^{2} =(r^{2} +a^{2} )^{2} -a^{2} \upDelta \sin^{2} \theta =(r^{2} +a^{2} )\rho ^{2} +2Ma^{2} r\sin^{2} \theta .
+\end{equation*}
+现在，我们给度规\ref{eq:7.8}取一个合适的类光标架$(\boldsymbol{l} ,\boldsymbol{n} ,\boldsymbol{m} ,\overline{\boldsymbol{m}})$。在$\partial /\partial x^{\boldsymbol{a}}$的基底下，我们可以写出类光标架的分量：
+\begin{equation}
+	\begin{aligned}
+		l^{i} & =\frac{1}{\upDelta } (r^{2} +a^{2} ,+\upDelta ,0,a)\\
+		n^{i} & =\frac{1}{2\rho ^{2}} (r^{2} +a^{2} ,-\upDelta ,0,a)\\
+		m^{i} & =\frac{1}{\overline{\rho }\sqrt{2}} (\mathrm{i} a\sin \theta ,0,1,\mathrm{i}\csc \theta ),
+	\end{aligned}
+	\label{eq:7.9}
+\end{equation}
+其中
+\begin{equation*}
+	\overline{\rho } =r+\mathrm{i} a\cos \theta ,\quad \overline{\rho }^{*} =r-\mathrm{i} a\cos \theta .
+\end{equation*}
+这里$\boldsymbol{l}$是仿射参数化的。在其对偶基$\mathrm{d} x^{\boldsymbol{a}}$下，其分量为
+\begin{equation*}
+	\begin{aligned}
+		l_{i} & =\frac{1}{\upDelta } (\upDelta ,-\rho ^{2} ,0,-a\upDelta \sin^{2} \theta )\\
+		n_{i} & =\frac{1}{2\rho ^{2}} (\upDelta ,+\rho ^{2} ,0,-a\upDelta \sin^{2} \theta )\\
+		m_{i} & =\frac{1}{\overline{\rho }\sqrt{2}} (\mathrm{i} a\sin \theta ,0,-\rho ^{2} ,-\mathrm{i} (r^{2} +a^{2} )\sin \theta ).
+	\end{aligned}
+\end{equation*}
+容易验证\ref{eq:5.90}：
+\begin{equation*}
+	\mathrm{d} s^{2} =2\boldsymbol{ln} -2\boldsymbol{m}\overline{\boldsymbol{m}} =g_{ab}\mathrm{d} x^{a}\mathrm{d} x^{b} ,
+\end{equation*}
+这里记$\boldsymbol{ln} =l_{(\boldsymbol{i}_{1}} n_{\boldsymbol{i}_{2})}$。例如：
+\begin{equation*}
+	\begin{aligned}
+		g_{tt} & =2l_{t} n_{t} -2m_{t}\overline{m}_{t} =2\cdot \frac{\upDelta }{2\rho ^{2}} -2\frac{\mathrm{i} a\sin \theta }{\overline{\rho }\sqrt{2}} \cdot \frac{-\mathrm{i} a\sin \theta }{\overline{\rho }\sqrt{2}} =1-\frac{2Mr}{\rho ^{2}}\\
+		g_{t\varphi } & =l_{t} n_{\varphi } +l_{\varphi } n_{t} -m_{t}\overline{m}_{\varphi } -m_{\varphi }\overline{m}_{t} =\frac{2Mra\sin^{2} \theta }{\rho ^{2}}
+	\end{aligned}
+\end{equation*}
+等。同时，我们也可以利用\ref{eq:4.2}将其写为普通的实标架$(\boldsymbol{t} ,\boldsymbol{x} ,\boldsymbol{y} ,\boldsymbol{z})$：
+\begin{equation*}
+	\begin{aligned}
+		t_{a} & =\frac{1}{2\sqrt{2}}\left(\frac{\upDelta }{\rho ^{2}} +1,-\frac{a^{2}\cos 2\theta +2Mr+r^{2}}{\upDelta } ,0,-\frac{\upDelta a\sin^{2} \theta }{\rho ^{2}} -2a\sin^{2} \theta \right)\\
+		x_{a} & =\left(\frac{a^{2}\sin \theta \cos \theta }{\rho ^{2}} ,0,-r,-\frac{a(a^{2} +r^{2} )\sin \theta \cos \theta }{\rho ^{2}}\right)\\
+		y_{a} & =\left( -\frac{ar\sin \theta }{\rho ^{2}} ,0,-a\cos \theta ,\frac{r(a^{2} +r^{2} )\sin \theta }{\rho ^{2}}\right)\\
+		z_{a} & =\frac{1}{\sqrt{2}}\left( 1-\frac{\upDelta }{2\rho ^{2}} ,-\frac{\rho ^{2}}{\upDelta } -\frac{1}{2} ,0,-\frac{a\sin^{2} \theta (a^{2}\cos 2\theta +r(2M+r))}{2\rho ^{2}}\right) .
+	\end{aligned}
+\end{equation*}
+容易验证
+\begin{equation*}
+	\begin{aligned}
+		g_{ab} & =t_{a} t_{b} -x_{a} x_{b} -y_{a} y_{b} -z_{a} z_{b}\\
+		& =\begin{pmatrix}
+			1-2Mr/\rho ^{2} & 0 & 0 & 2aMr\sin^{2} \theta /\rho ^{2}\\
+			0 & -\rho ^{2} /\upDelta  & 0 & 0\\
+			0 & 0 & -\rho ^{2} & 0\\
+			2aMr\sin^{2} \theta /\rho ^{2} & 0 & 0 & -[(r^{2} +a^{2} )+2a^{2} Mr\sin^{2} \theta /\rho ^{2} ]\sin^{2} \theta 
+		\end{pmatrix} .
+	\end{aligned}
+\end{equation*}
+除此之外，我们还可以给出英菲尔德-范德瓦尔登符号。例如如果我们选择闵氏标架$t_{\boldsymbol{a}} ,x_{\boldsymbol{a}} ,y_{\boldsymbol{a}} ,z_{\boldsymbol{a}}$作为基底，那么
+\begin{equation*}
+	\begin{aligned}
+		g{_{0}}^{AB'} & =\frac{1}{\sqrt{2}}\begin{pmatrix}
+			1 & 0\\
+			0 & 1
+		\end{pmatrix} =g{_{AB'}}^{0} , & g{_{1}}^{AB'} & =\frac{1}{\sqrt{2}}\begin{pmatrix}
+			0 & 1\\
+			1 & 0
+		\end{pmatrix} =g{_{AB'}}^{1} ,\\
+		g{_{2}}^{AB'} & =\frac{1}{\sqrt{2}}\begin{pmatrix}
+			0 & \mathrm{i}\\
+			-\mathrm{i} & 0
+		\end{pmatrix} =-g{_{AB'}}^{2} , & g{_{3}}^{AB'} & =\frac{1}{\sqrt{2}}\begin{pmatrix}
+			1 & 0\\
+			0 & -1
+		\end{pmatrix} =g{_{AB'}}^{3} .
+	\end{aligned}
+\end{equation*}
+但需要注意，这里的指标是在基底$t_{\boldsymbol{a}} ,x_{\boldsymbol{a}} ,y_{\boldsymbol{a}} ,z_{\boldsymbol{a}}$下展开的，这意味着如果我们要将其在普通的$\mathrm{d} x^{\boldsymbol{a}}$下展开，需要基变换，计算给出：
+\begin{equation*}
+	\begin{aligned}
+		g{_{0}}^{AB'} & =\frac{1}{2}\begin{pmatrix}
+			1 & -\mathrm{i}\sqrt{2} a\sin \theta /\overline{\rho }^{*}\\
+			\mathrm{i}\sqrt{2} a\sin \theta /\overline{\rho } & \upDelta /\rho ^{2}
+		\end{pmatrix} ,\\
+		g{_{1}}^{AB'} & =\frac{1}{2\upDelta }\begin{pmatrix}
+			-a^{2}\cos 2\theta +a^{2} +2r^{2} & 0\\
+			0 & \upDelta 
+		\end{pmatrix} ,\\
+		g{_{2}}^{AB'} & =-\frac{1}{\sqrt{2}}\begin{pmatrix}
+			0 & \overline{\rho }\\
+			\overline{\rho }^{*} & 0
+		\end{pmatrix} ,\\
+		g{_{3}}^{AB'} & =\begin{pmatrix}
+			-a\sin^{2} \theta  & \mathrm{i} (a^{2} +r^{2} )\sin \theta /\sqrt{2}\overline{\rho }^{*}\\
+			-\mathrm{i} (a^{2} +r^{2} )\sin \theta /\sqrt{2}\overline{\rho } & -a\upDelta \sin^{2} \theta /2\rho ^{2}
+		\end{pmatrix} .
+	\end{aligned}
+\end{equation*}
+容易验证在$\mathrm{d} x^{\boldsymbol{a}}$基下，我们仍然有
+\begin{equation*}
+	g_{ab} =\epsilon _{AB} \epsilon _{A'B'} g{_{a}}^{AA'} g{_{b}}^{BB'} .
+\end{equation*}
+根据度规计算出克氏符后，我们可以用类光标架的协变导数计算出自旋系数。例如\footnote{计算自旋系数已有现成的mathematica软件包，如\parencite{hasmani_algebraic_2011,gomez2012spinors}。}
+\begin{equation*}
+	\begin{aligned}
+		\kappa  & =m^{\boldsymbol{a}} Dl_{\boldsymbol{a}} =\mathbf{\nabla }_{\boldsymbol{b}} l_{\boldsymbol{a}} m^{\boldsymbol{a}} l^{\boldsymbol{b}} =(\partial _{b} l_{a} -\upGamma {_{ab}}^{c} l_{c} )m^{a} l^{b} =0,\\
+		\pi  & =-\mathbf{\nabla }_{\boldsymbol{b}} n_{\boldsymbol{a}}\overline{m}^{\boldsymbol{a}} m^{\boldsymbol{b}} =-(\partial _{b} n_{a} -\upGamma {_{ab}}^{c} n_{c} )\overline{m}^{a} m^{b} =\frac{\mathrm{i} a\sin \theta }{(\overline{\rho }^{*} )^{2}\sqrt{2}} ,
+	\end{aligned}
+\end{equation*}
+等等。遵循同样的方法，我们给出在\textbf{这个标架}下所有的自旋系数：
+\begin{equation*}
+	\begin{cases}
+		\kappa =\sigma =\lambda =\nu =\epsilon =0 & \\
+		\tilde{\rho } =-\frac{1}{\overline{\rho }^{*}} ;\quad \beta =\frac{\cot \theta }{\overline{\rho } 2\sqrt{2}} ;\quad \pi =\frac{\mathrm{i} a\sin \theta }{(\overline{\rho }^{*} )^{2}} & \\
+		\tau =-\frac{\mathrm{i} a\sin \theta }{\rho ^{2}\sqrt{2}} ;\quad \mu =-\frac{\upDelta }{2\rho ^{2}\overline{\rho }^{*}} ; & \\
+		\gamma =\mu +\frac{r-M}{2\rho ^{2}} ;\quad \alpha =\pi -\beta ^{*} . & 
+	\end{cases}
+\end{equation*}
+根据哥德伯-萨赫定理\ref{Goldberg-Sachs Theorem}，由于$\kappa ,\sigma ,\lambda ,\nu $都为零，因此Kerr时空是Petrov-D型，除此之外，在所选类光标架下，外尔标量$\upPsi _{0} ,\upPsi _{1} ,\upPsi _{3} ,\upPsi _{4}$都为零，只有$\upPsi _{2}$不为零。而非零外尔标量$\upPsi _{2}$的值可以定义，与黎曼张量收缩得到：
+\begin{equation*}
+	\upPsi _{2} =R_{pqrs} l^{p} m^{q} n^{r}\overline{m}^{s} =-\frac{M}{(\overline{\rho }^{*} )^{3}} .
+\end{equation*}
+
+
+现在我们回到弯曲时空中的狄拉克场或者麦克斯方程的NP形式\ref{eq:7.4}，\ref{eq:7.5}，\ref{eq:7.6}。需要注意的是，我们的思路是将物质场场作为时空背景的微扰，即不考虑$\psi ^{0} ,\psi ^{1}$（现在以狄拉克场为例）对时空背景，即标架和方程中取决于标架的导数$D\cdots $和自旋系数$\kappa \cdots $的反作用。那么\ref{eq:7.4}就变成了关于微扰$\psi ^{0} ,\psi ^{1}$的一阶微分齐次方程组。由于克尔时空有轴对称性，我们可以进一步将解取为$t,\varphi $的函数，或不同模式的组合\parencite{chandrasekhar1998mathematical}：
+\begin{equation}
+	\mathrm{e}^{\mathrm{i} (\omega t+m\varphi )} .
+	\label{eq:7.10}
+\end{equation}
+在这个条件下，并利用分离变量等一系列操作，可以得到这些一阶偏微分方程组的解。从中可以看出物质波在克尔时空中的透射系数，反射系数等物理信息\parencite{chandrasekhar1998mathematical}。
+
+
+\subsection{克尔时空中的引力波}
+
+处理引力波的方式与处理物质波的方式不同。虽然是微扰，但引力波作为时空几何本身，其必然会导致度规，标架的改变，因此不能像物质波那样不考虑对时空背景的反作用，我们需要将标架，自旋系数本身的变化也纳入解方程的过程中。然而，NP形式可以让我们避免直接面对关于度规扰动$h$的二阶偏微分方程，转为解决关于扰动量的一阶线性齐次偏微分方程组。
+
+
+
+现在我们来回顾一下，在我们所选的类光标架\ref{eq:7.9}下，以下量为零：
+\begin{equation}
+	\upPsi _{0} ,\upPsi _{1} ,\upPsi _{3} ,\upPsi _{4} ,\kappa ,\sigma ,\lambda ,\nu ,
+	\label{eq:7.11}
+\end{equation}
+这意味在受到引力扰动（如引力波入射）时，这些原来为零的量会变为一阶小量，而原先不为零的量会有增量
+\begin{equation}
+	\begin{cases}
+		\upPsi '_{2} ,\tilde{\rho } ',\tau ',\mu ',\pi ',\alpha ',\beta ',\gamma ',\epsilon ' & \\
+		\boldsymbol{l} ',\boldsymbol{n} ',\boldsymbol{m} ',\overline{\boldsymbol{m}} '. & 
+	\end{cases}
+	\label{eq:7.12}
+\end{equation}
+我们会先给出\ref{eq:7.11}的解，随后给出\ref{eq:7.12}的解。
+
+
+
+在陈述解方程的思路之前，我们先来列举已知的方程，待解的量和规范自由度。我们记基矢$\boldsymbol{l}^{i} =(\boldsymbol{l} ,\boldsymbol{n} ,\boldsymbol{m} ,\overline{\boldsymbol{m}} )$，并将对标架的扰动量展开成原先标架的函数：
+\begin{equation*}
+	\boldsymbol{l}^{i'} =A^{i}{}_{j}\boldsymbol{l}^{j} .
+\end{equation*}
+现在我们除了$\boldsymbol{A}$的矩阵元外，还需要求解$5$个外尔标量和$12$个自旋系数的扰动，共有$50$个实数量。我们现在有$20$个比安基恒等式，$18$个里奇恒等式，$12$个自旋系数的定义式，共$76$个实数方程。随后是理论的规范自由度，对于标架，我们有$6$个无限小旋转的自由度（即洛伦兹群的维数），而对于坐标，我们有四个$4$个坐标变换的自由度，共$10$个。从以上分析中可以看出，这些方程对于待解量来说是过剩的。
+
+
+
+在众多NP方程中，共有六个对\ref{eq:7.11}是线性齐次的微分方程，分别来自四个比安基恒等式和两个里奇恒等式：
+\begin{equation}
+	\begin{aligned}
+		(\delta '-4\alpha +\pi )\upPsi _{0} -(D-2\epsilon -4\tilde{\rho } )\upPsi _{1} & =3\kappa \upPsi _{2}\\
+		(D'-4\gamma +\mu )\upPsi _{0} -(\delta -4\tau -2\beta )\upPsi _{1} & =3\sigma \upPsi _{2}\\
+		(D-\tilde{\rho } -\tilde{\rho } '-3\epsilon +\epsilon ')\sigma -( \delta -\tau +\pi '-\alpha '-3\beta ) \kappa  & =\upPsi _{0}
+	\end{aligned}
+	\label{eq:7.13}
+\end{equation}
+和
+\begin{equation}
+	\begin{aligned}
+		(D+4\epsilon -\tilde{\rho } )\upPsi _{4} -( \delta '+4\pi +2\alpha ) \upPsi _{3} & =-3\lambda \upPsi _{2}\\
+		(\delta +4\beta -\tau )\upPsi _{4} -(D'+2\gamma +4\mu )\upPsi _{3} & =-3\nu \upPsi _{2}\\
+		( D'+\mu +\mu '+3\gamma -\gamma ') \lambda -( \delta '+3\alpha +\beta '+\pi -\tau ') \nu  & =-\upPsi _{4}
+	\end{aligned}
+	\label{eq:7.14}
+\end{equation}
+这里对于那些原本为零的背景量，我们用原来的字母（例如$\upPsi _{0}$）表示微扰量。注意，这里对于原本不为零的背景量，例如$\upPsi _{2}$，在方程中我们并没有使用$\upPsi _{2} +\upPsi '_{2}$，因为在这些方程中每一个原先不为零的量都要与一个一阶微扰相乘，而获得的二阶小量可以被省去，例如$\lambda (\upPsi _{2} +\upPsi '_{2} )=\lambda \upPsi _{2}$，因此方程中我们只需要这些量的未微扰值。这意味着，解方程\ref{eq:7.13}，\ref{eq:7.14}可以让我们将背景中为零的微扰完全用背景引力场相关的函数表示，同时支配$\upPsi _{0} ,\upPsi _{1} ,\kappa ,\sigma $和$\upPsi _{4} ,\upPsi _{3} ,\lambda ,\nu $两组三个方程是完全解耦的，从而两组量中的每一组的解都是独立的。
+
+
+
+由于克尔时空具有轴对称性，我们也可以假定引力扰动具有通常的$t,\varphi $的依赖性并做如\ref{eq:7.10}的模式展开。随后当我们尝试解方程组\ref{eq:7.13}和\ref{eq:7.14}时，需要先选择规范。可以证明，$\upPsi _{0}$和$\upPsi _{4}$是规范不变的，而$\upPsi _{1}$和$\upPsi _{3}$则不是，因此我们可以选择规范（即给类光标架施加一个无限小旋转）让$\upPsi _{1} ,\upPsi _{3}$为零而不影响$\upPsi _{0} ,\upPsi _{4}$。在这个规范下，我们就可以解出$\kappa ,\sigma ,\lambda ,\nu $。此处我们省略过程，直接给出\parencite{chandrasekhar1998mathematical}：
+\begin{equation*}
+	\begin{aligned}
+		\kappa  & =-\frac{\sqrt{2}}{6M} (\overline{\rho }^{*} )^{2} R_{+2}\left(\mathcal{L}_{2} -\frac{3\mathrm{i} a\sin \theta }{\overline{\rho }^{*}}\right) S_{+2} ,\\
+		\sigma  & =+\frac{1}{6M}\frac{(\overline{\rho }^{*} )^{2}}{\overline{\rho }} S_{+2} \upDelta \left(\mathcal{D}_{2}^{\dagger } -\frac{3}{\overline{\rho }^{*}}\right) R_{+2}\\
+		\lambda  & =+\frac{1}{6M}\frac{2}{\overline{\rho }^{*}} S_{-2}\left(\mathcal{D}_{0} -\frac{3}{\overline{\rho }^{*}}\right) R_{-2}\\
+		\nu  & =+\frac{\sqrt{2}}{6M}\frac{1}{\rho ^{2}} R_{-2}\left(\mathcal{L}_{2}^{\dagger } -\frac{3\mathrm{i} a\sin \theta }{\overline{\rho }^{*}}\right) S_{-2} ,
+	\end{aligned}
+\end{equation*}
+以及
+\begin{equation*}
+	\upPsi _{0} =R_{+2}( r) S_{+2}( \theta ) ,\quad \upPsi _{4} =R_{-2}( r) S_{-2}( \theta ) /(\overline{\rho }^{*} )^{4} .
+\end{equation*}
+这里我们引入了微分算符
+\begin{equation*}
+	\begin{aligned}
+		\mathcal{D}_{n} & =\partial _{r} +\frac{\mathrm{i} K}{\upDelta } +2n\frac{r-M}{\upDelta } , & \mathcal{D}_{n}^{\dagger } & =\partial _{r} -\frac{\mathrm{i} K}{\upDelta } +2n\frac{r-M}{\upDelta } ,\\
+		\mathcal{L}_{n} & =\partial _{\theta } +Q+n\cot \theta , & \mathcal{L}_{n}^{\dagger } & =\partial _{\theta } -Q+n\cot \theta ,
+	\end{aligned}
+\end{equation*}
+其中
+\begin{equation*}
+	K=(r^{2} +a^{2} )\omega +am,\quad Q=a\omega \sin \theta +m\csc \theta .
+\end{equation*}
+除此之外，$ $楚科尔斯基函数$R_{\pm 2} ,S_{\pm 2}$是算符$\mathcal{L} ,\mathcal{D}$的本征函数：
+\begin{equation*}
+	\begin{aligned}
+		\mathcal{L}_{-1}^{\dagger }\mathcal{L}_{2} S_{+2} & =-\mu ^{2} S_{+2} ,\\
+		(\upDelta \mathcal{D}_{1}\mathcal{D}_{2}^{\dagger } -6\mathrm{i} \omega r)R_{+2} & =+\mu ^{2} R_{+2} ,
+	\end{aligned}
+\end{equation*}
+以及
+\begin{equation*}
+	\begin{aligned}
+		\mathcal{L}_{-1}\mathcal{L}_{2}^{\dagger } S_{-2} & =-\mu ^{2} S_{+2} ,\\
+		(\upDelta \mathcal{D}_{-1}^{\dagger }\mathcal{D}_{0} +6\mathrm{i} \omega r)R_{-2} & =+\mu ^{2} R_{-2} ,
+	\end{aligned}
+\end{equation*}
+这里$\mu ^{2}$是用分离变量解偏微分方程时给出的分离常数。
+
+
+
+现在我们可以尝试求解标架扰动$\boldsymbol{A}$。我们已经用了$4$个规范自由度让$\upPsi _{1} =\upPsi _{3} =0$，现在我们可以再使用两个坐标自由度，使得
+\begin{equation*}
+	\upPsi '_{2} =0,
+\end{equation*}
+剩余$4$个比安基恒等式能将自旋系数$\tilde{\rho } ,\tau ,\mu ,\pi $的扰动直接用矩阵$\boldsymbol{A}$表示。忽略高阶项后的比安基恒等式为
+\begin{equation}
+	\begin{aligned}
+		D\upPsi _{2} & =3\tilde{\rho } \upPsi _{2} , & D'\upPsi _{2} & =-3\mu \upPsi _{2} ,\\
+		\delta \upPsi _{2} & =3\tau \upPsi _{2} , & \delta '\upPsi _{2} & =-3\pi \upPsi _{2} ,
+	\end{aligned}
+	\label{eq:7.15}
+\end{equation}
+标架扰动$\boldsymbol{l} '$会直接改变导数$D,\delta $，因此将\ref{eq:7.15}展开，我们可以得到$\tilde{\rho } ',\mu ',\tau ',\pi '$和$\boldsymbol{A}$的分量之间的关系。这意味着我们只需要解出$\boldsymbol{A}$即可。而解出$\boldsymbol{A}$靠的是$12$个自旋系数的定义，即标架的导数与自旋系数的关系，这些关系中还包含了剩余四个未解出的自旋系数$\alpha ,\beta ,\gamma ,\epsilon $的扰动。剩余$4$个自由度我们可以选择
+\begin{equation*}
+	A_{1}^{1} =A_{2}^{2} =A_{3}^{3} =A_{4}^{4} =0,
+\end{equation*}
+从而我们只剩下$20$个待解的实数量，而这些方程的自由度完全足够。最后再利用
+\begin{equation*}
+	\begin{aligned}
+		h^{\boldsymbol{ab}} =g^{\prime \boldsymbol{ab}} = & l^{\boldsymbol{a}} n^{\prime \boldsymbol{b}} +l^{\prime \boldsymbol{a}} n^{\boldsymbol{b}} -m^{\boldsymbol{a}}\overline{m} ^{\prime \boldsymbol{b}} -\overline{m} ^{\prime \boldsymbol{a}} m^{\boldsymbol{b}}\\
+		& +l^{\prime \boldsymbol{b}} n^{\boldsymbol{a}} +l^{\boldsymbol{b}} n^{\prime \boldsymbol{a}} -m^{\prime \boldsymbol{b}}\overline{m}^{\boldsymbol{a}} -\overline{m}^{\boldsymbol{b}} m^{\prime \boldsymbol{a}}
+	\end{aligned}
+\end{equation*}
+即可完全解出度规扰动$h^{\boldsymbol{ab}}$，从而不用再解二阶偏微分方程。这就是NP形式处理时空扰动的优越之处。解方程的具体细节可参考\parencite{chandrasekhar1998mathematical,teukolsky_perturbations_1973}等。
+
+
+
+可以看到，处理引力扰动和作为时空中的物质的方式完全不同。那么对于RS场，根据超对称理论，自旋为$3/2$的无质量粒子是引力子的超对称伴子，被称为引力微子。引力场和引力微场可以被纳入所谓的度规超场中，共同作为一个几何量被对待\parencite{weinberg2005quantum}。那么如果我们要考虑自旋为$3/2$粒子的扰动，应当用什么方式处理？这里我们\textbf{选择}的方式是，将RS场与中微子场，电磁场一样当成物质对待，施加弯曲时空中的RS场方程，并且不考虑对引力场的\textbf{反作用}。不过需要澄清的是，即使考虑RS场对于时空背景的反作用，这也不意味着要考虑超引力，只是计算会变得特别繁琐。然而，事情并没有那么简单，由于某些原因，自旋大于$1$的场在弯曲时空（即只有引力作为背景场）中会有所谓的代数限制\parencite{buchdahl_compatibility_1958}，导致如果使用这种处理微扰的方式，自洽条件会要求我们只能考虑里奇平坦时空中的RS场。
+
+
+\section{自洽条件}
+\subsection{一般自旋场的约束}
+
+我们已经给出了弯曲时空中的螺旋度为$n/2$的场$\phi _{(\boldsymbol{AB} \cdots \boldsymbol{L})}$在弯曲时空中的场方程
+\begin{equation}
+	\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} =0,
+	\label{eq:7.16}
+\end{equation}
+这里$\phi $有$n$个指标。然而，对于$n >2$的情况，弯曲时空中的情况并不那么简单，除了场方程以外还有代数限制条件，即所谓的Buchdahl 约束\parencite{buchdahl_compatibility_1958}，而即使对于$n=1$的情况，在有荷$e$时，约束依然存在。
+
+
+
+如果给无质量场方程求散度，假设$\phi _{\boldsymbol{AB} \cdots \boldsymbol{L}}$带有荷$e$：
+\begin{equation*}
+	\begin{aligned}
+		0= & \mathbf{\nabla }^{\boldsymbol{B}}{}_{\boldsymbol{A} '}\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{ABC} \cdots \boldsymbol{L}} =\mathbf{\nabla }^{(\boldsymbol{B}}{}_{\boldsymbol{A} '}\mathbf{\nabla }^{\boldsymbol{A})\boldsymbol{A} '} \phi _{\boldsymbol{ABC} \cdots \boldsymbol{L}}\\
+		= & \Box ^{\boldsymbol{AB}} \phi _{\boldsymbol{ABC} \cdots \boldsymbol{L}}\\
+		= & -\mathrm{i} e\varphi ^{\boldsymbol{AB}} \phi _{\boldsymbol{ABC} \cdots \boldsymbol{L}} -X^{\boldsymbol{ABM}}{}_{\boldsymbol{A}} \phi _{\boldsymbol{MBC} \cdots \boldsymbol{L}} -X^{\boldsymbol{ABM}}{}_{\boldsymbol{B}} \phi _{\boldsymbol{AMC} \cdots \boldsymbol{L}}\\
+		& -X^{\boldsymbol{ABM}}{}_{\boldsymbol{C}} \phi _{\boldsymbol{ABM} \cdots \boldsymbol{L}} -X^{\boldsymbol{ABM}}{}_{\boldsymbol{L}} \phi _{\boldsymbol{ABC} \cdots \boldsymbol{M}} .
+	\end{aligned}
+\end{equation*}
+由于$X^{\boldsymbol{ABCD}} = X^{(\boldsymbol{AB})(\boldsymbol{CD})}$，那么$X^{\boldsymbol{A}(\boldsymbol{BM})}{}_{\boldsymbol{A}} =0$，同时$X^{(\boldsymbol{ABM})}{}_{\boldsymbol{C}} =\upPsi ^{\boldsymbol{ABM}}{}_{\boldsymbol{C}}$，因此我们有
+\begin{equation}
+	( n-2) \phi _{\boldsymbol{ABM}(\boldsymbol{C} \cdots \boldsymbol{K}} \upPsi {_{\boldsymbol{L})}}^{\boldsymbol{ABM}} =-\mathrm{i} e\varphi ^{\boldsymbol{AB}} \phi _{\boldsymbol{ABC} \cdots \boldsymbol{L}} .
+	\label{eq:7.17}
+\end{equation}
+如果没有电磁场，那么
+\begin{equation}
+	( n-2) \phi _{\boldsymbol{ABM}(\boldsymbol{C} \cdots \boldsymbol{K}} \upPsi {_{\boldsymbol{L})}}^{\boldsymbol{ABM}} =0.
+	\label{eq:7.18}
+\end{equation}
+这意味着场方程\ref{eq:7.16}在这些限制条件不平凡的时候是不那么令人满意的。现在我们考虑几种情况：
+\begin{itemize}
+	\item $\mathcal{M} =\mathbb{M}$，并且$\varphi =0$或$e=0$，此时方程\ref{eq:7.16}是合格的，即我们有足够的自由度给波动方程\ref{eq:7.16}找到复解。
+	\item 如果$\mathcal{M}$与闵氏时空$\mathbb{M}$相差一个（局部）共形变换，同时$e\varphi _{\boldsymbol{AB}} =0$，这时\ref{eq:7.16}仍然是合格的，此时由于共形不变性，$\upPsi =0$，寻找解的操作可以被化简为在闵氏时空找解的过程。
+	\item 假设时空不是共形平坦的，同时$e\varphi _{\boldsymbol{AB}} =0$，那么外尔旋量不为零，此时我们必须考虑自洽条件\ref{eq:7.18}。当$n=1,2$没有限制，但当$n >2$，这个限制是非常强的。可以证明，在“代数一般”（algebraically general，即有不同的引力主类光方向）的真空时空中，对于$n=4$最多可以有两个线性独立的解，而一般情况下，唯一的解是$\upPsi _{\boldsymbol{ABCD}}$的正比。
+\end{itemize}
+
+
+
+事实上，对于引力，这个限制是消失的，因为如果我们取$\upPsi _{\boldsymbol{ABCD}}$，那么约束变为
+\begin{equation*}
+	\upPsi _{\boldsymbol{ABM}(\boldsymbol{C}} \upPsi {_{\boldsymbol{D})}}^{\boldsymbol{ABM}} =0,
+\end{equation*}
+这显然是一个冗余的条件。同样的，对于有质量的带荷场，代数限制条件也存在。
+
+
+
+对于一个一般的$( A,B)$表示的场，代数限制仍然存在\parencite{christensen_new_1979,barth_arbitrary_1983}。考虑一个按照$( A,B)$表示变换的对称旋量
+\begin{equation*}
+	\phi _{(\boldsymbol{A}_{1} \cdots \boldsymbol{A}_{2A})(\boldsymbol{A} '_{1} \cdots \boldsymbol{A} '_{2B})} ,
+\end{equation*}
+对于$A >B$时，我们\textbf{规定}场方程为
+\begin{equation*}
+	\mathbf{\nabla }^{\boldsymbol{A}_{1}\boldsymbol{B} '_{1}} \phi _{\boldsymbol{A}_{1} \cdots \boldsymbol{A}_{2A}\boldsymbol{A} '_{1} \cdots \boldsymbol{A} '_{2B}} =0,
+\end{equation*}
+而$A< B$时，规定场方程为
+\begin{equation*}
+	\mathbf{\nabla }^{\boldsymbol{B}_{1}\boldsymbol{A} '_{1}} \phi _{\boldsymbol{A}_{1} \cdots \boldsymbol{A}_{2A}\boldsymbol{A} '_{1} \cdots \boldsymbol{A} '_{2B}} =0.
+\end{equation*}
+现在，我们对这两个方程做相同的操作，与$\mathbf{\nabla }{_{\boldsymbol{B} '_{1}}}^{\boldsymbol{A}_{2}}$或$\mathbf{\nabla }{_{\boldsymbol{B}_{1}}}^{\boldsymbol{A} '_{2}}$缩并，同样可以得到自洽条件
+\begin{equation}
+	\begin{aligned}
+		\mathbf{\nabla }{_{\boldsymbol{B} '_{1}}}^{(\boldsymbol{A}_{2}}\mathbf{\nabla }^{\boldsymbol{A}_{1})\boldsymbol{B} '_{1}} \phi _{\boldsymbol{A}_{1} \cdots \boldsymbol{A}_{2A}\boldsymbol{A} '_{1} \cdots \boldsymbol{A} '_{2B}} & =0,\\
+		\mathbf{\nabla }{_{\boldsymbol{B}_{1}}}^{(\boldsymbol{A} '_{2}}\mathbf{\nabla }^{\boldsymbol{A'_{1}})\boldsymbol{B}_{1}} \phi _{\boldsymbol{A}_{1} \cdots \boldsymbol{A}_{2A}\boldsymbol{A} '_{1} \cdots \boldsymbol{A} '_{2B}} & =0.
+	\end{aligned}
+	\label{eq:7.19}
+\end{equation}
+在此之外，我们已经给出了黎曼张量在不可约表示下的分解
+\begin{equation*}
+	R_{\boldsymbol{abcd}} =\prescript{( -)}{}{} C_{\boldsymbol{abcd}} +\prescript{( +)}{}{} C_{\boldsymbol{abcd}} +E_{\boldsymbol{abcd}} +2\upLambda g_{\boldsymbol{abcd}} ,
+\end{equation*}
+我们不加证明地给出自洽条件\ref{eq:7.19}的一个充分条件\parencite{christensen_new_1979}：
+\begin{equation}
+	\phi _{\boldsymbol{A}_{1} \cdots \boldsymbol{A}_{2A}\boldsymbol{A} '_{1} \cdots \boldsymbol{A} '_{2B}} =0
+	\label{eq:7.20}
+\end{equation}
+\textbf{除非}
+\begin{equation}
+	A\left( A-\frac{1}{2}\right)( A-1)\prescript{( +)}{}{} C=B\left( B-\frac{1}{2}\right)( B-1)\prescript{( -)}{}{} C=0
+	\label{eq:7.21}
+\end{equation}
+\textbf{且}
+\begin{equation}
+	AB\left( B-\frac{1}{2}\right) E=BA\left( A-\frac{1}{2}\right) E=0.
+	\label{eq:7.22}
+\end{equation}
+这个条件意味着如果我们要给出弯曲时空中场的非零解，这会对时空本身给出较强的限制。现在我们按照这些条件将时空分为五种
+\begin{enumerate}
+	\item[(I)] 一般时空：$\prescript{( +)}{}{} C\neq 0,\prescript{( -)}{}{} C\neq 0,E\neq 0$
+	\item[(II)] 爱因斯坦时空：$\prescript{( +)}{}{} C\neq 0,\prescript{( -)}{}{} C\neq 0,E=0$
+	
+	\item[(IIIa)] 外尔自对偶时空：$\prescript{( +)}{}{} C\neq 0,\prescript{( -)}{}{} C=0,E\neq 0$
+	
+	\item[(IIIb)]外尔反自对偶时空：$\prescript{( +)}{}{} C=0,\prescript{( -)}{}{} C\neq 0,E\neq 0$
+	
+	\item[(IVa)] 外尔自对偶爱因斯坦时空：$\prescript{( +)}{}{} C\neq 0,\prescript{( -)}{}{} C=0,E=0$
+	
+	\item[(IVb)]外尔反自对偶爱因斯坦时空：$\prescript{( +)}{}{} C=0,\prescript{( -)}{}{} C\neq 0,E=0$
+	\item[(V)] 常曲率时空：$\prescript{( +)}{}{} C=0,\prescript{( -)}{}{} C=0,E=0$
+\end{enumerate}
+
+现在，对于一个一般的$( A,B)$表示的场，满足自洽条件\ref{eq:7.5}、\ref{eq:7.6}、\ref{eq:7.7}的时空如表\ref{tab:classification of AB spacetime}所示。
+
+\begin{table}[h]
+	\centering
+	\begin{tabularx}{\textwidth}{K|KKKKKK}
+		\toprule 
+		$B\backslash A$ & $0$ & $1/2$ & $1$ & $3/2$ & $2$ & $5/2$ \\
+		\midrule 
+		$0$ & I & I & I & IIIb & IIIb & IIIb \\
+		$1/2$ & I & I & II & IVb & IVb & IVb \\
+		$1$ & I & II & II & IVb & IVb & IVb \\
+		$3/2$ & IIIa & IVa & IVa & V & V & V \\
+		$2$ & IIIa & IVa & IVa & V & V & V \\
+		$5/2$ & IIIa & IVa & IVa & V & V & V \\
+		\bottomrule
+	\end{tabularx}
+	\caption{满足$( A,B)$表示场的自洽条件的时空分类}
+	\label{tab:classification of AB spacetime}
+\end{table}
+
+实际上，对于物理的理论，大部分都满足$A\leq 1,B\leq 1$。对于$( 3/2,0) \oplus ( 0,3/2)$表示的场，这也印证了\ref{eq:7.17}，即在里奇平坦时空中是无约束的。而对于$( 1,1/2) \oplus ( 1/2,1)$的场，它只能存在于爱因斯坦时空，即$E=0$的时空中。实际上，如果要求这个场有规范不变性，那么我们会给出更强的约束，即$R_{\mu \nu } =0$。对于引力场的$( 2,0)$部分，即外尔张量$\prescript{( +)}{}{} C$只能存在于$\prescript{( +)}{}{} C$为零的时空中，即没有背景带来的约束，对于$\prescript{( -)}{}{} C$同样如此。
+
+
+
+然而需要注意，条件\ref{eq:7.20}、\ref{eq:7.21}、\ref{eq:7.22}对于\ref{eq:7.19}来说只是充分条件，并不一定是必要条件。对于某些高对称性的时空，例如Petrov-N型时空，这个条件就不是必要条件\footnote{这出现在\parencite{christensen_new_1979}的一个脚注中，但是没有更多的说明或引用。}。除此之外，在自洽的超引力理论中，如果我们加上挠率，并且要求背景场同时包括自旋为$2$的场和自旋为$3/2$的场，满足二者耦合的超引力方程，那么这些限制条件都会消失\parencite{christensen_new_1979,barth_arbitrary_1983,deser_consistent_1976,freedman_progress_1976,giiven_black_nodate}。
+
+其他给出一般弯曲时空中无质量任意自旋场方程的尝试可见\parencite{noauthor_relativistic_1936,dowker_particles_1966,noauthor_relativistic_1939,illge_massless_1992,fang_massless_1978,bengtsson_massless_1986,christensen_new_1979,robinson_differential_1995,barth_arbitrary_1983,frauendiener_class_1999}。给出有质量任意自旋场方程的尝试可见\parencite{illge_massive_1993}。
+
+\subsection{自旋$3/2$无质量场的约束}
+
+在某些情况下，自洽的高自旋场方程是可以被给出的，但这些高自旋场不能被简单的，满足场方程\ref{eq:6.35}的旋量来描述。例如，我们已经看到了如何在背景时空$\mathcal{M}$中构造自旋为$2$的场，并满足爱因斯坦场方程：通过考虑度规的微扰，这个微扰满足真空场方程。这意味着，取代量$\phi _{\boldsymbol{ABCD}}$，我们应该通过$h_{\boldsymbol{ab}} \in \mathfrak{T}_{(\boldsymbol{ab} )}$来描述场，并用$h_{\boldsymbol{ab}}$的方程\ref{eq:7.1}来作为场方程，而两个通过变换$h_{\boldsymbol{ab}} \mapsto h_{\boldsymbol{ab}} -2\mathbf{\nabla }_{(\boldsymbol{a}} \xi _{\boldsymbol{b} )}$联系的$h_{\boldsymbol{ab}}$被视为等价的，那么我们可以通过\ref{eq:6.45}来\textbf{定义}$\phi _{\boldsymbol{ABCD}}$。
+
+
+
+在自旋为$3/2$场的情况下，取代原本的$( 3/2,0) \oplus ( 0,3/2)$表示$\phi _{(\boldsymbol{ABC})}$，我们考虑$3/2$场的“势”：
+\begin{equation*}
+	\chi _{\boldsymbol{ABC} '} \in \mathfrak{S}_{(\boldsymbol{AB} )\boldsymbol{C} '} ,
+\end{equation*}
+它与原先的场量$\phi _{(\boldsymbol{ABC})}$的关系为
+\begin{equation}
+	\phi _{\boldsymbol{ABC}} =\mathbf{\nabla }^{\boldsymbol{C} '}{}_{\boldsymbol{A}} \chi _{\boldsymbol{BCC} '} .
+	\label{eq:7.23}
+\end{equation}
+同时，对于$( 0,3/2)$表示的场$\phi _{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{C} '}$我们也引入对应的$( 1/2,1)$表示的势
+\begin{equation*}
+	\phi _{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{C} '} =\mathbf{\nabla }^{\boldsymbol{C}}{}_{\boldsymbol{A} '} \gamma _{\boldsymbol{B} '\boldsymbol{C} '\boldsymbol{C}} .
+\end{equation*}
+此时，原先对于$\phi _{\boldsymbol{ABC}}$的场方程
+\begin{equation}
+	\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{ABC}} =0
+	\label{eq:7.24}
+\end{equation}
+就变为了
+\begin{equation}
+	\mathbf{\nabla }^{\boldsymbol{AA} '} \chi _{\boldsymbol{ABC} '} =0.
+	\label{eq:7.25}
+\end{equation}
+但是需要注意，与$h_{\boldsymbol{ab}}$相似，$\chi _{\boldsymbol{ABC} '}$并不是唯一的。在平直时空中有所谓的“平凡解”，即那些没有能量和角动量的解，这样的解满足\parencite{fierz1939relativistic,frauendiener_spin32_1995}
+\begin{equation*}
+	\chi ^{\boldsymbol{ABB} '} =\mathbf{\nabla }^{\boldsymbol{B} '(\boldsymbol{B}} \nu ^{\boldsymbol{A})} ,
+\end{equation*}
+其中$\nu ^{\boldsymbol{A}}$属于洛伦兹群的$( 1/2,0)$表示，即满足狄拉克场方程
+\begin{equation*}
+	\mathbf{\nabla }^{\boldsymbol{AA} '} \nu _{\boldsymbol{A}} =0.
+\end{equation*}
+在弯曲时空中，我们称两个由变换$\chi ^{\boldsymbol{ABC} '} \mapsto \chi ^{\boldsymbol{ABC} '} +\mathbf{\nabla }^{\boldsymbol{C} '(\boldsymbol{B}} \nu ^{\boldsymbol{A})}$联系的解为等价的解。这个规范变换就是超引力理论中的引力微子部分的规范变换。随后我们会证明，如果同时要求理论满足自洽条件并且是规范不变的，那么背景时空一定是里奇平坦的。
+
+
+
+以$( 1/2,1)$表示$\gamma ^{\boldsymbol{C}}{}_{\boldsymbol{A} '\boldsymbol{B} '}$的场方程
+\begin{equation}
+	\mathbf{\nabla }^{\boldsymbol{AA} '} \gamma ^{\boldsymbol{C}}{}_{\boldsymbol{A} '\boldsymbol{B} '} =0,
+	\label{eq:7.26}
+\end{equation}
+为例，与$\mathbf{\nabla }^{\boldsymbol{B} '}{}_{\boldsymbol{A}}$缩并，我们有
+\begin{equation}
+	0=\mathbf{\nabla }_{\boldsymbol{B} '\boldsymbol{A}}\mathbf{\nabla }^{\boldsymbol{A}}{}_{\boldsymbol{A} '} \gamma ^{\boldsymbol{CA} '\boldsymbol{B} '} .
+	\label{eq:7.27}
+\end{equation}
+利用分解
+\begin{equation*}
+	\mathbf{\nabla }_{\boldsymbol{A} '\boldsymbol{A}}\mathbf{\nabla }^{\boldsymbol{A}}{}_{\boldsymbol{B} '} =\frac{1}{2} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '} \Box +\Box _{\boldsymbol{A} '\boldsymbol{B} '} ,
+\end{equation*}
+\ref{eq:7.27}变为
+\begin{equation*}
+	0=\Box _{\boldsymbol{B} '\boldsymbol{A} '} \gamma ^{\boldsymbol{CA} '\boldsymbol{B} '} .
+\end{equation*}
+根据里奇恒等式：
+\begin{equation*}
+	\begin{aligned}
+		\Box _{\boldsymbol{AB}} \gamma ^{\boldsymbol{C}}{}_{\boldsymbol{E} '\boldsymbol{F} '} & =X{_{\boldsymbol{ABD}}}^{\boldsymbol{C}} \gamma ^{\boldsymbol{D}}{}_{\boldsymbol{E'F} '} -\upPhi {_{\boldsymbol{ABE} '}}^{\boldsymbol{D} '} \gamma ^{\boldsymbol{C}}{}_{\boldsymbol{D} '\boldsymbol{F} '} -\upPhi {_{\boldsymbol{ABF} '}}^{\boldsymbol{D} '} \gamma ^{\boldsymbol{C}}{}_{\boldsymbol{E'D} '}\\
+		\Box _{\boldsymbol{A} '\boldsymbol{B} '} \gamma ^{\boldsymbol{C}}{}_{\boldsymbol{E} '\boldsymbol{F} '} & =-\overline{X}{_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{E} '}}^{\boldsymbol{D} '} \gamma ^{\boldsymbol{C}}{}_{\boldsymbol{D} '\boldsymbol{F} '} -\overline{X}{_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{F} '}}^{\boldsymbol{D} '} \gamma ^{\boldsymbol{C}}{}_{\boldsymbol{E} '\boldsymbol{D} '} +\upPhi {_{\boldsymbol{A'B'D}}}^{\boldsymbol{C}} \gamma ^{\boldsymbol{D}}{}_{\boldsymbol{E'F} '}
+	\end{aligned}
+\end{equation*}
+我们给出：
+\begin{equation*}
+	0=-\overline{X}{_{\boldsymbol{B} '\boldsymbol{A} '}}^{\boldsymbol{A'D} '} \gamma ^{\boldsymbol{C}}{}{_{\boldsymbol{D} '}}^{\boldsymbol{B} '} -\overline{X}{_{\boldsymbol{B} '\boldsymbol{A} '}}^{\boldsymbol{B'D} '} \gamma ^{\boldsymbol{CA} '}{}_{\boldsymbol{D} '} +\upPhi {_{\boldsymbol{B'A'D}}}^{\boldsymbol{C}} \gamma ^{\boldsymbol{DA} '\boldsymbol{B} '} .
+\end{equation*}
+现在利用曲率旋量的分解：
+\begin{equation*}
+	X_{\boldsymbol{ABCD}} =\upPsi _{\boldsymbol{ABCD}} +\upLambda (\epsilon _{\boldsymbol{AC}} \epsilon _{\boldsymbol{BD}} +\epsilon _{\boldsymbol{AD}} \epsilon _{\boldsymbol{BC}} ),
+\end{equation*}
+缩并给出
+\begin{equation*}
+	\begin{aligned}
+		\overline{X}{_{\boldsymbol{B} '\boldsymbol{A} '}}^{\boldsymbol{A'D} '} & =\overline{\upPsi }{_{\boldsymbol{B} '\boldsymbol{A} '}}^{\boldsymbol{A'D} '} +\upLambda (\epsilon {_{\boldsymbol{B} '}}^{\boldsymbol{A} '} \epsilon {_{\boldsymbol{A} '}}^{\boldsymbol{D} '} +\epsilon {_{\boldsymbol{B} '}}^{\boldsymbol{D} '} \epsilon {_{\boldsymbol{A} '}}^{\boldsymbol{A} '} )=3\upLambda \epsilon {_{\boldsymbol{B} '}}^{\boldsymbol{D} '} ,\\
+		\overline{X}{_{\boldsymbol{B} '\boldsymbol{A} '}}^{\boldsymbol{B'D} '} & =\overline{\upPsi }{_{\boldsymbol{B} '\boldsymbol{A} '}}^{\boldsymbol{B'D} '} +\upLambda (\epsilon {_{\boldsymbol{B} '}}^{\boldsymbol{B} '} \epsilon {_{\boldsymbol{A} '}}^{\boldsymbol{D} '} +\epsilon {_{\boldsymbol{B} '}}^{\boldsymbol{D} '} \epsilon {_{\boldsymbol{A} '}}^{\boldsymbol{B} '} )=3\upLambda \epsilon {_{\boldsymbol{A} '}}^{\boldsymbol{D} '} ,
+	\end{aligned}
+\end{equation*}
+因此
+\begin{equation*}
+	0=-3\upLambda \epsilon {_{\boldsymbol{B} '}}^{\boldsymbol{D} '} \gamma ^{\boldsymbol{C}}{}{_{\boldsymbol{D} '}}^{\boldsymbol{B} '} -3\upLambda \epsilon {_{\boldsymbol{A} '}}^{\boldsymbol{D} '} \gamma ^{\boldsymbol{CA} '}{}_{\boldsymbol{D} '} +\upPhi {_{\boldsymbol{B'A'D}}}^{\boldsymbol{C}} \gamma ^{\boldsymbol{DA} '\boldsymbol{B} '} =\upPhi {_{\boldsymbol{B'A'D}}}^{\boldsymbol{C}} \gamma ^{\boldsymbol{DA} '\boldsymbol{B} '} .
+\end{equation*}
+最后一个等式中，我们利用了性质$\gamma ^{\boldsymbol{CA} '\boldsymbol{B} '} =\gamma ^{\boldsymbol{C}(\boldsymbol{A} '\boldsymbol{B} ')}$。当然，这个条件并不意味着对于处处不为零的场$\gamma ^{\boldsymbol{DA} '\boldsymbol{B} '}$，$\upPhi $处处都为零，只需要$\gamma $的主类光方向$\gamma _{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{C}} =\alpha _{(\boldsymbol{A} '} \beta _{\boldsymbol{B} ')} \delta _{\boldsymbol{C}}$与$\upPhi {_{\boldsymbol{B'A'D}}}^{\boldsymbol{C}}$的主类光方向在缩并的部分上垂直即可。
+
+
+
+现在我们来考察规范自由度。场$\gamma ^{\boldsymbol{C}}{}_{\boldsymbol{A} '\boldsymbol{B} '}$的规范变换为
+\begin{equation}
+	\gamma ^{\boldsymbol{C}}{}_{\boldsymbol{A} '\boldsymbol{B} '}\rightarrow \gamma ^{\boldsymbol{C}}{}_{\boldsymbol{A} '\boldsymbol{B} '} +\mathbf{\nabla }^{\boldsymbol{C}}{}_{\boldsymbol{B} '} \nu _{\boldsymbol{A} '} ,
+	\label{eq:7.28}
+\end{equation}
+如果要求$\nu $是一个纯规范，即场方程在规范变换下不变，我们要求
+\begin{equation*}
+	\begin{aligned}
+		0\stackrel{!}{=}\mathbf{\nabla }^{\boldsymbol{AA} '}\mathbf{\nabla }^{\boldsymbol{C}}{}_{\boldsymbol{B} '} \nu _{\boldsymbol{A} '} & =\epsilon ^{\boldsymbol{AC}} \Box ^{\boldsymbol{A} '}{}_{\boldsymbol{B} '} \nu _{\boldsymbol{A} '} +\epsilon ^{\boldsymbol{A} '}{}_{\boldsymbol{B} '} \Box ^{\boldsymbol{AC}} \nu _{\boldsymbol{A} '}\\
+		& =\epsilon ^{\boldsymbol{AC}}\overline{X}^{\boldsymbol{A} '}{}{_{\boldsymbol{B} '}}^{\boldsymbol{D} '}{}_{\boldsymbol{A} '} \nu _{\boldsymbol{D} '} +\epsilon ^{\boldsymbol{A} '}{}_{\boldsymbol{B} '} \upPhi ^{\boldsymbol{ACD} '}{}_{\boldsymbol{A} '} \nu _{\boldsymbol{D} '}\\
+		& =-3\upLambda \epsilon ^{\boldsymbol{AC}} \epsilon {_{\boldsymbol{B} '}}^{\boldsymbol{D} '} \nu _{\boldsymbol{D} '} -\upPhi ^{\boldsymbol{ACD} '}{}_{\boldsymbol{B} '} \nu _{\boldsymbol{D} '} .
+	\end{aligned}
+\end{equation*}
+这意味着对于任何$\nu _{\boldsymbol{D} '}$，我们都有
+\begin{equation*}
+	3\upLambda \epsilon ^{\boldsymbol{AC}} \epsilon ^{\boldsymbol{D} '}{}_{\boldsymbol{B} '} =\upPhi ^{\boldsymbol{ACD} '}{}_{\boldsymbol{B} '} ,
+\end{equation*}
+但
+\begin{equation*}
+	\upPhi _{\boldsymbol{ABC} '\boldsymbol{D} '} =\upPhi _{(\boldsymbol{AB})(\boldsymbol{C} '\boldsymbol{D} ')} ,
+\end{equation*}
+因此我们必须有
+\begin{equation*}
+	\upLambda =0=\upPhi ^{\boldsymbol{ACD} '}{}_{\boldsymbol{B} '} ,
+\end{equation*}
+这意味着要求规范不变性的条件下，整个时空必须是里奇平坦，即$R_{\boldsymbol{ab}} =0$的。
+
+
+
+事实上，如果我们对时空做$3+1$分解，即引入一个类时向量$t^{\boldsymbol{a}}$，并沿着$t^{\boldsymbol{a}}$的方向将时空分解成一系列类空超曲面族，并考察$\gamma ,\chi $场在超曲面上的演化，那么我们可以证明更强的结论，即\parencite{frauendiener_spin32_1995}
+\begin{them}[label={SC condition of RS equation}]{自旋$3/2$体系的自洽条件}
+	如果$( M,g)$是一个爱因斯坦时空，即满足
+	\begin{equation*}
+		\upPhi _{\boldsymbol{ABC} '\boldsymbol{D} '} =0,
+	\end{equation*}
+	同时有旋量结构，那么自旋$3/2$的方程
+	\begin{equation*}
+		\mathbf{\nabla }^{\boldsymbol{AA} '} \chi _{\boldsymbol{ABC} '} =0
+	\end{equation*}
+	是一个良定义的柯西问题。
+\end{them}
+
+当然，如果我们再要求规范不变性，那么
+\begin{them}[label={SC condition of gauge invariant RS equation}]{规范不变的自旋$3/2$体系的自洽条件}
+	在一个洛伦兹流形上，如果我们同时要求场方程\ref{eq:7.26}，并且这个方程在规范变换\ref{eq:7.28}下不变，那么\textbf{当且仅当}这个流形是里奇平坦的，即$R_{\boldsymbol{ab}} =0$，那么这个方程才是一个\textbf{良定义}的\textbf{初值问题}。
+\end{them}
+
+对定理\ref{SC condition of gauge invariant RS equation}的其他证明（例如使用微分形式和jet bundle）可见\parencite{robinson_differential_1995}。
+
+然而，仍需澄清的是，之所以有这样的约束是因为我们没有考虑自旋$3/2$场对背景引力场的反作用\parencite{buchdahl_compatibility_1958,christensen_new_1979}。在自洽的超引力理论中，如果将引力场与引力微子场（即无质量RS场）共同作为时空背景，同时引入挠率，这些自洽性问题都会消失。当然，考虑RS场对背景引力场的反作用并不意味着一定要引入一个度规超场统一引力子与引力微子，只是在计算上会更加繁琐。
+
+
+\section{里奇平坦时空中的RS场}
+
+在给出了上述结论后，我们可以考虑继续之前的范式，用NP形式处理作为里奇平坦时空的RS场扰动。我们先尝试将一般时空中的RS场方程化为NP形式。
+
+
+
+在将RS场方程化为NP形式之前，我们先尝试给出不受约束的场方程的形式。如果我们对\ref{eq:7.23}两边作用$\mathbf{\nabla }^{\boldsymbol{AR} '}$：
+\begin{equation}
+	\mathbf{\nabla }^{\boldsymbol{AR} '} \phi _{\boldsymbol{ABC}} =-\mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '}\mathbf{\nabla }{_{(\boldsymbol{B}}}^{\boldsymbol{D} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '} .
+	\label{eq:7.29}
+\end{equation}
+利用导数算符对易子的分解：
+\begin{gather*}
+	\mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '}\mathbf{\nabla }{_{\boldsymbol{B}}}^{\boldsymbol{D} '} -\mathbf{\nabla }{_{\boldsymbol{B}}}^{\boldsymbol{D} '}\mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '} =\epsilon ^{\boldsymbol{R} '\boldsymbol{D} '} \Box _{\boldsymbol{AB}} +\epsilon _{\boldsymbol{AB}} \Box ^{\boldsymbol{R} '\boldsymbol{D} '} ,\\
+	\mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '}\mathbf{\nabla }{_{\boldsymbol{C}}}^{\boldsymbol{D} '} -\mathbf{\nabla }{_{\boldsymbol{C}}}^{\boldsymbol{D} '}\mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '} =\epsilon ^{\boldsymbol{R} '\boldsymbol{D} '} \Box _{\boldsymbol{AC}} +\epsilon _{\boldsymbol{AC}} \Box ^{\boldsymbol{R} '\boldsymbol{D} '} ,
+\end{gather*}
+故
+\begin{equation*}
+	\begin{aligned}
+		& \mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '}\mathbf{\nabla }{_{(\boldsymbol{B}}}^{\boldsymbol{D} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '}\\
+		= & \frac{1}{2} (\mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '}\mathbf{\nabla }{_{\boldsymbol{B}}}^{\boldsymbol{D} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{CD} '} +\mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '}\mathbf{\nabla }{_{\boldsymbol{C}}}^{\boldsymbol{D} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{BD} '} )\\
+		= & \frac{1}{2}( \epsilon ^{\boldsymbol{R} '\boldsymbol{D} '} \Box _{\boldsymbol{AB}} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{CD} '} +\epsilon _{\boldsymbol{AB}} \Box ^{\boldsymbol{R} '\boldsymbol{D} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{CD} '} +\mathbf{\nabla }{_{\boldsymbol{B}}}^{\boldsymbol{D} '}\mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{CD} '}\\
+		& +\epsilon ^{\boldsymbol{R} '\boldsymbol{D} '} \Box _{\boldsymbol{AC}} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{BD} '} +\epsilon _{\boldsymbol{AC}} \Box ^{\boldsymbol{R} '\boldsymbol{D} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{BD} '} +\mathbf{\nabla }{_{\boldsymbol{C}}}^{\boldsymbol{D} '}\mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{BD} '})\\
+		= & \epsilon ^{\boldsymbol{R} '\boldsymbol{D} '} \Box _{\boldsymbol{A}(\boldsymbol{B}} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '} +\epsilon _{\boldsymbol{A}(\boldsymbol{B}} \Box ^{\boldsymbol{R} '\boldsymbol{D} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '} +\mathbf{\nabla }{_{(\boldsymbol{B}}}^{\boldsymbol{D} '}\mathbf{\nabla }{_{|\boldsymbol{A} |}}^{\boldsymbol{R} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '}
+	\end{aligned}
+\end{equation*}
+利用里奇恒等式：
+\begin{equation*}
+	\begin{aligned}
+		\Box _{\boldsymbol{AB}} \chi ^{\boldsymbol{C}}{}_{\boldsymbol{DF} '} & =X{_{\boldsymbol{ABQ}}}^{\boldsymbol{C}} \chi ^{\boldsymbol{Q}}{}_{\boldsymbol{DF} '} -X{_{\boldsymbol{ABD}}}^{\boldsymbol{Q}} \chi ^{\boldsymbol{C}}{}_{\boldsymbol{QF} '} -\upPhi {_{\boldsymbol{ABF} '}}^{\boldsymbol{Q} '} \chi ^{\boldsymbol{C}}{}_{\boldsymbol{DQ} '}\\
+		\Box _{\boldsymbol{A'B} '} \chi ^{\boldsymbol{C}}{}_{\boldsymbol{DF} '} & =-\overline{X}{_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{F} '}}^{\boldsymbol{Q} '} \chi ^{\boldsymbol{C}}{}_{\boldsymbol{DQ} '} +\upPhi {_{\boldsymbol{A'B'Q}}}^{\boldsymbol{C}} \chi ^{\boldsymbol{Q}}{}_{\boldsymbol{DF} '} -\upPhi {_{\boldsymbol{A'B'D}}}^{\boldsymbol{Q}} \chi ^{\boldsymbol{C}}{}_{\boldsymbol{QF} '} ,
+	\end{aligned}
+\end{equation*}
+缩并后给出
+\begin{equation*}
+	\begin{aligned}
+		\Box _{\boldsymbol{A}(\boldsymbol{B}} \chi ^{\boldsymbol{A}}{}{_{\boldsymbol{C})}}^{\boldsymbol{R} '} & =X{_{\boldsymbol{A}(\boldsymbol{B}| \boldsymbol{Q}| }}^{\boldsymbol{A}} \chi ^{\boldsymbol{Q}}{}{_{\boldsymbol{C})}}^{\boldsymbol{R} '} -X{_{\boldsymbol{A}(\boldsymbol{BC})}}^{\boldsymbol{Q}} \chi ^{\boldsymbol{A}}{}{_{\boldsymbol{Q}}}^{\boldsymbol{R} '} -\upPhi {_{\boldsymbol{A}(\boldsymbol{B}}}^{\boldsymbol{R}\mathbf{'}\boldsymbol{Q} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{Q} '}\\
+		\Box ^{\boldsymbol{R} '\boldsymbol{D} '} \chi _{(\boldsymbol{BC})\boldsymbol{D} '} & =\overline{X}^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{D} '\boldsymbol{Q} '} \chi {_{(\boldsymbol{BC})}}^{\boldsymbol{Q} '} +\upPhi ^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{Q}(\boldsymbol{B}} \chi ^{\boldsymbol{Q}}{}_{\boldsymbol{C})\boldsymbol{D} '} +\upPhi ^{\boldsymbol{R} '\boldsymbol{D} '}{}_{(\boldsymbol{C}| \boldsymbol{Q}| } \chi {_{\boldsymbol{B})}}^{\boldsymbol{Q}}{}_{\boldsymbol{D} '}
+	\end{aligned}
+\end{equation*}
+现在利用曲率旋量$X$的分解，将缩并化简 ：
+\begin{equation*}
+	\begin{aligned}
+		X{_{\boldsymbol{ABQ}}}^{\boldsymbol{A}} & =\upPsi {_{\boldsymbol{ABQ}}}^{\boldsymbol{A}} +\upLambda (\epsilon _{\boldsymbol{AQ}} \epsilon {_{\boldsymbol{B}}}^{\boldsymbol{A}} +\epsilon {_{\boldsymbol{A}}}^{\boldsymbol{A}} \epsilon _{\boldsymbol{BQ}} )=3\upLambda \epsilon _{\boldsymbol{BQ}} ,\\
+		X{_{\boldsymbol{A}(\boldsymbol{BC})}}^{\boldsymbol{Q}} & =\upPsi {_{\boldsymbol{ABC}}}^{\boldsymbol{Q}} +\upLambda (\epsilon _{\boldsymbol{A}(\boldsymbol{C}} \epsilon {_{\boldsymbol{B})}}^{\boldsymbol{Q}} +\epsilon _{\boldsymbol{AD}} \epsilon _{(\boldsymbol{BC})}) =\upPsi {_{\boldsymbol{ABC}}}^{\boldsymbol{Q}} +\upLambda \epsilon _{\boldsymbol{A}(\boldsymbol{C}} \epsilon {_{\boldsymbol{B})}}^{\boldsymbol{Q}} ,\\
+		\overline{X}^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{D} '\boldsymbol{Q} '} & =\overline{\upPsi }^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{D} '\boldsymbol{Q} '} +\upLambda (\epsilon ^{\boldsymbol{R} '}{}_{\boldsymbol{D} '} \epsilon ^{\boldsymbol{D} '}{}_{\boldsymbol{Q} '} +\epsilon ^{\boldsymbol{R} '}{}_{\boldsymbol{Q} '} \epsilon ^{\boldsymbol{D} '}{}_{\boldsymbol{D} '} )=-3\upLambda \epsilon ^{\boldsymbol{R} '}{}_{\boldsymbol{Q} '} .
+	\end{aligned}
+\end{equation*}
+故
+\begin{equation*}
+	\begin{aligned}
+		& \Box _{\boldsymbol{A}(\boldsymbol{B}} \chi ^{\boldsymbol{A}}{}{_{\boldsymbol{C})}}^{\boldsymbol{R} '}\\
+		= & 3\upLambda \epsilon _{(\boldsymbol{B}| \boldsymbol{Q}| } \chi ^{\boldsymbol{Q}}{}{_{\boldsymbol{C})}}^{\boldsymbol{R} '} -(\upPsi {_{\boldsymbol{ABC}}}^{\boldsymbol{Q}} +\upLambda \epsilon _{\boldsymbol{A}(\boldsymbol{C}} \epsilon {_{\boldsymbol{B})}}^{\boldsymbol{Q}} )\chi ^{\boldsymbol{A}}{}{_{\boldsymbol{Q}}}^{\boldsymbol{R} '} -\upPhi {_{\boldsymbol{A}(\boldsymbol{B}}}^{\boldsymbol{R}\mathbf{'}\boldsymbol{Q} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{Q} '}\\
+		= & -3\upLambda \chi {_{(\boldsymbol{BC})}}^{\boldsymbol{R} '} -\upPsi {_{\boldsymbol{ABC}}}^{\boldsymbol{Q}} \chi ^{\boldsymbol{A}}{}{_{\boldsymbol{Q}}}^{\boldsymbol{R} '} -\upLambda \chi {_{(\boldsymbol{BC})}}^{\boldsymbol{R} '} -\upPhi {_{\boldsymbol{A}(\boldsymbol{B}}}^{\boldsymbol{R}\mathbf{'}\boldsymbol{Q} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{Q} '}\\
+		= & \upPsi _{\boldsymbol{ABCQ}} \chi ^{\boldsymbol{AQR} '} -4\upLambda \chi {_{(\boldsymbol{BC})}}^{\boldsymbol{R} '} -\upPhi {_{\boldsymbol{A}(\boldsymbol{B}}}^{\boldsymbol{R}\mathbf{'}\boldsymbol{Q} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{Q} '} .
+	\end{aligned}
+\end{equation*}
+同样的：
+\begin{equation*}
+	\begin{aligned}
+		\Box ^{\boldsymbol{R} '\boldsymbol{D} '} \chi _{(\boldsymbol{BC})\boldsymbol{D} '} & =3\upLambda \chi {_{(\boldsymbol{BC})}}^{\boldsymbol{R} '} +\upPhi ^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{Q}(\boldsymbol{B}} \chi ^{\boldsymbol{Q}}{}_{\boldsymbol{C})\boldsymbol{D} '} +\upPhi ^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{Q}(\boldsymbol{C}} \chi {_{\boldsymbol{B})}}^{\boldsymbol{Q}}{}_{\boldsymbol{D} '}
+	\end{aligned}
+\end{equation*}
+因此我们有
+\begin{equation*}
+	\begin{aligned}
+		& \mathbf{\nabla }{_{\boldsymbol{A}}}^{\boldsymbol{R} '}\mathbf{\nabla }{_{(\boldsymbol{B}}}^{\boldsymbol{D} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '}\\
+		= & \Box _{\boldsymbol{A}(\boldsymbol{B}} \chi ^{\boldsymbol{A}}{}{_{\boldsymbol{C})}}^{\boldsymbol{R} '} +\Box ^{\boldsymbol{R} '\boldsymbol{D} '} \chi _{(\boldsymbol{BC})\boldsymbol{D} '} +\mathbf{\nabla }{_{(\boldsymbol{B}}}^{\boldsymbol{D} '}\mathbf{\nabla }{_{|\boldsymbol{A} |}}^{\boldsymbol{R} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '}\\
+		= & \upPsi _{\boldsymbol{ABCQ}} \chi ^{\boldsymbol{AQR} '}\textcolor{mulan}{-4\upLambda \chi }\textcolor{mulan}{{_{(\boldsymbol{BC})}}}\textcolor{mulan}{^{\boldsymbol{R} '}}\textcolor{roulan}{-\upPhi }\textcolor{roulan}{{_{\boldsymbol{A}(\boldsymbol{B}}}}\textcolor{roulan}{^{\boldsymbol{R}\mathbf{'}\boldsymbol{Q} '}}\textcolor{roulan}{\chi }\textcolor{roulan}{^{\boldsymbol{A}}{}}\textcolor{roulan}{_{\boldsymbol{C})\boldsymbol{Q} '}}\\
+		& +\textcolor{mulan}{3\upLambda \chi }\textcolor{mulan}{{_{(\boldsymbol{BC})}}}\textcolor{mulan}{^{\boldsymbol{R} '}} +\upPhi ^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{Q}(\boldsymbol{B}} \chi ^{\boldsymbol{Q}}{}_{\boldsymbol{C})\boldsymbol{D} '}\textcolor{roulan}{+\upPhi }\textcolor{roulan}{^{\boldsymbol{R} '\boldsymbol{D} '}{}}\textcolor{roulan}{_{\boldsymbol{Q}(\boldsymbol{C}}}\textcolor{roulan}{\chi }\textcolor{roulan}{{_{\boldsymbol{B})}}}\textcolor{roulan}{^{\boldsymbol{Q}}{}}\textcolor{roulan}{_{\boldsymbol{D} '}}\\
+		& +\mathbf{\nabla }{_{(\boldsymbol{B}}}^{\boldsymbol{D} '}\mathbf{\nabla }{_{|\boldsymbol{A} |}}^{\boldsymbol{R} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '}\\
+		= & \upPsi _{\boldsymbol{ABCQ}} \chi ^{\boldsymbol{AQR} '} -\upLambda \chi {_{(\boldsymbol{BC})}}^{\boldsymbol{R} '} +\upPhi ^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{Q}(\boldsymbol{B}} \chi ^{\boldsymbol{Q}}{}_{\boldsymbol{C})\boldsymbol{D} '} +\mathbf{\nabla }{_{(\boldsymbol{B}}}^{\boldsymbol{D} '}\mathbf{\nabla }{_{|\boldsymbol{A} |}}^{\boldsymbol{R} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '} .
+	\end{aligned}
+\end{equation*}
+从而原先的方程\ref{eq:7.29}变为
+\begin{equation}
+	\begin{aligned}
+		\mathbf{\nabla }^{\boldsymbol{AR} '} \phi _{\boldsymbol{ABC}} = & -\mathbf{\nabla }{_{(\boldsymbol{B}}}^{\boldsymbol{D} '}\mathbf{\nabla }{_{|\boldsymbol{A} |}}^{\boldsymbol{R} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{C})\boldsymbol{D} '} -\upPsi _{\boldsymbol{ABCQ}} \chi ^{\boldsymbol{AQR} '}\\
+		& +\upLambda \chi {_{(\boldsymbol{BC})}}^{\boldsymbol{R} '} -\upPhi ^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{Q}(\boldsymbol{B}} \chi ^{\boldsymbol{Q}}{}_{\boldsymbol{C})\boldsymbol{D} '} .
+	\end{aligned}
+	\label{eq:7.30}
+\end{equation}
+我们利用原始的场方程\ref{eq:7.25}：
+\begin{equation*}
+	\mathbf{\nabla }_{\boldsymbol{AD} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{BC} '} =\mathbf{\nabla }_{\boldsymbol{BC} '} \chi ^{\boldsymbol{A}}{}_{\boldsymbol{AD} '} =0,
+\end{equation*}
+我们给出一般时空中的情况：
+\begin{equation*}
+	\begin{aligned}
+		& \mathbf{\nabla }^{\boldsymbol{AR} '} \phi _{\boldsymbol{ABC}}\\
+		= & -\mathbf{\nabla }{_{(\boldsymbol{B}}}^{\boldsymbol{D} '}\mathbf{\nabla }_{\boldsymbol{C})\boldsymbol{D} '} \chi ^{\boldsymbol{A}}{}{_{\boldsymbol{A}}}^{\boldsymbol{R} '} -\upPsi _{\boldsymbol{ABCQ}} \chi ^{\boldsymbol{AQR} '} +\upLambda \chi {_{(\boldsymbol{BC})}}^{\boldsymbol{R} '} -\upPhi ^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{Q}(\boldsymbol{B}} \chi ^{\boldsymbol{Q}}{}_{\boldsymbol{C})\boldsymbol{D} '}\\
+		= & -\upPsi _{\boldsymbol{ABCQ}} \chi ^{\boldsymbol{AQR} '} +\upLambda \chi {_{(\boldsymbol{BC})}}^{\boldsymbol{R} '} -\upPhi ^{\boldsymbol{R} '\boldsymbol{D} '}{}_{\boldsymbol{Q}(\boldsymbol{B}} \chi ^{\boldsymbol{Q}}{}_{\boldsymbol{C})\boldsymbol{D} '} .
+	\end{aligned}
+\end{equation*}
+在里奇平坦时空中，上式退化为
+\begin{equation}
+	\mathbf{\nabla }^{\boldsymbol{AR} '} \phi _{\boldsymbol{ABC}} =-\upPsi _{\boldsymbol{ABCQ}} \chi ^{\boldsymbol{AQR} '} .
+	\label{eq:7.31}
+\end{equation}
+我们可以将\ref{eq:7.31}视为取代\ref{eq:7.24}的场方程，但值得注意的是，\ref{eq:7.31}并不再受代数限制条件\ref{eq:7.18}的约束。如果对\ref{eq:7.31}的右侧作用导数算符$\mathbf{\nabla }^{\boldsymbol{B}}{}_{\boldsymbol{R} '}$：
+\begin{equation*}
+	\begin{aligned}
+		\mathbf{\nabla }^{\boldsymbol{B}}{}_{\boldsymbol{R} '} (-\upPsi _{\boldsymbol{ABCQ}} \chi ^{\boldsymbol{AQR} '} ) & =-\chi ^{\boldsymbol{AQR} '}\mathbf{\nabla }^{\boldsymbol{B}}{}_{\boldsymbol{R} '} \upPsi _{\boldsymbol{BACQ}} -\upPsi _{\boldsymbol{BACQ}}\mathbf{\nabla }^{\boldsymbol{B}}{}_{\boldsymbol{R} '} \chi ^{\boldsymbol{AQR} '}\\
+		& =\upPsi _{\boldsymbol{ABCD}} \phi ^{\boldsymbol{ABD}} ,
+	\end{aligned}
+\end{equation*}
+这恰好就是约束条件\ref{eq:7.18}，而\ref{eq:7.18}的导出只利用了$\phi _{\boldsymbol{ABC}}$的全对称性，这意味着如果我们使用方程\ref{eq:7.31}，方程\ref{eq:7.18}则是一个冗余的约束条件。
+
+
+
+现在我们可以将不受约束的场方程\ref{eq:7.31}化为NP形式。但首先我们需要将定义\ref{eq:7.23}化为NP形式，例如
+\begin{equation}
+	\phi _{000} =(\delta -2\beta -\overline{\alpha } +\overline{\pi } )\chi _{000'} -(D-2\epsilon +\overline{\epsilon } -\overline{\rho } )\chi _{001'} .
+	\label{eq:7.32}
+\end{equation}
+与前文的考虑的克尔时空相似，我们考虑Petrov-D型时空，此时我们可以选择规范使得$\upPsi _{0} =\upPsi _{1} =0$，再根据哥德堡-萨赫定理，我们有$\kappa =\sigma =0$。因此对\ref{eq:7.31}，我们有NP方程
+\begin{equation}
+	(D-\epsilon -3\rho )\phi _{001} -(\delta '-3\alpha +\pi ) \phi _{000} =\upPsi _{2} \chi _{000^{\prime }}
+	\label{eq:7.33}
+\end{equation}
+和
+\begin{equation}
+	(\delta -\beta -3\tau )\phi _{001} -(D'-3\gamma +\mu )\phi _{000} =\upPsi _{2} \chi _{001^{\prime }} .
+	\label{eq:7.34}
+\end{equation}
+但注意，由于\ref{eq:7.32}的约束，\ref{eq:7.33}和\ref{eq:7.34}不是独立的方程，且两边同时有未知量$\phi ,\chi $。现在，如果我们对\ref{eq:7.33}作用$\delta -2\beta -\overline{\alpha } -2\tau +\overline{\pi }$，对\ref{eq:7.34}作用$D-2\epsilon +\overline{\epsilon } -3\rho -\overline{\rho }$并将两式相减，我们给出
+\begin{equation}
+	\begin{aligned}
+		[ (D-2\epsilon +\overline{\epsilon } -3\rho -\overline{\rho } )(D'-3\gamma +\mu ) & \\
+		-(\delta -2\beta -\overline{\alpha } -3\tau +\overline{\pi } )(\overline{\delta } -3\alpha +\pi )-\upPsi _{2}] & \phi _{000} =0,
+	\end{aligned}
+	\label{eq:7.35}
+\end{equation}
+这是只关于$\phi _{000}$的线性微分方程。这里我们用到了比安基恒等式
+\begin{equation*}
+	(D-3\rho )\upPsi _{2} =0,\quad (\delta -3\tau )\upPsi _{2} =0.
+\end{equation*}
+在Petrov-D型时空中，我们还可以获得一个如\ref{eq:7.35}一样解耦的关于场$\phi $分量的方程：
+\begin{equation}
+	\begin{aligned}
+		[ (D'+2\gamma -\overline{\gamma } +3\mu +\overline{\mu } )(D+3\epsilon -\mu ) & \\
+		-(\delta +2\alpha +\overline{\beta } +3\pi -\overline{\tau } )(\delta '+3\beta -\tau )-\upPsi _{2}] & \phi _{111} =0,
+	\end{aligned}
+	\label{eq:7.36}
+\end{equation}
+而\ref{eq:7.35}和\ref{eq:7.36}仅凭分离变量法就可以被解决，这与上文所述的克尔时空中的其他场（物质场和引力场）如出一辙，而剩余的工作就是解余下的一阶线性偏微分方程。关于具体时空背景中无质量RS场的传播，可见\parencite{torres_del_castillo_spin32_1989,del_castillo_rarita-schwinger_1990,del_castillo_spin-_1992,einstein_solutions_1979,szereszewski_solutions_2002,chen_gravitino_2015,torres_del_castillo_debye_1989,fordy_zero-rest-mass_1977,zecca_separation_1996}。对于有质量RS场在时空中的行为，可见\parencite{zecca_massive_2006,acik_spin-12_2018,schenkel_quantization_2012}等。除此之外，有趣的是扭量的概念也能作为自旋$3/2$的荷自然浮现，见\parencite{zichichi_twistors_1991,hayashi_spin-32_2001}。
+
+
+
+至此，我们看到在NP形式下，本来高度非线性的场方程\ref{eq:7.24}也退化为一阶线性微分方程组，极大化简了问题。但是同样值得注意的是，这里由于自洽条件，我们只考虑了里奇平坦时空中的规范不变RS场方程，而这是由于未考虑RS场对背景引力场的反作用引起的。如果要考虑一般弯曲时空中的RS场，我们应当将RS场与引力场一同看做背景场处理。

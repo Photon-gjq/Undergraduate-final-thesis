@@ -1,0 +1,572 @@
+\chapter{$\mathfrak{S}$-模上的咏叹调——抽象指标以及旋量代数}
+
+为什么我们需要抽象指标记号？首先注意到一个事实：如果对两个不同的复向量空间做张量积，那么它们张量积的顺序是无所谓的，因为我们发现有一个自然同构$\sum _{i} v_{i} \otimes w_{i} \mapsto \sum _{i} w_{i} \otimes v_{i}$。但是当两个空间相同的时候，张量积的\textbf{顺序}就变得重要了，因为一般来说$v_{1} \otimes v_{2} -v_{2} \otimes v_{1} \neq 0$。因此，一个自然的想法是，我们不再处理张量积空间$V\otimes V\otimes V$，而是处理张量积空间$V^{a} \otimes V^{b} \otimes V^{c}$，这意味着我们可以\textbf{暂时}将不同标记的空间视为不同的空间。举个例子，考虑$v_{1}^{a} \otimes v_{2}^{b} \otimes v_{3}^{c}$，如果忽略自然同构关系，对$1,3$做置换，得到$v_{3}^{c} \otimes v_{2}^{b} \otimes v_{1}^{a}$。这时候，我们再借助$a,c$之间的同构，我们有
+\begin{equation*}
+	v_{3}^{c} \otimes v_{2}^{b} \otimes v_{1}^{a} \mapsto v_{3}^{a} \otimes v_{2}^{b} \otimes v_{1}^{c} ,
+\end{equation*}
+这意味着通过置换$a,c$我们构建了一个$V^{a} \otimes V^{b} \otimes V^{c}$到自身的非恒等映射：
+\begin{equation*}
+	v_{1}^{a} \otimes v_{2}^{b} \otimes v_{3}^{c} \mapsto v_{3}^{a} \otimes v_{2}^{b} \otimes v_{1}^{c} .
+\end{equation*}
+这些用来“强行区分”相同空间以便用于跟踪的记号称为\textbf{抽象指标}。张量积的交换通过抽象指标的\textbf{置换}来表达。我们将上式简写为$v_{1}^{a} v_{2}^{b} v_{3}^{c} \mapsto v_{1}^{c} v_{2}^{b} v_{3}^{a}$，或者$T^{abc} \mapsto T^{cba}$。
+
+虽然抽象指标记号带有指标，但是它并不依赖于任何基的选择。除此之外，其运算法则与具体指标是一致的，区别只是概念上的阐释，但是当我们引入微分以后，两者的差别就会凸显出来了，同时这也导向了旋量代数的出现。
+
+
+\section{抽象指标*}
+\subsection{用抽象指标定义张量}
+
+如果使用具体指标，指标之间的置换是非常自然的，例如
+\begin{equation*}
+	H_{\rho }^{\alpha \beta \gamma } =A_{\rho }^{\beta \alpha \gamma } ,
+\end{equation*}
+之所以要考虑指标之间的置换是因为这条运算与张量的分量的变换规则是对易的：
+\begin{equation*}
+	A_{\rho \cdots \tau }^{\alpha \cdots \gamma } \mapsto A_{\varphi \cdots \psi }^{\lambda \cdots \nu } t_{\lambda }^{\alpha } \cdots t_{\nu }^{\gamma } T_{\rho }^{\varphi } \cdots T_{\tau }^{\psi } ,
+\end{equation*}
+这里
+\begin{equation*}
+	t_{\beta }^{\alpha } T_{\gamma }^{\beta } =\delta _{\gamma }^{\alpha } .
+\end{equation*}
+但是具体指标一个很重要的问题就是它依赖于坐标系的选取，这会在我们想要推导一些广泛结论时出现问题，于是一个很自然的想法是使用抽象的张量代数，即只用张量的运算法则定义张量。但是，这样做的问题在于如果我们将指标去掉，只考虑$\boldsymbol{AB}$或$\boldsymbol{BA}$这样的抽象张量对象，我们无法表现张量指标之间的对称性。于是，我们很自然的想引入一种抽象指标记号，这里的指标并不代表一些数字，也不依赖于坐标系，只是用来标记张量的类型以及指标之间的对称关系。例如符号$V^{\boldsymbol{a}}$并不代表$n$元组$(V^{1} ,V^{2} ,\cdots V^{n} )$，而只是一个抽象的向量空间或模\footnote{这里我们使用“模”这个术语是因为，如果考虑一个数域上的向量空间，那么这个数域自然是可除的，但如果考虑整个空间上的向量场，这个向量场定义在一个“标量场”（或者交换环）上，那么这个标量场有可能不是可逆的。例如$h,k$是两个不同的标量场，有可能$h$仅仅在$k$消失的区域上非零，这意味着$hk=0$但是这两个标量场都不为零。因此，我们称这样的可能不是可除的交换环为模（module）以区分普通的数域。}中的一个元素。这里，我们用粗体$\boldsymbol{a}$指标表示抽象指标，而正常斜体代表已经选择了坐标系的具体指标。
+
+
+
+使用了具体指标就会产生一些非常尴尬的情况，例如对于具体指标，$V^{a} U^{b} -V^{b} U^{a}$在一般情况下非零，但是对于抽象指标，$V^{\boldsymbol{a}} =V^{\boldsymbol{b}} ,U^{\boldsymbol{a}} =U^{\boldsymbol{b}}$，这意味着$V^{\boldsymbol{a}} U^{\boldsymbol{b}} -V^{\boldsymbol{b}} U^{\boldsymbol{a}} =0$。这意味着对于每一个矢量$\boldsymbol{V}$，我们都应该考虑它的无穷多个副本$V^{\boldsymbol{a}} ,V^{\boldsymbol{b}} ,\cdots ,V^{\boldsymbol{a}_{0}} ,\cdots V^{\boldsymbol{a}_{1}} ,\cdots $，其中任何两个都是相同的，但是在表达式中可以被当成不同矢量。同时，$\boldsymbol{V}$所在的整个模$\mathfrak{S}^{\bullet }$也应有无穷多个副本$\mathfrak{S}^{\boldsymbol{a}} ,\mathfrak{S}^{\boldsymbol{b}} ,\cdots ,\mathfrak{S}^{a_{0}} ,\cdots $。这意味着$a\boldsymbol{V} +b\boldsymbol{U} =\boldsymbol{W}$当且仅当$aV^{\boldsymbol{a}} +bU^{\boldsymbol{a}} =W^{\boldsymbol{a}}$，其中$a,b\in \mathfrak{S}$，即标量$a,b,\cdots $构成的交换环。如果定义一个指标集
+\begin{equation*}
+	\mathcal{L} =\{\boldsymbol{a} ,\boldsymbol{b} ,\cdots ,\boldsymbol{a}_{0} ,\boldsymbol{b}_{0} ,\cdots \} ,
+\end{equation*}
+那么实际上抽象指标描绘的向量实际上是一个数对$(\boldsymbol{V} ,\boldsymbol{a}) \in \mathfrak{S}^{\bullet } \times \mathcal{L}$，其中$\boldsymbol{V} \in \mathfrak{S}^{\bullet }$，$\boldsymbol{a} \in \mathcal{L}$。
+
+考虑到读者可能对模不熟悉，我们在这里给出其公理化定义。
+
+\begin{defi}[label={defi:fraS and commutative ring}]{$\mathfrak{S}$是有单位元的交换环}
+	对于$\mathfrak{S}$中的每一个元素，我们有
+	\begin{enumerate}[label=(\alph*)]
+		\item $a+b=b+a$
+		\item $a+(b+c)=(a+b)+c$
+		\item $ab=ba$
+		\item $a(bc)=(ab)c$
+		\item $a(b+c)=ab+ac$
+		\item $\exists 0\in \mathfrak{S}$，s.t. $\forall a\in \mathfrak{S} ,0+a=a$
+		\item $\exists 1\in \mathfrak{S}$，s.t. $\forall a\in \mathfrak{S} ,1a=a$
+		\item $\forall a\in \mathfrak{S} ,\exists -a\in \mathfrak{S}$，s.t. $a+( -a) =0$。
+	\end{enumerate}
+\end{defi}
+
+注意，在上述定义中，乘法逆元可能不存在。现在，如果我们有一个无限的指标集$\mathcal{L}$，我们就可以定义所谓的$\mathfrak{S}$-模：
+
+\begin{defi}[label={defi:fraSa}]{$\mathfrak{S}$-模$\mathfrak{S}^{\boldsymbol{a}}$}
+	$\mathfrak{S}^{\boldsymbol{a}}$上的加法和数乘运算定义是映射$\mathfrak{S} \times \mathfrak{S}^{\boldsymbol{a}}\rightarrow \mathfrak{S}^{\boldsymbol{a}}$，满足：
+	\begin{enumerate}[label=(\alph*)]
+		\item $U^{\boldsymbol{a}} +V^{\boldsymbol{a}} =V^{\boldsymbol{a}} +U^{\boldsymbol{a}}$
+		\item $U^{\boldsymbol{a}} +(V^{\boldsymbol{a}} +W^{\boldsymbol{a}} )=(U^{\boldsymbol{a}} +V^{\boldsymbol{a}} )+W^{\boldsymbol{a}}$
+		\item $a(U^{\boldsymbol{a}} +V^{\boldsymbol{a}} )=aU^{\boldsymbol{a}} +aV^{\boldsymbol{a}}$
+		\item $(a+b)U^{\boldsymbol{a}} =aU^{\boldsymbol{a}} +bU^{\boldsymbol{a}}$
+		\item $(ab)U^{\boldsymbol{a}} =a(bU^{\boldsymbol{a}} )$
+		\item $1U^{\boldsymbol{a}} =U^{\boldsymbol{a}}$
+		\item $0U^{\boldsymbol{a}} =0V^{\boldsymbol{a}}$。
+	\end{enumerate}
+\end{defi}
+
+这里$\mathfrak{S}$中的元素为$( 0,0)$型张量（标量），而$\mathfrak{S}^{\boldsymbol{a}}$中的元素为$( 1,0)$型张量。我们也可以定义其对偶，$( 0,1)$型张量$\mathfrak{S}_{\boldsymbol{a}} ,\mathfrak{S}_{\boldsymbol{b}} ,\cdots $：
+
+\begin{defi}[label={defi:dualfraSa}]{$\mathfrak{S}_{\boldsymbol{a}}$}
+	$\mathfrak{S}_{\boldsymbol{a}}$为从$\mathfrak{S}^{\boldsymbol{a}}$到$\mathfrak{S}$的$\mathfrak{S}$-线性映射，即对于每一个元素$Q_{\boldsymbol{a}} \in \mathfrak{S}_{\boldsymbol{a}}$是一个映射$Q_{\boldsymbol{a}} :\mathfrak{S}^{\boldsymbol{a}}\rightarrow \mathfrak{S}$，使得
+	\begin{equation*}
+		\begin{aligned}
+			Q_{\boldsymbol{a}} (U^{\boldsymbol{a}} +V^{\boldsymbol{a}} ) & =Q_{\boldsymbol{a}} (U^{\boldsymbol{a}} )+Q_{\boldsymbol{a}} (V^{\boldsymbol{a}} ),\\
+			Q_{\boldsymbol{a}} (aV^{\boldsymbol{a}} ) & =aQ_{\boldsymbol{a}} (V^{\boldsymbol{a}} ).
+		\end{aligned}
+	\end{equation*}
+\end{defi}
+
+一个自然的感觉是$\mathfrak{S}^{\boldsymbol{a}}$与$\mathfrak{S}_{\boldsymbol{a}}$是同构的，但对于一般的交换幺环$\mathfrak{S}$上的模$\mathfrak{S}^{\boldsymbol{a}}$来说，这是\textbf{错误}的。我们称两者同构的模为\textbf{自反}（reflexive）的，我们只考虑这种情况（稍后我们会考虑更加简单的，完全自反的情况）。
+
+
+
+下面我们尝试定义张量。我们用两种定义证明张量，而两种定义等价的条件是$\mathfrak{S}^{\boldsymbol{a}}$是完全自反的。
+
+
+
+第一类张量（type I tensor）由映射定义。
+
+\begin{defi}[label={defi:tensor of first type}]{第一类张量}
+	考虑两个不相交的指标集，$\{\boldsymbol{a} ,\boldsymbol{b} ,\cdots \boldsymbol{d}\}$和$\{\boldsymbol{l} ,\cdots \boldsymbol{n}\}$的势分别为$p,q$，那么一个$( p,q)$型张量是一个$\mathfrak{S}$-多线性映射：
+	\begin{equation*}
+		A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} :\mathfrak{S}_{\boldsymbol{a}} \times \mathfrak{S}_{\boldsymbol{b}} \times \cdots \times \mathfrak{S}_{\boldsymbol{d}} \times \mathfrak{S}^{\boldsymbol{l}} \times \cdots \mathfrak{S}^{\boldsymbol{n}}\rightarrow \mathfrak{S} ,
+	\end{equation*}
+	其中
+	\begin{equation*}
+		A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} :(Q_{\boldsymbol{a}} ,R_{\boldsymbol{b}} ,\cdots T_{\boldsymbol{d}} ,U^{\boldsymbol{l}} ,\cdots ,W^{\boldsymbol{n}} )\in \mathfrak{S} ,
+	\end{equation*}
+	其中对这个映射对每个变量都是$\mathfrak{S}$-线性的：
+	\begin{equation*}
+		A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} (aQ_{\boldsymbol{a}} ,\cdots )=aA_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} (aQ_{\boldsymbol{a}} ,\cdots ),\cdots A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} (\cdots ,aW^{\boldsymbol{n}} )=aA_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} (\cdots ,W^{\boldsymbol{n}} )
+	\end{equation*}
+	同时对同一个空间$\mathfrak{S}_{\boldsymbol{a}}$中的不同元素$Q_{1\boldsymbol{a}} ,Q_{2\boldsymbol{a}} ,\cdots $也都是线性的：
+	\begin{equation*}
+		A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} (Q_{1\boldsymbol{a}} +Q_{2\boldsymbol{a}} ,\cdots )=A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} (Q_{1\boldsymbol{a}} ,\cdots )+A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} (Q_{2\boldsymbol{a}} ,\cdots ).
+	\end{equation*}
+	记这样的张量$A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}}$所在的空间为$\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}}$。
+\end{defi}
+
+我们发现这样的定义根据我们假设的自反性，与原来的$\mathfrak{S}^{\boldsymbol{a}}$的定义是一致的。
+
+现在我们给出不依赖坐标的第二种定义张量的办法：
+
+\begin{defi}[label={defi:tensor of second type}]{第二类张量}
+	考虑两个不相交的非零集合$\{\boldsymbol{a} ,\boldsymbol{b} ,\cdots ,\boldsymbol{d}\}$以及$\{\boldsymbol{l} ,\cdots ,\boldsymbol{n}\}$，考虑形式乘积：
+	\begin{equation}
+		B_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} =\sum _{i=1}^{m} G_{i}^{\boldsymbol{a}} H_{i}^{\boldsymbol{b}} \cdots J_{i}^{\boldsymbol{d}} L_{i\boldsymbol{l}} \cdots N_{i\boldsymbol{n}} ,
+		\label{eq:tensor of second type}
+	\end{equation}
+	其中形式乘积满足
+	\begin{equation*}
+		(X^{\boldsymbol{x}} +Y^{\boldsymbol{x}} )C^{\boldsymbol{r}} \cdots E^{\boldsymbol{t}} =X^{\boldsymbol{x}} C^{\boldsymbol{r}} \cdots E^{\boldsymbol{t}} +Y^{\boldsymbol{x}} C^{\boldsymbol{r}} \cdots E^{\boldsymbol{t}} ,
+	\end{equation*}
+	以及
+	\begin{equation*}
+		(qX^{\boldsymbol{x}} )Y^{\boldsymbol{e}} C^{\boldsymbol{r}} \cdots E^{\boldsymbol{t}} =X^{\boldsymbol{x}} (qY^{\boldsymbol{e}} )C^{\boldsymbol{r}} \cdots E^{\boldsymbol{t}} .
+	\end{equation*}
+\end{defi}
+
+我们可以看到，任何第二类张量都自然给出了一个第一类张量：
+\begin{equation}
+	\begin{aligned}
+		& B_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{ab} \cdots \boldsymbol{d}} Q_{\boldsymbol{a}} R_{\boldsymbol{b}} \cdots T_{\boldsymbol{d}} U^{\boldsymbol{l}} \cdots W^{\boldsymbol{n}}\\
+		= & \sum _{i=1}^{m} (G_{i}^{\boldsymbol{a}} Q_{\boldsymbol{a}} )(H_{i}^{\boldsymbol{b}} R_{\boldsymbol{b}} )\cdots (J_{i}^{\boldsymbol{d}} T_{\boldsymbol{d}} )(L_{i\boldsymbol{l}} U^{\boldsymbol{l}} )\cdots (N_{i\boldsymbol{n}} W^{\boldsymbol{n}} )\in \mathfrak{S} .
+	\end{aligned}
+	\label{eq:second type to first type}
+\end{equation}
+但事实上，我们并不清楚是否所有的第一类张量都能通过这种方式获得，同时也不清楚两个不同的第二类张量是否会给出不同的第一类张量。事实上，对于一般的自反的$\mathfrak{S}^{\bullet }$，这个结论是错误的。但如果我们假设$\mathfrak{S}^{\boldsymbol{a}}$是完全自反（totally relfexive）的，那么第一类张量和第二类张量等价的。
+
+
+\subsection{张量操作}
+
+现在，有了张量的定义后，我们就可以针对抽象指标定义张量操作了。例如我们定义加法为，对两个不相交的集合$\{\boldsymbol{a} ,\cdots ,\boldsymbol{d}\} ,\{\boldsymbol{l} ,\cdots ,\boldsymbol{n}\}$，加法为一个映射$\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{d}} \times \mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{d}}\rightarrow \mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{d}}$。一个重要的运算是所谓的外乘（outer multiplication），即映射$\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{d}} \times \mathfrak{S}_{\boldsymbol{p} \cdots \boldsymbol{s}}^{\boldsymbol{r} \cdots \boldsymbol{t}}\rightarrow \mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{np} \cdots \boldsymbol{s}}^{\boldsymbol{a} \cdots \boldsymbol{dr} \cdots \boldsymbol{t}}$。如果用第一类张量的定义，即外乘定义了一个多重线性映射$\mathfrak{S}_{\boldsymbol{a}} \times \cdots \times \mathfrak{S}^{\boldsymbol{s}}\rightarrow \mathfrak{S}$，其值为由$A_{\cdots }^{\cdots }$和$D_{\cdots }^{\cdots }$的乘积定义。这意味着我们可以看出外乘是交换的，即
+\begin{equation*}
+	A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{d}} D_{\boldsymbol{p} \cdots \boldsymbol{s}}^{\boldsymbol{r} \cdots \boldsymbol{t}} =D_{\boldsymbol{p} \cdots \boldsymbol{s}}^{\boldsymbol{r} \cdots \boldsymbol{t}} A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{d}} .
+\end{equation*}
+将外乘的一方取成标量，那么我们自然发现这意味着$\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{d}}$有$\mathfrak{S}$-模的结构。
+
+
+
+现在我们考虑抽象指标最重要的指标替换操作，即映射$\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{d}}\rightarrow \mathfrak{S}_{\boldsymbol{p} \cdots \boldsymbol{s}}^{\boldsymbol{r} \cdots \boldsymbol{t}}$。当指标集映射到自身，即$\{\boldsymbol{a} ,\cdots ,\boldsymbol{d}\} =\{\boldsymbol{r} ,\cdots ,\boldsymbol{t}\}$以及$\{\boldsymbol{l} ,\cdots ,\boldsymbol{n}\} =\{\boldsymbol{p} ,\cdots ,\boldsymbol{s}\}$时，这就是所谓的指标置换。当与加法结合，我们就可以定义所谓的对称操作，即$A_{\boldsymbol{ab}}$的对称和反对称部分分别为$( A_{\boldsymbol{ab}} +A_{\boldsymbol{ba}}) /2$以及$ $$( A_{\boldsymbol{ab}} -A_{\boldsymbol{ba}}) /2$。 
+
+随后是张量缩并操作，考虑
+\begin{equation*}
+	\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{ne}}^{\boldsymbol{a} \cdots \boldsymbol{dx}}\rightarrow \mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{d}} ,
+\end{equation*}
+其中$\{\boldsymbol{a} ,\cdots ,\boldsymbol{d}\} ,\{\boldsymbol{l} ,\cdots ,\boldsymbol{n}\}$是两个不相交的集合。这里我们应当使用第二类张量的定义：
+\begin{equation*}
+	A_{\boldsymbol{l} \cdots \boldsymbol{nx}}^{\boldsymbol{a} \cdots \boldsymbol{dx}} =\sum _{i}^{m} (P_{i\boldsymbol{x}} H_{i}^{\boldsymbol{x}} )D_{i}^{\boldsymbol{a}} \cdots G_{i}^{\boldsymbol{d}} L_{i\boldsymbol{l}} \cdots N_{i\boldsymbol{n}} .
+\end{equation*}
+这里抽象指标的张量缩并与具体指标的张量缩并不同，抽象指标的张量缩并可以出现$U^{\boldsymbol{a}} (Q_{\boldsymbol{a}} V^{\boldsymbol{a}} )$这样的记号，但是需要注意这种情况必须使用括号表示缩并顺序，因为显然
+\begin{equation*}
+	U^{\boldsymbol{a}} (Q_{\boldsymbol{a}} V^{\boldsymbol{a}} )\neq (U^{\boldsymbol{a}} Q_{\boldsymbol{a}} )V^{\boldsymbol{a}} .
+\end{equation*}
+但一般我们会避免相同字母的出现，这样上式就可以写为
+\begin{equation*}
+	U^{\boldsymbol{a}} Q_{\boldsymbol{b}} V^{\boldsymbol{b}} \neq U^{\boldsymbol{b}} Q_{\boldsymbol{b}} V^{\boldsymbol{a}} .
+\end{equation*}
+我们称这样的有指标缩并的外乘为缩并积（内积）。
+\subsection{完全自反性的推论}
+
+下面我们给出两个较为重要的，$\mathfrak{S}^{\boldsymbol{a}}$是完全自反的结论。
+
+\begin{them}[label={them:fras and its dual}]{$\mathfrak{S}$-模与其对偶}
+	$\mathfrak{S}$-模$\mathfrak{S}_{\boldsymbol{a} \cdots \boldsymbol{g}}^{\boldsymbol{l} \cdots \boldsymbol{n}}$的对偶$\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{g}}$与$\mathfrak{S}_{\boldsymbol{a} \cdots \boldsymbol{g}}^{\boldsymbol{l} \cdots \boldsymbol{n}}$同构，且其标量积为缩并积。
+\end{them}
+
+\begin{proof}
+	显然，每一个$\mathfrak{S}_{\boldsymbol{a} \cdots \boldsymbol{g}}^{\boldsymbol{l} \cdots \boldsymbol{n}}$中的元素$Q_{\boldsymbol{a} \cdots \boldsymbol{g}}^{\boldsymbol{l} \cdots \boldsymbol{n}}$都是一个将$\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{g}}$中的元素映射到$\mathfrak{S}$的$\mathfrak{S}$-线性映射。需要证明的是每一个从$\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{g}}$到$\mathfrak{S}$的$\mathfrak{S}$-线性映射都可以用这种方式从$\mathfrak{S}_{\boldsymbol{a} \cdots \boldsymbol{g}}^{\boldsymbol{l} \cdots \boldsymbol{n}}$中得到，而且是唯一的。如果我们考虑第二类张量的定义\ref{eq:tensor of second type}，即将元素表示为向量的外乘，那么每一个从$\mathfrak{S}_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{g}}$到$\mathfrak{S}$的$\mathfrak{S}$-线性映射可以通过对每一个向量的映射来定义，这就是说可以通过从$\mathfrak{S}^{\boldsymbol{a}} \times \cdots \times \mathfrak{S}^{\boldsymbol{g}} \times \mathfrak{S}_{\boldsymbol{l}} \times \cdots \times \mathfrak{S}_{\boldsymbol{n}}$到$\mathfrak{S}$的$\mathfrak{S}$-线性映射定义，而这恰好根据完全自反性对应了一个唯一的张量$Q_{\boldsymbol{a} \cdots \boldsymbol{g}}^{\boldsymbol{l} \cdots \boldsymbol{n}} \in \mathfrak{S}_{\boldsymbol{a} \cdots \boldsymbol{g}}^{\boldsymbol{l} \cdots \boldsymbol{n}}$，即证毕。
+\end{proof}
+
+我们常常因为方便会定义所谓的复合指标，例如我们定义$\mathcal{A} =\boldsymbol{rt}^{*}\boldsymbol{e}^{*}$，其中星号代表$\mathcal{A}$所在的相反位置，那么我们可以将$\mathfrak{S}_{\boldsymbol{te}}^{\boldsymbol{r}}$中的元素$Q_{\boldsymbol{te}}^{\boldsymbol{r}}$写成$Q^{\mathcal{A}} =Q^{\boldsymbol{r}}{}_{\boldsymbol{te}}$，$\mathfrak{S}_{\boldsymbol{r}}^{\boldsymbol{te}}$中的元素$U{_{\boldsymbol{r}}}^{\boldsymbol{te}}$可以被写成$U_{\mathcal{A}}$。这种复合指标也可以缩并或者做其他正常抽象指标可以做的操作，但是要小心我们常常不写$R^{\boldsymbol{t}\mathcal{A}}$，因为这个张量实际上是$R^{\boldsymbol{tr}}{}_{\boldsymbol{te}} \in \mathfrak{S}_{\boldsymbol{e}}^{\boldsymbol{r}}$，这样写会将本来有的指标缩并隐藏起来。我们容易得到以下结论：
+
+\begin{them}[label={them:tensor of composed index}]{复合指标构成的张量}
+	\begin{enumerate}[label=(\alph*)]
+		\item 所有的从$\mathfrak{S}^{\mathcal{A}} \times \mathfrak{S}^{\mathcal{B}}$到$\mathfrak{S}$的$\mathfrak{S}$-双线性映射与$\mathfrak{S}_{\mathcal{AB}}$相同，这里的映射由收缩积定义。
+		\item 所有的从$\mathfrak{S}^{\mathcal{A}}$到$\mathfrak{S}^{\mathcal{K}}$的$\mathfrak{S}$-双线性映射与$\mathfrak{S}_{\mathcal{A}}^{\mathcal{K}}$相同，这里的映射由收缩积定义。
+		\item 所有的从$\mathfrak{S}^{\mathcal{A}} \times \mathfrak{S}^{\mathcal{B}} \times \cdots \times \mathfrak{S}^{\mathcal{D}}$到$\mathfrak{S}^{\mathcal{K}}$的$\mathfrak{S}$-多线性映射与$\mathfrak{S}_{\mathcal{AB} \cdots \mathcal{D}}^{\mathcal{K}}$相同，这里的映射由收缩积定义。
+	\end{enumerate}
+\end{them}
+
+下面我们定义一个特别的张量：克罗内克$\delta _{\boldsymbol{a}}^{\boldsymbol{b}}$，即$\mathfrak{S}_{\boldsymbol{a}}^{\boldsymbol{b}}$中的元素，并且将$\mathfrak{S}_{\boldsymbol{b}}$中的元素$Y_{\boldsymbol{b}}$映射到$\mathfrak{S}^{\boldsymbol{a}}$中的标量$Y^{\boldsymbol{a}}$：
+\begin{equation*}
+	\delta _{\boldsymbol{a}}^{\boldsymbol{b}} Y_{\boldsymbol{b}} =Y^{\boldsymbol{a}} .
+\end{equation*}
+同时，根据完全自反性，我们知道
+\begin{equation*}
+	\delta _{\boldsymbol{a}}^{\boldsymbol{b}} Z^{\boldsymbol{a}} =Z^{\boldsymbol{b}} .
+\end{equation*}
+
+
+此外，如果我们一开始就考虑多个不同的$\mathfrak{S}$-模，那么我们很自然要考虑多个指标集。例如考虑$\mathfrak{S^{\boldsymbol{a}} ,S}^{\boldsymbol{a} '} ,\mathfrak{S}^{\boldsymbol{a} ''} \cdots $，这里注意$\mathfrak{S^{\boldsymbol{a}} ,S}^{\boldsymbol{a} '}$或$\mathfrak{S^{\boldsymbol{a}}} ,\mathfrak{S}^{\boldsymbol{a} ''}$之间没有正则的同构关系，这意味着我们可能不能定义指标替换操作。之所以要注意这个是因为我们的旋量代数就是从两个模$\mathfrak{S}^{\boldsymbol{A}}$与$\mathfrak{S}^{\boldsymbol{A} '}$构建的，这两个模之间没有代数关系，但是有一个非代数关系，即复共轭相连接。
+
+
+\section{基}
+
+迄今为止我们给出的抽象指标都是与基无关的，这是因为即使是对于很多完全自反的模来说，基也有可能不存在！在抽象指标下，如果对于$\mathfrak{S}^{\boldsymbol{a}}$存在有限基，那么就是说存在一组向量$\delta _{1}^{\boldsymbol{a}} ,\delta _{2}^{\boldsymbol{a}} ,\cdots ,\delta _{n}^{\boldsymbol{a}} \in \mathfrak{S}^{\boldsymbol{a}}$，其中对于任何$V^{\boldsymbol{a}}\mathfrak{\in S}^{\boldsymbol{a}}$都有一个唯一的展开：
+\begin{equation*}
+	V^{\boldsymbol{a}} =V^{1} \delta _{1}^{\boldsymbol{a}} +V^{2} \delta _{2}^{\boldsymbol{a}} +\cdots +V^{n} \delta _{n}^{\boldsymbol{a}} \equiv V^{a} \delta _{a}^{\boldsymbol{a}} ,
+\end{equation*}
+我们将标量$V^{1} ,\cdots ,V^{n} \in \mathfrak{S}$叫做$V^{\boldsymbol{a}}$在这组基下的分量（components）。
+
+
+
+注意到如果$\mathfrak{S}^{\boldsymbol{a}}$有$n$个基向量，那么这意味着$\mathfrak{S}_{\boldsymbol{a}_{1} \cdots \boldsymbol{a}_{n}}$一定包含了一个非零的全反对称的元素，而$\mathfrak{S}_{\boldsymbol{a}_{1} \cdots \boldsymbol{a}_{n+k}}$只包含为零的全反对称元素。因为对于全反对称张量$A_{\cdots \boldsymbol{a}_{i} \cdots \boldsymbol{a}_{j}}$，我们发现
+\begin{equation*}
+	A_{\cdots \boldsymbol{a}_{i} \cdots \boldsymbol{a}_{j}} X^{\boldsymbol{a}_{i}} X^{\boldsymbol{a}_{j}} =0,
+\end{equation*}
+这意味着我们有：
+\begin{equation*}
+	A_{\boldsymbol{a}_{1} \cdots \boldsymbol{a}_{n+k}} R^{\boldsymbol{a}_{1}} \cdots W^{\boldsymbol{a}_{n} +k} =0,
+\end{equation*}
+因为只需要将每一个元素$X^{\boldsymbol{a}}$在基底下展开，就会发现每一项至少包含一项指标重复的基底项，这意味着
+\begin{equation*}
+	A_{\boldsymbol{a}_{1} \cdots \boldsymbol{a}_{n+k}} =0.
+\end{equation*}
+同时，我们也可以定义所谓的全反对称张量$\epsilon _{\boldsymbol{a}_{1} \cdots \boldsymbol{a}_{n}} \in \mathfrak{S}_{\boldsymbol{a}_{1} \cdots \boldsymbol{a}_{n}}$通过
+\begin{equation*}
+	\epsilon _{\boldsymbol{a}_{1} \cdots \boldsymbol{a}_{n}} U^{\boldsymbol{a}_{1}} \cdots W^{\boldsymbol{a}_{n}} \equiv \begin{vmatrix}
+		U^{1} & \cdots  & W^{1}\\
+		\vdots  &  & \vdots \\
+		U^{n} & \cdots  & W^{n}
+	\end{vmatrix} .
+\end{equation*}
+现在问题来了，$\mathfrak{S}^{\boldsymbol{a}}$什么时候存在基，什么时候不存在？如果$\mathfrak{S}^{\boldsymbol{a}}$是流形某一点的切空间，那么$\mathfrak{S}^{\boldsymbol{a}}$其实是一个有限维向量空间，那么一定存在基。但是如果$\mathfrak{S}^{\boldsymbol{a}}$是流形上的向量场，那么这里基的意思就是一组$n$维的向量场，并且在每一点都线性无关。在这种情况下，基常常\textbf{不}存在。对于这种情况，基存在的必要条件是整个流形上可以定义处处非零的$n$个向量场，因为零向量一定与所有向量线性相关。而这个条件就是一个流形可平行化的条件，例如$S^{2}$上就无法定义处处非零的向量场，但$S^{3}$可以。事实上，所有可定向的三维流形都是可平行化的，但是大部分四维流形不是。实际上，根据我们对时空的猜想，即我们要求时空整体有旋量结构并且是非紧的，对于这样的时空是可平行化的。因此，当我们用$\mathfrak{S}^{\boldsymbol{a}}$代表时空中的向量场的时候，我们可以很合理地假设$\mathfrak{S}^{\boldsymbol{a}}$存在基（$n=4$）。同时，如果我们考虑时空中的自旋矢量场，我们也能假定旋量基（$n=4$）在整个时空中存在。当然，即使我们考虑的流形是不可平行化的，我们也可以在一个局域坐标卡里考虑问题，只是在我们想要给出整个流形的全局结构的结论时，我们需要格外小心。实际上，无论一个流形是否是可平行化的，在$\mathbb{C}^{\infty }$上定义的$\mathbb{C}^{\infty }$向量场的模仍然是完全自反的。
+
+
+
+现在我们可以考察基$\delta _{a}^{\boldsymbol{a}}$。很容易证明，对偶空间的基底可以被写成$\delta _{\boldsymbol{a}}^{a}$，并且可以证明（这里我们不需要用自反性）：
+\begin{equation*}
+	\delta _{\boldsymbol{a}}^{a} \delta _{b}^{\boldsymbol{a}} =\delta _{b}^{a} ,
+\end{equation*}
+这是一个$n\times n$的单位矩阵，被称作克罗内克$\delta $。需要注意的是，$\delta _{b}^{a} ,\delta _{b}^{\boldsymbol{a}} ,\delta _{\boldsymbol{b}}^{a} ,\delta _{\boldsymbol{b}}^{\boldsymbol{a}}$虽然形式相似，其运算规则也相似，但是它们的含义完全不同。第一个是依赖于基的$n\times n$矩阵，中间两个是基向量，最后一个是一个与基无关的映射。
+
+
+
+迄今为止我们还没使用完全自反性，实际上我们可以证明当有基存在的时候，完全自反性一定成立。我们需要定义第三类张量，即张量在基下的分量：
+\begin{equation*}
+	A_{l\cdots n}^{a\cdots g} =A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{g}} \delta _{\boldsymbol{a}}^{a} \cdots \delta _{\boldsymbol{g}}^{g} \delta _{l}^{\boldsymbol{l}} \cdots \delta _{n}^{\boldsymbol{n}} .
+\end{equation*}
+显然，给定一组基，对于每一个一类张量都对应了一个唯一的三类张量。同时，我们也可以用这种方式建立一个二类张量：
+\begin{equation*}
+	A_{\boldsymbol{l} \cdots \boldsymbol{n}}^{\boldsymbol{a} \cdots \boldsymbol{g}} =A_{l\cdots n}^{a\cdots g} \delta _{a}^{\boldsymbol{a}} \cdots \delta _{g}^{\boldsymbol{g}} \delta _{\boldsymbol{l}}^{l} \cdots \delta _{\boldsymbol{n}}^{n} ,
+\end{equation*}
+同样的每一个三类张量也会给出一个唯一的二类张量。最后，再利用式\ref{eq:second type to first type}，我们发现每一个二类张量给出了一个唯一的一类张量。可以验证映射
+\begin{equation*}
+	\text{一}\rightarrow \text{三}\rightarrow \text{二}\rightarrow \text{一} ,\kern+0.4em \text{三}\rightarrow \text{二}\rightarrow \text{一}\rightarrow \text{三} ,\kern+0.4em \text{二}\rightarrow \text{一}\rightarrow \text{三}\rightarrow \text{一}
+\end{equation*}
+都给出了单位映射。这意味着我们只需要有基的存在，完全自反性（即一，二类张量的等价性）就是可以被证明的。
+
+
+
+但问题是，之前我们已经说了，流形上有可能不存在向量场的基，那么完全自反性好像也不存在了。但是，我们可以不加证明地给出这样的定理
+
+\begin{them}[label={them:condition of existence of total reflective module}]{流形上存在完全自反的向量场的模的条件}
+	对于所有的豪斯多夫的仿紧致\footnotemark（paracompact）流形$\mathcal{M}$，如果满足以下条件，那么其上定义的向量场的模是自反的：
+	\begin{enumerate}[label=(\alph*)]
+		\item 模$\mathfrak{S}$上的标量场（假设是复数构成的标量场）的可微性是充分不受限的（例如$\mathbb{C}^{0} ,\mathbb{C}^{1} ,\cdots $甚至$\mathbb{C}^{\infty }$，但不需要$\mathbb{C}^{\omega }$，这里$\mathbb{C}^{\omega }$指解析），从而可以给出“单位元的分解”（partition of unity）。
+		\item $\mathfrak{S}^{\bullet }$在局部有基。
+	\end{enumerate}
+\end{them}
+\footnotetext{一个拓扑空间是仿紧的，意思是对于每个开覆盖，都有一个局部有限的开精细化。一个开覆盖的精细化是指同一个空间的一个新的覆盖，这个覆盖中的每个集合都是旧覆盖的某些集合的子集，即$V=\{V_{\beta } | \beta \in B\}$是一个覆盖$U=\{U_{\alpha } | \alpha \in A\}$的精细化，当且仅当$\forall V_{\beta }$，$\exists U_{\alpha } \in U$，使得$V_{\beta } \subseteq U_{\alpha }$。而一个开覆盖是局部有限的是指，这个空间的每一点都有一个邻域，这个邻域只和这个覆盖内的有限个集合相交，即覆盖$U=\{U_{\alpha } | \alpha \in A\}$是局部有限的，当且仅当$\forall x\in X$，都存在一个邻域$V( x)$，使得集合$\{\alpha \in A | U_{\alpha } \cap V( x) \neq \emptyset \}$是有限的。每一个紧致的空间都是仿紧的，且每一个度量空间都是仿紧的。}
+
+这个定理的证明是纯代数的，即不需要用到$\mathfrak{S}$所定义在的$\mathcal{M}$上的“点集”的任何性质。从后文开始，我们很乐意认为对于物理背景，都有基存在。
+
+
+\section{旋量代数}
+
+还记得每一个闵氏时空$\mathbb{V}$中的光旗都定义了一对自旋矢量$\kappa ,-\kappa $，我们可以用两个复数$( \xi ,\eta )$描写$\kappa $：
+\begin{equation*}
+	\kappa ^{0} =\xi ,\kappa ^{1} =\eta .
+\end{equation*}
+注意到任何被动洛伦兹变换（即闵氏时空坐标系的改变）对应了一个自旋变换，而光旗由于不依赖坐标系，在自旋变换下是不变的，这意味着自旋矢量之间的操作也应该在被动自旋变换下不变。现在我们尝试给出满足这些条件的运算：
+
+\begin{defi}[label={transformation of spin vector}]{自旋矢量的变换}
+	称$\mathfrak{S}^{\bullet }$为自旋空间，考虑其在$\mathbb{C}$上的模，我们可以定义以下操作：
+	\begin{enumerate}[label=(\alph*)]
+		\item 标量乘法：$\mathbb{C} \times \mathfrak{S}^{\bullet }\rightarrow \mathfrak{S}^{\bullet }$，即对于$\lambda \in \mathbb{C}$，$\kappa \in \mathfrak{S}^{\bullet }$，我们有$\lambda \kappa \in \mathfrak{S}^{\bullet }$；
+		\item 加法：$\mathfrak{S}^{\bullet } \times \mathfrak{S}^{\bullet }\rightarrow \mathfrak{S}^{\bullet }$，即对于$\kappa ,\omega \in \mathfrak{S}^{\bullet }$，我们有$\kappa +\omega \in \mathfrak{S}^{\bullet }$；
+		\item 内积：$\mathfrak{S}^{\bullet } \times \mathfrak{S}^{\bullet }\rightarrow \mathbb{C}$，即对于$\kappa ,\omega \in \mathfrak{S}^{\bullet }$，我们有$\{\kappa ,\omega \} \in \mathbb{C}$。
+	\end{enumerate}
+\end{defi}
+
+如果选定了基，那么对于前两种运算我们可以\textbf{定义}它在基下的表示方式：
+\begin{equation*}
+	\begin{aligned}
+		\lambda (\kappa ^{0} ,\kappa ^{1} ) & =(\lambda \kappa ^{0} ,\lambda \kappa ^{1} ),\\
+		(\kappa ^{0} ,\kappa ^{1} )+(\omega ^{0} ,\omega ^{1} ) & =(\kappa ^{0} +\omega ^{0} ,\kappa ^{1} +\omega ^{1} ),
+	\end{aligned}
+\end{equation*}
+这两个式子显然在自旋变换下是不变的。但是对于内积，我们要求
+\begin{equation*}
+	\{(\kappa ^{0} ,\kappa ^{1} ),(\omega ^{0} ,\omega ^{1} )\}=\{(\kappa ^{\tilde{0}} ,\kappa ^{\tilde{1}} ),(\omega ^{\tilde{0}} ,\omega ^{\tilde{1}} )\},
+\end{equation*}
+因此我们\textbf{定义}内积为
+\begin{equation*}
+	\{(\kappa ^{0} ,\kappa ^{1} ),(\omega ^{0} ,\omega ^{1} )\}=\kappa ^{0} \omega ^{1} -\kappa ^{1} \omega ^{0} ,
+\end{equation*}
+这个内积显然在自旋变换下是不变的，因为
+\begin{equation*}
+	\kappa ^{\tilde{0}} \omega ^{\tilde{1}} -\kappa ^{\tilde{1}} \omega ^{\tilde{0}} =\begin{vmatrix}
+		\kappa ^{\tilde{0}} & \omega ^{\tilde{0}}\\
+		\kappa ^{\tilde{1}} & \omega ^{\tilde{1}}
+	\end{vmatrix} =\left| \begin{pmatrix}
+		\alpha  & \beta \\
+		\gamma  & \delta 
+	\end{pmatrix}\begin{pmatrix}
+		\kappa ^{0} & \omega ^{0}\\
+		\kappa ^{1} & \omega ^{1}
+	\end{pmatrix}\right| =\begin{vmatrix}
+		\alpha  & \beta \\
+		\gamma  & \delta 
+	\end{vmatrix}\begin{vmatrix}
+		\kappa ^{0} & \omega ^{0}\\
+		\kappa ^{1} & \omega ^{1}
+	\end{vmatrix} =\kappa ^{0} \omega ^{1} -\kappa ^{1} \omega ^{0} .
+\end{equation*}
+除了一般的线性性之外，我们还发现内积是反对称的：
+\begin{equation*}
+	\{\kappa ,\omega \} =-\{\omega ,\kappa \} .
+\end{equation*}
+同时，其反对称也带来了类似于雅克比恒等式的关系：
+\begin{equation}
+	\{\kappa ,\omega \} \tau +\{\omega ,\tau \} \kappa +\{\tau ,\kappa \} \omega =0,
+	\label{eq:spinor jacobi identity}
+\end{equation}
+这一点可以通过式
+\begin{equation*}
+	\begin{vmatrix}
+		\tau ^{0} & \kappa ^{0} & \omega ^{0}\\
+		\tau ^{1} & \kappa ^{1} & \omega ^{1}\\
+		\tau ^{A} & \kappa ^{A} & \omega ^{A}
+	\end{vmatrix} =0
+\end{equation*}
+看出。我们很容易看出$\mathfrak{S}^{\bullet }$是$\mathbb{C}$上的二维向量空间，实际上\ref{eq:spinor jacobi identity}就表现了一个任意的自旋矢量$\tau $如何用两个自旋矢量$\kappa ,\omega $的线性组合表达。同样的，我们可以选取两个自旋矢量，获得归一化的内积：
+\begin{equation*}
+	\{\omicron ,\iota \} =1=-\{\iota ,o\} ,
+\end{equation*}
+我们称$o,\iota $为一个自旋标架（spin-frame），这相当于我们选取了一个基底，即
+\begin{equation*}
+	\kappa ^{0} =\{\kappa ,\iota \} ,\kappa ^{1} =-\{\kappa ,o\} ,
+\end{equation*}
+从而
+\begin{equation*}
+	\kappa =\kappa ^{0} o+\kappa ^{1} \iota .
+\end{equation*}
+对于一般的弯曲时空，我们只需要考虑其切空间，但是需要分两种情况，第一种是整个流形上的自旋矢量场，第二种情况是空间某一点的自旋矢量。对于前者，$\mathfrak{S}^{\bullet }$是$\mathbb{C}^{\infty }$的标量场构成的环，对于后者则是标量$\mathfrak{S}$环构成的复数可除环。如果给$\mathfrak{S}^{\bullet }$配上一个指标集，那么我们就可以获得前文所述的$\mathfrak{S}^{\boldsymbol{A}}$，以及其对偶$\mathfrak{S}_{\boldsymbol{A}}$，从而可以定义\textbf{旋量}（spinor），即$\mathfrak{S}_{\boldsymbol{S} \cdots \boldsymbol{U}}^{\boldsymbol{P} \cdots \boldsymbol{R}}$中的元素。但这并不是最一般的旋量的定义，在给出一般的旋量定义之前，我们先考虑一些特殊的旋量的性质。
+
+
+\subsection{$\epsilon $-旋量}
+
+我们已经知道内积为$\mathfrak{S}^{\bullet } \times \mathfrak{S}^{\bullet }\rightarrow \mathfrak{S}$的双线性映射，这意味着一定有一个唯一的元素$\epsilon _{\boldsymbol{AB}} \in \mathfrak{S}_{\boldsymbol{AB}}$，使得
+\begin{equation*}
+	\{\kappa ,\omega \} =\epsilon _{\boldsymbol{\textcolor{roulan}{A} B}} \kappa ^{\boldsymbol{\textcolor{roulan}{A}}} \omega ^{\boldsymbol{B}} =-\{\omega ,\kappa \}
+\end{equation*}
+对于所有$\omega ,\kappa \in \mathfrak{S}^{\bullet }$都成立，这意味着$\epsilon _{\boldsymbol{AB}}$是反对称的：$\epsilon _{\boldsymbol{AB}} =-\epsilon _{\boldsymbol{BA}}$。这意味着$\epsilon _{\boldsymbol{AB}}$在旋量代数中扮演了常见的度规的角色，但它是反对称的。由于完全自反性，我们可以用$\epsilon _{\boldsymbol{AB}}$升降指标（这里用颜色标记仅仅是为了凸显缩并顺序，完全可以去掉）：
+\begin{equation}
+	\kappa _{\boldsymbol{B}} =\kappa ^{\boldsymbol{\textcolor{roulan}{A}}} \epsilon _{\boldsymbol{\textcolor{roulan}{A} B}} \Rightarrow \kappa _{B} =\kappa ^{A} \epsilon _{AB} ,
+	\label{eq:covariant spinor}
+\end{equation}
+这意味着
+\begin{equation*}
+	\kappa _{0} =\kappa ^{1} \epsilon _{10} =-\kappa ^{1} ,\kappa _{1} =\kappa ^{0} \epsilon _{01} =\kappa ^{0} .
+\end{equation*}
+如果用下标书写内积，我们实际上有：
+\begin{equation*}
+	\{\kappa ,\omega \} =\kappa _{\boldsymbol{B}} \omega ^{\boldsymbol{B}} =\kappa _{B} \omega ^{B} =\kappa _{0} \omega ^{0} +\kappa _{1} \omega ^{1} =\kappa ^{0} \omega ^{1} -\kappa ^{1} \omega ^{0} .
+\end{equation*}
+同理，我们有
+\begin{equation}
+	\kappa ^{\boldsymbol{A}} =\epsilon ^{\boldsymbol{A\textcolor{mulan}{B}}} \kappa _{\boldsymbol{\textcolor{mulan}{B}}} .
+	\label{eq:contravariant spinor}
+\end{equation}
+实际上，\ref{eq:covariant spinor}，\ref{eq:contravariant spinor}两式的逆为
+\begin{equation*}
+	\epsilon _{\boldsymbol{A\textcolor{mulan}{B}}} \epsilon ^{\boldsymbol{C\textcolor{mulan}{B}}} =\delta _{\boldsymbol{A}}^{\boldsymbol{C}} ,\epsilon ^{\boldsymbol{\textcolor{roulan}{A} B}} \epsilon _{\boldsymbol{\textcolor{roulan}{A} C}} =\delta _{\boldsymbol{C}}^{\boldsymbol{B}} ,
+\end{equation*}
+这意味着
+\begin{equation}
+	\delta \boldsymbol{_{A}^{B}} =\epsilon {_{\boldsymbol{A}}}^{\boldsymbol{B}} =-\epsilon ^{\boldsymbol{B}}{}_{\boldsymbol{A}} .
+	\label{eq:k delta}
+\end{equation}
+注意，\ref{eq:covariant spinor}，\ref{eq:contravariant spinor}式中，我们用$\epsilon _{\boldsymbol{\textcolor{roulan}{A} B}}$的第一个下标来\textbf{\textcolor{roulan}{降}}指标，用$\epsilon ^{\boldsymbol{A\textcolor{mulan}{B}}}$的第二个上标来\textbf{\textcolor{mulan}{升}}指标。那么我们可以看出
+\begin{equation*}
+	\epsilon _{\boldsymbol{A\textcolor{mulan}{B}}} \epsilon ^{\boldsymbol{C\textcolor{mulan}{B}}} =-\epsilon _{\boldsymbol{AB}} \epsilon ^{\boldsymbol{BC}} =\epsilon _{\boldsymbol{\textcolor{roulan}{B} A}} \epsilon ^{\boldsymbol{\textcolor{roulan}{B} C}} =\epsilon \boldsymbol{{_{A}}^{C}} =-\epsilon _{\boldsymbol{\textcolor{roulan}{B} A}} \epsilon ^{\boldsymbol{C\textcolor{roulan}{B}}} =-\epsilon \boldsymbol{^{C}{}}_{\boldsymbol{A}} .
+\end{equation*}
+同时，\ref{eq:k delta}中的$\delta \boldsymbol{_{A}^{B}}$还不是单位阵，而是一个抽象的映射$\epsilon $，需要确定指标位置。那么我们就有
+\begin{equation*}
+	\psi ^{\mathcal{C}}{}_{\boldsymbol{\textcolor{mulan}{A}}} \epsilon {_{\boldsymbol{B}}}^{\boldsymbol{\textcolor{mulan}{A}}} =\psi ^{\mathcal{C}}{}_{\boldsymbol{B}} ,\psi ^{\mathcal{C}\boldsymbol{\textcolor{roulan}{A}}} \epsilon \textcolor{roulan}{{_{\boldsymbol{A}}}}^{\boldsymbol{B}} =\psi ^{\mathcal{C}\boldsymbol{B}} .
+\end{equation*}
+同时，当有多个指标的时候要特别注意升降前后指标的相对位置：
+\begin{equation*}
+	\psi ^{\mathcal{C}\boldsymbol{A}} =\epsilon ^{\boldsymbol{A\textcolor{mulan}{B}}} \psi ^{\mathcal{C}}{}\textcolor{mulan}{_{\boldsymbol{B}}} =-\psi ^{\mathcal{C}}{}_{\boldsymbol{B}} \epsilon ^{\boldsymbol{BA}} ,
+\end{equation*}
+以及
+\begin{equation*}
+	\psi ^{\mathcal{C}}{}_{\boldsymbol{B}} =\psi ^{\mathcal{C}\boldsymbol{\textcolor{roulan}{A}}} \epsilon _{\boldsymbol{\textcolor{roulan}{A} B}} =-\epsilon _{\boldsymbol{BA}} \psi ^{\mathcal{C}\boldsymbol{A}} .
+\end{equation*}
+这意味着当一个张量有内部缩并的指标的时候，我们有：
+\begin{equation*}
+	\chi ^{\cdots }{}{_{\cdots \boldsymbol{A}}}^{\cdots }{}{_{\cdots }}^{\boldsymbol{A}}{}_{\cdots } =-\chi ^{\cdots }{}{_{\cdots }}^{\boldsymbol{A} \cdots }{}_{\cdots \boldsymbol{A} \cdots } .
+\end{equation*}
+如果将\ref{eq:spinor jacobi identity}展开，我们有：
+\begin{equation*}
+	\kappa _{\boldsymbol{A}} \omega ^{\boldsymbol{A}} \tau ^{\boldsymbol{B}} +\omega _{\boldsymbol{A}} \tau ^{\boldsymbol{A}} \kappa ^{\boldsymbol{B}} +\tau _{\boldsymbol{A}} \kappa ^{\boldsymbol{A}} \omega ^{\boldsymbol{B}} =0,
+\end{equation*}
+用$\epsilon _{\boldsymbol{AB}}$展开：
+\begin{equation*}
+	(\epsilon _{\boldsymbol{AB}} \epsilon {_{\boldsymbol{C}}}^{\boldsymbol{D}} +\epsilon _{\boldsymbol{BC}} \epsilon {_{\boldsymbol{A}}}^{\boldsymbol{D}} +\epsilon _{\boldsymbol{CA}} \epsilon {_{\boldsymbol{B}}}^{\boldsymbol{D}} )\kappa ^{\boldsymbol{A}} \omega ^{\boldsymbol{B}} \tau ^{\boldsymbol{C}} =0,
+\end{equation*}
+对所有的$\kappa ,\omega ,\tau $都成立，这意味着
+\begin{equation*}
+	\epsilon _{\boldsymbol{AB}} \epsilon {_{\boldsymbol{C}}}^{\boldsymbol{D}} +\epsilon _{\boldsymbol{BC}} \epsilon {_{\boldsymbol{A}}}^{\boldsymbol{D}} +\epsilon _{\boldsymbol{CA}} \epsilon {_{\boldsymbol{B}}}^{\boldsymbol{D}} =0.
+\end{equation*}
+降下$\boldsymbol{D}$指标，我们有：
+\begin{equation*}
+	\epsilon _{\boldsymbol{AB}} \epsilon _{\boldsymbol{CD}} +\epsilon _{\boldsymbol{BC}} \epsilon _{\boldsymbol{AD}} +\epsilon _{\boldsymbol{CA}} \epsilon _{\boldsymbol{BD}} =0.
+\end{equation*}
+如果升起$\boldsymbol{C}$指标：
+\begin{equation*}
+	\epsilon {_{\boldsymbol{A}}}^{\boldsymbol{C}} \epsilon {_{\boldsymbol{B}}}^{\boldsymbol{D}} -\epsilon {_{\boldsymbol{B}}}^{\boldsymbol{C}} \epsilon {_{\boldsymbol{A}}}^{\boldsymbol{D}} =\epsilon _{\boldsymbol{AB}} \epsilon ^{\boldsymbol{CD}} ,
+\end{equation*}
+这意味着
+\begin{equation*}
+	\phi _{\mathcal{D}\boldsymbol{AB}} -\phi _{\mathcal{D}\boldsymbol{BA}} =\phi {_{\mathcal{D}\boldsymbol{C}}}^{\boldsymbol{C}} \epsilon _{\boldsymbol{AB}} ,
+\end{equation*}
+那么如果$\phi _{\mathcal{D}\boldsymbol{AB}}$在$\boldsymbol{A} ,\boldsymbol{B}$指标是上是反对称的，这意味着
+\begin{equation*}
+	\phi _{\mathcal{D}\boldsymbol{AB}} =\frac{1}{2} \phi {_{\mathcal{D}\boldsymbol{C}}}^{\boldsymbol{C}} \epsilon _{\boldsymbol{AB}} .
+\end{equation*}
+如果我们对$\epsilon _{\boldsymbol{AB}}$本身缩并，可以得到：
+\begin{equation*}
+	\epsilon {_{\boldsymbol{A}}}^{\boldsymbol{A}} =\delta _{\boldsymbol{A}}^{\boldsymbol{A}} =2=-\epsilon ^{\boldsymbol{A}}{}_{\boldsymbol{A}} .
+\end{equation*}
+\subsection{复共轭}
+
+只考虑一个自旋代数在物理中是不够的，因为我们希望我们的世界矢量和世界张量的体系与我们的自旋代数相通。注意到如果要将一个世界矢量用$( \xi ,\eta )$表示，我们必须使用复共轭。但如果取了复共轭操作后得到的元素仍然在$\mathfrak{S}^{\boldsymbol{A}}$中，这会导致洛伦兹协变性消失（两个自旋矢量可能不能再通过洛伦兹变换联系），因此我们必须让一个元素$\kappa ^{\boldsymbol{A}} \in \mathfrak{S}^{\boldsymbol{A}}$复共轭属于一个新的模，记为：
+\begin{equation*}
+	\overline{\kappa ^{\boldsymbol{A}}} =\overline{\kappa }^{\boldsymbol{A} '} \in \mathfrak{S}^{\boldsymbol{A} '} .
+\end{equation*}
+这里我们用指标集$\mathcal{L} '$表示原来指标集$\mathcal{L}$的复共轭的指标集。而共轭模$\mathfrak{S}^{\boldsymbol{A} '}$中的运算可以由以下要求定义：
+\begin{equation*}
+	\lambda \kappa ^{\boldsymbol{A}} +\mu \omega ^{\boldsymbol{A}} =\tau ^{\boldsymbol{A}} \Leftrightarrow \overline{\lambda }\overline{\kappa }^{\boldsymbol{A} '} +\overline{\mu }\overline{\omega }^{\boldsymbol{A} '} =\overline{\tau }^{\boldsymbol{A} '} .
+\end{equation*}
+容易验证$\mathfrak{S}^{\boldsymbol{A} '}$仍然是一个$\mathfrak{S}$-模，我们称$\mathfrak{S}^{\boldsymbol{A} '}$与$\mathfrak{S}^{\boldsymbol{A}}$是反同构（anti-isomorphic）的。
+
+
+
+现在我们可以定义一个一般的旋量了。一个一般的旋量$\chi {_{\boldsymbol{L} \cdots \boldsymbol{NU} '\cdots \boldsymbol{W} '}}^{\boldsymbol{A} \cdots \boldsymbol{DP} '\cdots \boldsymbol{R} '}$是一个$\mathfrak{S}$-多线性映射：
+\begin{equation*}
+	\mathfrak{S}_{\boldsymbol{A}} \times \cdots \times \mathfrak{S}_{\boldsymbol{D}} \times \mathfrak{S}_{\boldsymbol{P} '} \times \cdots \times \mathfrak{S}_{\boldsymbol{R} '} \times \mathfrak{S}^{\boldsymbol{L}} \times \cdots \times \mathfrak{S}^{\boldsymbol{N}} \times \mathfrak{S}^{U'} \times \cdots \times \mathfrak{S}^{\boldsymbol{W} '}\rightarrow \mathfrak{S} ,
+\end{equation*}
+我们称这样的旋量为$\{( p,q) ,( r,s)\}$型的旋量。由于$\mathfrak{S}^{\boldsymbol{A}}$与$\mathfrak{S}^{\boldsymbol{A} '}$是自然反同构的，我们定义一个一般张量的复共轭为
+\begin{equation*}
+	\overline{\chi {_{\boldsymbol{L} \cdots \boldsymbol{NU} '\cdots \boldsymbol{W} '}}^{\boldsymbol{A} \cdots \boldsymbol{DP} '\cdots \boldsymbol{R} '}} =\overline{\chi }{_{\boldsymbol{L} '\cdots \boldsymbol{N'U} \cdots \boldsymbol{W}}}^{\boldsymbol{A} '\cdots \boldsymbol{D'P} \cdots \boldsymbol{R}} .
+\end{equation*}
+需要注意的是，由于不带撇的指标与带撇的指标不可进行指标替换操作，这意味着带撇和不带撇的指标的相对位置是无所谓的。这意味着例如我们有：
+\begin{equation*}
+	\psi ^{\boldsymbol{AA} '}{}{_{\boldsymbol{B} '\boldsymbol{B}}}^{\boldsymbol{Q}} =\psi ^{\boldsymbol{AA} '}{}{_{\boldsymbol{B}}}^{\boldsymbol{Q}}{}_{\boldsymbol{B} '} =\psi ^{\boldsymbol{A}}{}{_{\boldsymbol{B}}}^{\boldsymbol{QA} '}{}_{\boldsymbol{B} '} \neq \psi ^{\boldsymbol{AA} '\boldsymbol{Q}}{}_{\boldsymbol{BB} '} .
+\end{equation*}
+我们将空间$\mathfrak{S}_{\boldsymbol{A} '\boldsymbol{B} '}$的度规记做$\epsilon _{\boldsymbol{A} '\boldsymbol{B} '} \equiv \overline{\epsilon _{\boldsymbol{AB}}} =\overline{\epsilon }_{\boldsymbol{A} '\boldsymbol{B} '}$，这与$\epsilon _{\boldsymbol{AB}}$的性质一样，可以用来升降指标。
+
+
+\subsection{旋量基}
+
+在使用度规$\epsilon $升降指标后，我们可以将归一化式$\{o,\iota \} =1$写成
+\begin{equation*}
+	o_{\boldsymbol{A}} \iota ^{\boldsymbol{A}} =1\Leftrightarrow \iota _{\boldsymbol{A}} o^{\boldsymbol{A}} =-1.
+\end{equation*}
+通过内积的反对称性，我们知道
+\begin{equation*}
+	o_{\boldsymbol{A}} o^{\boldsymbol{A}} =0=\iota ^{\boldsymbol{A}} \iota _{\boldsymbol{A}} .
+\end{equation*}
+对于任意一个自旋矢量$\kappa ^{\boldsymbol{A}} \in \mathfrak{S}^{\boldsymbol{A}}$，我们可以写出
+\begin{equation*}
+	\kappa ^{\boldsymbol{A}} =\kappa ^{0} o^{\boldsymbol{A}} +\kappa ^{1} \iota ^{\boldsymbol{A}} ,
+\end{equation*}
+其中
+\begin{equation*}
+	\kappa ^{0} =-\iota _{\boldsymbol{A}} \kappa ^{\boldsymbol{A}} ,\kappa ^{1} =o_{\boldsymbol{A}} \kappa ^{\boldsymbol{A}} .
+\end{equation*}
+注意上面的式子都是抽象指标。这意味着我们可以将$\{o^{\boldsymbol{A}} ,\iota ^{\boldsymbol{A}} \}$当做空间$\mathfrak{S}^{\boldsymbol{A}}$的一组基。如果我们假设时空是可平行化并且非紧致的，那么我们可以假设这个自旋标架场在整个时空中都存在。与之前的符号对应，我们可以将$\mathfrak{S}^{\boldsymbol{A}}$的基底记做$\epsilon {_{A}}^{\boldsymbol{A}}$，这里
+\begin{equation*}
+	\epsilon {_{0}}^{\boldsymbol{A}} =o^{\boldsymbol{A}} ,\epsilon {_{1}}^{\boldsymbol{A}} =\iota ^{\boldsymbol{A}} .
+\end{equation*}
+我们可以发现$\epsilon _{\boldsymbol{AB}}$在这个基下的分量为
+\begin{equation*}
+	\epsilon _{AB} =\epsilon _{\boldsymbol{AB}} \epsilon {_{A}}^{\boldsymbol{A}} \epsilon {_{B}}^{\boldsymbol{B}} =\begin{pmatrix}
+		0 & \chi \\
+		-\chi  & 0
+	\end{pmatrix} ,
+\end{equation*}
+其中
+\begin{equation*}
+	\chi =\epsilon _{\boldsymbol{AB}} o^{\boldsymbol{A}} \iota ^{\boldsymbol{B}} =o_{\boldsymbol{A}} \iota ^{\boldsymbol{A}} =1,
+\end{equation*}
+这意味着$\epsilon _{\boldsymbol{AB}}$的分量$\epsilon _{AB}$就是普通的Levi-Civita符号。如果我们使用归一化条件，我们可以使用线性变换，让$\epsilon {_{0}}^{\boldsymbol{A}}$不变，$\epsilon {_{1}}^{\boldsymbol{A}} \mapsto \chi ^{-1} \epsilon {_{1}}^{\boldsymbol{A}}$。这种情况$\chi \neq 1$我们称$\epsilon _{\boldsymbol{AB}}$为一个二标架（dyad）。那么对偶基$\epsilon {_{\boldsymbol{A}}}^{A}$必须满足
+\begin{equation*}
+	\epsilon {_{A}}^{\boldsymbol{A}} \epsilon {_{\boldsymbol{A}}}^{B} =\epsilon {_{A}}^{B} =\begin{pmatrix}
+		1 & 0\\
+		0 & 1
+	\end{pmatrix} ,
+\end{equation*}
+实际上就是克罗内克$\delta _{A}^{B}$。这意味着对于一个一般的二标架，我们有
+\begin{equation*}
+	\epsilon ^{AB} =\begin{pmatrix}
+		0 & \chi ^{-1}\\
+		-\chi ^{-1} & 0
+	\end{pmatrix} .
+\end{equation*}
+这意味着
+\begin{equation*}
+	\epsilon {_{\boldsymbol{A}}}^{0} =-\iota _{\boldsymbol{A}} ,\epsilon {_{\boldsymbol{A}}}^{1} =o_{\boldsymbol{A}} .
+\end{equation*}
+那么根据
+\begin{equation*}
+	\epsilon ^{\boldsymbol{AB}} =\epsilon ^{AB} \epsilon {_{A}}^{\boldsymbol{A}} \epsilon {_{B}}^{\boldsymbol{B}} ,\epsilon _{\boldsymbol{AB}} =\epsilon _{AB} \epsilon {_{\boldsymbol{A}}}^{A} \epsilon {_{\boldsymbol{B}}}^{B} ,\epsilon {_{\boldsymbol{A}}}^{\boldsymbol{B}} =\epsilon {_{\boldsymbol{A}}}^{A} \epsilon {_{A}}^{\boldsymbol{B}} ,
+\end{equation*}
+我们可以写出
+\begin{equation*}
+	\epsilon ^{\boldsymbol{AB}} =o^{\boldsymbol{A}} \iota ^{\boldsymbol{B}} -\iota ^{\boldsymbol{A}} o^{\boldsymbol{B}} ,\epsilon _{\boldsymbol{AB}} =o_{\boldsymbol{A}} \iota _{\boldsymbol{B}} -\iota _{\boldsymbol{A}} o_{\boldsymbol{B}} ,\epsilon {_{\boldsymbol{A}}}^{\boldsymbol{B}} =o_{\boldsymbol{A}} \iota ^{\boldsymbol{B}} -\iota _{\boldsymbol{A}} o^{\boldsymbol{B}} .
+\end{equation*}
+下面我们给出一个重要结论：
+
+\begin{them}[label={them:linear dependence of two spin vector}]{两个自旋矢量线性相关的条件}
+	对如果在某点两个自旋矢量满足$\alpha _{\boldsymbol{A}} \beta ^{\boldsymbol{A}} =0$，那么其充要条件为在这一点$\alpha _{\boldsymbol{A}}$为$\beta _{\boldsymbol{A}}$的标量倍。
+\end{them}
+
+这个结论是显然的，但它告诉我们$\alpha _{\boldsymbol{A}} \beta ^{\boldsymbol{A}}$为零当且仅当$\alpha ^{\boldsymbol{A}}$和$\beta ^{\boldsymbol{A}}$的旗杆方向重合。
+
+
+
+如果我们给$\mathfrak{S}^{\boldsymbol{A}}$选定了一个基$\epsilon {_{A}}^{\boldsymbol{A}}$，那么我们就很自然地可以将其共轭空间的基选为基的共轭。其运算与没有共轭的空间完全一致，只是指标上需要加撇。同样的，如果我们有一个一般的旋量，我们就可以在原先的空间以及共轭空间的基底上展开得到旋量的分量。值得注意的是，当我们使用抽象指标记号的时候，我们可以让指标上同时出现$\boldsymbol{A} ,\boldsymbol{A} '$并对其做共轭操作，例如
+\begin{equation*}
+	\overline{u^{\boldsymbol{AA} '}} =\overline{u}^{\boldsymbol{A} '\boldsymbol{A}} =\overline{u}^{\boldsymbol{AA} '} ,
+\end{equation*}
+但当这个写法应用到具体指标的时候则会造成误解，例如
+\begin{equation*}
+	\overline{u^{AA'}} =\overline{u}^{A'A} =\overline{u}^{AA'}
+\end{equation*}
+是不合法的，因为$\overline{u^{01'}} \neq \overline{u}^{01'}$，实际上我们应当用不同字母：
+\begin{equation*}
+	\overline{u^{AB'}} =\overline{u}^{BA'} ,
+\end{equation*}
+这样我们就会给出正确的结论：$\overline{u^{01'}} =\overline{u}^{0'1}$。
+
+最后我们浅考虑一下坐标变换。如果$\epsilon {_{\tilde{A}}}^{\boldsymbol{A}}$和$\epsilon {_{A}}^{\boldsymbol{A}}$是两个基，那么我们容易发现
+\begin{equation*}
+	\epsilon {_{A}}^{\tilde{A}} =\epsilon {_{A}}^{\boldsymbol{A}} \epsilon {_{\boldsymbol{A}}}^{\tilde{A}} ,\epsilon {_{\tilde{A}}}^{A} =\epsilon {_{\tilde{A}}}^{\boldsymbol{A}} \epsilon {_{\boldsymbol{A}}}^{A}
+\end{equation*}
+是基变换矩阵。如果两个基都是自旋标架，那么$\epsilon _{AB}$和$\epsilon _{\tilde{A}\tilde{B}}$是一样的，都是Levi-Civita符号。这意味着
+\begin{equation*}
+	1=\epsilon _{\tilde{0}\tilde{1}} =\epsilon _{AB} \epsilon {_{\tilde{0}}}^{A} \epsilon {_{\tilde{1}}}^{B} =\det (\epsilon {_{\tilde{A}}}^{A} ),
+\end{equation*}
+这意味着$\epsilon {_{\tilde{A}}}^{A}$是单位模（unimodular）的，即它是一个自旋矩阵。那么这意味着旋量的分量的变换规则是以自旋变换的方式进行的：
+\begin{equation*}
+	\chi _{\tilde{G} '\cdots \tilde{K} '\cdots }^{\tilde{A} \cdots \tilde{D} '\cdots } =\chi _{G'\cdots K\cdots }^{A\cdots D'\cdots } \epsilon {_{A}}^{\tilde{A}} \cdots \epsilon {_{D'}}^{\tilde{D} '} \cdots \epsilon {_{\tilde{G'}}}^{G'} \cdots \epsilon {_{\tilde{K}}}^{K} \cdots .
+\end{equation*}

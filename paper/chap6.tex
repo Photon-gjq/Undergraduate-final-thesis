@@ -1,0 +1,1591 @@
+\chapter{物理的东西——时空中的场}
+
+
+\section{电磁场及其导数}
+
+在前面我们已经看到，引力场可以用一个对称旋量$\upPsi _{\boldsymbol{ABCD}}$刻画，同样的，电磁场也可以用一个对称旋量$\varphi _{\boldsymbol{AB}}$刻画。这个类比可以进一步扩展，每一个场都可以从其导数的对易子获得，在引力场的情况中就是普通的协变导数，而电磁场的情况是修改定义的协变导数。在平直时空中，我们只需要加上一项四矢势$A_{\boldsymbol{a}}$，即：
+\begin{equation}
+	\boldsymbol{\nabla }_{\boldsymbol{a}} \equiv \partial _{\boldsymbol{a}} -\mathrm{i} eA_{\boldsymbol{a}} ,
+	\label{eq:6.1}
+\end{equation}
+这里$e$是电荷。现在，我们定义麦克斯韦场的场强$F_{\boldsymbol{ab}}$为$A_{\boldsymbol{a}}$的旋度：
+\begin{equation*}
+	\mathrm{i}\boldsymbol{\nabla }_{[\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{b}]} \theta ^{\mathcal{A}} =e\theta ^{\mathcal{A}} \partial _{[\boldsymbol{a}} A_{\boldsymbol{b}]} =\frac{1}{2} e\theta ^{\mathcal{A}} F_{\boldsymbol{ab}} .
+\end{equation*}
+如果我们希望电磁场和引力场同时存在，这意味着我们需要将\ref{eq:6.1}中的$\partial _{\boldsymbol{a}}$变为普通的协变导数算符。 \ 
+
+
+
+在经典理论中，我们的势能“$A_{\boldsymbol{a}}$”没有物理意义，同样的，$\upGamma {_{ab}}^{c}$对引力理论也没有直接的物理意义。因此，类似于我们在引力理论中所做的，我们不认为$\partial _{a}$是一个“本质的”量，对于带荷的理论同样如此，它是依赖于“规范”选取的。因此，我们希望构建一个更加“基本”的协变导数算符，使得用它构建出来的量都有“物理”或者“几何”意义。本节我们会用代数方法给出这样的协变导数的构造，并且这样的构造是适用于弯曲时空的版本的。
+
+
+\section{带荷的场*}
+
+我们之前曾经给出了流形上的$\mathbb{C}^{\infty }$旋量场——$\mathfrak{S}^{\mathcal{A}}$的定义，本章我们需要扩展其定义：对于每一个“荷”的值，都对应了一个模$\mathfrak{S}^{\mathcal{A}}$，而协变导数算符$\boldsymbol{\nabla }_{\boldsymbol{a}}$对于每一个版本都不同。我们引入带荷的模（charged modules）：
+\begin{equation*}
+	\prescript{e}{}{}\mathfrak{S} ,\prescript{e}{}{}\mathfrak{S}^{\boldsymbol{A}} ,\cdots ,\prescript{e}{}{}\mathfrak{S}_{\boldsymbol{B} \cdots \boldsymbol{D} '\cdots }^{\boldsymbol{A} \cdots \boldsymbol{C} '\cdots } ,\cdots 
+\end{equation*}
+我们先前讨论的情况就是$e=0$的情况。原则上，$e$可以取任意复数，但是因为各种原因，我们将其取为整数，即$e$可以取值$0,\pm \varepsilon ,\cdots $。重点是$\prescript{e}{}{}\mathfrak{S}$中的元素，当$e\neq 0$的时候，在$\mathcal{M}$的每一点，它并不取一个具体的数值，而$\prescript{e}{}{}\mathfrak{S}[ P]$是一个抽象的一维可加的复向量空间，但是可能没有唯一的乘法单位元。同样，$\prescript{e}{}{}\mathfrak{S}[ P]$在两个不同的点处的取值也没有什么系统的联系。而正如一个矢量在选定基底后可以用数字描述其分量，$\prescript{e}{}{}\mathfrak{S}[ P]$中的元素在一个适当的\textbf{规范选取}后，也可以用某个数值标量描述。除了正常的构建模$\mathfrak{S}$的条件（包括各种操作，加乘缩并共轭），我们还有以下几个额外条件来构建$\prescript{e}{}{}\mathfrak{S}$。
+
+\begin{post}[label={efraS needs}]{$\prescript{e}{}{}\mathfrak{S}$需要满足的}
+	\begin{itemize}
+		\item 两个带荷的旋量当且仅当它们的荷相同时才能相加。
+		\item 无论两个选来那个的荷是怎样的，它们总是可以外乘。
+		\item 指标缩并操作不影响荷的取值。
+		\item 指标替换也不影响荷的取值。
+		\item 复共轭操作会将荷变为相反数。
+	\end{itemize}
+\end{post}
+
+现在我们考虑映射
+\begin{equation*}
+	\boldsymbol{\nabla }_{\boldsymbol{a}} :\prescript{e}{}{}\mathfrak{S}^{\mathcal{A}}\rightarrow \prescript{e}{}{}\mathfrak{S}_{a}^{\mathcal{A}} ,
+\end{equation*}
+注意这个映射是保证荷$e$不变的。如果我们知道了$\boldsymbol{\nabla }_{\boldsymbol{a}}$在$\prescript{\varepsilon }{}{}\mathfrak{S}$上的作用，通过考虑$\boldsymbol{\nabla }_{\boldsymbol{a}}$在无荷场上的作用，这样的$\boldsymbol{\nabla }_{\boldsymbol{a}}$是唯一的，即普通的协变导数。因为如果我们考察$\alpha \in \prescript{\varepsilon }{}{}\mathfrak{S} ,\psi ^{\mathcal{A}} \in \prescript{n\varepsilon }{}{}\mathfrak{S}^{\mathcal{A}}\prescript{}{}{}$，那么
+\begin{equation*}
+	\boldsymbol{\nabla }_{\boldsymbol{a}} \psi ^{\mathcal{A}} =\alpha ^{n}\boldsymbol{\nabla }_{\boldsymbol{a}} (\alpha ^{-n} \psi ^{\mathcal{A}} )+n\psi ^{\mathcal{A}} \alpha ^{-1}\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha ,
+\end{equation*}
+由于$\alpha ^{-n} \psi ^{\mathcal{A}}$不带荷，而根据假设，我们也知道$\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha $，因此我们可以将上式确定下来。这里需要注意，如果$\alpha \in \prescript{e}{}{}\mathfrak{S}$处处不为零，那么$\alpha ^{-1}$就表示了$\prescript{-e}{}{}\mathfrak{S}$中的唯一的元素。值得一提的是，全局存在带荷非零标量场的条件等价于在一个带磁荷的时空中没有“洞”。
+
+
+
+由于$\epsilon _{\boldsymbol{AB}} ,\epsilon ^{\boldsymbol{AB}} ,\epsilon {_{\boldsymbol{A}}}^{\boldsymbol{B}}$被定义在无荷的模上，$\boldsymbol{\nabla }_{\boldsymbol{a}}$作用在它们身上的效果和普通的协变导数一致，因此给出零。
+
+
+
+现在，我们来看看如何用$\boldsymbol{\nabla }_{\boldsymbol{a}}$的信息重构出$A_{\boldsymbol{a}}$和$\partial _{\boldsymbol{a}}$。类似于选择一个坐标基，我们也可以选择一个处处不为零的$\alpha \in \prescript{\varepsilon }{}{}\mathfrak{S}$，随后定义：
+\begin{equation}
+	A_{\boldsymbol{a}} \equiv \mathrm{i}( \varepsilon \alpha )^{-1}\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha ,
+	\label{eq:6.2}
+\end{equation}
+显然这个量是不带荷的。我们通过考虑在$\psi ^{\mathcal{A}}$（带有整数荷$e=n\varepsilon $）上的作用来定义对应的微分算符$\partial _{\boldsymbol{a}}$：
+\begin{equation*}
+	\partial _{\boldsymbol{a}} \psi ^{\mathcal{A}} \equiv \alpha ^{n}\boldsymbol{\nabla }_{\boldsymbol{a}} (\alpha ^{-n} \psi ^{\mathcal{A}} ),
+\end{equation*}
+那么
+\begin{equation*}
+	\boldsymbol{\nabla }_{\boldsymbol{a}} \psi ^{\mathcal{A}} =( \partial _{a} -\mathrm{i} eA_{\boldsymbol{a}}) \psi ^{\mathcal{A}} .
+\end{equation*}
+如果$e=0$，$\partial _{\boldsymbol{a}}$就是正常的\textbf{协变导数}（注意不是坐标导数）。在平直时空中，即使有电磁场的存在，我们有
+\begin{equation*}
+	\partial _{\boldsymbol{a}} \partial _{\boldsymbol{b}} =\partial _{\boldsymbol{b}} \partial _{\boldsymbol{a}} .
+\end{equation*}
+弯曲时空中，$\partial _{[\boldsymbol{a}} \partial _{\boldsymbol{b}]}$给出了曲率部分。
+
+
+
+如果$\alpha $满足条件
+\begin{equation*}
+	\alpha \overline{\alpha } =1,\alpha \in \prescript{e}{}{}\mathfrak{S} ,
+\end{equation*}
+那么我们称$\alpha $为一个规范（gauge）。如果上式一开始不成立，那么根据$\alpha $处处不为零，我们可以做替换$\alpha \mapsto \alpha ( \alpha \overline{\alpha })^{-1/2}$来做到这件事。对于任何规范$\alpha $我们有
+\begin{equation*}
+	0=\boldsymbol{\nabla }_{\boldsymbol{a}}( \alpha \overline{\alpha }) =\alpha \boldsymbol{\nabla }_{\boldsymbol{a}}\overline{\alpha } +\overline{\alpha }\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha \Rightarrow \overline{\alpha }^{-1}\boldsymbol{\nabla }\overline{\alpha } =-\alpha ^{-1}\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha .
+\end{equation*}
+这意味着由\ref{eq:6.2}定义的$A_{\boldsymbol{a}}$是实的：
+\begin{equation*}
+	\overline{A}_{\boldsymbol{a}} =A_{\boldsymbol{a}} .
+\end{equation*}
+同样，对于任何规范，$\partial _{\boldsymbol{a}}$也是实的：
+\begin{equation*}
+	\overline{\partial _{\boldsymbol{a}} \psi ^{\mathcal{A}}} =\overline{\alpha ^{n}\boldsymbol{\nabla }_{\boldsymbol{a}} (\alpha ^{-n} \psi ^{\mathcal{A}} )} =\alpha ^{n}\boldsymbol{\nabla }_{\boldsymbol{a}} (\alpha ^{-n}\overline{\psi ^{\mathcal{A}}} )=\partial _{\boldsymbol{a}}\overline{\psi ^{\mathcal{A}}} .
+\end{equation*}
+规范$\alpha $可以将任何带荷的场映射到不带荷的场
+\begin{equation*}
+	\psi ^{\mathcal{A}} \mapsto \alpha ^{-n} \psi ^{\mathcal{A}} ,
+\end{equation*}
+那么在基底下，我们可以取数值分量，因为带荷的标量可能并没有一个正则的数值值。即如果我们要确定一个带荷场的分量，我们需要同时给出基底和规范的选取。如果一个规范$\alpha $被换成了另一个规范$\alpha '$，那么对应的不带荷的场也会经历一个规范变换：
+\begin{equation*}
+	\alpha ^{-n} \psi ^{\mathcal{A}} \mapsto \alpha ^{\prime -n} \psi ^{\mathcal{A}} =\mathrm{e}^{\mathrm{i} n\theta } (\alpha ^{-n} \psi ^{\mathcal{A}} ),
+\end{equation*}
+这里
+\begin{equation*}
+	\mathrm{e}^{\mathrm{i} \theta } =\alpha /a'.
+\end{equation*}
+对应的$A_{\boldsymbol{a}}$的变换规则为
+\begin{equation}
+	A_{\boldsymbol{a}} \mapsto A'_{\boldsymbol{a}} =\frac{\mathrm{i}}{\varepsilon \alpha '}\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha '=\frac{\mathrm{i}}{\varepsilon \alpha }\mathrm{e}^{\mathrm{i} \theta }\boldsymbol{\nabla }_{\boldsymbol{a}} (\alpha \mathrm{e}^{-\mathrm{i} \theta } )=A_{\boldsymbol{a}} +\frac{1}{\varepsilon }\boldsymbol{\nabla }_{\boldsymbol{a}} \theta ,
+	\label{eq:6.3}
+\end{equation}
+以及
+\begin{equation*}
+	\partial _{\boldsymbol{a}} \psi ^{\mathcal{A}} \mapsto (\partial _{\boldsymbol{a}} -\mathrm{i} e\boldsymbol{\nabla }_{\boldsymbol{a}} \theta )\psi ^{\mathcal{A}} .
+\end{equation*}
+这就是一般电磁理论中的规范变换。值得注意的是，在电磁学以及引力的情况，其规范变换都是“第二类”的，即不改变算符$\partial _{\boldsymbol{a}}$。电磁学的情况是显然的，因为$\alpha \mapsto \alpha '=\mathrm{e}^{-\mathrm{i} \theta } \alpha $，其中$\theta $是实的且是常数。在引力的情况中，我们的规范变换为$x^{a} \mapsto A{_{b}}^{a} x^{b} +B^{a}$，这里$A{_{b}}^{a}$和$B^{a}$都是实的常数矩阵且$\det A\neq 0$。如果我们令$A{_{b}}^{a}$是一个限制性洛伦兹变换，那么规范$x^{a}$的选取对应了一个将时空$\mathcal{M}$映射到闵氏空间的映射，其对称性被视为规范自由度。
+
+
+\subsection{麦克斯韦场张量}
+
+下面我们考虑对易子：
+\begin{equation*}
+	\upDelta _{\boldsymbol{ab}} =\boldsymbol{\nabla }_{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{b}} -\boldsymbol{\nabla }_{\boldsymbol{b}}\boldsymbol{\nabla }_{\boldsymbol{a}} =2\boldsymbol{\nabla }_{[\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{b}]} ,
+\end{equation*}
+我们假设无挠，那么对于一个无荷的标量$\gamma \in \mathfrak{S}$，我们有：
+\begin{equation*}
+	\upDelta _{\boldsymbol{ab}} \gamma =0.
+\end{equation*}
+现在考虑$0\neq \alpha \in \prescript{\varepsilon }{}{}\mathfrak{S}$，那么对于$\psi \in \prescript{e}{}{}\mathfrak{S} ,e=n\varepsilon $，我们总有$\gamma \in \mathfrak{S}$，使得
+\begin{equation*}
+	\gamma \alpha ^{n} =\psi .
+\end{equation*}
+这意味着
+\begin{equation*}
+	\upDelta _{\boldsymbol{ab}} \psi =\gamma \upDelta _{\boldsymbol{ab}} \alpha ^{n} =n\gamma \alpha ^{n-1} \upDelta _{\boldsymbol{ab}} \alpha \Rightarrow n\psi \alpha ^{-1} \upDelta _{\boldsymbol{ab}} \alpha =\upDelta _{\boldsymbol{ab}} \psi .
+\end{equation*}
+如果我们令
+\begin{equation}
+	F_{\boldsymbol{ab}} \equiv \frac{\mathrm{i}}{\varepsilon \alpha } \upDelta _{\boldsymbol{ab}} \alpha \Rightarrow \mathrm{i} \upDelta _{\boldsymbol{ab}} \psi =eF_{\boldsymbol{ab}} \psi .
+	\label{eq:6.4}
+\end{equation}
+可以看到这样定义的$F$是不依赖于规范$\alpha $的选择的。我们称这样的$F_{\boldsymbol{ab}}$为麦克斯韦或者电磁场张量。对于一个带荷的旋量$\psi ^{\mathcal{A}} \in \prescript{e}{}{}\mathfrak{S}^{\mathcal{A}}$，我们有：
+\begin{equation*}
+	\upDelta _{\boldsymbol{ab}} (\alpha ^{-n} \psi ^{\mathcal{A}} )=-n\alpha ^{-n-1} \psi ^{\mathcal{A}} \upDelta _{\boldsymbol{ab}} \alpha +\alpha ^{-n} \upDelta _{\boldsymbol{ab}} \psi ^{\mathcal{A}} ,
+\end{equation*}
+即
+\begin{equation}
+	\upDelta _{\boldsymbol{ab}} \psi ^{\mathcal{A}} =\alpha ^{n} \upDelta _{\boldsymbol{ab}} (\alpha ^{-n} \psi ^{\mathcal{A}} )-\mathrm{i} eF_{\boldsymbol{ab}} \psi ^{\mathcal{A}} ,
+	\label{eq:6.5}
+\end{equation}
+由于$\alpha ^{-n} \psi ^{\mathcal{A}}$无荷，$\upDelta _{\boldsymbol{ab}} (\alpha ^{-n} \psi ^{\mathcal{A}} )$只是普通的协变导数算符，故
+\begin{equation}
+	\upDelta _{\boldsymbol{ab}} \psi ^{\mathcal{A}} =2\partial _{[\boldsymbol{a}} \partial _{\boldsymbol{b}]} \psi ^{\mathcal{A}} -\mathrm{i} eF_{\boldsymbol{ab}} \psi ^{\mathcal{A}} .
+	\label{eq:6.6}
+\end{equation}
+由于$\partial _{\boldsymbol{a}}$是普通的协变导数算符，我们可以写出
+\begin{equation*}
+	\upDelta _{\boldsymbol{ab}} \psi _{\boldsymbol{c}} =-R{_{\boldsymbol{abc}}}^{\boldsymbol{d}} \psi _{\boldsymbol{d}} -\mathrm{i} eF_{\boldsymbol{ab}} \psi _{\boldsymbol{c}} .
+\end{equation*}
+现在我们考察$F_{\boldsymbol{ab}}$的性质。首先显然它是反对称的$F_{\boldsymbol{ab}} =-F_{\boldsymbol{ba}}$，同时由于$\boldsymbol{\nabla }_{\boldsymbol{a}}$不改变荷，根据\ref{eq:6.4}，$F_{\boldsymbol{ab}}$是\textbf{无荷}的。如果对\ref{eq:6.4}取复共轭，我们有
+\begin{equation*}
+	\upDelta _{\boldsymbol{ab}}\overline{\psi } =\mathrm{i} eF_{\boldsymbol{ab}}\overline{\psi } ,
+\end{equation*}
+因为$\boldsymbol{\nabla }_{\boldsymbol{a}} =\overline{\boldsymbol{\nabla }}_{\boldsymbol{a}}$，这意味着$F_{\boldsymbol{ab}}$是实的。同样的，我们也有类似于比安基恒等式的结果：
+\begin{equation*}
+	\boldsymbol{\nabla }_{[\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{b}}\boldsymbol{\nabla }_{\boldsymbol{c}]} \psi =\boldsymbol{\nabla }_{[\boldsymbol{a}}\boldsymbol{\nabla }_{[\boldsymbol{b}}\boldsymbol{\nabla }_{\boldsymbol{c}]]} \psi =-\frac{1}{2}\mathrm{i} e\boldsymbol{\nabla }_{[\boldsymbol{a}} (F_{\boldsymbol{bc}]} \psi )=-\frac{1}{2}\mathrm{i} e\psi \boldsymbol{\nabla }_{[\boldsymbol{a}} F_{\boldsymbol{bc}]} -\frac{1}{2}\mathrm{i} eF_{[\boldsymbol{bc}}\boldsymbol{\nabla }_{\boldsymbol{a}]} \psi ,
+\end{equation*}
+但同时根据
+\begin{equation*}
+	\boldsymbol{\nabla }_{[\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{b}}\boldsymbol{\nabla }_{\boldsymbol{c}]} \psi =\boldsymbol{\nabla }_{[[\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{b}]}\boldsymbol{\nabla }_{\boldsymbol{c}]} \psi =-\frac{1}{2} R{_{[\boldsymbol{abc}]}}^{\boldsymbol{d}}\boldsymbol{\nabla }_{\boldsymbol{d}} \psi -\frac{1}{2}\mathrm{i} eF_{[\boldsymbol{ab}}\boldsymbol{\nabla }_{\boldsymbol{c}]} \psi ,
+\end{equation*}
+对比两式，我们有
+\begin{equation}
+	\boldsymbol{\nabla }_{[\boldsymbol{a}} F_{\boldsymbol{bc}]} =0.
+	\label{eq:6.7}
+\end{equation}
+如果我们选取一个规范$\alpha $，那么根据\ref{eq:6.2}：
+\begin{equation*}
+	\boldsymbol{\nabla }_{[\boldsymbol{a}} A_{\boldsymbol{b}]} \equiv \boldsymbol{\nabla }\mathrm{_{[\boldsymbol{a}}} [\mathrm{i} (\varepsilon \alpha )^{-1}\boldsymbol{\nabla }_{\boldsymbol{b}]} \alpha ]=-(\mathrm{i} /\varepsilon \alpha ^{2} )(\boldsymbol{\nabla }_{[\boldsymbol{a}} \alpha )(\boldsymbol{\nabla }_{\boldsymbol{b}]} \alpha )+(\mathrm{i} /\varepsilon \alpha )\boldsymbol{\nabla }_{[\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{b}]} \alpha =\frac{1}{2} F_{\boldsymbol{ab}} ,
+\end{equation*}
+这意味着
+\begin{equation}
+	F_{\boldsymbol{ab}} =\boldsymbol{\nabla }_{\boldsymbol{a}} A_{\boldsymbol{b}} -\boldsymbol{\nabla }_{\boldsymbol{b}} A_{\boldsymbol{a}} .
+	\label{eq:6.8}
+\end{equation}
+这就是我们在麦克斯韦理论中的通常的$F$的表达式。这意味着如果$F_{\boldsymbol{ab}} =0$，那么$A_{\boldsymbol{a}}$可以表示为一个梯度的形式$A_{\boldsymbol{a}} =\boldsymbol{\nabla }_{\boldsymbol{a}} \chi $，这里$\chi $是实的且不带荷。实际上，如果反过来，在局域也一定存在一个规范$\alpha $，其给出的势满足\ref{eq:6.8}。因为如果假设有两个不同的$A_{\boldsymbol{a}} ,A'_{\boldsymbol{a}}$，这意味着$\boldsymbol{\nabla }_{[\boldsymbol{a}} (A'_{\boldsymbol{b}]} -A_{\boldsymbol{b}]} )=0$，那么$A'_{\boldsymbol{a}} -A_{\boldsymbol{a}} =\varepsilon ^{-1}\boldsymbol{\nabla }_{\boldsymbol{a}} \theta $，由此根据\ref{eq:6.3}，由$\alpha '$产生的势也总满足\ref{eq:6.8}。
+
+
+
+众所周知比安基恒等式\ref{eq:6.7}给出了一半的麦克斯韦方程，如果我们定义流$J^{\boldsymbol{a}}$，那么另一半的麦克斯韦方程为
+\begin{equation}
+	\boldsymbol{\nabla }_{\boldsymbol{a}} F^{\boldsymbol{ab}} =4\pi J^{\boldsymbol{b}} .
+	\label{eq:6.9}
+\end{equation}
+这个式子告诉我们$J^{\boldsymbol{a}}$是无荷的。
+
+
+\subsection{电磁场旋量}
+
+由于$F_{\boldsymbol{ab}}$是实的反对称张量，我们可以将其分解为
+\begin{equation}
+	F_{\boldsymbol{ab}} =\varphi _{\boldsymbol{AB}} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '} +\epsilon _{\boldsymbol{AB}}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} ,
+	\label{eq:6.10}
+\end{equation}
+这里$\varphi _{\boldsymbol{AB}}$被称为电磁旋量（electromagnetic spinor），其中
+\begin{equation*}
+	\varphi _{\boldsymbol{AB}} =\varphi _{(\boldsymbol{AB})} =\frac{1}{2} F{_{\boldsymbol{ABC} '}}^{\boldsymbol{C} '} .
+\end{equation*}
+我们也可以将$F_{\boldsymbol{ab}}$分成自对偶部分和反自对偶部分：
+\begin{equation*}
+	\prescript{-}{}{} F_{\boldsymbol{ab}} =\varphi _{\boldsymbol{AB}} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '} ,\kern+0.4em \prescript{+}{}{} F_{\boldsymbol{ab}} =\epsilon _{\boldsymbol{AB}}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} .
+\end{equation*}
+从这里我们也可以看出，由于$F_{\boldsymbol{ab}}$的有效部分是两个旋量$\varphi _{\boldsymbol{AB}} ,\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '}$，前者有两个不带撇的指标，属于洛伦兹群的$( 1,0)$表示的表示空间，同时后者属于$( 0,1)$表示的表示空间，即电磁场$F_{\boldsymbol{ab}}$具有洛伦兹变换类型$( 1,0) \oplus ( 0,1)$。
+
+除此之外，我们也可以根据\ref{eq:6.4}，由$\upDelta _{\boldsymbol{ab}} =\epsilon _{\boldsymbol{A} '\boldsymbol{B} '} \Box _{\boldsymbol{AB}} +\epsilon _{\boldsymbol{AB}} \Box _{\boldsymbol{A} '\boldsymbol{B} '}$将$F$化为$\Box $的组合。例如考虑$\psi \in \prescript{e}{}{}\mathfrak{S}$。那么
+\begin{equation*}
+	\Box _{\boldsymbol{AB}} \psi =\frac{1}{2} \epsilon ^{\boldsymbol{A} '\boldsymbol{B} '} \upDelta _{\boldsymbol{ab}} \psi =-\frac{1}{2}\mathrm{i} e\epsilon ^{\boldsymbol{A} '\boldsymbol{B} '} F_{\boldsymbol{ab}} \psi =-\mathrm{i} e\varphi _{\boldsymbol{AB}} \psi ,
+\end{equation*}
+以及
+\begin{equation*}
+	\Box _{\boldsymbol{AB} '} \psi =-\mathrm{i} e\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} \psi .
+\end{equation*}
+当$\psi ^{\mathcal{A}} \in \prescript{e}{}{}\mathfrak{S}^{\mathcal{A}}$，那么根据\ref{eq:6.5}，我们知道
+\begin{equation*}
+	\Box _{\boldsymbol{AB}} \psi ^{\mathcal{A}} =\alpha ^{n} \Box _{\boldsymbol{AB}} (\alpha ^{-n} \psi ^{\mathcal{A}} )-\mathrm{i} e\varphi _{\boldsymbol{AB}} \psi ^{\mathcal{A}} ,
+\end{equation*}
+由于在无荷情况下$\Box _{\boldsymbol{AB}} \kappa ^{\boldsymbol{C}} =X{_{\boldsymbol{ABE}}}^{\boldsymbol{C}} \kappa ^{\boldsymbol{E}} ,\kern+0.4em \Box _{\boldsymbol{A} '\boldsymbol{B} '} \kappa ^{\boldsymbol{C}} =\upPhi {_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{E}}}^{\boldsymbol{C}} \kappa ^{\boldsymbol{E}}$，我们知道
+\begin{equation*}
+	\begin{aligned}
+		\Box _{\boldsymbol{AB}} \psi ^{\boldsymbol{D}} & =X{_{\boldsymbol{ABC}}}^{\boldsymbol{D}} \psi ^{\boldsymbol{C}} -\mathrm{i} e\varphi _{\boldsymbol{AB}} \psi ^{\boldsymbol{D}} ,\\
+		\Box _{\boldsymbol{A'B} '} \psi ^{\boldsymbol{D}} & =\upPhi {_{\boldsymbol{A'B'C}}}^{\boldsymbol{D}} \psi ^{\boldsymbol{C}} -\mathrm{i} e\overline{\varphi }_{\boldsymbol{A'B} '} \psi ^{\boldsymbol{D}} .
+	\end{aligned}
+\end{equation*}
+对比\ref{eq:6.8}和\ref{eq:6.10}，我们知道
+\begin{equation}
+	\varphi _{\boldsymbol{AB}} =\boldsymbol{\nabla }_{\boldsymbol{A} '(\boldsymbol{A}} A{_{\boldsymbol{B})}}^{\boldsymbol{A} '} .
+	\label{eq:6.11}
+\end{equation}
+（在平直时空中，）我们常常会对$A_{\boldsymbol{a}}$施加洛伦茨规范条件：
+\begin{equation*}
+	\boldsymbol{\nabla }^{\boldsymbol{a}} A_{\boldsymbol{a}} =0,
+\end{equation*}
+根据\ref{eq:6.2}，这等价于
+\begin{equation*}
+	\alpha \boldsymbol{\nabla }^{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha =(\boldsymbol{\nabla }^{\boldsymbol{a}} \alpha )(\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha ),
+\end{equation*}
+在这个条件下，\ref{eq:6.11}可以化简为
+\begin{equation*}
+	\varphi _{\boldsymbol{AB}} =\boldsymbol{\nabla }_{\boldsymbol{A} '\boldsymbol{A}} A^{\boldsymbol{A} '}{}_{\boldsymbol{B}} .
+\end{equation*}
+
+
+现在，麦克斯韦方程组\ref{eq:6.9}可以被写成：
+\begin{equation}
+	\boldsymbol{\nabla }^{\boldsymbol{A} '\boldsymbol{B}} \varphi ^{\boldsymbol{A}}{}_{\boldsymbol{B}} +\boldsymbol{\nabla }^{\boldsymbol{AB} '}\overline{\varphi }^{\boldsymbol{A} '}{}_{\boldsymbol{B} '} =4\pi J^{\boldsymbol{AA} '} .
+	\label{eq:6.12}
+\end{equation}
+同时，\ref{eq:6.7}也等价于$\boldsymbol{\nabla }_{\boldsymbol{a}}\prescript{*}{}{} F^{\boldsymbol{ab}} =0$，而$\prescript{*}{}{} F^{\boldsymbol{ab}} =-\mathrm{i} \varphi ^{\boldsymbol{AB}} \epsilon ^{\boldsymbol{A} '\boldsymbol{B} '} +\mathrm{i} \epsilon ^{\boldsymbol{AB}}\overline{\varphi }^{\boldsymbol{A} '\boldsymbol{B} '}$，从而我们知道
+\begin{equation}
+	\boldsymbol{\nabla }^{\boldsymbol{A} '\boldsymbol{B}} \varphi ^{\boldsymbol{A}}{}_{\boldsymbol{B}} =\boldsymbol{\nabla }^{\boldsymbol{AB} '}\overline{\varphi }^{\boldsymbol{A}}{}_{\boldsymbol{B}} ,
+	\label{eq:6.13}
+\end{equation}
+现在两个麦克斯韦方程组\ref{eq:6.12}，\ref{eq:6.13}可以被化为一个方程：
+\begin{equation}
+	\boldsymbol{\nabla }^{\boldsymbol{A} '\boldsymbol{B}} \varphi ^{\boldsymbol{A}}{}_{\boldsymbol{B}} =2\pi J^{\boldsymbol{AA} '} ,
+	\label{eq:6.14}
+\end{equation}
+以及约束条件$J^{\boldsymbol{a}}$是实的：$J^{\boldsymbol{AA} '} =\overline{J}^{\boldsymbol{AA} '}$。
+
+
+
+所谓的流守恒方程
+\begin{equation*}
+	\boldsymbol{\nabla }_{\boldsymbol{a}} J^{\boldsymbol{a}} =0
+\end{equation*}
+可以直接从方程\ref{eq:6.14}给出：
+\begin{equation*}
+	\begin{aligned}
+		-2\pi \boldsymbol{\nabla }_{\boldsymbol{a}} J^{\boldsymbol{a}} =\boldsymbol{\nabla }_{\boldsymbol{AA} '}\boldsymbol{\nabla }^{\boldsymbol{A} '}{}_{\boldsymbol{B}} \varphi ^{\boldsymbol{AB}} =\Box _{\boldsymbol{AB}} \varphi ^{\boldsymbol{AB}} & =X{_{\boldsymbol{ABQ}}}^{\boldsymbol{A}} \varphi ^{\boldsymbol{QB}} +X{_{\boldsymbol{ABQ}}}^{\boldsymbol{B}} \varphi ^{\boldsymbol{AQ}}\\
+		& =3\upLambda (\epsilon _{\boldsymbol{BQ}} \varphi ^{\boldsymbol{QB}} +\epsilon _{\boldsymbol{AQ}} \varphi ^{\boldsymbol{AQ}} )=0.
+	\end{aligned}
+\end{equation*}
+如果我们将\ref{eq:6.11}带入\ref{eq:6.14}，我们知道
+\begin{equation*}
+	\boldsymbol{\nabla }^{\boldsymbol{A} '}{}_{\boldsymbol{B}}\boldsymbol{\nabla }^{\boldsymbol{C} '(\boldsymbol{A}} A^{\boldsymbol{B})}{}_{\boldsymbol{C} '} =2\pi J^{\boldsymbol{AA} '} ,
+\end{equation*}
+如果取洛伦茨规范条件给出$\varphi _{\boldsymbol{AB}} =\boldsymbol{\nabla }_{\boldsymbol{A} '\boldsymbol{A}} \upPhi ^{\boldsymbol{A} '}{}_{\boldsymbol{B}}$，这意味着$\boldsymbol{AB}$指标天然对称，因此我们可以写：
+\begin{equation*}
+	\begin{aligned}
+		2\pi J^{\boldsymbol{AA} '} & =\boldsymbol{\nabla }^{\boldsymbol{A} '}{}_{\boldsymbol{B}}\boldsymbol{\nabla }^{\boldsymbol{C} '\boldsymbol{B}} A^{\boldsymbol{A}}{}_{\boldsymbol{C} '}\\
+		& =\boldsymbol{\nabla }^{(\boldsymbol{A} '}{}_{\boldsymbol{B}}\boldsymbol{\nabla }^{\boldsymbol{C} ')\boldsymbol{B}} A^{\boldsymbol{A}}{}_{\boldsymbol{C} '} +\boldsymbol{\nabla }^{[\boldsymbol{A} '}{}_{\boldsymbol{B}}\boldsymbol{\nabla }^{\boldsymbol{C} ']\boldsymbol{B}} A^{\boldsymbol{A}}{}_{\boldsymbol{C} '}\\
+		& =\Box ^{\boldsymbol{A} '\boldsymbol{C} '} A^{\boldsymbol{A}}{}_{\boldsymbol{C} '} +\frac{1}{2} \epsilon ^{\boldsymbol{A} '\boldsymbol{C} '}\boldsymbol{\nabla }_{\boldsymbol{BB} '}\boldsymbol{\nabla }^{\boldsymbol{BB} '} A^{\boldsymbol{A}}{}_{\boldsymbol{C} '}\\
+		& =-\upPhi ^{\boldsymbol{AA} '}{}_{\boldsymbol{CC} '} A^{\boldsymbol{CC} '} +3\upLambda A^{\boldsymbol{AA} '} +\frac{1}{2}\boldsymbol{\nabla }{_{\boldsymbol{b}}}^{\boldsymbol{b}} A^{\boldsymbol{a}} ,
+	\end{aligned}
+\end{equation*}
+这意味着
+\begin{equation*}
+	4\pi J^{\boldsymbol{a}} =\boldsymbol{\nabla }_{\boldsymbol{b}}\boldsymbol{\nabla }^{\boldsymbol{a}} A^{\boldsymbol{a}} +R^{\boldsymbol{a}}{}_{\boldsymbol{c}} A^{\boldsymbol{c}} .
+\end{equation*}
+
+
+此外，如果$J^{\boldsymbol{a}} =0$，那么
+\begin{equation*}
+	\boldsymbol{\nabla }^{\boldsymbol{AA} '} \varphi _{\boldsymbol{AB}} =0,
+\end{equation*}
+这是无源麦克斯韦方程组$\boldsymbol{\nabla }_{[\boldsymbol{a}} F_{\boldsymbol{bc}]} =0,\boldsymbol{\nabla }_{\boldsymbol{a}} F^{\boldsymbol{ab}} =0$的旋量形式，这与自旋$2$的无质量粒子的场方程形式一致。
+
+
+\subsection{与三矢量的关系*}
+
+如果我们将$F_{\boldsymbol{ab}}$在闵氏标架$t^{\boldsymbol{a}} ,x^{\boldsymbol{a}} ,y^{\boldsymbol{a}} ,z^{\boldsymbol{a}}$下展开，那么其分量与三维的矢量场$\boldsymbol{E} ,\boldsymbol{B}$的关系为：
+\begin{equation}
+	F_{ab} =\begin{pmatrix}
+		0 & E_{1} & E_{2} & E_{3}\\
+		-E_{1} & 0 & -B_{3} & B_{2}\\
+		-E_{2} & B_{3} & 0 & -B_{1}\\
+		-E_{3} & -B_{2} & B_{1} & 0
+	\end{pmatrix} .
+	\label{eq:6.15}
+\end{equation}
+那么根据张量分量与旋量分量之间的转化关系，取范德瓦尔登符号$g{_{\boldsymbol{AA} '}}^{\boldsymbol{a}}$为标准的泡利矩阵，我们知道
+\begin{equation}
+	\begin{aligned}
+		\varphi _{00} & =\frac{1}{2} (F_{31} +F_{01} -\mathrm{i} F_{32} -\mathrm{i} F_{02} )=\frac{1}{2}( C_{1} -\mathrm{i} C_{2})\\
+		\varphi _{01} & =\frac{1}{2} (-F_{03} -\mathrm{i} F_{12} )=-\frac{1}{2} C_{3}\\
+		\varphi _{11} & =\frac{1}{2}( F_{31} -F_{01} +\mathrm{i} F_{32} -\mathrm{i} F_{02}) =-\frac{1}{2}( C_{1} +\mathrm{i} C_{2}) ,
+	\end{aligned}
+	\label{eq:6.16}
+\end{equation}
+其中
+\begin{equation}
+	\boldsymbol{C} =\boldsymbol{E} -\mathrm{i}\boldsymbol{B} .
+	\label{eq:6.17}
+\end{equation}
+反过来，如果我们记
+\begin{equation}
+	\begin{aligned}
+		\varphi _{0} & =\varphi _{00} & \varphi _{1} & =\varphi _{01} & \varphi _{2} & =\varphi _{11}\\
+		\overline{\varphi }_{0} & =\varphi _{0'0'} & \overline{\varphi }_{1} & =\varphi _{0'1'} & \overline{\varphi }_{2} & =\varphi _{1'1'} ,
+	\end{aligned}
+	\label{eq:6.18}
+\end{equation}
+那么
+\begin{equation*}
+	\begin{array}{ l }
+		F_{ab} = \\
+		{\footnotesize \frac{1}{2} \times\begin{pmatrix}
+			0 & ( \varphi _{0} -\varphi _{2} +\overline{\varphi }_{0} -\overline{\varphi }_{2}) & (\mathrm{i} \varphi _{0} +\mathrm{i} \varphi _{2} -\mathrm{i}\overline{\varphi }_{0} -\mathrm{i}\overline{\varphi }_{2}) & ( -2\varphi _{1} -2\overline{\varphi }_{1})\\
+			( -\varphi _{0} +\varphi _{2} -\overline{\varphi }_{0} +\overline{\varphi }_{2}) & 0 & ( 2\mathrm{i} \varphi _{1} -2\mathrm{i}\overline{\varphi }_{1}) & ( -\varphi _{0} -\varphi _{2} -\overline{\varphi }_{0} -\overline{\varphi }_{2})\\
+			( -\mathrm{i} \varphi _{0} -\mathrm{i} \varphi _{2} +\mathrm{i}\overline{\varphi }_{0} +\mathrm{i}\overline{\varphi }_{1}) & ( -2\mathrm{i} \varphi _{1} +2\mathrm{i}\overline{\varphi }_{1}) & 0 & (\mathrm{i} \varphi _{2} -\mathrm{i} \varphi _{0} -\mathrm{i}\overline{\varphi }_{2} +\mathrm{i}\overline{\varphi }_{0})\\
+			( 2\varphi _{1} +2\overline{\varphi }_{1}) & ( \varphi _{0} +\varphi _{2} +\overline{\varphi }_{0} +\overline{\varphi }_{2}) & ( -\mathrm{i} \varphi _{2} +\mathrm{i} \varphi _{0} +\mathrm{i}\overline{\varphi }_{2} -\mathrm{i}\overline{\varphi }_{0}) & 0
+		\end{pmatrix}} .
+	\end{array}
+\end{equation*}
+如果$F_{\boldsymbol{ab}}$是复的场并且满足无源麦克斯韦场方程，那么它是单光子的“波函数”。这种情况下，我们写
+\begin{equation*}
+	F_{\boldsymbol{ab}} =\varphi _{\boldsymbol{AB}} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '} +\epsilon _{\boldsymbol{AB}}\tilde{\varphi }_{\boldsymbol{A'B} '} ,
+\end{equation*}
+这里
+\begin{equation*}
+	\varphi _{\boldsymbol{AB}} =\frac{1}{2} F{_{\boldsymbol{ABC} '}}^{\boldsymbol{C} '} ,\kern+0.4em \tilde{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} =\frac{1}{2} F{_{\boldsymbol{C}}}^{\boldsymbol{C}}{}_{\boldsymbol{A} '\boldsymbol{B} '} ,
+\end{equation*}
+这里$\varphi _{\boldsymbol{AB}} ,\tilde{\varphi }_{\boldsymbol{A'B} '}$是两个无关的旋量场。此时\ref{eq:6.18}定义的关于$\varphi ,\tilde{\varphi }$的矩阵$F_{\boldsymbol{ab}}$仍然成立，只是需要将$\overline{\varphi }$替换为$\tilde{\varphi }$，\ref{eq:6.16}不变，对应的$\tilde{\varphi }$的定义式需要将\ref{eq:6.16}和\ref{eq:6.17}中的$\mathrm{i}$替换为$-\mathrm{i}$。
+
+
+
+式\ref{eq:6.15}的对偶为
+\begin{equation*}
+	\prescript{*}{}{} F_{ab} =\begin{pmatrix}
+		0 & -B_{1} & -B_{2} & -B_{3}\\
+		B_{1} & 0 & -E_{3} & E_{2}\\
+		B_{2} & E_{3} & 0 & -E_{1}\\
+		B_{3} & -E_{2} & E_{1} & 0
+	\end{pmatrix} ,
+\end{equation*}
+我们可以利用它定义两个重要的量：
+\begin{equation*}
+	\begin{aligned}
+		P & =\frac{1}{2} F_{\boldsymbol{ab}} F^{\boldsymbol{ab}} =-\frac{1}{2}\prescript{*}{}{} F_{\boldsymbol{ab}}\prescript{*}{}{} F^{\boldsymbol{ab}} =\boldsymbol{B}^{2} -\boldsymbol{E}^{2} ,\\
+		Q & =\frac{1}{2} F_{\boldsymbol{ab}}\prescript{*}{}{} F^{\boldsymbol{ab}} =2\boldsymbol{E} \cdot \boldsymbol{B} .
+	\end{aligned}
+\end{equation*}
+以及：
+\begin{equation*}
+	K\equiv \varphi _{\boldsymbol{AB}} \varphi ^{\boldsymbol{AB}} =\frac{1}{2}\prescript{-}{}{} F_{\boldsymbol{ab}}\prescript{-}{}{} F^{\boldsymbol{ab}} =\frac{1}{2} F_{\boldsymbol{ab}}\prescript{-}{}{} F^{\boldsymbol{ab}} =P+\mathrm{i} Q.
+\end{equation*}
+如果$F_{\boldsymbol{ab}}$是实场，那么$P,Q$也是实的，那么他们可以分别作为$K$的实部和虚部。如果$F_{\boldsymbol{ab}}$是复的，那么我们定义
+\begin{equation*}
+	\tilde{K} \equiv \tilde{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '}\tilde{\varphi }^{\boldsymbol{A} '\boldsymbol{B} '} =\frac{1}{2} F_{\boldsymbol{ab}}\prescript{+}{}{} F^{\boldsymbol{ab}} =P-\mathrm{i} Q,
+\end{equation*}
+那么我们有：
+\begin{equation*}
+	P=( K+\tilde{K}) /2,\kern+0.4em Q=( K-\tilde{K}) /2\mathrm{i} .
+\end{equation*}
+如果$P=Q=0$，那么场是类光的，即$\varphi _{\boldsymbol{AB}}$的两个主类光方向重合。如果$Q=0$但$P\neq 0$，且在实场的情况下，场要么是纯电场要么是纯磁场，前者$P< 0$，后者$P >0$、实际上，我们能找到（无穷多个）洛伦兹变换在电场和磁场之间变换。同时，$Q=0$也是$F_{\boldsymbol{ab}}$是单的条件，即一个反对称张量可以分解为
+\begin{equation*}
+	F_{\boldsymbol{ab} \cdots \boldsymbol{r}} =a_{[\boldsymbol{a}} b_{\boldsymbol{b}} \cdots r_{\boldsymbol{r}]} .
+\end{equation*}
+
+\section{爱因斯坦-麦克斯韦方程的旋量形式*}
+
+现在我们考虑这样的理论：爱因斯坦场方程的唯一的源是电磁场的能动张量。
+
+
+
+首先我们需要找出电磁场的能动张量的选来那个形式。考虑一个实对称张量$T_{\boldsymbol{ab}}$当电磁场无源时满足
+\begin{equation}
+	\boldsymbol{\nabla }^{\boldsymbol{a}} T_{\boldsymbol{ab}} =0
+	\label{eq:6.19}
+\end{equation}
+且是电磁场$F_{\boldsymbol{ab}}$的二次型。显然，有一个形式的电磁场张量都满足这些条件：
+\begin{equation*}
+	T_{\boldsymbol{ab}} =k\varphi _{\boldsymbol{AB}}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} ,k\in \mathbb{R}^{+} .
+\end{equation*}
+这个形式的张量满足\ref{eq:6.19}因为无源$\boldsymbol{\nabla }^{\boldsymbol{AA} '} \varphi _{\boldsymbol{AB}} =0$。这和引力场的贝尔-罗宾逊张量的形式相同。
+
+
+
+标准的电磁场能动张量的形式为
+\begin{equation}
+	\begin{aligned}
+		T_{\boldsymbol{ab}} & =\frac{1}{4\pi }\left(\frac{1}{4} g_{\boldsymbol{ab}} F_{\boldsymbol{cd}} F^{\boldsymbol{cd}} -F_{\boldsymbol{ac}} F{_{\boldsymbol{b}}}^{\boldsymbol{c}}\right)\\
+		& =-\frac{1}{8\pi } (F_{\boldsymbol{ab}} F{_{\boldsymbol{b}}}^{\boldsymbol{c}} +\prescript{*}{}{} F_{\boldsymbol{ac}}\prescript{*}{}{} F{_{\boldsymbol{b}}}^{\boldsymbol{c}} ).
+	\end{aligned}
+	\label{eq:6.20}
+\end{equation}
+带入$F$的旋量形式可以给出：
+\begin{equation}
+	T_{\boldsymbol{ab}} =\frac{1}{2\pi } \varphi _{\boldsymbol{AB}}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} .
+	\label{eq:6.21}
+\end{equation}
+在电磁场的对偶性旋转$\varphi _{\boldsymbol{AB}} \mapsto \mathrm{e}^{-\mathrm{i} \theta } \varphi _{\boldsymbol{AB}}$下不变。除此之外，$T$也是无迹的：
+\begin{equation*}
+	T{_{\boldsymbol{a}}}^{\boldsymbol{a}} =0.
+\end{equation*}
+这些性质与引力场的贝尔-罗宾逊张量一致。现在我们将\ref{eq:6.21}带入引力场方程
+\begin{equation*}
+	\upPhi _{\boldsymbol{ab}} =4\pi \gamma \left( T_{\boldsymbol{ab}} -\frac{1}{4} T^{\boldsymbol{q}}{}_{\boldsymbol{q}} g_{\boldsymbol{ab}}\right) ,\kern+0.4em \upLambda =\frac{1}{3} \pi \gamma T^{\boldsymbol{q}}{}_{\boldsymbol{q}} +\frac{1}{6} \lambda ,
+\end{equation*}
+由于无迹，上式可以被化为
+\begin{equation*}
+	\upPhi _{\boldsymbol{ABA} '\boldsymbol{B}} =2\gamma \varphi _{\boldsymbol{AB}}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} ,\kern+0.4em \upLambda =\frac{1}{6} \lambda .
+\end{equation*}
+这两个方程与无源麦克斯韦场方程$\boldsymbol{\nabla }^{\boldsymbol{AA} '} \varphi _{\boldsymbol{AB}} =0$一起构成了爱因斯坦-麦克斯韦方程的旋量形式。通常我们也取$\lambda =0$。除此之外，如果我们将$T$的旋量形式带入之前得到的非真空场方程的形式$\boldsymbol{\nabla }^{\boldsymbol{A}}{}_{\boldsymbol{B} '} \upPsi _{\boldsymbol{ABCD}} =4\pi \gamma \boldsymbol{\nabla }^{\boldsymbol{A} '}{}_{(\boldsymbol{B}} T_{\boldsymbol{CD})\boldsymbol{A} '\boldsymbol{B} '}$：
+\begin{equation*}
+	\boldsymbol{\nabla }^{\boldsymbol{A}}{}_{\boldsymbol{B} '} \upPsi _{\boldsymbol{ABCD}} =2\gamma \boldsymbol{\nabla }^{\boldsymbol{A} '}{}_{(\boldsymbol{B}} (\varphi _{\boldsymbol{CD})}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} )=2\gamma (\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '}\boldsymbol{\nabla }^{\boldsymbol{A} '}{}_{(\boldsymbol{B}} \varphi _{\boldsymbol{CD})} +\varphi _{(\boldsymbol{CD}}\boldsymbol{\nabla }^{\boldsymbol{A} '}{}_{\boldsymbol{B})}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} ).
+\end{equation*}
+其中第二项因为场方程消失，而第一项的$\boldsymbol{BCD}$指标本身就是对称的，我们有：
+\begin{equation*}
+	\boldsymbol{\nabla }^{\boldsymbol{A}}{}_{\boldsymbol{B} '} \upPsi _{\boldsymbol{ABCD}} =2\gamma \overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '}\boldsymbol{\nabla }^{\boldsymbol{A} '}{}_{(\boldsymbol{B}} \varphi _{\boldsymbol{CD})} .
+\end{equation*}
+这样，原先关于贝尔-罗宾逊张量的定义$T_{\boldsymbol{abcd}} =\upPsi _{\boldsymbol{ABCD}}\overline{\upPsi }_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{C} '\boldsymbol{D} '}$的散度就不为零。我们可以修改其定义让其拥有零散度，但是修改后的张量不是全对称的：
+\begin{equation*}
+	\begin{aligned}
+		T_{\boldsymbol{abcd}} = & \upPsi _{\boldsymbol{ABCD}}\overline{\upPsi }_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{C} '\boldsymbol{D} '} -2\gamma \boldsymbol{\nabla }_{\boldsymbol{CD} '} \varphi _{\boldsymbol{AB}}\boldsymbol{\nabla }_{\boldsymbol{DC} '}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '}\\
+		& +6\gamma \boldsymbol{\nabla }_{\boldsymbol{D}(\boldsymbol{A} '|} \varphi _{(\boldsymbol{AB}}\boldsymbol{\nabla }_{\boldsymbol{C})\boldsymbol{D} '}\overline{\varphi }_{|\boldsymbol{B} '\boldsymbol{C} ')} -\lambda \varphi _{(\boldsymbol{AB}} \epsilon _{\boldsymbol{C})\boldsymbol{D}}\overline{\varphi }_{(\boldsymbol{A} '\boldsymbol{B} '} \epsilon _{\boldsymbol{C} ')\boldsymbol{D} '} .
+	\end{aligned}
+\end{equation*}
+这样的张量的性质为：
+\begin{equation*}
+	T_{\boldsymbol{abcd}} =T_{(\boldsymbol{abc})\boldsymbol{d}} ,\kern+0.4em T^{\boldsymbol{a}}{}_{\boldsymbol{acd}} =0,\kern+0.4em \boldsymbol{\nabla }^{\boldsymbol{d}} T_{\boldsymbol{abcd}} =0.
+\end{equation*}
+\subsection{麦克斯韦能动张量的正定性*}
+
+本节我们阐述$T_{\boldsymbol{ab}}$是正定的。
+
+
+
+考虑任意两个旋量$\mu ^{\boldsymbol{A}} ,\nu ^{\boldsymbol{A}}$以及它们对应的类光方向$M^{\boldsymbol{a}} =\mu ^{\boldsymbol{A}}\overline{\mu }^{\boldsymbol{A} '} ,N^{\boldsymbol{a}} =\nu ^{\boldsymbol{A}}\overline{\nu }^{\boldsymbol{A} '}$，我们有：
+\begin{equation*}
+	T_{\boldsymbol{ab}} M^{\boldsymbol{a}} N^{\boldsymbol{b}} =\frac{1}{2\pi }\left| \varphi _{\boldsymbol{AB}} \mu ^{\boldsymbol{A}} \nu ^{\boldsymbol{B}}\right| ^{2} \geq 0,
+\end{equation*}
+这个不等式对于任意两个指向未来的类光矢量都成立。由于任何一个指向未来的因果矢量（类光和类时矢量）都是某些指向未来类光矢量的线性组合，因此我们有结论：
+
+\begin{them}[label={them:dominant energy condition}]{主能量条件}
+	对于任何一对指向未来的因果矢量$U^{\boldsymbol{a}} ,V^{\boldsymbol{a}}$都有
+	\begin{equation*}
+		T_{\boldsymbol{ab}} U^{\boldsymbol{a}} V^{\boldsymbol{a}} \geq 0.
+	\end{equation*}
+\end{them}
+
+这个定理也可以被修改为：
+\begin{them}[label={them:modified dominant energy condition}]{}
+	对于任何一指向未来的因果矢量$V^{\boldsymbol{a}}$都有
+	\begin{equation*}
+		V^{\boldsymbol{a}} T{_{\boldsymbol{a}}}^{\boldsymbol{b}} T_{\boldsymbol{bc}} V^{\boldsymbol{c}} \geq 0,\kern+0.4em V^{\boldsymbol{a}} T_{\boldsymbol{ab}} V^{\boldsymbol{b}} \geq 0.
+	\end{equation*}
+\end{them}
+
+我们常常称\ref{them:dominant energy condition}或\ref{them:modified dominant energy condition}为\textbf{主能量条件}（dominant energy condition）。因为如果$V^{\boldsymbol{a}}$为一个观者的$4$-速度，那么$T^{\boldsymbol{a}}{}_{\boldsymbol{b}} V^{\boldsymbol{b}}$为其坡印廷矢量，那么\ref{them:dominant energy condition}意味着能量流的速度（通过坡印廷矢量描述）不会超过光速。
+
+如果我们把上述能量条件适当减弱：
+\begin{equation*}
+	T_{\boldsymbol{ab}} V^{\boldsymbol{a}} V^{\boldsymbol{b}} \geq 0,
+\end{equation*}
+就得到了弱能量条件，即观者观测到的能量密度$T_{00}$必须是其$4$-速度$V^{\boldsymbol{a}}$（作为其标架的基底$g{_{0}}^{\boldsymbol{a}}$）的非负定函数。极限情况下
+\begin{equation*}
+	T_{\boldsymbol{ab}} V^{\boldsymbol{a}} V^{\boldsymbol{b}} =0,
+\end{equation*}
+如果$V^{\boldsymbol{a}}$是类光矢量$N^{\boldsymbol{a}} =\nu ^{\boldsymbol{A}}\overline{\nu }^{\boldsymbol{A} '}$，那么$T_{\boldsymbol{ab}} N^{\boldsymbol{a}} N^{\boldsymbol{b}}$为零当且仅当
+\begin{equation*}
+	\varphi _{\boldsymbol{AB}} \nu ^{\boldsymbol{A}} \nu ^{\boldsymbol{B}} =0,
+\end{equation*}
+而这对应着$\nu ^{\boldsymbol{A}}$的旗杆指向$\varphi _{\boldsymbol{AB}}$的两个主类光方向其中之一。实际上我们可以给出：
+
+\begin{them}[label={them:6.3}]{}
+	如果$V^{\boldsymbol{a}}$是$\varphi _{\boldsymbol{AB}}$的主类光矢量，那么这等价于
+	\begin{equation*}
+		T_{\boldsymbol{ab}} V^{\boldsymbol{a}} V^{\boldsymbol{b}} =0,V^{\boldsymbol{a}} V_{\boldsymbol{a}} \geq 0,V^{\boldsymbol{a}} \neq 0.
+	\end{equation*}
+\end{them}
+同样的结果对引力场的贝尔-罗宾逊张量也成立：
+\begin{them}[label={them:6.4}]{}
+	对于所有的指向未来的因果矢量$S^{\boldsymbol{a}} ,U^{\boldsymbol{a}} ,V^{\boldsymbol{a}} ,W^{\boldsymbol{a}}$，我们都有：
+	\begin{equation*}
+		T_{\boldsymbol{abcd}} S^{\boldsymbol{a}} U^{\boldsymbol{b}} V^{\boldsymbol{c}} W^{\boldsymbol{d}} \geq 0.
+	\end{equation*}
+	除此之外，如果$V^{\boldsymbol{a}}$是$\upPsi _{\boldsymbol{ABCD}}$的主类光矢量，那么这等价于
+	\begin{equation*}
+		T_{\boldsymbol{abcd}} V^{\boldsymbol{a}} V^{\boldsymbol{b}} V^{\boldsymbol{c}} V^{\boldsymbol{d}} =0,V^{\boldsymbol{a}} V_{\boldsymbol{a}} \geq 0,V^{\boldsymbol{a}} \neq 0.
+	\end{equation*}
+\end{them}
+注意到贝尔-罗宾逊张量满足
+\begin{equation*}
+	T\boldsymbol{_{ABCDA'B'C'D'}} T\boldsymbol{_{EFGHE'F'G'H'}} =T\boldsymbol{_{ABCDE'F'G'H'}} T\boldsymbol{_{EFGHA'B'C'D'}} ,
+\end{equation*}
+而这在电磁学中的版本为
+\begin{equation*}
+	T_{\boldsymbol{ABA} '\boldsymbol{B} '} T_{\boldsymbol{CDC} '\boldsymbol{D} '} =T_{\boldsymbol{ABC} '\boldsymbol{D} '} T_{\boldsymbol{CDA} '\boldsymbol{B} '} ,
+\end{equation*}
+如果将其化为张量形式，我们有：
+\begin{equation*}
+	T_{\boldsymbol{ac}} T{_{\boldsymbol{b}}}^{\boldsymbol{c}} =\frac{1}{4} (T_{\boldsymbol{cd}} T^{\boldsymbol{cd}} )g_{\boldsymbol{ab}} .
+\end{equation*}
+
+\subsection{拉尼奇条件*}
+
+我们已经看到麦克斯韦理论的能动张量有如下性质：
+\begin{itemize}
+	\item $T{_{\boldsymbol{a}}}^{\boldsymbol{a}} =0$
+	\item $T_{\boldsymbol{ab}} T{_{\boldsymbol{c}}}^{\boldsymbol{d}} \propto g_{\boldsymbol{ac}}$
+	\item 对于每一对指向未来的因果矢量$U^{\boldsymbol{a}} ,V^{\boldsymbol{a}}$都有$T_{\boldsymbol{ab}} U^{\boldsymbol{a}} V^{\boldsymbol{b}} \geq 0$
+\end{itemize}
+
+但是反过来，我们给出结论：对于在每一点都满足上面三个条件的实对称张量$T_{\boldsymbol{ab}}$，对于方程\ref{eq:6.20}
+\begin{equation}
+	T_{\boldsymbol{ab}} =-\frac{1}{8\pi } (F_{\boldsymbol{ab}} F{_{\boldsymbol{b}}}^{\boldsymbol{c}} +\prescript{*}{}{} F_{\boldsymbol{ac}}\prescript{*}{}{} F{_{\boldsymbol{b}}}^{\boldsymbol{c}} )
+	\label{eq:6.22}
+\end{equation}
+都有解$F_{\boldsymbol{ab}}$，且$F_{\boldsymbol{ab}}$是反对称的，并且解之间可以用对偶旋转来相互变换。也因此，以上三个条件也被称为拉尼奇条件（Rainichi condition）。当然，如果需要让$F_{\boldsymbol{ab}}$满足麦克斯韦方程，需要进一步的限制条件，即需要让$T_{\boldsymbol{ab}}$为麦克斯韦场的能动张量。
+
+现在我们假设有一个实对称张量$T_{\boldsymbol{ab}}$满足上面三个条件。由于$T{_{\boldsymbol{a}}}^{\boldsymbol{a}} =0$，我们知道
+\begin{equation}
+	T_{\boldsymbol{ABA} '\boldsymbol{B} '} =T_{(\boldsymbol{AB})(\boldsymbol{A} '\boldsymbol{B} ')} ,
+	\label{eq:6.23}
+\end{equation}
+如果将$T_{\boldsymbol{ab}} T{_{\boldsymbol{c}}}^{\boldsymbol{d}} \propto g_{\boldsymbol{ac}}$化为旋量形式，我们有：
+\begin{equation*}
+	T_{\boldsymbol{AA} '\boldsymbol{BB} '} T^{\boldsymbol{BB} '}{}_{\boldsymbol{CC} '} \propto \epsilon _{\boldsymbol{AC}} \epsilon _{\boldsymbol{A} '\boldsymbol{C} '} .
+\end{equation*}
+这意味着
+\begin{equation*}
+	T{_{\boldsymbol{AA} '[\boldsymbol{B}}}^{[\boldsymbol{B} '} T^{\boldsymbol{D} ']}{}_{\boldsymbol{D}]\boldsymbol{CC} '} \propto \epsilon _{\boldsymbol{AC}} \epsilon _{\boldsymbol{A} '\boldsymbol{C} '} \epsilon _{\boldsymbol{BD}} \epsilon ^{\boldsymbol{B} '\boldsymbol{D} '} ,
+\end{equation*}
+以及
+\begin{equation*}
+	T_{(\boldsymbol{A} |[\boldsymbol{B}}^{(\boldsymbol{A} '|[\boldsymbol{B} '} T_{\boldsymbol{D}] |\boldsymbol{C})}^{\boldsymbol{D} '] |\boldsymbol{C} ')} =0.
+\end{equation*}
+利用对称性\ref{eq:6.23}，我们给出：
+\begin{equation*}
+	T_{[\boldsymbol{A} |(\boldsymbol{B}}^{(\boldsymbol{A} '|[\boldsymbol{B} '} T_{\boldsymbol{D}) |\boldsymbol{C}]}^{\boldsymbol{D} '] |\boldsymbol{C} ')} =0.
+\end{equation*}
+上面两个条件共同给出
+\begin{equation*}
+	T_{[\mathcal{A}}^{(\boldsymbol{A} '|[\boldsymbol{B} '} T_{\mathcal{C}]}^{\boldsymbol{D} '] |\boldsymbol{C} ')} =0,
+\end{equation*}
+这里$\mathcal{A} =\boldsymbol{AB} ,\mathcal{C} =\boldsymbol{CD}$，或者
+\begin{equation*}
+	T_{[\mathcal{A}}^{[\boldsymbol{A} '|(\boldsymbol{B} '} T_{\mathcal{C}]}^{\boldsymbol{D} ') |\boldsymbol{C} ']} =0.
+\end{equation*}
+同样的步骤给出：
+\begin{equation*}
+	T_{[\mathcal{A}}^{[\mathcal{A} '} T_{\mathcal{C}]}^{\mathcal{C} ']} =0.
+\end{equation*}
+那么这意味着
+\begin{equation*}
+	T_{\mathcal{AA} '} T_{\mathcal{CC} '} =T_{\mathcal{AC} '} T_{\mathcal{CA} '} .
+\end{equation*}
+现在，我们取任一非零旋量$X^{\mathcal{C}}$，给上式乘以$X^{\mathcal{C}}\overline{X}^{\mathcal{C} '}$，我们给出：
+\begin{equation*}
+	T_{\mathcal{AA} '} =(T_{\mathcal{CC} '} X^{\mathcal{C}}\overline{X}^{\mathcal{C} '} )^{-1} T_{\mathcal{AC} '}\overline{X}^{\mathcal{C} '} T_{\mathcal{A} '\mathcal{C}} X^{\mathcal{C}} ,
+\end{equation*}
+由于$T_{\boldsymbol{ab}}$是实的，我们可以写出
+\begin{equation}
+	T_{\boldsymbol{ABA} '\boldsymbol{B} '} =k\varphi _{\boldsymbol{AB}}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '} ,k\in \mathbb{R} .
+	\label{eq:6.24}
+\end{equation}
+而最后一个拉尼奇条件确保了$k >0$。那么如果我们按照\ref{eq:6.10}定义$F_{\boldsymbol{ab}}$，那么它自动满足方程\ref{eq:6.22}。显然，这个解并不唯一，因为通过变换$\varphi _{\boldsymbol{AB}} \mapsto \mathrm{e}^{-\mathrm{i} \theta } \varphi _{\boldsymbol{AB}}$，对应着$F_{\boldsymbol{ab}} \mapsto \prescript{( \theta )}{}{} F_{\boldsymbol{ab}}$，而这保持$T$不变，而这是每点处的唯一自由度\footnote{我们曾经给出结论：如果$\psi _{\mathcal{A}} \phi _{\mathcal{B}} =\chi _{\mathcal{A}} \theta _{\mathcal{B}} \neq 0$，那么$\psi _{\mathcal{A}} =\kappa \chi _{\mathcal{A}}$，且$\phi _{\mathcal{B}} =\kappa ^{-1} \theta _{\mathcal{B}}$，其中$\kappa \in \mathfrak{S}$非零。}，因此这是拉尼奇理论的代数部分。
+
+
+\paragraph{微分拉尼奇条件}
+
+现在假设我们已经有了一个实对称张量$T$满足拉尼奇条件，那么在流形上的每一点，我们都有一个光滑的“电张量”$P_{\boldsymbol{ab}}$，其能量张量为$T_{\boldsymbol{ab}}$。那么我们想问这样的问题，我们是否能找到一个张量$F_{\boldsymbol{ab}} =\prescript{\theta }{}{} P_{\boldsymbol{ab}}$，满足麦克斯韦方程组，从而$T_{\boldsymbol{ab}}$称为电磁场的能动张量？
+
+
+
+如果$\chi _{\boldsymbol{AB}}$是一个对称旋量，其对应了$P_{\boldsymbol{ab}}$，那么$\mathrm{e}^{-\mathrm{i} \theta } \chi _{\boldsymbol{AB}}$对应了$F_{\boldsymbol{ab}}$。对其施加麦克斯韦方程组：
+\begin{equation*}
+	\boldsymbol{\nabla }_{\boldsymbol{AA} '} (\mathrm{e}^{-\mathrm{i} \theta } \chi ^{\boldsymbol{AB}} )=\mathrm{e}^{-\mathrm{i} \theta }\boldsymbol{\nabla }_{\boldsymbol{AA} '} \chi ^{\boldsymbol{AB}} -\mathrm{ie}^{-\mathrm{i} \theta } \chi ^{\boldsymbol{AB}}\boldsymbol{\nabla }_{\boldsymbol{AA} '} \theta =0,
+\end{equation*}
+与$\chi _{\boldsymbol{BC}}$缩并，并定义$\chi \equiv \chi _{\boldsymbol{AB}} \chi ^{\boldsymbol{AB}} /2$，我们有：
+\begin{equation*}
+	\chi _{\boldsymbol{BC}}\boldsymbol{\nabla }_{\boldsymbol{AA} '} \chi ^{\boldsymbol{AB}} -\mathrm{i} \chi \boldsymbol{\nabla }_{\boldsymbol{CA} '} \theta =0
+\end{equation*}
+因此我们可以定义：
+\begin{equation}
+	S_{\boldsymbol{AA} '} \equiv \boldsymbol{\nabla }_{\boldsymbol{AA} '} \theta =\frac{1}{\mathrm{i} \chi }\boldsymbol{\nabla }_{\boldsymbol{CA} '} \chi ^{\boldsymbol{BC}} .
+	\label{eq:6.25}
+\end{equation}
+现在我们的问题是找到$S_{\boldsymbol{AA} '}$的张量对应，并解出$\theta $。下面我们考虑对上一节给出的$T$的旋量形式\ref{eq:6.24}微分：
+\begin{equation*}
+	\boldsymbol{\nabla }_{\boldsymbol{AC} '} T^{\boldsymbol{AA} '\boldsymbol{BB} '} =k\overline{\chi }^{\boldsymbol{A} '\boldsymbol{B} '}\boldsymbol{\nabla }_{\boldsymbol{AC} '} \chi ^{\boldsymbol{AB}} +k\chi ^{\boldsymbol{AB}}\boldsymbol{\nabla }_{\boldsymbol{AC} '}\overline{\chi }^{\boldsymbol{A} '\boldsymbol{B} '} ,
+\end{equation*}
+与$T_{\boldsymbol{DA} '\boldsymbol{BB} '}$缩并：
+\begin{equation*}
+	\begin{aligned}
+		T_{\boldsymbol{DA} '\boldsymbol{BB} '}\boldsymbol{\nabla }_{\boldsymbol{AC} '} T^{\boldsymbol{AA} '\boldsymbol{BB} '} & =2k^{2}\overline{\chi } \chi _{\boldsymbol{DB}}\boldsymbol{\nabla }_{\boldsymbol{AC} '} \chi ^{\boldsymbol{AB}} +k^{2} \chi \epsilon {_{\boldsymbol{D}}}^{\boldsymbol{A}}\overline{\chi }_{\boldsymbol{A} '\boldsymbol{B} '}\boldsymbol{\nabla }_{\boldsymbol{AC} '}\overline{\chi }^{\boldsymbol{A} '\boldsymbol{B} '}\\
+		& =2\mathrm{i} k^{2} \chi ^{2} S_{\boldsymbol{DC} '} +k^{2} \chi \boldsymbol{\nabla }_{\boldsymbol{DC} '} \chi .
+	\end{aligned}
+\end{equation*}
+由于$\chi $是实的，上式最后一项也是实的，因此我们可以给出上式虚部为：
+\begin{equation*}
+	4\mathrm{i} k^{2} \chi ^{2} S_{\boldsymbol{DC} '} =T_{\boldsymbol{DA} '\boldsymbol{BB} '}\boldsymbol{\nabla }_{\boldsymbol{AC} '} T^{\boldsymbol{AA} '\boldsymbol{BB} '} -T_{\boldsymbol{AC} '\boldsymbol{BB} '}\boldsymbol{\nabla }_{\boldsymbol{DA} '} T^{\boldsymbol{AA} '\boldsymbol{BB} '} .
+\end{equation*}
+注意到于任意张量$H_{\boldsymbol{cd}}$，
+\begin{equation*}
+	\begin{aligned}
+		e{_{\boldsymbol{ab}}}^{\boldsymbol{cd}} H_{\boldsymbol{cd}} & =(\mathrm{i} \epsilon \boldsymbol{{_{A}}}^{\boldsymbol{C}} \epsilon \boldsymbol{{_{B}}}^{\boldsymbol{D}} \epsilon {_{\boldsymbol{A} '}}^{\boldsymbol{D} '} \epsilon {_{\boldsymbol{B} '}}^{\boldsymbol{C} '} -\mathrm{i} \epsilon {_{\boldsymbol{A}}}^{\boldsymbol{D}} \epsilon {_{\boldsymbol{B}}}^{\boldsymbol{C}} \epsilon \boldsymbol{{_{A'}}}^{\boldsymbol{C} '} \epsilon \boldsymbol{{_{B'}}}^{\boldsymbol{D} '} )H_{\boldsymbol{CC} '\boldsymbol{DD} '}\\
+		& =\mathrm{i}( H_{\boldsymbol{AB} '\boldsymbol{A} '\boldsymbol{B}} -H_{\boldsymbol{A} '\boldsymbol{BAB} '}) ,
+	\end{aligned}
+\end{equation*}
+因此我们可以写出：
+\begin{equation*}
+	4\mathrm{i} k^{2} \chi ^{2} S_{\boldsymbol{DC} '} =\mathrm{i} e{_{\boldsymbol{AA} '\boldsymbol{DC} '}}^{\boldsymbol{PP} '\boldsymbol{QQ} '} T_{\boldsymbol{BB} '\boldsymbol{PP} '}\boldsymbol{\nabla }_{\boldsymbol{QQ} '} T^{\boldsymbol{AA} '\boldsymbol{BB} '} .
+\end{equation*}
+同时我们可以将$S$前的系数写成
+\begin{equation*}
+	4k^{2} \chi ^{2} =T_{\boldsymbol{ab}} T^{\boldsymbol{ab}} ,
+\end{equation*}
+那么我们可以将$S$表达成张量形式：
+\begin{equation}
+	S_{\boldsymbol{c}} =\frac{e{_{\boldsymbol{ac}}}^{\boldsymbol{pq}} T_{\boldsymbol{bp}}\boldsymbol{\nabla }_{\boldsymbol{q}} T^{\boldsymbol{ab}}}{T_{\boldsymbol{ab}} T^{\boldsymbol{ab}}} .
+	\label{eq:6.26}
+\end{equation}
+除此之外，由于$S_{\boldsymbol{AA} '} =\boldsymbol{\nabla }_{\boldsymbol{AA} '} \theta $为标量的梯度，我们知道$\boldsymbol{\nabla }_{\boldsymbol{b}} S_{\boldsymbol{a}} =\boldsymbol{\nabla }_{\boldsymbol{a}} S_{\boldsymbol{b}}$，那么这个条件即对$T_{\boldsymbol{ab}}$的微分限制条件。在这些限制下，$\theta $被方程\ref{eq:6.25}和\ref{eq:6.26}完全决定了。因此我们总可以找到一个变换，让满足拉尼奇条件的对称实张量变换为电磁场的电磁场的能动张量。
+
+
+%\section{杨-米尔斯场}
+%
+%现在我们尝试将上面的关于电磁场的结论推广到一般的规范场。电磁场是最简单的规范场，即$U( 1)$规范场，因为其规范变换$\alpha ^{-n} \psi ^{\mathcal{A}} \mapsto \mathrm{e}^{\mathrm{i} n\theta } (\alpha ^{-n} \psi ^{\mathcal{A}} )$构成$U( 1)$群。我们假定读者对纤维丛有一定了解，在这里不再做引入。现在我们如果把规范场的对称群推广到一般的李群，就是所谓的杨-米尔斯场（Yang-Mills fields）的情况。
+%
+%
+%
+%电磁理论中，带荷的标量场$\prescript{e}{}{}\mathfrak{S}$可以被认为是一个矢量丛$\mathcal{B}$的截面，而这个矢量丛的纤维是复的一维向量空间（即复线丛），而丛上面的联络即为$\boldsymbol{\nabla }_{\boldsymbol{a}}$。推广到杨-米尔斯场允许纤维是一般的抽象向量空间$\mathcal{V}^{\bullet }$，它和$\mathcal{M}$的切空间没有特别的关系。这样丛$\mathcal{B}$的截面则是杨-米尔斯场的“带荷空间”（charged space）的场，而$\mathcal{V}^{\bullet }$的连续对称变换构成了规范变换。我们仍然采用抽象指标的记号，采用大写的希腊字母表示向量空间的元素：$\mathcal{V}^{\bullet } \simeq \mathcal{V}^{\boldsymbol{\upPhi }} \cdots $，$\mathcal{B}$的截面为模$\mathfrak{S}^{\boldsymbol{\upPhi }} \simeq \cdots $。如果$\mathcal{V}^{\bullet }$是$n$维的，那么截面的元素$\lambda ^{\boldsymbol{\upPhi }} \in \mathfrak{S}^{\boldsymbol{\upPhi }}$可以被局域的表示成$n$个标量分量$\lambda ^{1} ,\cdots ,\lambda ^{n} \in \mathfrak{S}$，但是并没有一种正则的方式来做这件事。如果要（局域地）给$\lambda ^{\upPhi }$分配分量，我们需要在每一点选取一个$\mathcal{V}^{\bullet }$的YM基。如果给定一组带荷的YM场的基$\delta _{\upPhi }^{\boldsymbol{\upPhi }} =(\delta _{1}^{\boldsymbol{\upPhi }} ,\cdots ,\delta _{n}^{\boldsymbol{\upPhi }} )$，那么$\lambda ^{\boldsymbol{\upPhi }} =\lambda ^{\upPhi } \delta _{\upPhi }^{\boldsymbol{\upPhi }}$，随后模$\mathfrak{S}_{\boldsymbol{\upPhi }} ,\mathfrak{S}_{\boldsymbol{\upPsi }} ,\cdots $都可以用正常的方式被定义。关于模的其他结构基本与第二章所述相同，由实的模$\mathfrak{T}$可以构造复的模$\mathfrak{S} =\mathfrak{T} \oplus \mathrm{i}\mathfrak{T}$，复模有复共轭操作等等。
+%
+%
+%\subsection{$\mathcal{V}^{\bullet }$的结构；杨-米尔斯联络}
+%
+%向量空间$\mathcal{V}^{\bullet }$上的附加结构由特定的通过线性变换作用在$\mathcal{V}^{\bullet }$上，保持$\mathcal{V}^{\bullet }$结构不变的李群$\mathcal{G}$刻画。例如，如果$\mathcal{V}^{\bullet }$是三维实向量空间，那么$\mathcal{G}$可以是$O( 3)$群。此时，$g_{\boldsymbol{\upPhi \upPsi }} =g_{(\boldsymbol{\upPhi \upPsi })} \in \mathfrak{T}_{\boldsymbol{\upPhi \upPsi }}$是正定的，且在$\mathcal{G}$的作用下不变。反过来，$\mathcal{G}$是保证$g_{\boldsymbol{\upPhi \upPsi }}$不变的$\mathcal{V}^{\bullet }$上的最大线性群。同样的，$\mathcal{G} =SO( 3)$时，其不变元素有$g_{\boldsymbol{\upPhi \upPsi }} \in \mathfrak{T}_{\boldsymbol{\upPhi \upPsi }} ,e_{\boldsymbol{\upPhi \upPsi \upOmega}} =e_{[\boldsymbol{\upPhi \upPsi \upOmega}]} \in \mathfrak{T}_{\boldsymbol{\upPhi \upPsi \upOmega}}$。在电磁理论中，情况会大大简化，因为每一个$\mathfrak{S}_{\boldsymbol{\upTheta \cdots \upLambda }}^{\boldsymbol{\upPhi } \cdots \boldsymbol{\upOmega}}$都是一维的，这意味着指标缩并不丢失任何信息，导致$\mathfrak{S}\boldsymbol{_{\upTheta \cdots \upLambda \upUpsilon }^{\upPhi \cdots \upOmega\upDelta }}$与$\mathfrak{S}\boldsymbol{_{\upTheta \cdots \upLambda }^{\upPhi \cdots \upOmega}}$是等价的。
+%
+%
+%
+%对于一个普通的规范场，我们需要让$\boldsymbol{\nabla }_{\boldsymbol{a}}$在丛上的矢量$\lambda ^{\boldsymbol{\upPhi }}$在平行移动下保持$\mathcal{V}^{\bullet }$的结构不变，其中一种方式是让$\mathfrak{S}\boldsymbol{_{\upTheta \cdots \upOmega'}^{\upPhi \cdots \upPsi '}}$中的不变元素（例如上面例子中的$g,e$）被$\boldsymbol{\nabla }_{\boldsymbol{a}}$“湮灭”。假设$\mathcal{G}$中的元素可以被作用在$\mathbb{R}^{n}$（或$\mathbb{C}^{n}$）中的矩阵$\boldsymbol{q}$表示，其中$n$为$\mathcal{V}^{\bullet }$的维数，那么$\mathcal{V}^{\bullet }$的结构可以被表达成从$\mathcal{V}^{\bullet }$到$\mathbb{R}^{n}$（$\mathbb{C}^{n}$）的映射族。如果我们选取$\mathcal{V}^{\bullet }$的标准基，记为
+%\begin{equation*}
+%	\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} =(\alpha {_{1}}^{\boldsymbol{\upPsi }} ,\cdots ,\alpha {_{n}}^{\boldsymbol{\upPsi }} )\in \mathcal{V}^{\boldsymbol{\upPsi }} ,
+%\end{equation*}
+%其中基变换为
+%\begin{equation*}
+%	\alpha {_{\hat{\upPsi }}}^{\boldsymbol{\upPsi }} =q{_{\hat{\upPsi }}}^{\upPsi } \alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} ,\kern+0.4em q{_{\hat{\upPsi }}}^{\upPsi } \in \mathcal{G} ,
+%\end{equation*}
+%这意味着我们可以用$\mathcal{G}$来刻画$\mathcal{V}^{\bullet }$的结构。现在我们考虑在标准基下的场，即，$n$个线性无关的丛$\mathcal{B}$的截面，现在
+%\begin{equation*}
+%	\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} \in \mathfrak{T}^{\boldsymbol{\upPsi }} (\text{or }\mathfrak{S}^{\boldsymbol{\upPsi }} ),\kern+0.4em q{_{\hat{\upPsi }}}^{\upPsi } \in \mathfrak{T}\left(\text{or }\mathfrak{S}\right) ,
+%\end{equation*}
+%我们称$\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }}$为$\mathfrak{T}^{\boldsymbol{\upPsi }}$的规范，而$q{_{\hat{\upPsi }}}^{\upPsi }$则提供了所谓的规范变换。需要注意的是，规范总是能在局部存在，但是在全局会有一些拓扑的原因，有时候不能存在。一个全局规范在数学语言上叫丛$\mathcal{B}$的平凡化（trivialization）。现在，我们要求$\boldsymbol{\nabla }_{\boldsymbol{a}}$保持$\mathcal{V}^{\bullet }$的结构在平行移动下不变，我们令$\gamma $为$\mathcal{M}$上的一条光滑曲线，其切向量为$t^{\boldsymbol{a}}$，用$u$参数化，即$t^{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{a}} u=1$，那么一个张量场$\lambda ^{\mathcal{A}}$如果被算符$t^{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{a}}$湮灭，那么我们称其沿$\lambda $平行移动。记$\tilde{\lambda }^{\mathcal{A}}$为$\lambda ^{\mathcal{A}}$作用了算符$\exp (vt^{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{a}} )$后的新场：
+%\begin{equation*}
+%	\tilde{\lambda }^{\mathcal{A}} =\exp (vt^{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{a}} )\lambda ^{\mathcal{A}} ,
+%\end{equation*}
+%即$P$点处的$\tilde{\lambda }^{\mathcal{A}}$（用$u_{0}$参数化）是由$\lambda ^{\mathcal{A}}$在点$Q$（由$u_{0} +v$参数化）处，沿着$\gamma $从$Q$到$P$平行移动后的结果。实际上，当$\mathcal{M} ,\gamma ,t^{\boldsymbol{a}} ,\lambda ^{\mathcal{A}}$都是解析的，并且$| v| $足够小，那么
+%\begin{equation*}
+%	\tilde{\lambda }^{\mathcal{A}} =\lambda ^{\mathcal{A}} +vt^{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{a}} \lambda ^{\mathcal{A}} +\frac{v^{2}}{2!} t^{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{a}} (t^{\boldsymbol{b}}\boldsymbol{\nabla }_{\boldsymbol{b}} \lambda ^{\mathcal{A}} )+\cdots ,
+%\end{equation*}
+%那么如果
+%\begin{equation*}
+%	\exp (vt^{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{a}} )\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} =q{_{\upPsi }}^{\upTheta }( v) \alpha {_{\upTheta }}^{\boldsymbol{\upPsi }} ,
+%\end{equation*}
+%那么$\boldsymbol{\nabla }_{\boldsymbol{a}}$保持$\mathcal{V}^{\bullet }$的结构不变，这里当$v\rightarrow 0$时，矩阵$q{_{\upPsi }}^{\upTheta }$会光滑地趋于单位阵。取$v\rightarrow 0$的极限，保留一阶项：
+%\begin{equation*}
+%	t^{\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} =p{_{\upPsi }}^{\upTheta } \alpha {_{\upTheta }}^{\boldsymbol{\upPsi }} ,\kern+0.4em p{_{\upPsi }}^{\upTheta } =\left[\frac{\mathrm{d}}{\mathrm{d} v} q{_{\upPsi }}^{\upTheta }( v)\right]_{v=0} .
+%\end{equation*}
+%那么这里矩阵$p{_{\upPsi }}^{\upTheta }$构成了$\mathcal{G}$的李代数$\mathcal{A}$。定义$\alpha {_{\boldsymbol{\upPsi }}}^{\upPsi } \in \mathfrak{S}_{\boldsymbol{\upPsi }}$为$\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }}$的对偶，那么$\boldsymbol{\nabla }_{\boldsymbol{a}}$上的限制就为对于每个$t^{\boldsymbol{a}} ,\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }}$都有：
+%\begin{equation*}
+%	t^{\boldsymbol{a}} \alpha {_{\boldsymbol{\upPsi }}}^{\upTheta }\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} \in \mathcal{A} .
+%\end{equation*}
+%
+%\subsection{杨-米尔斯势和度规}
+%
+%与电磁理论相似，我们引入杨-米尔斯势：
+%\begin{equation}
+%	A{_{\boldsymbol{a} \upPsi }}^{\upTheta } =\mathrm{i} \alpha {_{\boldsymbol{\upPsi }}}^{\upTheta }\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} .
+%	\label{eq:6.27}
+%\end{equation}
+%后面我们会证明这里$A{_{\boldsymbol{a} \upPsi }}^{\upTheta }$是厄米的：
+%\begin{equation}
+%	\overline{A{_{\boldsymbol{a} \upPsi }}^{\upTheta }} =A{_{\boldsymbol{a} \upTheta }}^{\upPsi } .
+%	\label{eq:6.28}
+%\end{equation}
+%在这个意义下，复共轭操作会让数字指标的上下位置改变：
+%\begin{equation*}
+%	\overline{\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }}} =\overline{\alpha }^{\upPsi \boldsymbol{\upPsi } '} ,\kern+0.4em \overline{\alpha {_{\boldsymbol{\upPsi }}}^{\upPsi }} =\overline{\alpha }_{\boldsymbol{\upPsi } '\upPsi } ,\kern+0.4em \overline{q{_{\hat{\upTheta }}}^{\upPsi }} =\overline{q}^{\hat{\upTheta }}{}_{\upPsi } .
+%\end{equation*}
+%我们可以定义与标准基无关的量：
+%\begin{equation*}
+%	h^{\boldsymbol{\upPsi \upPsi } '} \equiv \alpha {_{\upPsi }}^{\boldsymbol{\upPsi }}\overline{\alpha }^{\upPsi \boldsymbol{\upPsi } '} =\overline{h}^{\boldsymbol{\upPsi } '\boldsymbol{\upPsi }} .
+%\end{equation*}
+%要求
+%\begin{equation*}
+%	\boldsymbol{\nabla }_{\boldsymbol{a}} h^{\boldsymbol{\upPsi \upPsi } '} =0,
+%\end{equation*}
+%那么
+%\begin{equation*}
+%	\alpha {_{\upLambda }}^{\boldsymbol{\upPsi }}\boldsymbol{\nabla }_{\boldsymbol{a}}\overline{\alpha }^{\upLambda \boldsymbol{\upPsi } '} +\overline{\alpha }^{\upLambda \boldsymbol{\upPsi } '}\boldsymbol{\nabla }_{\boldsymbol{a}} \alpha {_{\upLambda }}^{\boldsymbol{\upPsi }} =0,
+%\end{equation*}
+%这意味着
+%\begin{equation*}
+%	\alpha {_{\upLambda }}^{\boldsymbol{\upPsi }} p^{\upLambda }{}_{\upTheta }\overline{\alpha }^{\upTheta \boldsymbol{\upPsi } '} +\overline{\alpha }^{\upLambda \boldsymbol{\upPsi } '} p{_{\upLambda }}^{\upTheta } \alpha {_{\upTheta }}^{\boldsymbol{\upPsi }} =0,
+%\end{equation*}
+%因此根据$A$的定义，我们发现$A{_{\boldsymbol{a} \upPsi }}^{\upTheta }$是厄米的，即\ref{eq:6.28}成立。
+%
+%
+%
+%我们认为$h^{\boldsymbol{\upPsi \upPsi } '}$是杨米尔斯厄米度规，以及其逆：$h_{\boldsymbol{\upPsi \upPsi } '} =\alpha {_{\boldsymbol{\upPsi }}}^{\upPsi }\overline{\alpha }_{\boldsymbol{\upPsi } '\upPsi }$，我们可以用这两者来“消除”带撇YM指标，例如通过
+%\begin{equation*}
+%	\lambda {_{\boldsymbol{\upTheta } '\boldsymbol{\upPsi }}}^{\boldsymbol{\upLambda } '} \mapsto \lambda ^{\boldsymbol{\upTheta }}{}_{\boldsymbol{\upPsi \upLambda }} =\lambda {_{\boldsymbol{\upTheta } '\boldsymbol{\upPsi }}}^{\boldsymbol{\upLambda } '} h^{\boldsymbol{\upTheta \upTheta } '} h_{\boldsymbol{\upLambda \upLambda } '} ,
+%\end{equation*}
+%我们可以得到一个等价的YM场。而规范$\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }}$和$\alpha {_{\boldsymbol{\upPsi }}}^{\upPsi }$可以让我们得到场的分量：
+%\begin{equation*}
+%	\lambda {_{\upTheta }}^{\upPsi } =\lambda {_{\boldsymbol{\upTheta }}}^{\boldsymbol{\upPsi }} \alpha {_{\boldsymbol{\upPsi }}}^{\upPsi } \alpha {_{\upTheta }}^{\boldsymbol{\upTheta }} .
+%\end{equation*}
+%给定一个规范$\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }}$，我们可以定义一个微分算符$\partial _{\boldsymbol{a}}$，其在平直时空中和自身对易：
+%\begin{equation*}
+%	\partial _{\boldsymbol{a}} \lambda \boldsymbol{{_{\upTheta }}^{\upPsi \mathcal{A}}} =\alpha {_{\boldsymbol{\upTheta }}}^{\upTheta } \alpha {_{\upPsi }}^{\boldsymbol{\upPsi }}\boldsymbol{\nabla }_{\boldsymbol{a}} \lambda {_{\upTheta }}^{\upPsi \mathcal{A}} .
+%\end{equation*}
+%这里$\mathcal{A}$不携带YM指标。随后我们可以定义完整的协变导数：
+%\begin{equation*}
+%	\boldsymbol{\nabla }_{\boldsymbol{a}} \lambda {_{\boldsymbol{\upTheta }}}^{\boldsymbol{\upPsi }\mathcal{A}} =\boldsymbol{\nabla }_{\boldsymbol{a}} (\alpha {_{\boldsymbol{\upTheta }}}^{\upTheta } \alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} \lambda {_{\upTheta }}^{\upPsi \mathcal{A}} ),
+%\end{equation*}
+%展开并与$\alpha {_{\upTheta }}^{\boldsymbol{\upTheta }} \alpha {_{\boldsymbol{\upPsi }}}^{\upPsi }$缩并，我们有：
+%\begin{equation}
+%	\alpha {_{\upTheta }}^{\boldsymbol{\upTheta }} \alpha {_{\boldsymbol{\upPsi }}}^{\upPsi } (\boldsymbol{\nabla }_{\boldsymbol{a}} \lambda {_{\boldsymbol{\upTheta }}}^{\boldsymbol{\upPsi }\mathcal{A}} )=\boldsymbol{\nabla }_{\boldsymbol{a}} (\lambda {_{\upTheta }}^{\upPsi \mathcal{A}} )+\mathrm{i} A{_{\boldsymbol{a} \upTheta }}^{\upDelta } \lambda {_{\upDelta }}^{\upPsi \mathcal{A}} -\mathrm{i} A{_{a\upDelta }}^{\upPsi } \lambda {_{\upTheta }}^{\upDelta \mathcal{A}} .
+%	\label{eq:6.29}
+%\end{equation}
+%如果一个场的分量是在两个不同规范下取的，那么它们之间由规范变换联系：
+%\begin{equation}
+%	\lambda {_{\upTheta }}^{\upPsi } \mapsto \lambda {_{\hat{\upTheta }}}^{\hat{\upPsi }} =\lambda {_{\upTheta }}^{\upPsi } q{_{\hat{\upTheta }}}^{\upTheta } r^{\hat{\upPsi }}{}_{\upPsi } ,
+%	\label{eq:6.30}
+%\end{equation}
+%这里矩阵$r\in \mathcal{G}$是矩阵$q\in \mathcal{G}$的逆矩阵。在上述规范变换下，势的变换为
+%\begin{equation}
+%	A{_{\boldsymbol{a} \upPsi }}^{\upTheta } \mapsto \hat{A}{_{\boldsymbol{a}\hat{\upPsi }}}^{\hat{\upTheta }} =A{_{\boldsymbol{a} \upPsi }}^{\upTheta } r{_{\upTheta }}^{\hat{\upTheta }} q{_{\hat{\upPsi }}}^{\upPsi } +\mathrm{i} r{_{\upPsi }}^{\hat{\upTheta }}\boldsymbol{\nabla }_{\boldsymbol{a}} q{_{\hat{\upPsi }}}^{\upPsi } .
+%	\label{eq:6.31}
+%\end{equation}
+%在场论的标准记号中，我们用$D$表示协变导数，常常省去YM场指标，用$\psi $表示场，并用$t_{\alpha }$表示李代数的基，那么\ref{eq:6.29}退化为
+%\begin{equation*}
+%	( D_{\mu } \psi ( x))_{\ell } =\partial _{\mu } \psi _{\ell }( x) -\mathrm{i} A^{\beta }{}_{\mu }( x)( t_{\beta }){_{\ell }}^{m} \psi _{m}( x) ,
+%\end{equation*}
+%而势（规范场）的变换\ref{eq:6.31}为$A^{\alpha }{}_{\mu }\rightarrow A^{\alpha }{}_{\mu \upLambda }$，
+%\begin{equation*}
+%	t_{\alpha } A^{\alpha }{}_{\mu \upLambda } =\exp (\mathrm{i} t_{\beta } \upLambda ^{\beta } )t_{\alpha } A^{\alpha }{}_{\mu }\exp (-\mathrm{i} t_{\alpha } \upLambda ^{\alpha } )-\mathrm{i} [\partial _{\mu }\exp (\mathrm{i} t_{\beta } \upLambda ^{\beta } )]\exp (-\mathrm{i} t_{\alpha } \upLambda ^{\alpha } ).
+%\end{equation*}
+%
+%\subsection{杨-米尔斯场张量}
+%
+%现在我们假设无挠，考虑对易子：
+%\begin{equation}
+%	\begin{aligned}
+%		\upDelta _{\boldsymbol{ab}} \mu ^{\boldsymbol{\upPsi }} & =\upDelta _{\boldsymbol{ab}} (\mu ^{\upTheta } \alpha {_{\upTheta }}^{\boldsymbol{\upPsi }} )=2\mu ^{\upTheta }\boldsymbol{\nabla }_{[\boldsymbol{a}}\boldsymbol{\nabla }_{\boldsymbol{b}]} \alpha {_{\upTheta }}^{\boldsymbol{\upPsi }}\\
+%		& =-2\mathrm{i} \mu ^{\upTheta }\boldsymbol{\nabla }_{[\boldsymbol{a}} (A{_{\boldsymbol{b}] \upTheta }}^{\upPsi } \alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} )\\
+%		& =-\mathrm{i} \mu ^{\boldsymbol{\upTheta }} F{_{\boldsymbol{ab}\boldsymbol{\upTheta }}}^{\boldsymbol{\upPsi }} ,
+%	\end{aligned}
+%	\label{eq:6.32}
+%\end{equation}
+%这里
+%\begin{equation*}
+%	F{_{\boldsymbol{ab}\boldsymbol{\upTheta }}}^{\boldsymbol{\upPsi }} \equiv 2\alpha {_{\boldsymbol{\upTheta }}}^{\upTheta } \alpha {_{\upPsi }}^{\boldsymbol{\upPsi }} (\boldsymbol{\nabla }_{[\boldsymbol{a}} A{_{\boldsymbol{b}] \upTheta }}^{\upPsi } -\mathrm{i} A{_{\upLambda }}^{\upPsi }{}_{[\boldsymbol{a}} A{_{\boldsymbol{b}] \upTheta }}^{\upLambda } )
+%\end{equation*}
+%是杨-米尔斯场张量。其分量自然为：
+%\begin{equation}
+%	F{_{\boldsymbol{ab} \upTheta }}^{\upPsi } \equiv 2(\boldsymbol{\nabla }_{[\boldsymbol{a}} A{_{\boldsymbol{b}] \upTheta }}^{\upPsi } -\mathrm{i} A{_{\upLambda }}^{\upPsi }{}_{[\boldsymbol{a}} A{_{\boldsymbol{b}] \upTheta }}^{\upLambda } ).
+%	\label{eq:6.33}
+%\end{equation}
+%在场论的符号中，我们有：
+%\begin{equation*}
+%	F^{\gamma }{}_{\nu \mu } \equiv \partial _{\nu } A^{\gamma }{}_{\mu } -\partial _{\mu } A^{\gamma }{}_{\nu } +C^{\gamma }{}_{\alpha \beta } A^{\alpha }{}_{\nu } A^{\beta }{}_{\mu } .
+%\end{equation*}
+%从\ref{eq:6.32}我们发现$F$是不依赖于规范$\alpha {_{\upPsi }}^{\boldsymbol{\upPsi }}$的，这意味着$F$的变换为
+%\begin{equation*}
+%	F{_{\boldsymbol{ab} \upTheta }}^{\upPsi } \mapsto F{_{\boldsymbol{ab}\hat{\upTheta }}}^{\hat{\upPsi }} =F{_{\boldsymbol{ab} \upTheta }}^{\upPsi } r{_{\upPsi }}^{\hat{\upPsi }} q{_{\hat{\upTheta }}}^{\upTheta } .
+%\end{equation*}
+%即与YM场的变换规则\ref{eq:6.30}相同。
+%
+%
+%
+%与电磁场不同的是，YM场张量是带荷的（记得电磁场的$F_{\boldsymbol{ab}}$是无荷的）。对于协变指标：
+%\begin{equation*}
+%	\upDelta _{\boldsymbol{ab}} \beta _{\boldsymbol{\upPsi }} =\mathrm{i} \beta _{\boldsymbol{\upTheta }} F{_{\boldsymbol{ab\upPsi }}}^{\boldsymbol{\upTheta }} ,
+%\end{equation*}
+%对于一个一般场：
+%\begin{equation*}
+%	\upDelta _{\boldsymbol{ab}} \gamma {_{\boldsymbol{\upPsi }}}^{\boldsymbol{\upTheta } d} =R{_{\boldsymbol{abc}}}^{\boldsymbol{d}} \gamma {_{\boldsymbol{\upPsi }}}^{\boldsymbol{\upTheta }\boldsymbol{c}} +\mathrm{i} F{_{\boldsymbol{ab}\boldsymbol{\upTheta }}}^{\boldsymbol{\upLambda }} \gamma {_{\boldsymbol{\upLambda }}}^{\boldsymbol{\upTheta }\boldsymbol{d}} -\mathrm{i} F{_{\boldsymbol{ab}\boldsymbol{\upLambda }}}^{\boldsymbol{\upTheta }} \gamma {_{\boldsymbol{\upPsi }}}^{\boldsymbol{\upLambda }\boldsymbol{d}} .
+%\end{equation*}
+%
+%
+%除此之外，我们显然知道$F$的$\boldsymbol{ab}$是反对称的：
+%\begin{equation*}
+%	F{_{\boldsymbol{ab}\boldsymbol{\upTheta }}}^{\boldsymbol{\upPhi }} =-F{_{\boldsymbol{ba}\boldsymbol{\upTheta }}}^{\boldsymbol{\upPhi }} .
+%\end{equation*}
+%同时，类似于电磁场的\ref{eq:6.7}$\boldsymbol{\nabla }_{[\boldsymbol{a}} F_{\boldsymbol{bc}]} =0$，我们也有：
+%\begin{equation*}
+%	\boldsymbol{\nabla }_{[\boldsymbol{a}} F{_{\boldsymbol{bc}]\boldsymbol{\upPhi }}}^{\boldsymbol{\upPsi }} =0
+%\end{equation*}
+%这就是类似于麦克斯韦方程组的YM运动方程。而另一半运动方程（无源时）则为
+%\begin{equation*}
+%	\boldsymbol{\nabla }^{\boldsymbol{a}} F{_{\boldsymbol{ab\upPhi }}}^{\boldsymbol{\upPsi }} =0.
+%\end{equation*}
+%
+%\subsection{旋量对应}
+%
+%由于反对称性，我们立刻给出：
+%\begin{equation*}
+%	F{_{\boldsymbol{ab\upPhi }}}^{\boldsymbol{\upPsi }} =\varphi {_{\boldsymbol{AB\upPhi }}}^{\boldsymbol{\upPsi }} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '} +\epsilon _{\boldsymbol{AB}} \chi {_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{\upPhi }}}^{\boldsymbol{\upPsi }} \equiv \prescript{-}{}{} F{_{\boldsymbol{ab\upPhi }}}^{\boldsymbol{\upPsi }} +\prescript{+}{}{} F{_{\boldsymbol{ab\upPhi }}}^{\boldsymbol{\upPsi }} .
+%\end{equation*}
+%这里
+%\begin{equation*}
+%	\begin{aligned}
+%		\varphi {_{\boldsymbol{AB\upPhi }}}^{\boldsymbol{\upPsi }} & =\varphi {_{(\boldsymbol{AB})\boldsymbol{\upPhi }}}^{\boldsymbol{\upPsi }} =\frac{1}{2} F{_{\boldsymbol{ABC} '}}^{\boldsymbol{C} '}{}{_{\boldsymbol{\upPhi }}}^{\boldsymbol{\upPsi }}\\
+%		\ \chi {_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{\upPhi }}}^{\boldsymbol{\upPsi }} & =\chi {_{(\boldsymbol{A'B'})\boldsymbol{\upPhi }}}^{\boldsymbol{\upPsi }} =\frac{1}{2} F{_{\boldsymbol{C}}}^{\boldsymbol{C}}{}{_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{\upPhi }}}^{\boldsymbol{\upPsi }} .
+%	\end{aligned}
+%\end{equation*}
+%如果$F$是幺正的，即
+%\begin{equation*}
+%	F_{\boldsymbol{ab\upPhi \upPsi } '} =\overline{F}_{\boldsymbol{ab\upPsi } '\boldsymbol{\upPhi }} ,
+%\end{equation*}
+%记得这里YM指标用$h_{\boldsymbol{\upPsi \upPsi } '}$升降。我们有：
+%\begin{equation*}
+%	F_{\boldsymbol{ab\upPhi \upPsi } '} =\varphi _{\boldsymbol{AB\upPhi \upPsi } '} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '} +\epsilon _{\boldsymbol{AB}}\overline{\varphi }_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{\upPsi } '\boldsymbol{\upPhi }} .
+%\end{equation*}
+%如果将$\upDelta _{\boldsymbol{ab}}$和之前一样拆成$\Box _{\boldsymbol{AB}} ,\Box _{\boldsymbol{A} '\boldsymbol{B} '}$，我们有：
+%\begin{equation*}
+%	\begin{aligned}
+%		\Box _{\boldsymbol{AB}} \mu ^{\boldsymbol{\upPsi }} & =-\mathrm{i} \mu ^{\boldsymbol{\upPhi }} \varphi {_{\boldsymbol{AB\upPhi }}}^{\boldsymbol{\upPsi }} , & \Box _{\boldsymbol{A} '\boldsymbol{B} '} \mu ^{\boldsymbol{\upPsi }} & =-\mathrm{i} \mu ^{\boldsymbol{\upPhi }} \chi {_{\boldsymbol{A'B'\upPhi }}}^{\boldsymbol{\upPsi }} ,\\
+%		\Box _{\boldsymbol{AB}} \lambda _{\boldsymbol{\upPsi }} & =\mathrm{i} \lambda _{\boldsymbol{\upPhi }} \varphi {_{\boldsymbol{AB\upPsi }}}^{\boldsymbol{\upPhi }} , & \Box _{\boldsymbol{A} '\boldsymbol{B} '} \lambda _{\boldsymbol{\upPsi }} & =\mathrm{i} \lambda _{\boldsymbol{\upPhi }} \chi {_{\boldsymbol{A'B'\upPsi }}}^{\boldsymbol{\upPhi }} ,
+%	\end{aligned}
+%\end{equation*}
+%这里没有曲率项是因为没有对普通指标求对易子。因为$F$可以用势$A$表达，那么\ref{eq:6.33}的旋量形式自然为：
+%\begin{equation*}
+%	\begin{aligned}
+%		\varphi {_{\boldsymbol{AB} \upPhi }}^{\upPsi } & =\boldsymbol{\nabla }_{\boldsymbol{A} '(\boldsymbol{A}} A^{\boldsymbol{A} '}{}{_{\boldsymbol{B}) \upPhi }}^{\upPsi } -\mathrm{i} \upPhi {_{\upOmega}}^{\upPsi }{}_{\boldsymbol{A} '(\boldsymbol{A}} A^{\boldsymbol{A} '}{}{_{\boldsymbol{B}) \upPhi }}^{\upOmega} ,\\
+%		\chi {_{\boldsymbol{A'B} '\upPhi }}^{\upPsi } & =\boldsymbol{\nabla }_{\boldsymbol{A}(\boldsymbol{A} '} A^{\boldsymbol{A}}{}{_{\boldsymbol{B} ') \upPhi }}^{\upPsi } -\mathrm{i} \upPhi {_{\upOmega}}^{\upPsi }{}_{\boldsymbol{A}(\boldsymbol{A} '} A^{\boldsymbol{A}}{}{_{\boldsymbol{B} ') \upPhi }}^{\upOmega} .
+%	\end{aligned}
+%\end{equation*}
+%无源杨米尔斯场方程$\boldsymbol{\nabla }^{\boldsymbol{a}} F{_{\boldsymbol{ab\upPhi }}}^{\boldsymbol{\upPsi }} =0$的旋量形式为
+%\begin{equation}
+%	\boldsymbol{\nabla }^{\boldsymbol{B}}{}_{\boldsymbol{A} '} \varphi {_{\boldsymbol{AB\upPhi }}}^{\boldsymbol{\upPsi }} =0=\boldsymbol{\nabla }^{\boldsymbol{B} '}{}_{\boldsymbol{A}} \chi {_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{\upPhi }}}^{\boldsymbol{\upPsi }} .
+%	\label{eq:6.34}
+%\end{equation}
+%
+%
+%与电磁场的形式相同，我们也可以定义YM场的能动张量：
+%\begin{equation*}
+%	T_{\boldsymbol{ab}} =\frac{1}{2\pi } \varphi {_{\boldsymbol{AB\upPhi }}}^{\boldsymbol{\upPsi }}\overline{\varphi }{_{\boldsymbol{A} '\boldsymbol{B} '}}^{\boldsymbol{\upPhi }}{}_{\boldsymbol{\upPsi }} ,
+%\end{equation*}
+%这与爱因斯坦场方程中的能动张量的性质相同且是无迹的：
+%\begin{equation*}
+%	T_{\boldsymbol{ab}} =\overline{T}_{\boldsymbol{ab}} ,\kern+0.4em T_{[\boldsymbol{ab}]} =0,\kern+0.4em T{_{\boldsymbol{a}}}^{\boldsymbol{a}} =0.
+%\end{equation*}
+%同时根据\ref{eq:6.34}以及$\overline{\chi {_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{\upPhi }}}^{\boldsymbol{\upPsi }}} =\varphi {_{\boldsymbol{AB}}}^{\boldsymbol{\upPsi } '}{}_{\boldsymbol{\upPhi } '}$，我们知道
+%\begin{equation*}
+%	\boldsymbol{\nabla }^{\boldsymbol{a}} T_{\boldsymbol{ab}} =0.
+%\end{equation*}
+%
+
+\section{共形重标度}
+
+在最一开始，我们通过时空流形$\mathcal{M}$光锥结构给出了自旋矢量的几何描述，而度规——从这个结构中衍生的量——并不是那么基本。实际上，如果$\mathcal{M}$仅仅有所谓的“共形”结构（conformal structure），我们也可以构造旋量：即如果我们只有度规在\textbf{共形重标度}（conformal rescaling）
+\begin{equation*}
+	g_{\boldsymbol{ab}} \mapsto \hat{g}_{\boldsymbol{ab}} =\upOmega^{2} g_{\boldsymbol{ab}}
+\end{equation*}
+下的等价类，我们也可以拥有旋量。这里$\upOmega >0$是一个标量场$\upOmega\in \mathfrak{T}$。注意，这里没有\textbf{点}的变换，因为共形结构的信息其实就是光锥结构的信息，反过来，如果两个闵氏度规的实类光方向一致，那么它们一定只相差一个共形变换。实际上，光锥结构应当被视为比度规变换更“基本”（permitive）的结构，例如当我们讨论点之间的因果关系（causality）的时候。虽然我们定义旋量的时候需要用到度规（及其共形变换），但是实际上整个构建过程与$g_{\boldsymbol{ab}}$的具体选择是无关的。用光锥的几何结构，我们可以定义两个自旋矢量的内积$\{\boldsymbol{\kappa } ,\boldsymbol{\tau }\} =\kappa ^{\boldsymbol{A}} \tau ^{\boldsymbol{B}} \epsilon _{\boldsymbol{AB}}$：其幅角可以完全由共形几何（球极投影等）定义，而模长则需要长度的概念，这意味着共形变换保证内积的幅角不变，而模长可能会改变。
+
+
+
+为了保证$g_{\boldsymbol{ab}} =\epsilon _{\boldsymbol{AB}} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '}$不变，我们选择
+\begin{equation*}
+	\epsilon _{\boldsymbol{AB}} \mapsto \hat{\epsilon }_{\boldsymbol{AB}} =\upOmega\epsilon _{\boldsymbol{AB}} ,
+\end{equation*}
+而选择$\hat{\epsilon }_{\boldsymbol{AB}} =-\upOmega\epsilon _{\boldsymbol{AB}}$会与单位元不连通。在给出分量时，我们选择一个自旋标架$\{o^{\boldsymbol{A}} ,\iota ^{\boldsymbol{A}} \}$，使得
+\begin{equation*}
+	\epsilon _{AB} =\epsilon _{\boldsymbol{AB}} o^{\boldsymbol{A}} \iota ^{\boldsymbol{B}} =\begin{pmatrix}
+		0 & 1\\
+		-1 & 0
+	\end{pmatrix} .
+\end{equation*}
+在共形变换后，我们有几种不同的标架选择方式，其中一种是令$\hat{o}^{\boldsymbol{A}} =o^{\boldsymbol{A}} ,\hat{\iota }^{\boldsymbol{A}} =\iota ^{\boldsymbol{A}}$，那么这时
+\begin{equation*}
+	o^{\boldsymbol{A}} \iota ^{\boldsymbol{B}}\hat{\epsilon }_{\boldsymbol{AB}} =\upOmega,
+\end{equation*}
+即
+\begin{equation*}
+	\hat{\epsilon }_{AB} =\begin{pmatrix}
+		0 & \upOmega\\
+		-\upOmega & 0
+	\end{pmatrix} .
+\end{equation*}
+但为了方便，我们也可以选
+\begin{equation*}
+	\hat{o}^{\boldsymbol{A}} =\upOmega^{-1} o^{\boldsymbol{A}} ,\hat{\iota }^{\boldsymbol{A}} =\iota ^{\boldsymbol{A}} ,
+\end{equation*}
+这意味着
+\begin{equation*}
+	\hat{o}_{\boldsymbol{A}} =o_{\boldsymbol{A}} ,\hat{\iota }_{\boldsymbol{A}} =\upOmega\iota _{\boldsymbol{A}} ,
+\end{equation*}
+以及
+\begin{equation*}
+	\hat{\epsilon }_{AB} =\epsilon _{AB} ,\hat{\epsilon }^{AB} =\epsilon ^{AB} .
+\end{equation*}
+由于克罗内克$\delta $记号仅仅只起到指标置换的作用，我们应当保证这些量不变：
+\begin{equation*}
+	\hat{g}{_{\boldsymbol{a}}}^{\boldsymbol{b}} =g{_{\boldsymbol{a}}}^{\boldsymbol{b}} ,\kern+0.4em \hat{\epsilon }{_{\boldsymbol{A}}}^{\boldsymbol{B}} =\epsilon {_{\boldsymbol{A}}}^{\boldsymbol{B}} ,\kern+0.4em \hat{\epsilon }{_{\boldsymbol{A} '}}^{\boldsymbol{B} '} =\epsilon {_{\boldsymbol{A} '}}^{\boldsymbol{B} '} ,
+\end{equation*}
+这意味着
+\begin{equation*}
+	\hat{\epsilon }_{\boldsymbol{A} '\boldsymbol{B} '} =\upOmega\epsilon _{\boldsymbol{A} '\boldsymbol{B} '} ,\kern+0.4em \hat{\epsilon }^{\boldsymbol{AB}} =\upOmega^{-1} \epsilon ^{\boldsymbol{AB}} ,\kern+0.4em \hat{\epsilon }^{\boldsymbol{A} '\boldsymbol{B} '} =\upOmega^{-1} \epsilon ^{\boldsymbol{A'B} '} ,\hat{g}^{\boldsymbol{ab}} =\upOmega^{-2} g^{\boldsymbol{ab}} .
+\end{equation*}
+\subsection{共形密度}
+
+现在我们假设有一个从几何角度出发定义的自旋矢量$\kappa ^{\boldsymbol{A}}$，它是不被重标度影响的：
+\begin{equation*}
+	\hat{\kappa }^{\boldsymbol{A}} =\kappa ^{\boldsymbol{A}} ,
+\end{equation*}
+对于其协变矢量：
+\begin{equation*}
+	\hat{\kappa }_{\boldsymbol{A}} =\hat{\epsilon }_{\boldsymbol{BA}}\hat{\kappa }^{\boldsymbol{B}} =\upOmega\epsilon _{\boldsymbol{BA}} \kappa ^{\boldsymbol{B}} =\upOmega\kappa _{\boldsymbol{A}} ,
+\end{equation*}
+我们称$\kappa _{\boldsymbol{A}}$的\textbf{共形密度}（conformal density）的权（weight）为$1$。同样的，如果我们有一个协变矢量在重标度下不变：
+\begin{equation*}
+	\hat{\omega }_{\boldsymbol{A}} =\omega _{\boldsymbol{A}} ,
+\end{equation*}
+那么
+\begin{equation*}
+	\hat{\omega }^{\boldsymbol{A}} =\upOmega^{-1} \omega ^{\boldsymbol{A}} ,
+\end{equation*}
+我们称其共形密度的权为$-1$。一般来说，如果我们可以考虑共形密度的任意权，如果$\theta ^{\mathcal{A}}$在重标度下的变换规则为
+\begin{equation*}
+	\hat{\theta }^{\mathcal{A}} =\upOmega^{k} \theta ^{\mathcal{A}} ,
+\end{equation*}
+那么我们称其共形密度的权（简称共形权）为$k$。例如$g_{\boldsymbol{ab}}$的共形权为$2$，$g^{\boldsymbol{ab}}$的则为$-2$。
+
+
+\subsection{$\boldsymbol{\nabla }_{\boldsymbol{a}}$的变换}
+
+如果我们能给一个场的系统中的所有量分配上一个共形权，这样场方程在共形重标度后是不变的，那么我们称这个系统是共形不变（conformally invariant）的。但在此之前，我们需要研究协变导数算符$\boldsymbol{\nabla }_{\boldsymbol{a}}$在共形变换下的行为，因为我们要求我们的理论是协变恒定（$\boldsymbol{\nabla }_{\boldsymbol{a}} g_{\boldsymbol{bc}} =\boldsymbol{\nabla }_{\boldsymbol{a}} \epsilon _{\boldsymbol{BC}} =0$）的，这意味着我们需要给$\hat{\boldsymbol{\nabla }}_{\boldsymbol{a}}$额外的限制。我们要求：
+\begin{equation*}
+	\boldsymbol{\nabla }_{\boldsymbol{a}} \epsilon _{\boldsymbol{BC}} =\hat{\boldsymbol{\nabla }}_{\boldsymbol{a}}\hat{\epsilon }_{\boldsymbol{BC}} =0,
+\end{equation*}
+同时假设无挠。根据我们之前得到的结果：
+\begin{equation*}
+	\hat{\boldsymbol{\nabla }}_{\boldsymbol{a}} f=\boldsymbol{\nabla }_{\boldsymbol{a}} f,\kern+0.4em \hat{\boldsymbol{\nabla }}_{\boldsymbol{a}} \xi ^{\boldsymbol{C}} =\boldsymbol{\nabla }_{\boldsymbol{a}} \xi ^{\boldsymbol{C}} +\upTheta {_{\boldsymbol{aB}}}^{\boldsymbol{C}} \xi ^{\boldsymbol{B}} ,
+\end{equation*}
+这里
+\begin{equation*}
+	\upTheta {_{\boldsymbol{aB}}}^{\boldsymbol{C}} =\mathrm{i} \upPi _{\boldsymbol{a}} \epsilon {_{\boldsymbol{B}}}^{\boldsymbol{C}} +\upUpsilon _{\boldsymbol{A} '\boldsymbol{B}} \epsilon {_{\boldsymbol{A}}}^{\boldsymbol{C}} ,\kern+0.4em \upPi _{\boldsymbol{a}} ,\upUpsilon _{\boldsymbol{a}} \in \mathfrak{T}_{\boldsymbol{a}} .
+\end{equation*}
+那么我们有：
+\begin{equation*}
+	\begin{aligned}
+		0 & =\hat{\boldsymbol{\nabla }}_{\boldsymbol{a}}\hat{\epsilon }_{\boldsymbol{BC}} =\hat{\boldsymbol{\nabla }}_{\boldsymbol{a}} (\upOmega\epsilon _{\boldsymbol{BC}} )\\
+		& =\boldsymbol{\nabla }_{\boldsymbol{a}} (\upOmega\epsilon _{\boldsymbol{BC}} )-\upTheta {_{\boldsymbol{aB}}}^{\boldsymbol{D}} \upOmega\epsilon _{\boldsymbol{DC}} -\upTheta {_{\boldsymbol{aC}}}^{\boldsymbol{D}} \upOmega\epsilon _{\boldsymbol{BD}}\\
+		& =\epsilon _{\boldsymbol{BC}} (\boldsymbol{\nabla }_{\boldsymbol{a}} \upOmega-\upOmega\upTheta {_{\boldsymbol{aD}}}^{\boldsymbol{D}} )\\
+		& =\epsilon _{\boldsymbol{BC}} (\boldsymbol{\nabla }_{\boldsymbol{a}} \upOmega-2\mathrm{i} \upOmega\upPi _{\boldsymbol{a}} -\upOmega\upUpsilon _{\boldsymbol{a}} ),
+	\end{aligned}
+\end{equation*}
+这意味着
+\begin{equation*}
+	\upOmega^{-1}\boldsymbol{\nabla }_{\boldsymbol{a}} \upOmega=\upUpsilon _{\boldsymbol{a}} +2\mathrm{i} \upPi _{\boldsymbol{a}} .
+\end{equation*}
+由于$\upOmega$是实的，那么$\upPi _{a} =0$，从而
+\begin{equation*}
+	\upUpsilon _{\boldsymbol{a}} =\upOmega^{-1}\boldsymbol{\nabla }_{\boldsymbol{a}} \upOmega=\boldsymbol{\nabla }_{\boldsymbol{a}}\ln \upOmega.
+\end{equation*}
+因此，对于任意场的协变导数，其共形变换后的结果为
+\begin{equation*}
+	\begin{aligned}
+		& \hat{\mathbf{\nabla }}_{\boldsymbol{AA} '} \chi _{\boldsymbol{B} \cdots \boldsymbol{F} '\cdots }^{\boldsymbol{P} \cdots \boldsymbol{S} '\cdots }\\
+		= & \mathbf{\nabla }_{\boldsymbol{AA} '} \chi _{\boldsymbol{B} \cdots \boldsymbol{F} '\cdots }^{\boldsymbol{P} \cdots \boldsymbol{S} '\cdots } -\upUpsilon _{\boldsymbol{BA} '} \chi _{\boldsymbol{A} \cdots \boldsymbol{F} '\cdots }^{\boldsymbol{P} \cdots \boldsymbol{S} '\cdots } -\cdots -\upUpsilon _{\boldsymbol{AF} '} \chi _{\boldsymbol{B} \cdots \boldsymbol{A} '\cdots }^{\boldsymbol{P} \cdots \boldsymbol{S} '\cdots } +\epsilon {_{\boldsymbol{A}}}^{\boldsymbol{P}} \upUpsilon _{\boldsymbol{XA} '} \chi _{\boldsymbol{B} \cdots \boldsymbol{F} '\cdots }^{\boldsymbol{X} \cdots \boldsymbol{S} '\cdots } +\cdots .
+	\end{aligned}
+\end{equation*}
+对于一个普通张量，我们有：
+\begin{equation*}
+	\hat{\boldsymbol{\nabla }}_{\boldsymbol{a}} V_{\boldsymbol{b}} =\hat{\boldsymbol{\nabla }}_{\boldsymbol{AA} '} V_{\boldsymbol{BB} '} =\boldsymbol{\nabla }_{\boldsymbol{AA} '} V_{\boldsymbol{BB} '} -\upUpsilon _{\boldsymbol{BA} '} V_{\boldsymbol{AB} '} -\upUpsilon _{\boldsymbol{AB} '} V_{\boldsymbol{BA} '} ,
+\end{equation*}
+如果我们定义
+\begin{equation*}
+	Q{_{\boldsymbol{ab}}}^{\boldsymbol{c}} =2\upUpsilon _{(\boldsymbol{a}} g{_{\boldsymbol{b})}}^{\boldsymbol{c}} -g_{\boldsymbol{ab}} \upUpsilon ^{\boldsymbol{c}} ,
+\end{equation*}
+那么
+\begin{equation*}
+	\hat{\boldsymbol{\nabla }}_{\boldsymbol{a}} U^{\boldsymbol{b}} =\boldsymbol{\nabla }_{\boldsymbol{a}} U^{\boldsymbol{b}} +Q{_{\boldsymbol{ac}}}^{\boldsymbol{b}} U^{\boldsymbol{c}} ,
+\end{equation*}
+这与之前得到的结果相同。对于曲率，我们先不加证明地给出
+\begin{equation*}
+	\begin{aligned}
+		\hat{\upPhi }_{\boldsymbol{ABA} '\boldsymbol{B} '} & =\upPhi _{\boldsymbol{ABA} '\boldsymbol{B} '} -\boldsymbol{\nabla }_{\boldsymbol{A}(\boldsymbol{A} '} \upUpsilon _{\boldsymbol{B} ')\boldsymbol{B}} +\upUpsilon _{\boldsymbol{A}(\boldsymbol{A} '} \upUpsilon _{\boldsymbol{B} ')\boldsymbol{B}}\\
+		\upOmega^{2}\hat{\upLambda } & =\upLambda +\frac{1}{4}\boldsymbol{\nabla }^{\boldsymbol{a}} \upUpsilon _{\boldsymbol{a}} +\frac{1}{4} \upUpsilon ^{\boldsymbol{a}} \upUpsilon _{\boldsymbol{a}}\\
+		\hat{\upPsi }_{\boldsymbol{ABCD}} & =\upPsi _{\boldsymbol{ABCD}} .
+	\end{aligned}
+\end{equation*}
+可以发现外尔张量$\upPsi _{\boldsymbol{ABCD}}$是共形不变的。
+
+
+\subsection{自旋系数的变换}
+
+如果标架的变换为
+\begin{equation*}
+	\hat{o}_{\boldsymbol{A}} =\upOmega^{w_{0} +1} o_{\boldsymbol{A}} ,\kern+0.4em \hat{\iota }_{\boldsymbol{A}} =\upOmega^{w_{1} +1} \iota _{\boldsymbol{A}} ,
+\end{equation*}
+这意味着
+\begin{equation*}
+	\hat{o}^{\boldsymbol{A}} =\upOmega^{w_{0}} o^{\boldsymbol{A}} ,\kern+0.4em \hat{\iota }^{\boldsymbol{A}} =\upOmega^{w_{1}} \iota ^{\boldsymbol{A}} ,\kern+0.4em \hat{\chi } =\upOmega^{w_{0} +w_{1} +1} \chi ,
+\end{equation*}
+如果记
+\begin{equation*}
+	\omega =\ln \upOmega,
+\end{equation*}
+那么我们知道
+\begin{equation*}
+	D\omega =\upUpsilon _{00'} ,\kern+0.4em \delta \omega =\upUpsilon _{01'} ,\kern+0.4em \delta '\omega =\upUpsilon _{10'} ,\kern+0.4em D'\omega =\upUpsilon _{11'} .
+\end{equation*}
+根据自旋系数的定义，我们记$\upOmega^{w_{0} -w_{1}} =\upSigma $，那么有自旋系数的变换：
+\begin{equation*}
+	\begin{aligned}
+		& \begin{array}{|c|c|c|c|}
+			\hline
+			\hat{\kappa } & \hat{\epsilon } & \hat{\gamma } ' & \hat{\tau } '\\
+			\hline
+			\hat{\rho } & \hat{\alpha } & \hat{\beta } ' & \hat{\sigma } '\\
+			\hline
+			\hat{\sigma } & \hat{\beta } & \hat{\alpha } ' & \hat{\rho } '\\
+			\hline
+			\hat{\tau } & \hat{\gamma } & \hat{\epsilon } ' & \hat{\kappa } '\\
+			\hline
+		\end{array} =\upOmega^{w_{0} +w_{1}} \times \\
+		& \begin{array}{|l|l|l|l|}
+			\hline
+			\kappa \upSigma ^{2} & [ \epsilon +( w_{0} +1) D\omega ] \upSigma  & ( \gamma '+w_{1} D\omega ) \upSigma  & \tau '-\delta '\omega \\
+			\hline
+			(\rho -D\omega )\upSigma  & \alpha +w_{0} \delta '\omega  & \beta '+( w_{1} +1) \delta '\omega  & \sigma '\upSigma ^{-1}\\
+			\hline
+			\sigma \upSigma  & \beta +( w_{0} +1) \delta \omega  & \alpha '+w_{1} \delta \omega  & ( \rho '-D'\omega ) \upSigma ^{-1}\\
+			\hline
+			\tau -\delta \omega  & ( \gamma +w_{0} D'\omega ) \upSigma ^{-1} & [ \epsilon '+( w_{1} +1) D'\omega ] \upSigma ^{-1} & \kappa '\upSigma ^{-2}\\
+			\hline
+		\end{array} .
+	\end{aligned}
+\end{equation*}
+我们可以选择几种不同的标架变换：
+\begin{itemize}
+	\item $\hat{o}_{\boldsymbol{A}} =o_{\boldsymbol{A}} ,\hat{\iota }_{\boldsymbol{A}} =\iota _{\boldsymbol{A}} ;\hat{o}^{\boldsymbol{A}} =\upOmega^{-1} o^{\boldsymbol{A}} ,\hat{\iota }^{\boldsymbol{A}} =\upOmega^{-1} \iota ^{\boldsymbol{A}} ;\hat{\chi } =\upOmega^{-1} \chi $
+	\item $\hat{o}_{\boldsymbol{A}} =\upOmega_{\boldsymbol{A}} ,\hat{\iota }_{\boldsymbol{A}} =\upOmega_{\boldsymbol{A}} ;\hat{o}^{\boldsymbol{A}} =o^{\boldsymbol{A}} ,\hat{\iota }^{\boldsymbol{A}} =\iota ^{\boldsymbol{A}} ;\hat{\chi } =\upOmega\chi $
+	\item $\hat{o}_{\boldsymbol{A}} =\upOmega^{1/2} o_{\boldsymbol{A}} ,\hat{\iota }_{\boldsymbol{A}} =\upOmega^{1/2} \iota _{\boldsymbol{A}} ;\hat{o}^{\boldsymbol{A}} =\upOmega^{-1/2} o^{\boldsymbol{A}} ,\hat{\iota }^{\boldsymbol{A}} =\upOmega^{-1/2} \iota ^{\boldsymbol{A}} ;\hat{\chi } =\chi $
+	\item $\hat{o}_{\boldsymbol{A}} =o_{\boldsymbol{A}} ,\hat{\iota }_{\boldsymbol{A}} =\upOmega\iota _{\boldsymbol{A}} ;\hat{o}^{\boldsymbol{A}} =\upOmega^{-1} o^{\boldsymbol{A}} ,\hat{\iota }^{\boldsymbol{A}} =\iota ^{\boldsymbol{A}} ;\hat{\chi } =\chi $
+\end{itemize}
+
+在这些不同选择下，自旋系数的变换为
+\begin{equation*}
+	\begin{array}{|c|c|c|c|}
+		\hline
+		\hat{\kappa } & \hat{\epsilon } & \hat{\gamma } ' & \hat{\tau } '\\
+		\hline
+		\hat{\rho } & \hat{\alpha } & \hat{\beta } ' & \hat{\sigma } '\\
+		\hline
+		\hat{\sigma } & \hat{\beta } & \hat{\alpha } ' & \hat{\rho } '\\
+		\hline
+		\hat{\tau } & \hat{\gamma } & \hat{\epsilon } ' & \hat{\kappa } '\\
+		\hline
+	\end{array} =\begin{cases}
+		\upOmega^{-2} \times  & \begin{array}{|l|l|l|l|}
+			\hline
+			\kappa  & \epsilon  & \gamma '-D\omega  & \tau '-\delta '\omega \\
+			\hline
+			\rho -D\omega  & \alpha -\delta '\omega  & \beta ' & \sigma '\\
+			\hline
+			\sigma  & \beta  & \alpha '-\delta \omega  & \rho '-D'\omega \\
+			\hline
+			\tau -\delta \omega  & \gamma -D'\omega  & \epsilon ' & \kappa '\\
+			\hline
+		\end{array}\\ \\
+		& \begin{array}{|l|l|l|l|}
+			\hline
+			\kappa  & \epsilon +D\omega  & \gamma ' & \tau '-\delta '\omega \\
+			\hline
+			\rho -D\omega  & \alpha  & \beta '+\delta '\omega  & \sigma '\\
+			\hline
+			\sigma  & \beta +\delta \omega  & \alpha ' & \rho '-D'\omega \\
+			\hline
+			\tau -\delta \omega  & \gamma  & \epsilon '+D'\omega  & \kappa '\\
+			\hline
+		\end{array}\\ \\
+		\upOmega^{-1} \times  & \begin{array}{|l|l|l|l|}
+			\hline
+			\kappa  & \epsilon +\frac{1}{2} D\omega  & \gamma '-\frac{1}{2} D\omega  & \tau '-\delta '\omega )\\
+			\hline
+			\rho -D\omega  & \alpha -\frac{1}{2} \delta '\omega  & \beta '+\frac{1}{2} \delta '\omega  & \sigma '\\
+			\hline
+			\sigma  & \beta +\frac{1}{2} \delta \omega  & \alpha '-\frac{1}{2} \delta \omega  & \rho '-D'\omega \\
+			\hline
+			\tau -\delta \omega  & \gamma -\frac{1}{2} D'\omega  & \epsilon '+\frac{1}{2} D'\omega  & \kappa '\\
+			\hline
+		\end{array}\\ \\
+		& {\small\begin{array}{|l|l|l|l|}
+			\hline
+			\upOmega^{-3} \kappa  & \upOmega^{-2} \epsilon  & \upOmega^{-2} \gamma ' & \upOmega^{-1}( \tau '-\delta '\omega )\\
+			\hline
+			\upOmega^{-2} (\rho -D\omega ) & \upOmega^{-1}( \alpha -\delta '\omega ) & \upOmega^{-1}( \beta '+\delta '\omega ) & \sigma '\\
+			\hline
+			\upOmega^{-2} \sigma  & \upOmega^{-1} \beta  & \upOmega^{-1} \alpha ' & \rho '-D'\omega \\
+			\hline
+			\upOmega^{-1} (\tau -\delta \omega ) & \gamma -D'\omega  & \epsilon '+D'\omega  & \upOmega\kappa '\\
+			\hline
+		\end{array}}
+	\end{cases}
+\end{equation*}
+从上面的变换我们可以发现，无论我们选择了那种，$\kappa ,\sigma ,\kappa ',\sigma '$永远都是共形密度，虽然其权不同；而$\tau -\overline{\tau } '$，以及$\rho ,\rho ',\epsilon ,\epsilon ',\gamma ,\gamma '$的虚部也都是共形密度。
+
+
+\subsection{共形不变的紧算符*}
+
+之前我们讨论过标架在一般的规范变换
+\begin{equation*}
+	o^{\boldsymbol{A}} \mapsto \lambda o^{\boldsymbol{A}} ,\kern+0.4em \iota ^{\boldsymbol{A}} \mapsto \mu \iota ^{\boldsymbol{A}}
+\end{equation*}
+后，一个$\{r',r;t',t\}$类的标量$\eta $的变换为
+\begin{equation*}
+	\eta (\lambda o^{\boldsymbol{A}} ,\mu \iota ^{\boldsymbol{A}} )\mapsto \lambda ^{r'}\overline{\lambda }^{t'} \mu ^{r}\overline{\mu }^{t'} \eta (o^{\boldsymbol{A}} ,\iota ^{\boldsymbol{A}} ).
+\end{equation*}
+现在假设$\eta $有共性权$w$，那么
+\begin{equation*}
+	\hat{\eta } =\upOmega^{w} \eta .
+\end{equation*}
+我们可以定义新的$\text{ð} ,\text{þ}$算符：
+\begin{equation*}
+	\begin{aligned}
+		& \text{þ}_{\mathcal{C}} =\text{þ}+[ w-r'( w_{0} +1) -rw_{1} -t'( w_{0} +1) -tw_{1}] \rho \\
+		& \text{þ}'_{\mathcal{C}} =\text{þ}'+[ w-r'w_{0} -r( w_{1} +1) -t'w_{0} -t( w_{1} +1)] \rho '\\
+		& \text{ð} _{\mathcal{C}} =\text{ð} +[ w-r'( w_{0} +1) -rw_{1} -t'w_{0} -t( w_{1} +1)] \tau \\
+		& \text{ð} '_{\mathcal{C}} =\text{ð} '+[ w-r'w_{0} -r( w_{1} +1) -t'( w_{0} +1) -tw_{1}] \tau ',
+	\end{aligned}
+\end{equation*}
+很容易验证，新算符的共形权为：
+\begin{equation*}
+	\begin{aligned}
+		& \widehat{\text{þ}_{\mathcal{C}} \eta } =\hat{\text{þ}}_{\mathcal{C}}\hat{\eta } =\upOmega^{w+2w_{0}} \text{þ}_{\mathcal{C}} \eta \\
+		& \widehat{\text{þ}'_{\mathcal{C}} \eta } =\hat{\text{þ}} '_{\mathcal{C}}\hat{\eta } =\upOmega^{w+2w_{1}} \text{þ}'_{\mathcal{C}} \eta \\
+		& \widehat{\text{ð} _{\mathcal{C}} \eta } =\hat{\text{ð} }_{\mathcal{C}}\hat{\eta } =\upOmega^{w+w_{0} +w_{1}}\hat{\text{ð} }_{\mathcal{C}} \eta \\
+		& \widehat{\text{ð} '_{\mathcal{C}} \eta } =\hat{\text{ð} } '_{\mathcal{C}}\hat{\eta } =\upOmega^{w+w_{0} +w_{1}}\hat{\text{ð} } '_{\mathcal{C}} \eta ,
+	\end{aligned}
+\end{equation*}
+同时，新算符与之前算符的“规范”权是一致的。 但是需要注意，新算符并不是实的，与之前的情况不同。
+
+
+
+由于之前我们看到$\chi $的共形权为$w_{0} +w_{1} +1$，这意味着
+\begin{equation*}
+	\text{þ}_{\mathcal{C}} \chi =\text{þ}'_{\mathcal{C}} \chi =\text{ð} _{\mathcal{C}} \chi =\text{ð} '_{\mathcal{C}} \chi =0.
+\end{equation*}
+如果$\chi $在共形变换前后不变，这意味着$w_{0} +w_{1} +1=0$，那么共形紧算符的定义退化成
+\begin{equation*}
+	\begin{aligned}
+		& \text{þ}_{\mathcal{C}} =\text{þ}+[ w+(\text{þ}+q)w_{1}] \rho ,\ \ \text{þ}'_{\mathcal{C}} =\text{þ}'+[ w-(\text{þ}+q)w_{0}] \rho '\\
+		& \text{ð} _{\mathcal{C}} =\delta +[ w+\text{þ}w_{1} -qw_{0}] \tau ,\ \ \text{ð} '_{\mathcal{C}} =\text{ð} '+[ w-\text{þ}w_{0} +qw_{1}] \tau '
+	\end{aligned}
+\end{equation*}
+这里$p=r'-r,q=t'-t$。
+
+
+
+除此之外，用这些算符可以化简很多有共形不变性的方程。例如对于无质量自由场方程，用普通的紧算符表达的形式为
+\begin{equation*}
+	\text{þ}\phi _{r} -\text{ð} '\phi _{r-1} =( r-1) \sigma '\phi _{r-2} -r\tau '\phi _{r-1} +( n-r+1) \rho \phi _{r} -( n-r) \kappa \phi _{r+1} ,
+\end{equation*}
+现在，如果我们将其用新定义的共形紧算符表示：
+\begin{equation*}
+	\begin{aligned}
+		& \text{þ}_{\mathcal{C}} \phi _{r} -\text{ð} '_{\mathcal{C}} \phi _{r-1} =(r-1)\sigma '\phi _{r-2} -(n-r)\kappa \phi _{r+1} ,\\
+		& \text{ð} _{\mathcal{C}} \phi _{r} -\text{þ}'_{\mathcal{C}} \phi _{r-1} =(r-1)\kappa '\phi _{r-2} -(n-r)\sigma \phi _{r+1} .
+	\end{aligned}
+\end{equation*}
+对于扭量方程$\boldsymbol{\nabla }_{\boldsymbol{A} '}^{(\boldsymbol{A}} \omega ^{\boldsymbol{B})} =0$：
+\begin{equation*}
+	\begin{aligned}
+		\text{ð} '_{\mathcal{C}} \omega ^{0} & =\sigma '\omega ^{1} , & \text{ð} _{\mathcal{C}} \omega ^{1} & =\sigma \omega ^{0} ,\\
+		\text{þ}'_{\mathcal{C}} \omega ^{0} & =\kappa '\omega ^{1} , & \text{þ}_{\mathcal{C}} \omega ^{1} & =\kappa \omega ^{0} ,\\
+		\text{ð} _{\mathcal{C}} \omega ^{0} & =\text{þ}'_{\mathcal{C}} \omega ^{1} , & \text{þ}_{\mathcal{C}} \omega ^{0} & =\text{ð} '_{\mathcal{C}} \omega ^{1} .
+	\end{aligned} \ \ 
+\end{equation*}
+在这些方程中，我们假定场$\phi _{\boldsymbol{A} \cdots \boldsymbol{L}}$和$\omega ^{\boldsymbol{A}}$的共形权分别为$-1,0$。
+
+
+\section{无质量场}
+
+现在，我们来考虑一类具有共形不变性的旋量方程：任意自旋为$n/2$的无质量场方程。记$\phi _{\boldsymbol{AB} \cdots \boldsymbol{L}}$有$n$个指标，且是对称的：
+\begin{equation*}
+	\phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} =\phi _{(\boldsymbol{AB} \cdots \boldsymbol{L})} .
+\end{equation*}
+那么自旋为$n/2$的无质量自由场方程可以被表达为
+\begin{equation}
+	\boldsymbol{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} =0.
+	\label{eq:6.35}
+\end{equation}
+其复共轭为方程：
+\begin{equation}
+	\boldsymbol{\nabla }^{\boldsymbol{AA} '} \theta _{\boldsymbol{A} '\boldsymbol{B} '\cdots \boldsymbol{L} '} =0,\kern+0.4em \theta _{\boldsymbol{A} '\boldsymbol{B} '\cdots \boldsymbol{L} '} =\theta _{(\boldsymbol{A} '\boldsymbol{B} '\cdots \boldsymbol{L} ')} .
+	\label{eq:6.36}
+\end{equation}
+方程\ref{eq:6.35}的解常常被称为左手粒子，方程\ref{eq:6.36}的解常常被称为右手粒子。
+
+\subsection{场与粒子}
+
+在量子场论的框架下，场与粒子的地位是一致的，即场的产生湮灭算符可以由单粒子态的产生湮灭算符的傅里叶变换给出
+\begin{equation}
+	\psi _{\ell }( x) =( 2\pi )^{-3/2}\int \mathrm{d}^{3} p\sum _{\sigma } [\kappa a(\boldsymbol{p} ,\sigma ) u_{\ell }(\boldsymbol{p} ,\sigma )\mathrm{e}^{\mathrm{i} p\cdot x} +\lambda a^{c\dagger }(\boldsymbol{p} ,\sigma ) v_{\ell }(\boldsymbol{p} ,\sigma )\mathrm{e}^{-\mathrm{i} p\cdot x} ],
+	\label{eq:6.37}
+\end{equation}
+这里$\sigma $表示自旋或螺旋度，$a$为粒子单粒子态$\ket{\boldsymbol{p} ,\sigma }$的湮灭算符，$a^{c\dagger }$为其反粒子的产生算符。而单粒子态的产生湮灭算符的对易关系，即\textbf{量子化条件}
+\begin{equation*}
+	a^{\dagger }( q') a( q) \mp a^{\dagger }( q) a( q') =\delta ( q'-q)
+\end{equation*}
+也给出了场的量子化条件。在这个背景下，粒子也可以被视为时空背景下的波，给出场方程（也即粒子的运动方程）的解可以解决粒子，或者波的动力学问题。但是在这里情况并不同，此时我们考虑的都是\textbf{经典场}，即没有施加量子化条件。即使用傅里叶变换将场形式上写成单粒子态的产生湮灭算符，此时这些算符也是c-数，并没有对易关系。因此，当我们考虑\ref{eq:6.35}所给出的弯曲时空中的自旋为半整数的场的时候，实际上它们\textbf{并不一定}对应真实世界中的某种带有波粒二象性的\textbf{粒子}，只是时空中某种符合特定洛伦兹群表示的\textbf{波}而已。这意味着，即使是之前考虑的无质量狄拉克场，在我们的框架下也并不一定对应某种满足泡利不相容原理的，自旋为$1/2$的无质量费米子。换句话说，即使将单粒子态看做洛伦兹群的不可约幺正表示，如果没有施加量子化条件以及诸如集团分解原理这样的要求，我们是给不出自旋-统计定理的。
+
+
+
+实际上，如果将场写成\ref{eq:6.37}这样的单粒子态的产生湮灭算符的傅里叶变换的形式，即使不附加量子化条件，我们也可以推出一个\textbf{零质量的}$( A,B)$类场仅能从螺旋度为$\sigma $的\textbf{无质量粒子}的湮灭算符和螺旋度为$-\sigma $的反粒子的产生算符中构造出来\parencite{weinberg1995quantum}，这里
+\begin{equation*}
+	\sigma =B-A.
+\end{equation*}
+现在我们来给出这件事的证明。考虑一个零质量的单粒子产生算符$a^{\dagger }( q)$，其在粒子态上的作用为产生一个四动量为$q$的零质量粒子：
+\begin{equation}
+	a^{\dagger }( q)\ket{\psi ,q_{1} ,q_{2} ,\cdots ,q_{N}} \equiv \ket{\psi ,q,q_{1} ,q_{2} ,\cdots ,q_{N}} .
+	\label{eq:6.38}
+\end{equation}
+这里\textbf{无质量的}单粒子态在洛伦兹变换$\upLambda $下的变换规则为\parencite{weinberg1995quantum}
+\begin{equation}
+	U( \upLambda )\ket{\psi ,p,\sigma } =\sqrt{\frac{( \upLambda p)^{0}}{p^{0}}}\exp(\mathrm{i} \sigma \theta ( \upLambda ,p))\ket{\psi ,\upLambda p,\sigma } ,
+	\label{eq:6.39}
+\end{equation}
+其中$\displaystyle \theta ( \upLambda ,p)$定义为
+\begin{equation*}
+	W( \upLambda ,p) \equiv L^{-1}( \upLambda p) \upLambda L( p) \equiv S( \alpha ( \upLambda ,p) ,\beta ( \upLambda ,p)) R( \theta ( \upLambda ,p)) .
+\end{equation*}
+这里$L$为让无质量的“标准”四动量$\displaystyle k^{\mu } =( \kappa ,0,0,\kappa )$变为粒子动量$p$的洛伦兹变换：
+\begin{equation*}
+	p^{\mu } =L^{\mu }{}_{\nu }( p) k^{\nu } ,
+\end{equation*}
+而$W$是保持标准动量$k^{\mu }$不变的洛伦兹变换，这样的$W$构成了洛伦兹群的一个子群，被称为小群。对于零质量态和标准动量$\displaystyle k^{\mu } =( \kappa ,0,0,\kappa )$，$W$构成了小群$E( 2)$，其中的元素可由$\alpha ,\beta ,\theta $三个量参数化。这里$R( \theta )$为绕$\displaystyle z$轴方向的纯旋转
+\begin{equation*}
+	R( \theta ) =S^{-1}( \alpha ,\beta ) W=\begin{pmatrix}
+		1 & 0 & 0 & 0\\
+		0 & \cos \theta  & \sin \theta  & 0\\
+		0 & -\sin \theta  & \cos \theta  & 0\\
+		0 & 0 & 0 & 1
+	\end{pmatrix} ,
+\end{equation*}
+$S$为
+\begin{equation*}
+	S( \alpha ,\beta ) =\begin{pmatrix}
+		1+\zeta  & \alpha  & \beta  & -\zeta \\
+		\alpha  & 1 & 0 & -\alpha \\
+		\beta  & 0 & 1 & -\beta \\
+		\zeta  & \alpha  & \beta  & 1-\zeta 
+	\end{pmatrix} ,\quad \zeta =\frac{\alpha ^{2} +\beta ^{2}}{2} .
+\end{equation*}
+
+
+而多粒子态$\ket{\psi ,q_{1} ,q_{2} ,\cdots ,q_{N}}$的变换规则就是单粒子态的直积的变换规则：
+\begin{equation*}
+	\begin{aligned}
+		& U( \upLambda )\ket{\psi ,p_{1} ,\sigma _{1} ;p_{2} ,\sigma _{2} \cdots }\\
+		= & \sqrt{\frac{( \upLambda p_{1})^{0} (\upLambda p_{2} )^{0} \cdots }{p_{1}^{0} p_{2}^{0} \cdots }}\exp(\mathrm{i} \sigma _{1} \theta _{1} +\mathrm{i} \sigma _{2} \theta _{2} +\cdots )\ket{\psi ,\upLambda p_{1} ,\sigma _{1} ;\upLambda p_{2} ,\sigma _{2} \cdots } .
+	\end{aligned}
+\end{equation*}
+为了让变换规则\ref{eq:6.39}与\ref{eq:6.38}相容，我们需要让产生算符满足变换关系：
+\begin{equation*}
+	\begin{aligned}
+		U( \upLambda ) a^{\dagger }(\boldsymbol{p} ,\sigma ) U^{-1}( \upLambda ) & =\sqrt{\frac{( \upLambda p)^{0}}{p^{0}}}\exp(\mathrm{i} \sigma \theta ( p,\upLambda )) a^{\dagger }( \upLambda \boldsymbol{p} ,\sigma )\\
+		U( \upLambda ) a^{c\dagger }(\boldsymbol{p} ,\sigma ) U^{-1}( \upLambda ) & =\sqrt{\frac{( \upLambda p)^{0}}{p^{0}}}\exp(\mathrm{i} \sigma \theta ( p,\upLambda )) a^{c\dagger }( \upLambda \boldsymbol{p} ,\sigma ) .
+	\end{aligned}
+\end{equation*}
+故对于湮灭算符：
+\begin{equation*}
+	\begin{aligned}
+		U( \upLambda ) a(\boldsymbol{p} ,\sigma ) U^{-1}( \upLambda ) & =\sqrt{\frac{( \upLambda p)^{0}}{p^{0}}}\exp( -\mathrm{i} \sigma \theta ( p,\upLambda )) a( \upLambda \boldsymbol{p} ,\sigma ) .
+	\end{aligned}
+\end{equation*}
+
+
+如果我们希望构造的场按照齐次洛伦兹群的某个表示$D( \upLambda )$变换，即
+\begin{equation*}
+	U( \upLambda ) \psi _{\ell }( x) U^{-1}( \upLambda ) =\sum _{\bar{\ell }} D_{\ell \bar{\ell }} (\upLambda ^{-1} )\psi _{\bar{\ell }}( \upLambda x) ,
+\end{equation*}
+那么系数函数需要满足
+\begin{equation*}
+	\begin{aligned}
+		u_{\bar{\ell }}( \upLambda \boldsymbol{p} ,\sigma )\exp(\mathrm{i} \sigma \theta ( p,\upLambda )) & =\sqrt{\frac{p^{0}}{( \upLambda p)^{0}}}\sum _{\ell } D_{\bar{\ell } \ell } (\upLambda ^{-1} )u_{\ell }(\boldsymbol{p} ,\sigma )\\
+		v_{\bar{\ell }}( \upLambda \boldsymbol{p} ,\sigma )\exp( -\mathrm{i} \sigma \theta ( p,\upLambda )) & =\sqrt{\frac{p^{0}}{( \upLambda p)^{0}}}\sum _{\ell } D_{\bar{\ell } \ell } (\upLambda ^{-1} )v_{\ell }(\boldsymbol{p} ,\sigma ) .
+	\end{aligned}
+\end{equation*}
+如果我们将$\boldsymbol{p}$选成标准动量$\boldsymbol{k}$，那么我们就有
+\begin{equation*}
+	\begin{aligned}
+		u_{\bar{\ell }}(\boldsymbol{p} ,\sigma ) & =\sqrt{\frac{| \boldsymbol{k}| }{p^{0}}}\sum _{\ell } D_{\bar{\ell } \ell }(\mathcal{L}( p)) u_{\ell }(\boldsymbol{k} ,\sigma )\\
+		v_{\bar{\ell }}(\boldsymbol{p} ,\sigma ) & =\sqrt{\frac{| \boldsymbol{k}| }{p^{0}}}\sum _{\ell } D_{\bar{\ell } \ell }(\mathcal{L}( p)) v_{\ell }(\boldsymbol{k} ,\sigma ) ,
+	\end{aligned}
+\end{equation*}
+其中$\mathcal{L}( p)$是将无质量粒子的动量从$\boldsymbol{k}$变为$\boldsymbol{p}$的标准洛伦兹变换。如果我们取$\upLambda $为保持$\boldsymbol{k}$不变的小群群元$W$，那么我们有
+\begin{equation*}
+	\begin{aligned}
+		u_{\bar{\ell }}(\boldsymbol{k} ,\sigma )\exp(\mathrm{i} \sigma \theta ( k,W)) & =\sum _{\ell } D_{\bar{\ell } \ell }( W) u_{\ell }(\boldsymbol{k} ,\sigma )\\
+		v_{\bar{\ell }}(\boldsymbol{k} ,\sigma )\exp( -\mathrm{i} \sigma \theta ( k,W)) & =\sum _{\ell } D_{\bar{\ell } \ell }( W) v_{\ell }(\boldsymbol{k} ,\sigma ) .
+	\end{aligned}
+\end{equation*}
+由于我们已经给出了小群的结构，只需考虑两类群元$R( \theta ) ,S( \alpha ,\beta )$即可。对于$R( \theta )$，我们有
+\begin{equation}
+	\begin{aligned}
+		u_{\bar{\ell }}(\boldsymbol{k} ,\sigma )\mathrm{e}^{\mathrm{i} \sigma \theta } & =\sum _{\ell } D_{\bar{\ell } \ell }( R( \theta )) u_{\ell }(\boldsymbol{k} ,\sigma )\\
+		v_{\bar{\ell }}(\boldsymbol{k} ,\sigma )\mathrm{e}^{-\mathrm{i} \sigma \theta } & =\sum _{\ell } D_{\bar{\ell } \ell }( R( \theta )) v_{\ell }(\boldsymbol{k} ,\sigma ) ,
+	\end{aligned}
+	\label{eq:6.40}
+\end{equation}
+而对于$S( \alpha ,\beta )$我们有
+\begin{equation}
+	\begin{aligned}
+		u_{\bar{\ell }}(\boldsymbol{k} ,\sigma ) & =\sum _{\ell } D_{\bar{\ell } \ell }( S( \alpha ,\beta )) u_{\ell }(\boldsymbol{k} ,\sigma )\\
+		v_{\bar{\ell }}(\boldsymbol{k} ,\sigma ) & =\sum _{\ell } D_{\bar{\ell } \ell }( S( \alpha ,\beta )) v_{\ell }(\boldsymbol{k} ,\sigma ) .
+	\end{aligned}
+	\label{eq:6.41}
+\end{equation}
+上述四个方程是决定标准动量$\boldsymbol{k}$处系数函数$u,v$的条件。由于$u,v$的方程互为复共轭，因此在对常数$\kappa ,\lambda $选择后，我们可以使得
+\begin{equation*}
+	v_{\ell }(\boldsymbol{p} ,\sigma ) =u_{\ell }(\boldsymbol{p} ,\sigma )^{*} .
+\end{equation*}
+
+
+现在，由于齐次洛伦兹群的任何表示$D( \upLambda )$都可以分解为$( 2A+1)( 2B+1)$维表示$( A,B)$。对于这样的表示，洛伦兹群的生成元可以写为
+\begin{equation*}
+	\begin{aligned}
+		(\mathcal{J}_{ij})_{a'b',ab} & =\epsilon _{ijk} [(J_{k}^{( A)} )_{a'a} \delta _{b'b} +(J_{k}^{( B)} )_{b'b} \delta _{a'a} ],\\
+		(\mathcal{J}_{k0})_{a'b',ab} & =-\mathrm{i} [(J_{k}^{( A)} )_{a'a} \delta _{b'b} -(J_{k}^{( B)} )_{b'b} \delta _{a'a} ],
+	\end{aligned}
+\end{equation*}
+这里$\boldsymbol{J}^{( j)}$是自旋为$j$的角动量矩阵。当$\theta $为无穷小量时，我们可以展开$D( R( \theta )) =1+\mathrm{i}\mathcal{J}_{12} \theta $，因此\ref{eq:6.40}给出
+\begin{equation*}
+	\begin{aligned}
+		\sigma u_{ab}(\boldsymbol{k} ,\sigma ) & =( a+b) u_{ab}(\boldsymbol{k} ,\sigma ) ,\\
+		-\sigma v_{ab}(\boldsymbol{k} ,\sigma ) & =( a+b) v_{ab}(\boldsymbol{k} ,\sigma ) .
+	\end{aligned}
+\end{equation*}
+这意味着$u,v$仅在$\sigma =a+b$和$\sigma =-a-b$时不为零。同时，\ref{eq:6.41}给出
+\begin{equation*}
+	\begin{aligned}
+		0 & =\mathcal{(J}_{31} +\mathcal{J}_{01} )_{ab,a'b'} u_{a'b'} (\boldsymbol{k} ,\sigma )\\
+		& =(J_{2}^{(A)} +\mathrm{i} J_{1}^{(A)} )_{aa'} u_{a'b} (\boldsymbol{k} ,\sigma )+(J_{2}^{(B)} -\mathrm{i} J_{1}^{(B)} )_{bb'} u_{ab'} (\boldsymbol{k} ,\sigma ),\\
+		0 & =\mathcal{(J}_{32} +\mathcal{J}_{02} )_{ab,a'b'} u_{a'b'} (\boldsymbol{k} ,\sigma )\\
+		& =(-J_{1}^{(A)} +\mathrm{i} J_{2}^{(A)} )_{aa'} u_{a'b} (\boldsymbol{k} ,\sigma )+(-J_{1}^{(B)} -\mathrm{i} J_{2}^{(B)} )_{bb'} u_{ab'} (\boldsymbol{k} ,\sigma ),
+	\end{aligned}
+\end{equation*}
+也即
+\begin{equation*}
+	\begin{aligned}
+		& (J_{1}^{(A)} -\mathrm{i} J_{2}^{(A)} )_{aa'} u_{a'b} (\boldsymbol{k} ,\sigma )=0\\
+		& (J_{1}^{(B)} +\mathrm{i} J_{2}^{(B)} )_{bb'} u_{ab'} (\boldsymbol{k} ,\sigma )=0
+	\end{aligned}
+\end{equation*}
+这意味着仅当
+\begin{equation*}
+	a=-A,\quad b=-B
+\end{equation*}
+时$u_{ab}(\boldsymbol{k} ,\sigma ) ,v_{ab}(\boldsymbol{k} ,\sigma )$才不为零。因此，一个$( A,B)$类场仅能从螺旋度为$\sigma $的无质量粒子的湮灭算符和螺旋度为$-\sigma $的反粒子的产生算符中构造出来，其中
+\begin{equation}
+	\sigma =B-A.
+	\label{eq:6.42}
+\end{equation}
+例如对于无质量粒子的Dirac场，其$( 1/2,0)$部分$\psi _{\boldsymbol{A}}$和$( 0,1/2)$部分$\phi _{\boldsymbol{A} '}$只能分别湮灭螺旋度为$-1/2$和螺旋度为$1/2$的粒子。这意味着，螺旋度为$\mp j$的无质量粒子只能用$( j,0)$类场和$( 0,j)$类场构造，这也与我们之前得到的结论相符：电磁场具有洛伦兹变换类型$( 1,0) \oplus ( 0,1)$而非一般的$( 1/2,1/2)$矢量表示，引力场的外尔部分具有洛伦兹变换类型$( 2,0) \oplus ( 0,2)$。
+
+
+
+除此之外，我们也容易看出，自旋为$j$的无质量粒子的$( A,A+j)$类场和$( B+j,B)$类场分别是$( 0,j)$类场或$( j,0)$类场的$2A$或$2B$阶导数，因此我们只需考虑$( 0,j)$类场或$( j,0)$类场。这也意味着对于我们即将讨论的螺旋度为$3/2$的无质量场，我们只能用$( 3/2,0) \oplus ( 0,3/2)$表示构造。当然，根据\ref{eq:6.42},按$( 1/2,1/2)$表示变换的矢量场只能描述零螺旋度，例如无质量场$\phi $的导数$\partial _{\boldsymbol{AA} '} \phi $。这也意味着，我们可以构造按照$( 1,1/2)$表示变换的有两个不带撇指标，一个带撇指标的旋量场$\psi _{\boldsymbol{ABC} '}$，但它只能描述\textbf{螺旋度}为$1/2$的无质量粒子。也正因如此，任意自旋的无质量场方程\ref{eq:6.35}才都使用不带撇的指标，而并不把混合了带撇的量当做场变量。
+
+
+\subsection{自旋2：引力扰动}
+
+现在我们考虑\ref{eq:6.35}中自旋$n=2$的情况，并取弱场极限。考虑满足真空场方程的一族时空，由单个参数$u$刻画，当$u=0$时，时空为闵氏时空$\mathbb{M}$。对于每一个固定的$u$值，其定义的时空上都有一个旋量场$\upPsi _{\boldsymbol{ABCD}}$，满足$\mathbf{\nabla }^{\boldsymbol{AA} '} \upPsi _{\boldsymbol{ABCD}} =0$。由于$u\rightarrow 0$时，代表了曲率的场$\upPsi $也会趋于零，因此我们期望$u^{-1} \upPsi _{\boldsymbol{ABCD}}$会在$u\rightarrow 0$的时候趋于极限$\phi _{\boldsymbol{ABCD}}$。
+
+
+
+实际上，这个步骤可以继续推广，我们常常讨论引力场的一阶效应，取$\mathbb{M}$中的势$h_{\boldsymbol{ab}} =h_{(\boldsymbol{ab})} \in \mathfrak{T}_{(\boldsymbol{ab})}$，我们可以将度规展开成
+\begin{equation*}
+	g_{\boldsymbol{ab}}( u) =g_{\boldsymbol{ab}} +uh_{\boldsymbol{ab}} +\mathcal{O} (u^{2} ),
+\end{equation*}
+这里$g_{\boldsymbol{ab}} =g_{\boldsymbol{ab}}( 0)$为平直时空的度规。那么曲率的一阶项就为
+\begin{equation}
+	K_{\boldsymbol{abcd}} \equiv \lim _{u\rightarrow 0} (u^{-1} R_{\boldsymbol{abcd}} (u))=2\mathbf{\nabla }_{[\boldsymbol{a}}\mathbf{\nabla }_{|[\boldsymbol{c}} h_{\boldsymbol{d}] |\boldsymbol{b}]} ,
+	\label{eq:6.43}
+\end{equation}
+这里$\mathbf{\nabla }_{\boldsymbol{a}}$是平直时空的导数算符，因此交换。显然$K_{\boldsymbol{abcd}}$有黎曼张量的对称性：
+\begin{equation*}
+	K_{\boldsymbol{abcd}} =K_{[\boldsymbol{cd}][\boldsymbol{ab}]} ,\kern+0.4em K_{[\boldsymbol{abc}]\boldsymbol{d}} =0,
+\end{equation*}
+同时爱因斯坦场方程的线性项为：
+\begin{equation*}
+	K{_{\boldsymbol{abc}}}^{\boldsymbol{b}} -\frac{1}{2} g_{\boldsymbol{ac}} K{_{\boldsymbol{bd}}}^{\boldsymbol{bd}} =-8\pi \gamma E_{\boldsymbol{ac}} ,
+\end{equation*}
+这里$E_{\boldsymbol{ab}}$是能动张量$T_{\boldsymbol{ab}}$的线性部分。如果无源，那么我们知道
+\begin{equation*}
+	K{_{\boldsymbol{abc}}}^{\boldsymbol{b}} =0,
+\end{equation*}
+这外尔张量的一阶项$\lim _{u\rightarrow 0} (u^{-1} C_{\boldsymbol{abcd}}( u) )$相同，因此可以被表示为下列旋量形式：
+\begin{equation*}
+	K_{\boldsymbol{abcd}} =\phi _{\boldsymbol{ABCD}} \epsilon _{\boldsymbol{A} '\boldsymbol{B} '} \epsilon _{\boldsymbol{C} '\boldsymbol{D} '} +\overline{\phi }_{\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{C} '\boldsymbol{D} '} \epsilon _{\boldsymbol{AB}} \epsilon _{\boldsymbol{CD}} ,
+\end{equation*}
+这里
+\begin{equation*}
+	\phi _{\boldsymbol{ABCD}} =\lim _{u\rightarrow 0} (u^{-1} \upPsi _{\boldsymbol{ABCD}}( u) ),
+\end{equation*}
+同样是全对称的。显然，$K_{\boldsymbol{abcd}}$也必须满足比安基恒等式
+\begin{equation*}
+	\mathbf{\nabla }_{[\boldsymbol{a}} K_{\boldsymbol{bc}]\boldsymbol{de}} =0,
+\end{equation*}
+而由于$K{_{\boldsymbol{abc}}}^{\boldsymbol{b}} =0$，这等价于
+\begin{equation*}
+	\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{ABCD}} =0.
+\end{equation*}
+因此，$\phi _{\boldsymbol{ABCD}}$被认为是一个无质量场，其场方程则是$K_{\boldsymbol{abcd}}$的比安基恒等式。事实上，$\phi $的地位比$h_{\boldsymbol{ab}}$更重要，因为$h_{\boldsymbol{ab}}$有规范对称性：
+\begin{equation*}
+	h_{\boldsymbol{ab}} \mapsto h_{\boldsymbol{ab}} -2\mathbf{\nabla }_{(\boldsymbol{a}} \xi _{\boldsymbol{b})} ,
+\end{equation*}
+但在这个变换下，$K_{\boldsymbol{abcd}}$不变，因此$\phi _{\boldsymbol{ABCD}}$也不变。
+
+
+
+无论有没有源，我们总有
+\begin{equation*}
+	\phi _{\boldsymbol{ABCD}} =\frac{1}{4} K_{(\boldsymbol{ABCD})\boldsymbol{A} '\boldsymbol{B} '\boldsymbol{C} '\boldsymbol{D} '} \epsilon ^{\boldsymbol{A} '\boldsymbol{B} '} \epsilon ^{\boldsymbol{C} '\boldsymbol{D} '} ,
+\end{equation*}
+根据\ref{eq:6.43}，我们有
+\begin{equation*}
+	\phi _{\boldsymbol{ABCD}} =\frac{1}{2}\mathbf{\nabla }^{\boldsymbol{A} '}{}_{(\boldsymbol{A}}\mathbf{\nabla }^{\boldsymbol{B} '}{}_{\boldsymbol{B}} h_{\boldsymbol{CD})\boldsymbol{A} '\boldsymbol{B} '} ,
+\end{equation*}
+当有源的时候，场方程变为
+\begin{equation*}
+	\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{ABCD}} =4\pi \gamma \mathbf{\nabla }^{\boldsymbol{B} '}{}_{(\boldsymbol{B}} E{_{\boldsymbol{CD})\boldsymbol{B} '}}^{\boldsymbol{A} '} .
+\end{equation*}
+带入$\phi $，我们给出$E_{\boldsymbol{ab}}$关于$h$的表达式
+\begin{equation*}
+	\begin{aligned}
+		-16\pi \gamma E_{\boldsymbol{ab}} & =\Box \hat{h}_{\boldsymbol{ab}} -2\mathbf{\nabla }_{(\boldsymbol{a}}\mathbf{\nabla }^{\boldsymbol{c}}\hat{h}_{\boldsymbol{b})\boldsymbol{c}} +g_{\boldsymbol{ab}}\mathbf{\nabla }^{\boldsymbol{c}}\mathbf{\nabla }^{\boldsymbol{d}}\hat{h}_{\boldsymbol{cd}}\\
+		& =\Box h_{\boldsymbol{AB} '\boldsymbol{BA} '} -\mathbf{\nabla }_{\boldsymbol{AB} '}\mathbf{\nabla }^{\boldsymbol{CD} '} h_{\boldsymbol{CA} '\boldsymbol{BD} '} -\mathbf{\nabla }_{\boldsymbol{BA} '}\mathbf{\nabla }^{\boldsymbol{CD} '} h_{\boldsymbol{CB} '\boldsymbol{AD} '} ,
+	\end{aligned}
+\end{equation*}
+这里$\hat{h}_{\boldsymbol{ab}}$为$h_{\boldsymbol{ab}}$的迹反转
+\begin{equation*}
+	\hat{h}_{\boldsymbol{ab}} =h_{\boldsymbol{ab}} -\frac{1}{2} g_{\boldsymbol{ab}} h{_{\boldsymbol{c}}}^{\boldsymbol{c}} =h_{\boldsymbol{AB} '\boldsymbol{BA} '} =h_{\boldsymbol{BA} '\boldsymbol{AB} '} ,
+\end{equation*}
+当我们取所谓的“de Donder”规范条件
+\begin{equation*}
+	\mathbf{\nabla }^{\boldsymbol{a}}\hat{h}_{\boldsymbol{ab}} =0\Leftrightarrow \mathbf{\nabla }^{\boldsymbol{AB} '} h_{\boldsymbol{ab}} =0
+\end{equation*}
+时，最终可以化简为
+\begin{equation*}
+	\Box \hat{h}_{\boldsymbol{ab}} =-16\pi \gamma E_{\boldsymbol{ab}} .
+\end{equation*}
+
+
+下面我们考虑来自非平坦时空$\mathcal{M}$的微扰，这里$\mathcal{M}$和微扰都满足爱因斯坦真空场方程，那么我们有一个固定的非零$\upPsi _{\boldsymbol{ABCD}}$作为背景，并有$\phi _{\boldsymbol{ABCD}}$表示微扰。但现在如果做变换$h_{\boldsymbol{ab}} \mapsto h_{\boldsymbol{ab}} -2\mathbf{\nabla }_{(\boldsymbol{a}} \xi _{\boldsymbol{b})}$，$\phi $不再是规范不变的，并且无质量场方程$\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{ABCD}} =0$也并不一定成立，这时候场方程变为
+\begin{equation}
+	\mathbf{\nabla }_{\boldsymbol{a}}\mathbf{\nabla }^{\boldsymbol{a}} h_{\boldsymbol{bc}} -\mathbf{\nabla }_{\boldsymbol{a}}\mathbf{\nabla }_{\boldsymbol{b}} h{_{\boldsymbol{c}}}^{\boldsymbol{a}} -\mathbf{\nabla }_{\boldsymbol{a}}\mathbf{\nabla }_{\boldsymbol{c}} h{_{\boldsymbol{b}}}^{\boldsymbol{a}} +\mathbf{\nabla }_{\boldsymbol{b}}\mathbf{\nabla }_{\boldsymbol{c}} h{_{\boldsymbol{a}}}^{\boldsymbol{a}} =0,
+	\label{eq:6.44}
+\end{equation}
+这个场方程在变换$h_{\boldsymbol{ab}} \mapsto h_{\boldsymbol{ab}} -2\mathbf{\nabla }_{(\boldsymbol{a}} \xi _{\boldsymbol{b})}$下仍然是不变的。
+
+而微扰则变为
+\begin{equation}
+	\phi _{\boldsymbol{ABCD}} =\frac{1}{2}\mathbf{\nabla }^{\boldsymbol{A} '}{}_{(\boldsymbol{A}}\mathbf{\nabla }^{\boldsymbol{B} '}{}_{\boldsymbol{B}} h_{\boldsymbol{CD})\boldsymbol{A} '\boldsymbol{B} '} +\frac{1}{4} h{_{\boldsymbol{p}}}^{\boldsymbol{p}} \upPsi _{\boldsymbol{ABCD}} ,
+	\label{eq:6.45}
+\end{equation}
+用$\phi $的形式表示，场方程为
+\begin{equation*}
+	\begin{aligned}
+		& \mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{ABCD}}\\
+		= & \frac{1}{2} h^{\boldsymbol{RSA} '\boldsymbol{B}}\mathbf{\nabla }_{\boldsymbol{BB} '} \upPsi _{\boldsymbol{RSCD}} -\upPsi _{\boldsymbol{RS}(\boldsymbol{BC}}\mathbf{\nabla }^{\boldsymbol{B} '}{}_{\boldsymbol{D})} h^{\boldsymbol{RSA} '}{}_{\boldsymbol{B} '} -\frac{1}{2} \upPsi _{\boldsymbol{RS}(\boldsymbol{BC}}\mathbf{\nabla }^{\boldsymbol{RB} '} h{_{\boldsymbol{D})}}^{\boldsymbol{SA} '}{}_{\boldsymbol{B} '} .
+	\end{aligned}
+\end{equation*}
+在变换$h_{\boldsymbol{ab}} \mapsto h_{\boldsymbol{ab}} -2\mathbf{\nabla }_{(\boldsymbol{a}} \xi _{\boldsymbol{b})}$下，$\phi $的变换规则为
+\begin{equation*}
+	\phi _{\boldsymbol{ABCD}} \mapsto \phi _{\boldsymbol{ABCD}} -\xi ^{\boldsymbol{EE} '}\mathbf{\nabla }_{\boldsymbol{E} '(\boldsymbol{A}} \upPsi _{\boldsymbol{BCD})\boldsymbol{E}} -2\upPsi _{\boldsymbol{E}(\boldsymbol{ABC}}\mathbf{\nabla }_{\boldsymbol{D})\boldsymbol{E} '} \xi ^{\boldsymbol{EE} '} .
+\end{equation*}
+
+\subsection{共形不变性}
+
+由于$\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} =0$，我们可以将缩并的指标中的反对称项抽出来，这意味着
+\begin{equation*}
+	\mathbf{\nabla }_{\boldsymbol{M} '\boldsymbol{M}} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} =\mathbf{\nabla }_{\boldsymbol{M} '(\boldsymbol{M}} \phi _{\boldsymbol{A})\boldsymbol{B} \cdots \boldsymbol{L}} ,
+\end{equation*}
+即
+\begin{equation}
+	\mathbf{\nabla }_{\boldsymbol{M} '\boldsymbol{M}} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} =\mathbf{\nabla }_{\boldsymbol{M} '(\boldsymbol{M}} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L})}
+	\label{eq:6.46}
+\end{equation}
+
+
+现在我们选择$\phi _{\boldsymbol{A} \cdots \boldsymbol{L}}$是权为$-1$的共形密度：
+\begin{equation*}
+	\hat{\phi }_{\boldsymbol{AB} \cdots \boldsymbol{L}} =\upOmega^{-1} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} .
+\end{equation*}
+那么其导数的变换规则为
+\begin{equation}
+	\begin{aligned}
+		& \upOmega\hat{\mathbf{\nabla }}_{\boldsymbol{M} '\boldsymbol{M}}\hat{\phi }_{\boldsymbol{AB} \cdots \boldsymbol{L}}\\
+		= & \upOmega\hat{\mathbf{\nabla }}_{\boldsymbol{M} '\boldsymbol{M}} (\upOmega^{-1} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} )\\
+		= & \mathbf{\nabla }_{\boldsymbol{M} '\boldsymbol{M}} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} -\upUpsilon _{\boldsymbol{M} '\boldsymbol{M}} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} -\upUpsilon _{\boldsymbol{M} '\boldsymbol{A}} \phi _{\boldsymbol{MB} \cdots \boldsymbol{L}} -\cdots \upUpsilon _{\boldsymbol{M} '\boldsymbol{L}} \phi _{\boldsymbol{AB} \cdots \boldsymbol{M}} ,
+	\end{aligned}
+	\label{eq:6.47}
+\end{equation}
+这里我们用了
+\begin{equation*}
+	\upOmega^{-r}\mathbf{\nabla }_{\boldsymbol{a}} \upOmega^{r} =r\upUpsilon _{\boldsymbol{a}} .
+\end{equation*}
+可以发现\ref{eq:6.46}成立等价于$\hat{\mathbf{\nabla }}_{\boldsymbol{M} '\boldsymbol{M}}\hat{\phi }_{\boldsymbol{AB} \cdots \boldsymbol{L}} =\hat{\mathbf{\nabla }}_{\boldsymbol{M} '(\boldsymbol{M}}\hat{\phi }_{\boldsymbol{AB} \cdots \boldsymbol{L})}$，因此方程
+\begin{equation*}
+	\mathbf{\nabla }_{\boldsymbol{M} '\boldsymbol{M}} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} =\mathbf{\nabla }_{\boldsymbol{M} '(\boldsymbol{M}} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L})}
+\end{equation*}
+是共形不变的。将\ref{eq:6.47}两边用$\epsilon $缩并，$\epsilon $本身带来$\upOmega^{-2}$的因子，这意味着
+\begin{equation*}
+	\hat{\mathbf{\nabla }}^{\boldsymbol{AA} '}\hat{\phi }_{\boldsymbol{AB} \cdots \boldsymbol{L}} =\upOmega^{-3}\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{AB} \cdots \boldsymbol{L}} .
+\end{equation*}
+那么从无质量场方程\ref{eq:6.35}可以看出，它是共形不变的。但是对于有源或者有质量场来说却不一定如此。例如对于有质量狄拉克场，场方程为
+\begin{equation*}
+	\begin{cases}
+		\mathbf{\nabla }^{\boldsymbol{AA} '} \phi _{\boldsymbol{A}} & =\mu \chi ^{\boldsymbol{A} '}\\
+		\mathbf{\nabla }^{\boldsymbol{A} '\boldsymbol{A}} \chi _{\boldsymbol{A} '} & =\mu \phi ^{\boldsymbol{A}} ,
+	\end{cases}
+\end{equation*}
+如果$\phi _{\boldsymbol{A}} ,\chi _{\boldsymbol{A} '}$的共形权为$-1$，即$\phi ^{\boldsymbol{A}} =\epsilon ^{\boldsymbol{AB}} \phi _{\boldsymbol{B}} ,\chi ^{\boldsymbol{A} '} =\epsilon ^{\boldsymbol{A} '\boldsymbol{B} '} \chi _{\boldsymbol{B} '}$的共形权为$0$，这与等式左边为$3$的共形权不同，因此有质量的自旋$1/2$方程4.38并不是共形不变的。
+
+
+
+但对于有源麦克斯韦方程
+\begin{equation}
+	\mathbf{\nabla }^{\boldsymbol{AA} '} \varphi _{\boldsymbol{AB}} =2\pi J_{\boldsymbol{B}}^{\boldsymbol{A} '} ,
+	\label{eq:6.48}
+\end{equation}
+如果$J_{\boldsymbol{a}}$的共形权为$-2$（因为我们它是场的二次型）
+\begin{equation*}
+	\hat{J}_{\boldsymbol{a}} =\upOmega^{-2} J_{\boldsymbol{a}} ,
+\end{equation*}
+那么方程\ref{eq:6.48}也是共形不变的，因为两边的共形权都为$-3$。同时$J_{\boldsymbol{a}}$的流守恒方程
+\begin{equation*}
+	\mathbf{\nabla }^{\boldsymbol{a}} J_{\boldsymbol{a}} =0
+\end{equation*}
+也有共形不变性：
+\begin{equation*}
+	\begin{aligned}
+		\upOmega^{2}\hat{\mathbf{\nabla }}^{\boldsymbol{a}}\hat{J}_{\boldsymbol{a}} & =\upOmega^{2}\hat{g}^{\boldsymbol{ab}}\hat{\mathbf{\nabla }}_{\boldsymbol{b}} (\upOmega^{-2} J_{\boldsymbol{a}} )\\
+		& =g^{\boldsymbol{ab}} J_{\boldsymbol{a}}\hat{\mathbf{\nabla }}_{\boldsymbol{b}} \upOmega^{-2} +g^{\boldsymbol{ab}} \upOmega^{-2}\hat{\mathbf{\nabla }}_{\boldsymbol{b}} J_{\boldsymbol{a}}\\
+		& =-2J^{\boldsymbol{b}} \upOmega^{-3}\hat{\mathbf{\nabla }}_{\boldsymbol{b}} \upOmega+g^{\boldsymbol{ab}} \upOmega^{-2} (\mathbf{\nabla }_{\boldsymbol{b}} J_{\boldsymbol{a}} -\upUpsilon _{\boldsymbol{a}} J_{\boldsymbol{b}} -\upUpsilon _{\boldsymbol{b}} J_{\boldsymbol{a}} +g_{\boldsymbol{ab}} \upUpsilon _{\boldsymbol{c}} V^{\boldsymbol{c}} )\\
+		& =-2\upOmega^{-2} J^{\boldsymbol{b}} \upUpsilon _{\boldsymbol{b}} -2\upOmega^{-2} J^{\boldsymbol{b}} \upUpsilon _{\boldsymbol{b}} +4\upUpsilon _{\boldsymbol{c}} V^{\boldsymbol{c}} =0.
+	\end{aligned}
+\end{equation*}
+需要注意的是，如果我们选择洛伦茨规范，即
+\begin{equation*}
+	\mathbf{\nabla }^{\boldsymbol{a}} A_{\boldsymbol{a}} =0,
+\end{equation*}
+并且让$A_{\boldsymbol{a}}$的共形权为$-2$，那么这个规范条件也是共形不变的。但是这个共形权并不保证$F$的定义式\ref{eq:6.8}也是共形不变的。这意味着，洛伦兹规范下的麦克斯韦理论并不是一个共形不变的理论。
+

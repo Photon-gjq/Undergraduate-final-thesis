@@ -1,0 +1,217 @@
+\documentclass[oneside]{fduthesis}
+
+\fdusetup{
+style = {
+	font = times,
+	% 西文字体（包括数学字体）
+	% 允许选项：
+	%   font = garamond|libertinus|lm|palatino|times
+	%
+	% 注意：
+	%   1. LaTeX 默认风格是 lm
+	%   2. Satoshi 的讲义风格是 palatino
+	%
+	cjk-font = fandol,
+	% 中文字体
+	% 允许选项：
+	%   cjk-font = adobe|fandol|founder|mac|sinotype|sourcehan|windows
+	%
+	% 注意：
+	%   1. 中文字体设置高度依赖于系统。各系统建议方案：
+	%        windows：cjk-font = windows
+	%        mac：    cjk-font = mac
+	%        linux：  cjk-font = fandol（默认值）
+	%   2. 除 fandol 和 sourcehan 外，其余字体均为商用字体，请注意版权问题
+	%   3. 但 fandol 字体缺字比较严重，而 sourcehan 没有配备楷体和仿宋体
+	%   4. 某些字体会有 Font "xxx" does not contain requested Script "CJK" 的警告，可以忽略
+	%
+	font-size    = -4,
+	bib-backend  = bibtex,
+	bib-resource = {main.bib},
+	hyperlink-color  = june,
+},
+info = {
+	title            = {弯曲时空背景下的Rarita-Schwinger场,及其纽曼-彭罗斯形式},
+	% title            = {如果标题很长,可以用英文逗号分成两行},
+	author           = {郭家祺},
+	department       = {物理学系},
+	major            = {物理学},
+	supervisor       = {万义顿},
+	supervisor-title = {教授},
+	affiliation      = {物理学系},
+	student-id       = {18307110017},
+	keywords         = {Rarita-Schwinger场, 二分量旋量, 自旋$3/2$, 超引力},
+	keywords*        = {Rarita-Schwinger field, two-component spinors, spin $3/2$, supergravity},
+	% 中英文关键字均使用英文逗号分隔
+}
+}
+
+% 需要的宏包可以自行调用
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{latexsym}
+\usepackage{slashed}
+\usepackage{physics}
+\usepackage{ltxtable}
+
+\usetikzlibrary{svg.path}
+\tcbuselibrary{breakable}
+
+
+% \newcommand{\hilbertH}{\symcal{H}}
+% \newcommand{\ee}{\symrm{e}}
+% \newcommand{\ii}{\symrm{i}}
+
+% 图片路径
+% \graphicspath{{images/}}A
+
+% 目录深度，只保留到 \section
+\setcounter{tocdepth}{1}
+
+\setmathfont{Asana}[range=\mathbb]
+\setmathfont{Latin Modern Math}[range=\mathcal]
+\setmathfont{Latin Modern Math}[range=\ell]
+\setmathfont{Latin Modern Math}[range=\sum]
+\setmathfont{TeX Gyre Pagella Math}[range=\mathfrak]
+
+\allowdisplaybreaks
+\newcolumntype{K}{>{\centering\arraybackslash}X}
+
+%定义配色方案
+\definecolor{roulan}{RGB}{16,104,152}%柔蓝，文档june标准蓝
+\definecolor{guanlv}{RGB}{42,110,63}%官绿，文档june标准绿
+\definecolor{mulan}{RGB}{203,82,62}%木兰
+\definecolor{luzhu}{RGB}{105,142,106}%菉竹
+\definecolor{shanlan}{RGB}{190,210,187}%山岚
+\definecolor{diqing}{RGB}{0,52,96}%帝青
+\definecolor{gaoyu}{RGB}{239,239,239}%缟羽
+\definecolor{peijiu}{RGB}{172,159,138}%佩玖
+\definecolor{ruancui}{RGB}{0,109,135}%软翠
+\definecolor{yunmen}{RGB}{162,210,226}%云门
+\definecolor{xinggang}{RGB}{245,176,135}%騂刚
+\definecolor{chengxia}{RGB}{239,132,93}%赪尾
+\definecolor{zhushi}{RGB}{239,132,93}%朱柿
+\definecolor{mathcha}{HTML}{4caf4f}%mathcha标准色
+
+\newtcolorbox[auto counter,number within=section]{them}[2][]{%
+breakable,colback=yunmen!10!white,colframe=ruancui,fonttitle=\bfseries,
+title=定理~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=section]{prop}[2][]{%
+breakable,colback=gaoyu!20!white,colframe=peijiu,fonttitle=\bfseries,
+title=性质~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=section]{cond}[2][]{%
+breakable,colback=gaoyu!20!white,colframe=peijiu,fonttitle=\bfseries,
+title=条件~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=section]{defi}[2][]{%
+breakable,colback=xinggang!10!white,colframe=zhushi,fonttitle=\bfseries,
+title=定义~\thetcbcounter: #2,#1}
+
+\newtcolorbox[auto counter,number within=section]{post}[2][]{%
+breakable,colback=xinggang!10!white,colframe=zhushi,fonttitle=\bfseries,
+title=公理~\thetcbcounter: #2,#1}
+
+\newcommand{\narrowunderline}[1]{\mathrlap{\underline{\vphantom{#1}\hphantom{\textup{#1}}}}#1}
+\newcommand{\Mathcha}{\href{https://www.mathcha.io/}{\textcolor{mathcha}{\includegraphics*[scale=0.23,viewport=0 10 50 55]{mathchalogo.pdf}}}}
+
+\begin{document}
+
+% 前置部分包含目录、中英文摘要以及符号表等
+\frontmatter
+
+% 目录
+\tableofcontents
+% 插图目录
+%\listoffigures
+% 表格目录
+% \listoftables
+
+\begin{abstract}
+	本文首先按照Penrose，1984\parencite{penrose_spinors_1984}给出了一份二分量旋量理论的简介，并用旋量形式重述了广义相对论。随后考虑了弯曲时空中高自旋场的自洽条件，证明了在只有引力作为背景场时，规范不变的自旋$3/2$无质量场只能存在于里奇平坦时空中，并通过引入一个属于$(1/2,1)\oplus(1,1/2)$表示的规范场给出了无质量自旋$3/2$场在弯曲时空背景的无约束场方程。最后提供了用纽曼-彭罗斯形式处理时空扰动的范式。
+\end{abstract}
+
+\begin{abstract*}
+	This article presents an introduction to two-components spinor calculus following Penrose, 1984\parencite{penrose_spinors_1984}, and reformulate general relativity using spinor theory. Then the consistency relation of higher spinor field in curved spacetime is considered. We have proved when the background field only contains gravity, the massless spin $3/2$ field can exist only in Ricci flat spacetime. Moreover, the unconstrainted massless spin $3/2$ field equation is given by introducing a gauge field in $(1/2,1)\oplus(1,1/2)$ representation. Finally, we show the paradigm of dealing with the spacetime perturbation using Newman–Penrose formalism. 
+\end{abstract*}
+
+% 主体部分是论文的核心
+\mainmatter
+
+\ctexset{chapter/pagestyle=fancy}
+
+% 建议采用多文件编译的方式
+% 比较好的做法是把每一章放进一个单独的 tex 文件里，并在这里用 \include 导入，例如
+%   \include{chapter1}
+%   \include{chapter2}
+%   \include{chapter3}
+
+
+\include{intro.tex}
+
+\include{chap2.tex}
+
+\include{chap3.tex}
+
+\include{chap4.tex}
+
+\include{chap5.tex}
+
+\include{chap6.tex}
+
+\include{chap7.tex}
+
+
+
+%公式中倾斜加粗用 $\symbf{a}$，直立加粗用 \verb|\symbfup|：
+%\begin{equation}
+%	G(\symbf{r}, t; \symbf{r}', t') = \symbfup{M}
+%\end{equation}
+
+%\subsection{文献与引用}
+
+%引用~\cite{feynman2011feynman}，行内引用~\parencite{penrosespinors1984}。
+
+% 后置部分包含参考文献、声明页（自动生成）等
+\backmatter
+
+% 打印参考文献列表
+\printbibliography
+
+\chapter{致\quad 谢}
+
+首先感谢我自己。感谢自己几乎没日没夜地将时间投在这份毕业设计上。这几个月过程中，曾经无数次觉得“要做不完了”，或质问自己“为什么要写这么多，反正也不会有什么人看”，但还是咬着牙坚持了下来，大概是为了给自己的本科生涯一个合适的交代，为了对得起自己入学时的期望。
+
+
+
+随后最应该感谢的是我的导师万义顿老师。如果没有他，我的本科生涯将会截然不同，也正是万老师将我带到理论物理学习的正路上。大二在他的数理方法课上，他的作业习题已经引导我阅读Penrose，1984，虽然当时没读太懂，也没坚持读很多，但确实为我这份课题埋下了种子。可能这份论文也有完成那道开放性的课后习题的意思吧。
+
+
+
+在这份论文上，我还要感谢唐子骞同学，如果不是他邀请我写下RS场方程的NP形式，我也不会开始这个课题。同时也感谢他在本课题上与我的各种讨论。除此之外，我还要感谢曾祥东学长，他为我提供了这份复旦大学论文模板，同时还耐心解答我在 \LaTeX 上的各种问题。不过远远不仅如此，他在我整个本科生涯教会了我数不清的东西，虽然与本文的具体内容无关，但还是特别感谢他。当然，我还应该感谢 \href{www.mathcha.io}{\textcolor{mathcha}{Math\Mathcha}}，感谢其开发者Nha，没有这个排版软件，我绝无可能在一个学期内写完这篇长文。感谢 \href{www.mathcha.io}{\textcolor{mathcha}{Math\Mathcha}}为我的本科生涯提供了意料之外的惊喜。最后，自然应该感谢我的父母，他们为我提供了一个良好的论文创作环境，可以让我不用为生活操劳，专心学术。
+
+
+
+按照隐性惯例，毕业论文的致谢也是给自己本科生涯的致谢，虽然与本文没有直接关系，但是没有他们，我也绝无可能写出这篇文章。
+
+
+
+首先感谢我的朋友杨博文，他让我明白学科之间没有分界线，物理学是包含了整个世界的学科；以及什么是真正的科学精神。感谢我的同学于鑫阳，他教会了我如何脚踏实地做学术，做切实的计算，而不是漂浮在没有根基的抽象数学概念里。也感谢他的温柔，善良，和对我孜孜不倦的帮助，其对待他人的态度给我带来了深刻的影响。也感谢我的同学邵一陆，他让我明白放眼广阔的学术天地是与脚踏实地同样重要的，除此之外，他也告诉我学术也都是人做出来的，并不是没有感情的知识堆砌。还要感谢我的同学吴晋渊，他让我明白除了拘泥于细节计算，浏览各种不同的学术品位以外，还应该理清楚理论与理论之间的关系，理论发展的逻辑。人不是计算机也不是维基百科，作为一个理论物理学家最重要的是知道，理论，或者世界\textbf{为什么}是这样。也感谢我的同学王思源，他让我明白一个物理学家的物理直觉是多么强大的武器。
+
+
+
+感谢温伯格，是他的量子场论教材告诉我什么东西是“物理”的，一个优秀的理论物理学家应当做出什么样的工作，一个纯粹的理论物理学家应该是什么样的。感谢彭罗斯和康威，他们让我明白兴趣永远是做学术的人最根本的原动力。
+
+
+
+除了学术之外，我还要感谢那些在生活上给与我帮助和支持的人。感谢侯晓远老师让我进入物理系。感谢我的朋友申静，傅彦霖，陈子湄，郑佳欣，马知秋，沈海潮，黄雨航，姜凯腾，王逸飞，华策，陈艳艳，崔云峰，马沁怡，王昕睿，闫方刚，韩纪元等人对我学习以及感情生活的大力支持。当然还有许许多多不能感谢到的人和事，即使是最微小的影响也可能在人生这样一个混沌系统中带来巨变，所以感谢他们。
+
+
+
+最后再次感谢自己。
+	
+\end{document}

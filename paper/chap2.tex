@@ -1,0 +1,653 @@
+\chapter{矢量与旋量的几何}
+
+如果我们将一个闵氏空间的矢量$\boldsymbol{v}$在自然基底$(e_{t} ,e_{x} ,e_{y} ,e_{z} )$下展开得到分量$( t,x,y,z)$，其内积为$v^{2} =t^{2} -x^{2} -y^{2} -z^{2}$。但如果我们换一组类光基底展开：
+\begin{equation*}
+	\begin{aligned}
+		\boldsymbol{v} & =te_{t} +xe_{x} +ye_{y} +ze_{z}\\
+		& =\left(\frac{t+z}{\sqrt{2}}\right)\boldsymbol{l} +\left(\frac{t-z}{\sqrt{2}}\right)\boldsymbol{n} +\left(\frac{x+\mathrm{i} y}{\sqrt{2}}\right)\boldsymbol{m} +\left(\frac{x-\mathrm{i} y}{\sqrt{2}}\right)\overline{\boldsymbol{m}} ,
+	\end{aligned}
+\end{equation*}
+其中
+\begin{equation*}
+	\boldsymbol{l} \equiv \frac{e_{t} +e_{z}}{\sqrt{2}} ,\quad \boldsymbol{n} \equiv \frac{e_{t} -e_{z}}{\sqrt{2}} ,\quad \boldsymbol{m} \equiv \frac{e_{x} -\mathrm{i} e_{y}}{\sqrt{2}} ,\quad \overline{\boldsymbol{m}} \equiv \frac{e_{x} +\mathrm{i} e_{y}}{\sqrt{2}}
+\end{equation*}
+这样我们就能将$\boldsymbol{v}$写成一个厄米矩阵：
+\begin{equation*}
+	v\rightarrow \frac{1}{\sqrt{2}}\begin{pmatrix}
+		t+z & x+\mathrm{i} y\\
+		x-\mathrm{i} y & t-z
+	\end{pmatrix} .
+\end{equation*}
+如果$v$是类光矢量，那么我们自然有$\det\boldsymbol{v} =(t^{2} -x^{2} -y^{2} -z^{2} )/2=0$，这意味着其秩不超过$1$，可以用两个复向量构建：
+\begin{equation*}
+	\frac{1}{\sqrt{2}}\begin{pmatrix}
+		t+z & x+\mathrm{i} y\\
+		x-\mathrm{i} y & t-z
+	\end{pmatrix} =\alpha \alpha ^{\dagger } ,\alpha =\begin{pmatrix}
+		\xi \\
+		\eta 
+	\end{pmatrix}
+\end{equation*}
+我们称$\alpha $为\textbf{旋量}。实际上，对于一个非类光矢量我们也能定义对应的旋量的概念。通过考虑在旋量上的作用，我们也能清晰地了解洛伦兹群的结构。除此之外，类光矢量决定了时空的因果结构，而这也与旋量密切相关。一个时空是否存在旋量结构与其\textbf{整体拓扑}有关，而Geroch证明了\parencite{geroch1968spinor}，一个非紧的时空存在旋量结构，当且仅当它存在连续的正交归一的闵氏标架场。因此，从旋量出发构建矢量，以及相对论理论则是更基本的也是更容易的。
+
+\section{闵氏向量空间}
+
+闵氏向量空间是所谓\textbf{世界矢量}（world vector）的空间，其由狭义相对论时空中的位置矢量的集合构成。在弯曲时空中，闵氏向量空间作为时空点的切空间出现。它是$\mathbb{R}$上带有定向的实向量空间$\mathbb{V}$，带有双线性的内积$( +,-,-,-)$。$\mathbb{V}$配备了一个自然基$\boldsymbol{t} ,\boldsymbol{x} ,\boldsymbol{y} ,\boldsymbol{z}$，即任何一个矢量都可以用这组基展开：
+\begin{equation*}
+	\boldsymbol{U} =U^{0}\boldsymbol{t} +U^{1}\boldsymbol{x} +U^{2}\boldsymbol{y} +U^{3}\boldsymbol{z} ,\quad U^{i} \in \mathbb{R} .
+\end{equation*}
+我们称$\mathbb{V}$中的一组基为\textbf{标架}（tetrad），表示为$\boldsymbol{g}_{i}$，例如标架$(\boldsymbol{t} ,\boldsymbol{x} ,\boldsymbol{y} ,\boldsymbol{z})$可以表示为
+\begin{equation*}
+	\boldsymbol{t} =\boldsymbol{g}_{0} ,\quad \boldsymbol{x} =\boldsymbol{g}_{1} ,\quad \boldsymbol{y} =\boldsymbol{g}_{2} ,\quad \boldsymbol{z} =\boldsymbol{g}_{3} ,
+\end{equation*}
+那么一个矢量就可以表示为$\boldsymbol{U} =U^{i}\boldsymbol{g}_{i}$。如果我们考虑另一组标架$\boldsymbol{g}_{\tilde{\imath }}$，我们知道
+\begin{equation*}
+	\boldsymbol{g}_{i} =g{_{i}}^{\tilde{0}}\boldsymbol{g}_{\tilde{0}} +g{_{i}}^{\tilde{1}}\boldsymbol{g}_{\tilde{1}} +g{_{i}}^{\tilde{2}}\boldsymbol{g}_{\tilde{2}} +g{_{i}}^{\tilde{3}}\boldsymbol{g}_{\tilde{3}} =g{_{i}}^{\tilde{\jmath }}\boldsymbol{g}_{\hat{\jmath }} .
+\end{equation*}
+矩阵$g{_{i}}^{\tilde{\jmath }}$构成了一个非奇异矩阵，如果其行列式是正的，我们称这两个标架有相同的定向，如果是负的，我们称这两个标架有相反的定向。注意这里的定向构成了一个等价关系，因此所有标架可以归为两个等价类，我们称其中一个为正规（proper）的标架，另一个为非正规的。
+
+
+
+度规$( +,-,-,-)$意味着我们有一个自然标架$\boldsymbol{g}_{i} =(\boldsymbol{t} ,\boldsymbol{x} ,\boldsymbol{y} ,\boldsymbol{z})$，给出
+\begin{equation*}
+	\eta _{ij} =\boldsymbol{g}_{i} \cdot \boldsymbol{g}_{j} =\operatorname{diag}( 1,-1,-1,-1) ,
+\end{equation*}
+我们称这组标架为闵氏标架。注意，二次型的惯性定理告诉我们，对于所有正交标架，自内积的正负符号是不变的。
+
+
+
+除了一般的定义内积的方式，我们注意到内积还可以用洛伦兹范数定义：
+\begin{equation*}
+	\boldsymbol{U} \cdot \boldsymbol{V} =\frac{1}{2}( \| \boldsymbol{U} +\boldsymbol{V} \| -\| \boldsymbol{U} \| -\| \boldsymbol{V} \| ) ,\| \boldsymbol{U} \| \equiv \boldsymbol{U} \cdot \boldsymbol{U} .
+\end{equation*}
+其中我们称
+\begin{equation*}
+	\begin{cases}
+		\begin{drcases}
+			\| \boldsymbol{U} \|  >0 & \text{类时矢量}\\
+			\| \boldsymbol{U} \| < 0 & \text{类空矢量}
+		\end{drcases}\text{因果矢量}\\
+		\| \boldsymbol{U} \| =0 \quad \text{类光矢量} .
+	\end{cases}
+\end{equation*}
+根据Schwarz不等式，对于两个因果矢量，我们有：
+\begin{equation*}
+	\begin{aligned}
+		|U^{0} V^{0} |\geq  & \{(U^{1} )^{2} +(U^{2} )^{2} +(U^{3} )^{2} \}^{1/2} \{(V^{1} )^{2} +(V^{2} )^{2} +(V^{3} )^{2} \}^{1/2}\\
+		\geq  & U^{1} V^{1} +U^{2} V^{2} +U^{3} V^{3} ,
+	\end{aligned}
+\end{equation*}
+我们容易看出$\boldsymbol{U} \cdot \boldsymbol{V}$的符号与$U^{0} V^{0}$一致，因此我们可以用$U^{0}$的符号来区分因果矢量，将其分为\textbf{指向未来}和\textbf{指向过去}的。如果$\boldsymbol{t}$是指向未来的类时矢量，那么我们称$(\boldsymbol{t} ,\boldsymbol{x} ,\boldsymbol{y} ,\boldsymbol{z})$为正时（orthochronous）的。
+
+
+
+与闵氏向量空间不同的是，所谓的闵氏时空$\mathbb{M}$是一个仿射空间（affine space），即没有原点的选择，其与闵氏向量空间的关系为存在一个映射
+\begin{equation*}
+	\operatorname{vec:}\mathbb{M} \times \mathbb{M}\rightarrow \mathbb{V} ,
+\end{equation*}
+其中
+\begin{equation*}
+	\operatorname{vec} (P,Q)+\operatorname{vec} (Q,R)=\operatorname{vec} (P,R).
+\end{equation*}
+因此我们可以令$\operatorname{vec} (P,Q)\equiv \overrightarrow{PQ} \in \mathbb{V}$，而这意味着$\mathbb{V}$自然诱导出了一个范数$\upPhi $：
+\begin{equation*}
+	\upPhi \equiv \| \operatorname{vec} (P,Q)\| =(Q^{0} -P^{0} )^{2} -(Q^{1} -P^{1} )^{2} -(Q^{2} -P^{2} )^{2} -(Q^{3} -P^{3} )^{2} .
+\end{equation*}
+$\mathbb{V}$上的线性保范数自变换被称为\textbf{洛伦兹变换}。如果与此同时保定向和时间定向，那么称其为限制性洛伦兹变换，而$\mathbb{M}$上的线性保范数$\upPhi $的变换被称为庞加莱变换，这样的变换在$\mathbb{V}$上自动诱导出了洛伦兹变换。
+
+\section{类光矢量与自旋变换}
+
+对于一个限制性的闵氏标架$(\boldsymbol{t} ,\boldsymbol{x} ,\boldsymbol{y} ,\boldsymbol{z})$，我们记其展开系数为
+\begin{equation*}
+	\boldsymbol{U} =T\boldsymbol{t} +X\boldsymbol{x} +Y\boldsymbol{y} +Z\boldsymbol{z} .
+\end{equation*}
+如果$\boldsymbol{U}$是类光的，那么我们知道
+\begin{equation}
+	T^{2} -X^{2} -Y^{2} -Z^{2} =0,
+	\label{eq:lightlike vector}
+\end{equation}
+这自然构成了一个三维的双曲面，如图\ref{fig:lightcone}所示。
+
+\begin{figure}[h]
+	\centering
+	\input{lightcone}
+	\caption{四维时空中，方程$T^{2} -X^{2} -Y^{2} -Z^{2} =0$构成的超曲面，即光锥。对于不同的$t=T$的平面在曲面上的截面构成一个二维球面，即天球。}
+	\label{fig:lightcone}
+\end{figure}
+
+我们记这些指向未来（过去）的类光矢量的空间为$\mathcal{S}^{+} /\mathcal{S}^{-}$，而它们在超平面$T=1/-1$上的投影被称为$S^{+} /S^{-}$，其方程为
+\begin{equation*}
+	x^{2} +y^{2} +z^{2} =1.
+\end{equation*}
+$S^{+} /S^{-}$的内部代表了指向未来/过去的方向的集合，而其外部则是类空的方向。
+
+
+
+现在我们回到物理，考虑一个时空中的观测者位于事件$O$处。到达其眼中的光线为穿过$O$的类光线，也就是图\ref{fig:lightcone}所示的超平面$\mathcal{S}^{-}$，如果我们考虑一个固定时刻$T$，那么这就是球面$S^{-}$。因此我们称$S^{-}$（或$\mathcal{S}^{-}$）为事件$O$的天球（celestial sphere），而称将所有源于$O$点的类光方向映射到$S^{-}$的映射称为天空映射（sky mapping）。而对于$S^{+}$我们称其为反天空映射（anti-sky mapping）。
+
+
+
+我们可以很自然地将$S^{+} /S^{-}$看成Argand平面上的黎曼球面，而一个$\mathbb{V}$上额限制性洛伦兹变换可以被它对黎曼面的作用而唯一决定。我们可以用将$S^{+}$上的坐标$x,y,z$用球极投影（stereographic）映射到一个Argand平面的复数上。
+
+\begin{figure}[h]
+	\centering
+	\input{argand-plane}
+	\caption{球极投影将天球上的点映射到复平面$\mathbb{C} \cup \{\infty \}$上，其中北极点映射到复平面的无穷远点。}
+	\label{fig:argand-plane}
+\end{figure}
+
+如图\ref{fig:argand-plane}所示，我们可以用一个复数$\zeta $将平面$\upSigma :z=0$参数化：
+\begin{equation*}
+	\zeta =X'+\mathrm{i} Y'.
+\end{equation*}
+很容易用初中几何计算出
+\begin{equation*}
+	\zeta =\frac{x+\mathrm{i} y}{1-z} .
+\end{equation*}
+我们也很容易给出逆，观察到
+\begin{equation*}
+	\zeta \overline{\zeta } =\frac{1+z}{1-z} ,
+\end{equation*}
+这意味着
+\begin{equation}
+	x=\frac{\zeta +\overline{\zeta }}{\zeta \overline{\zeta } +1} ,\quad y=\frac{\zeta -\overline{\zeta }}{\mathrm{i} (\zeta \overline{\zeta } +1)} ,\quad z=\frac{\zeta \overline{\zeta } -1}{\zeta \overline{\zeta } +1} .
+	\label{eq:coordinate of stereographic projection}
+\end{equation}
+如果我们用球坐标参数化$x,y,z$：
+\begin{equation*}
+	x=\sin \theta \cos \phi ,\quad y=\sin \theta \sin \phi ,\quad z=\cos \theta ,
+\end{equation*}
+我们可以给出：
+\begin{equation*}
+	\zeta =\mathrm{e}^{\mathrm{i} \phi }\cot\frac{\theta }{2} .
+\end{equation*}
+对于$S^{-}$，我们只需要做一个对顶点映射（antipodal map）$( x,y,z) \mapsto -(x,y,z )$或者$( \theta ,\phi ) \mapsto ( \pi -\theta ,\pi +\phi )$，这样我们就有
+\begin{equation*}
+	\zeta =-\mathrm{e}^{\mathrm{i} \phi }\tan\frac{\theta }{2} .
+\end{equation*}
+
+\subsection{洛伦兹变换与自旋变换*}
+
+除了用非齐次坐标$\zeta $来刻画$S^{+}$上的点，我们也可以用齐次坐标$( \xi ,\eta )$来刻画一个复数：
+\begin{equation*}
+	\zeta =\frac{\xi }{\eta } .
+\end{equation*}
+这里$( \lambda \xi ,\lambda \eta )$为同一个点。在齐次坐标下，我们有：
+\begin{equation}
+	x=\frac{\xi \overline{\eta } +\eta \overline{\xi }}{\xi \overline{\xi } +\eta \overline{\eta }} ,\quad y=\frac{\xi \overline{\eta } -\eta \overline{\xi }}{\mathrm{i} (\xi \overline{\xi } +\eta \overline{\eta } )} ,\quad z=\frac{\xi \overline{\xi } -\eta \overline{\eta }}{\xi \overline{\xi } +\eta \overline{\eta }} .
+	\label{eq:homogeneous coordinate of stereoprojection}
+\end{equation}
+特别地，注意到我们可以选择$OP$上任意一点$R$来刻画与$OP$相同的类光方向，我们选择
+\begin{equation*}
+	\overrightarrow{OR} =\frac{\xi \overline{\xi } +\eta \overline{\eta }}{\sqrt{2}}\overrightarrow{OP} ,
+\end{equation*}
+那么我们实际上就有$\boldsymbol{K} \equiv \overrightarrow{OR}$的坐标为
+\begin{equation}
+	\begin{aligned}
+		& T=\frac{1}{\sqrt{2}} (\xi \overline{\xi } +\eta \overline{\eta } ),\ \  & X=\frac{1}{\sqrt{2}} (\xi \overline{\eta } +\eta \overline{\xi } ),\\
+		& Y=\frac{1}{\mathrm{i}\sqrt{2}} (\xi \overline{\eta } -\eta \overline{\xi } ),\ \  & Z=\frac{1}{\sqrt{2}} (\xi \overline{\xi } -\eta \overline{\eta } ).
+	\end{aligned}
+	\label{eq:real and complex coordinate}
+\end{equation}
+与点$P$不同，$R$不再有在标度变换$( \xi ,\eta ) \mapsto ( r\xi ,r\eta )$下的不变性，但仍在相位变换$( \xi ,\eta ) \mapsto (\mathrm{e}^{\mathrm{i} \theta } \xi ,\mathrm{e}^{\mathrm{i} \theta } \eta )$下不变。
+
+
+
+现在，根据 \ref{eq:real and complex coordinate} 的形式我们可以看出，任何一个对于$( \xi ,\eta )$的复线性变换会诱导出一个$( T,X,Y,Z)$上的实线性变换。同时又注意到四个类光矢量能张成整个向量空间$\mathbb{V}$，这意味着对于类光矢量的线性变换会自然给出整个$\mathbb{V}$空间上的线性变换。不过注意，在这样的变换下，式\ref{eq:lightlike vector}是不变的，这意味着这样的变换诱导出了一个可能带有伸缩的洛伦兹变换。即，我们考虑对于$\xi ,\eta $的复线性变换：
+\begin{equation*}
+	\begin{aligned}
+		\xi  & \mapsto \tilde{\xi } =\alpha \xi +\beta \eta \\
+		\eta  & \mapsto \tilde{\eta } =\gamma \xi +\delta \eta ,
+	\end{aligned}
+\end{equation*}
+其中$\alpha ,\beta ,\gamma ,\delta \in \mathbb{C}$。为了保证这个线性变换非奇异，我们只需要要求$\alpha \delta -\beta \gamma \neq 0$即可。用复数$\zeta $表达，这个变换等价于
+\begin{equation*}
+	\zeta \mapsto \tilde{\zeta } =\frac{\alpha \zeta +\beta }{\gamma \zeta +\delta } .
+\end{equation*}
+如果我们加上一个归一化条件：
+\begin{equation*}
+	\alpha \delta -\beta \gamma =1,
+\end{equation*}
+那么我们称这样的变换为\textbf{自旋变换}（spin transformation）。同样的，我们也可以定义一个\textbf{自旋矩阵}$\boldsymbol{A}$为：
+\begin{equation*}
+	\boldsymbol{A} \equiv \begin{pmatrix}
+		\alpha  & \beta \\
+		\gamma  & \delta 
+	\end{pmatrix} ,\det\boldsymbol{A} =1,
+\end{equation*}
+此时线性变换可以写成
+\begin{equation*}
+	\begin{pmatrix}
+		\tilde{\xi }\\
+		\tilde{\eta }
+	\end{pmatrix} =\boldsymbol{A}\begin{pmatrix}
+		\xi \\
+		\eta 
+	\end{pmatrix} .
+\end{equation*}
+显然，这样的自旋变换构成了$SL( 2,\mathbb{C})$群。但是注意，并不是一个$\zeta $的变换对应了一个自旋矩阵，因为显然$\boldsymbol{A} ,-\boldsymbol{A}$对应了同样的$\zeta $变换。如果反过来，假设存在$\boldsymbol{A} ,\boldsymbol{B}$对应了同一个$\zeta $的变换，那么$\boldsymbol{B}^{-1}\boldsymbol{A}$对应了$\zeta $的单位变换，也即$\pm \boldsymbol{I}$，因此我们知道$\boldsymbol{A} =\pm \boldsymbol{B}$。这意味着两个自旋变换对应了一个洛伦兹变换，这意味着我们可以记洛伦兹变换构成的群为$PSL( 2,\mathbb{C}) \equiv SL( 2,\mathbb{C}) /\mathbb{Z}_{2}$。
+
+
+
+现在我们来考察自旋变换在坐标$( T,X,Y,Z)$上的效果。我们已经有了用$( \xi ,\eta )$表示$( T,X,Y,Z)$的表达式\ref{eq:real and complex coordinate}，反过来我们注意到：
+\begin{equation*}
+	\frac{1}{\sqrt{2}}\begin{pmatrix}
+		T+Z & X+\mathrm{i} Y\\
+		X-\mathrm{i} Y & T-Z
+	\end{pmatrix} =\begin{pmatrix}
+		\xi \overline{\xi } & \xi \overline{\eta }\\
+		\eta \overline{\xi } & \eta \overline{\eta }
+	\end{pmatrix} =\begin{pmatrix}
+		\xi \\
+		\eta 
+	\end{pmatrix}\begin{pmatrix}
+		\overline{\xi } & \overline{\eta }
+	\end{pmatrix} .
+\end{equation*}
+现在我们很容易看出，自旋变换的效果为
+\begin{equation}
+	\begin{pmatrix}
+		T+Z & X+\mathrm{i} Y\\
+		X-\mathrm{i} Y & T-Z
+	\end{pmatrix} \mapsto \begin{pmatrix}
+		\tilde{T} +\tilde{Z} & \tilde{X} +\mathrm{i}\tilde{Y}\\
+		\tilde{X} -\mathrm{i}\tilde{Y} & \tilde{T} -\tilde{Z}
+	\end{pmatrix} =\boldsymbol{A}\begin{pmatrix}
+		T+Z & X+\mathrm{i} Y\\
+		X-\mathrm{i} Y & T-Z
+	\end{pmatrix}\boldsymbol{A}^{\dagger } .
+	\label{eq:effect of a spin transformation}
+\end{equation}
+即使向量$\boldsymbol{U} =T\boldsymbol{t} +X\boldsymbol{x} +Y\boldsymbol{y} +Z\boldsymbol{z}$不是类光的，$\boldsymbol{A}$仍然诱导出了一个保证范数$T^{2} -X^{2} -Y^{2} -Z^{2}$不变的变换，因为
+\begin{equation*}
+	\det\begin{pmatrix}
+		T+Z & X+\mathrm{i} Y\\
+		X-\mathrm{i} Y & T-Z
+	\end{pmatrix} =T^{2} -X^{2} -Y^{2} -Z^{2} ,
+\end{equation*}
+从而\ref{eq:effect of a spin transformation}定义了一个洛伦兹变换。将其转换成对于坐标$( T,X,Y,Z)$的具体形式，我们有：
+\begin{equation*}
+	\begin{pmatrix}
+		T\\
+		X\\
+		Y\\
+		Z
+	\end{pmatrix} \mapsto \begin{pmatrix}
+		\tilde{T}\\
+		\tilde{X}\\
+		\tilde{Y}\\
+		\tilde{Z}
+	\end{pmatrix} =\frac{1}{2}\boldsymbol{B}\begin{pmatrix}
+		T\\
+		X\\
+		Y\\
+		Z
+	\end{pmatrix} ,
+\end{equation*}
+其中
+\begin{equation*}
+	\begin{aligned}
+		& \boldsymbol{B} =\\
+		& {\small\begin{pmatrix}
+				\alpha \overline{\alpha } +\beta \overline{\beta } +\gamma \overline{\gamma } +\delta \delta  & \alpha \overline{\beta } +\beta \overline{\alpha } +\gamma \delta +\delta \overline{\gamma } & \mathrm{i} (\alpha \beta -\beta \overline{\alpha } +\gamma \overline{\delta } -\delta \overline{\gamma } ) & \alpha \overline{\alpha } -\beta \overline{\beta } +\gamma \overline{\gamma } -\delta \overline{\delta }\\
+				\alpha \overline{\gamma } +\gamma \overline{\alpha } +\beta \overline{\delta } +\delta \overline{\beta } & \alpha \delta +\delta \overline{\alpha } +\beta \overline{\gamma } +\gamma \beta  & \mathrm{i} (\alpha \delta -\delta \overline{\alpha } +\gamma \overline{\beta } -\beta \overline{\gamma } ) & \alpha \overline{\gamma } +\gamma \overline{\alpha } -\beta \delta -\delta \beta \\
+				\mathrm{i} (\gamma \overline{\alpha } -\alpha \overline{\gamma } +\delta \overline{\beta } -\beta \overline{\delta } ) & \mathrm{i} (\delta \overline{\alpha } -\alpha \delta +\gamma \beta -\beta \overline{\gamma } ) & \alpha \delta +\delta \overline{\alpha } -\beta \overline{\gamma } -\gamma \overline{\beta } & \mathrm{i} (\gamma \overline{\alpha } -\alpha \overline{\gamma } +\beta \overline{\delta } -\delta \overline{\beta } )\\
+				\alpha \overline{\alpha } +\beta \overline{\beta } -\gamma \overline{\gamma } -\delta \delta  & \alpha \beta +\beta \overline{\alpha } -\gamma \delta -\delta \overline{\gamma } & \mathrm{i} (\alpha \beta -\beta \overline{\alpha } +\delta \overline{\gamma } -\gamma \delta ) & \alpha \overline{\alpha } -\beta \overline{\beta } -\gamma \overline{\gamma } +\delta \overline{\delta }
+		\end{pmatrix}} .
+	\end{aligned}
+\end{equation*}
+注意，这一定是一个限制性洛伦兹变换，因为$\boldsymbol{A}$与单位元连通，而且即使$\boldsymbol{A} =-\boldsymbol{I}$，我们也可以通过自旋变换$\operatorname{diag} (\mathrm{e}^{\mathrm{i} \theta } ,\mathrm{e}^{-\mathrm{i} \theta } )$将其变为$\boldsymbol{I}$。
+
+总结上面的内容，这意味着我们有以下结论：
+
+
+\begin{them}[label={them:Spin and Lorentz transformation}]{自旋变换与洛伦兹变换的对应关系}
+	每一个自旋变换对应了一个限制性洛伦兹变换；反过来一个限制性洛伦兹变换对应了两个自旋变换，这两个自旋变换相差一个负号。
+\end{them}
+
+除此之外，我们知道一个洛伦兹变换可以由旋转与推动生成，那么旋转和推动对应了什么样的自旋变换呢？我们给出下面这样的定理：
+
+\begin{them}[label={them:rotation and spin transformation}]{旋转与自旋变换}
+	每一个\textbf{幺正}的自旋变换对应了一个$S^{+}$上的正当旋转，而反过来每一个$S^{+}$上的正当旋转也对应了两个互为相反的幺正自旋变换。
+\end{them}
+
+现在我们来证明定理\ref{them:rotation and spin transformation}。首先需要澄清的是，$S^{+}$上的旋转在定义上并不等价于洛伦兹变换中的旋转，但由于洛伦兹变换中的旋转改变了闵氏向量空间中的矢量的方向，而每一个指向未来的类光方向被旋转代表着它在$S^{+}$上对应的点也旋转了，因此我们可以不严谨地称其为$S^{+}$上的旋转。这里的关键仍然在于，我们只是旋转了$\mathbb{V}$中的类光矢量，但是正是由于类光矢量构成了$\mathbb{V}$中的一个基，因此它们的变换对应了$\mathbb{V}$中所有向量的变换。
+
+现在根据\ref{eq:effect of a spin transformation}，我们发现在幺正自旋变换下$T$是不变的，因为
+\begin{equation*}
+	\begin{aligned}
+		& \operatorname{tr}\begin{pmatrix}
+			T+Z & X+\mathrm{i} Y\\
+			X-\mathrm{i} Y & T-Z
+		\end{pmatrix} =2T\\
+		\mapsto  & \operatorname{tr}\boldsymbol{A}\begin{pmatrix}
+			T+Z & X+\mathrm{i} Y\\
+			X-\mathrm{i} Y & T-Z
+		\end{pmatrix}\boldsymbol{A}^{\dagger } =\operatorname{tr}\begin{pmatrix}
+			T+Z & X+\mathrm{i} Y\\
+			X-\mathrm{i} Y & T-Z
+		\end{pmatrix} .
+	\end{aligned}
+\end{equation*}
+我们又知道，保证$T$不变的限制性洛伦兹变换就是正规旋转，因此我们证明了定理\ref{them:rotation and spin transformation}的前半部分。要证明定理\ref{them:rotation and spin transformation}的后半部分，我们可以将任意一个旋转用欧拉角分解成绕$y$轴和绕$z$轴的旋转，只要我们分别给出两种旋转对应的自旋变换，我们就证明了这个定理。考虑绕$z$的旋转，我们从Argand平面可以看出，绕$z$轴的旋转等价于
+\begin{equation*}
+	\tilde{\zeta } =\mathrm{e}^{\mathrm{i} \psi } \zeta ,
+\end{equation*}
+即对应自旋变换
+\begin{equation*}
+	\begin{pmatrix}
+		\tilde{\xi }\\
+		\tilde{\eta }
+	\end{pmatrix} =\pm \begin{pmatrix}
+		\mathrm{e}^{\mathrm{i} \psi /2} & 0\\
+		0 & \mathrm{e}^{-\mathrm{i} \psi /2}
+	\end{pmatrix}\begin{pmatrix}
+		\xi \\
+		\eta 
+	\end{pmatrix} .
+\end{equation*}
+现在我们考虑绕$y$轴的旋转，我们考虑幺正变换：
+\begin{equation*}
+	\begin{pmatrix}
+		\tilde{\xi }\\
+		\tilde{\eta }
+	\end{pmatrix} =\pm \begin{pmatrix}
+		\cos\frac{\theta }{2} & -\sin\frac{\theta }{2}\\
+		\sin\frac{\theta }{2} & \cos\frac{\theta }{2}
+	\end{pmatrix}\begin{pmatrix}
+		\xi \\
+		\eta 
+	\end{pmatrix} ,
+\end{equation*}
+由于它是幺正变换，那么它一定对应某个旋转。但同时我们又可以看出这个变换保证$\xi \overline{\eta } -\eta \overline{\xi }$和$\xi \overline{\xi } +\eta \overline{\eta }$不变，从\ref{eq:coordinate of stereographic projection}我们可以看出$y$轴的坐标也不变，因此这是绕$y$轴的旋转。同时，我们可以发现这个变换将点$( 1,0,0,1)$变换到$( 1,\sin \theta ,0,\cos \theta )$，因此这个旋转的转角为$\theta $。因此，对于一般的欧拉角为$\theta ,\phi ,\psi $的旋转，其对应的自旋矩阵为
+\begin{equation*}
+	\pm \begin{pmatrix}
+		\cos\frac{\theta }{2}\mathrm{e}^{\mathrm{i} (\phi +\psi )/2} & -\sin\frac{\theta }{2}\mathrm{e}^{\mathrm{i} (\phi -\psi )/2}\\
+		\sin\frac{\theta }{2}\mathrm{e}^{-\mathrm{i} (\phi -\psi )/2} & \cos\frac{\theta }{2}\mathrm{e}^{-\mathrm{i} (\phi +\psi )/2}
+	\end{pmatrix} .
+\end{equation*}
+这意味着我们成功证明了定理\ref{them:rotation and spin transformation}。
+
+
+
+刚才考虑了旋转，那么推动对应了什么样的自旋变换呢？由于任何推动都可以被分解成到$z$轴的旋转-$z$方向的推动-旋转回去，因此我们只需考虑$z$方向的推动：
+\begin{equation*}
+	\begin{cases}
+		\tilde{T} +\tilde{Z} & =w(T+Z)\\
+		\tilde{T} -\tilde{Z} & =w^{-1} (T-Z)\\
+		\tilde{X} & =X\\
+		\tilde{Y} & =Y
+	\end{cases}
+\end{equation*}
+
+
+其中
+\begin{equation*}
+	w=\left(\frac{1+v}{1-v}\right)^{1/2} .
+\end{equation*}
+这对应了自旋变换
+\begin{equation*}
+	\begin{pmatrix}
+		\tilde{\xi }\\
+		\tilde{\eta }
+	\end{pmatrix} =\pm \begin{pmatrix}
+		w^{1/2} & 0\\
+		0 & w^{-1/2}
+	\end{pmatrix}\begin{pmatrix}
+		\xi \\
+		\eta 
+	\end{pmatrix} .
+\end{equation*}
+在Argand平面上，我们有
+\begin{equation*}
+	\tilde{\zeta } =w\zeta .
+\end{equation*}
+对于一般的推动，其对应的自旋变换为正定的厄米矩阵。
+
+\section{洛伦兹变换的性质*}
+
+现在，我们可以利用自旋变换非常简便地导出洛伦兹变换的许多性质。
+
+\begin{prop}[label={prop:fixed point of rotation}]{旋转的不动点}
+	球面$S^{+} /S^{-}$上的任意旋转有两个不动点，为球面的对顶点，这意味着每一个旋转都等价于绕着一个轴的旋转。
+\end{prop}
+
+
+\begin{proof}
+	由于每一个旋转都是幺正的，我们可以将自旋变换写成
+	\begin{equation*}
+		\tilde{\zeta } =\frac{\alpha \zeta -\overline{\gamma }}{\gamma \zeta +\overline{\alpha }} ,
+	\end{equation*}
+	那么其不动点$\tilde{\zeta } =\zeta $就为
+	\begin{equation*}
+		\gamma \zeta ^{2} +(\overline{\alpha } -\alpha )\zeta +\overline{\gamma } =0.
+	\end{equation*}
+	注意到如果$\zeta $为这个方程的一个根，那么$-1/\overline{\zeta }$则为另一个根，而根据
+	\begin{equation*}
+		\zeta =-\mathrm{e}^{\mathrm{i} \phi }\tan \theta /2\Rightarrow -\frac{1}{\overline{\zeta }} =-\mathrm{e}^{\mathrm{i} (\pi +\phi )}\tan\frac{\pi -\theta }{2} ,
+	\end{equation*}
+	这意味着两个不动点为$S^{+}$上的对顶点。
+\end{proof}
+
+除此之外，一般的自旋变换也仅仅只有两个不动点，这意味着每一个（非平凡）洛伦兹变换也只能保证两个类光方向不变。事实上，根据庞加莱-霍普夫定理，每一个保持定向到黎曼球面自身的连续映射一定会至少有一个不动点，而由于$S^{2}$的欧拉数是$2$，这意味着这样的映射的映射度也是$2$。
+
+
+
+下面我们考虑一般的洛伦兹变换，如果我们令$\boldsymbol{t} ,\boldsymbol{z}$两个不变的类光方向张成的平面上，那么实际上我们知道这个变换的不动点在$S^{+}$的两极。这种变换的最一般形式可以被写成
+\begin{equation*}
+	\tilde{\zeta } =w\mathrm{e}^{\mathrm{i} \psi } \zeta ,
+\end{equation*}
+即绕$z$轴的旋转与推动的复合，并且我们称这种变换为four-screw。图\ref{fig:visualization of lorentz transformation}是将旋转，推动以及four-screw变换可视化后的结果。
+
+\begin{figure}[h]
+	\centering
+	\input{visualization of lorentz transformation}
+	\caption{将不同洛伦兹变换在黎曼球上可视化}
+	\label{fig:visualization of lorentz transformation}
+\end{figure}
+
+如果洛伦兹变换保持不变的两个类光方向重合，那么我们将这种情况称作类光旋转（null rotation）。我们可以将不动点定为$\zeta =\infty $，这时自旋变换就为
+\begin{equation*}
+	\tilde{\zeta } =\zeta +\beta ,
+\end{equation*}
+自旋变换矩阵就为
+\begin{equation*}
+	\begin{pmatrix}
+		\tilde{\xi }\\
+		\tilde{\eta }
+	\end{pmatrix} =\pm \begin{pmatrix}
+		1 & \beta \\
+		0 & 1
+	\end{pmatrix}\begin{pmatrix}
+		\xi \\
+		\eta 
+	\end{pmatrix} .
+\end{equation*}
+其可视化效果如图\ref{fig:visualization of null rotation}所示。
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=160.28pt,height=161.62pt]{null rotation.pdf}
+	\caption{类光旋转可视化化}
+	\label{fig:visualization of null rotation}
+\end{figure}
+
+\section{类光旗帜与自旋矢量*}
+
+本节的目的是让我们对自旋矢量有一个直观的几何理解。我们知道复数对$( \xi ,\eta )$定义了一个自旋矢量$\boldsymbol{\kappa }$，这与闵氏向量空间中的类光矢量$\boldsymbol{K}$有对应关系\ref{eq:real and complex coordinate}。但我们知道如果用$( \xi ,\eta )$作为$\boldsymbol{K}$的坐标，有冗余自由度$\xi \mapsto \mathrm{e}^{\mathrm{i} \theta } \xi ,\eta \mapsto \mathrm{e}^{\mathrm{i} \theta } \eta $。这个变换很容易让我们想到三维空间中的旋转，因此我们想要将这个冗余自由度阐释为一个“几何结构”，在这个结构之外，多余的自由度可以被缩减到一个符号的不确定性。这个几何结构就是所谓\textbf{类光旗帜}（null flag），即$\boldsymbol{K}$能对应到一个平面相位意义上的$\xi ,\eta $，我们只需要考虑这个“旗帜面”。
+
+
+
+除此之外，注意我们所寻找的$( \xi ,\eta )$的几何结构是“内禀”的，即不依赖于坐标的选取。例如考虑自旋变换诱导的被动洛伦兹变换，这样的变换并不会改变$\boldsymbol{\kappa }$的几何结构。
+
+
+
+我们的思路是首先在所有类光方向的曲面$\mathcal{S}^{+}$上描述$( \xi ,\eta )$的几何结构，随后再将其引入到$\mathbb{V}$上。
+
+
+\subsection{$S^{+}$上的描述}
+
+我们知道$\mathcal{S}^{+}$上的点可以与复数$\zeta \equiv \xi /\eta $一一对应，但除了这个比值之外，如果我们知道了表示$\zeta $的点$P$处的实切向量$\mathbf{L}$，那么$\xi ,\eta $也能独立地被表示出来。我们知道$\mathcal{S}^{+}$（的切空间）上的实的切向量可以被表示为
+\begin{equation*}
+	\mathbf{L} =\lambda \frac{\partial }{\partial \zeta } +\overline{\lambda }\frac{\partial }{\partial \overline{\zeta }} ,
+\end{equation*}
+其中我们需要选择系数让$\mathbf{L}$是实的。如果$\lambda ( \xi ,\eta )$可以表示为$\xi ,\eta $的定值，这意味着我们需要$\mathbf{L}$在自旋变换下是不变的，即
+\begin{equation}
+	\lambda '\frac{\partial }{\partial \zeta '} +\overline{\lambda } '\frac{\partial }{\partial \overline{\zeta } '} =\lambda \frac{\partial }{\partial \zeta } +\overline{\lambda }\frac{\partial }{\partial \overline{\zeta }} ,
+	\label{eq:invariance of L}
+\end{equation}
+其中
+\begin{equation*}
+	\zeta '=\frac{\xi '}{\eta '} =\frac{\alpha \xi +\beta \eta }{\gamma \xi +\delta \eta } =\frac{\alpha \zeta +\beta }{\gamma \zeta +\delta } .
+\end{equation*}
+那么利用链式法则：
+\begin{equation}
+	\frac{\partial }{\partial \zeta } =\frac{\partial \zeta '}{\partial \zeta }\frac{\partial }{\partial \zeta '} =\frac{\alpha \delta -\beta \gamma }{(\delta +\gamma \zeta )^{2}}\frac{\partial }{\partial \zeta '} =(\delta +\gamma \zeta )^{-2}\frac{\partial }{\partial \zeta '} =\eta ^{2} \eta ^{\prime -2}\frac{\partial }{\partial \zeta '} .
+	\label{eq:chain rule of xi}
+\end{equation}
+代回\ref{eq:invariance of L}并要求系数相等，我们有
+\begin{equation*}
+	\lambda '( \xi ',\eta ') \eta ^{\prime 2} =\lambda ( \xi ,\eta ) \eta ^{2} ,
+\end{equation*}
+这意味着我们必须要求$\lambda $对$\eta $的依赖关系为某个数字乘以$\eta ^{-2}$.我们选取
+\begin{equation*}
+	\lambda =-\frac{1}{\sqrt{2}} \eta ^{-2} ,
+\end{equation*}
+那么我们有
+\begin{equation}
+	\mathbf{L} =-\frac{1}{\sqrt{2}}\left( \eta ^{-2}\frac{\partial }{\partial \zeta } +\overline{\eta }^{-2}\frac{\partial }{\partial \overline{\zeta }}\right) .
+	\label{eq:expression of L}
+\end{equation}
+
+
+反过来，如果我们知道$P$点以及$P$点处的$\mathbf{L}$，那么我们就可以将$( \zeta ,\eta )$确定到相差一个符号。因为通过$\mathbf{L}$的具体形式\ref{eq:expression of L}，我们可以对比系数给出$\eta ^{2}$，根据$P$我们可以知道$\zeta $，从而反推出$\pm ( \xi ,\eta )$。
+
+
+
+等价地，我们可以根据
+\begin{equation*}
+	\eta ^{2}\mathrm{d} \zeta =\eta \mathrm{d} \xi -\xi \mathrm{d} \eta ,
+\end{equation*}
+给出
+\begin{equation*}
+	\eta ^{\prime 2}\mathrm{d} \zeta '=\eta ^{2}\mathrm{d} \zeta ,
+\end{equation*}
+这与\ref{eq:chain rule of xi}等价。
+
+
+\subsection{$\mathbb{V}$上的表述}
+
+$\mathcal{S}^{+}$上的切向量$\mathbf{L}$自然诱导出了作为子空间的$S^{+}$上的切向量$\boldsymbol{L}$，而$S^{+}$上的坐标通过\ref{eq:coordinate of stereographic projection}自然与$\mathbb{V}$中的坐标相联系，那么我们可以写出
+\begin{equation*}
+	\boldsymbol{L} =-\frac{1}{\sqrt{2}}\left( \eta ^{-2}\frac{\partial }{\partial \zeta } +\overline{\eta }^{-2}\frac{\partial }{\partial \overline{\zeta }}\right) =L^{a}\frac{\partial }{\partial x^{a}} ,
+\end{equation*}
+其中$x^{a}$是$\mathbb{V}$中的坐标。选定参数$x^{0} =1$，通过\ref{eq:coordinate of stereographic projection}，我们知道
+\begin{equation*}
+	\frac{\partial x^{0}}{\partial \zeta } =0,\frac{\partial x^{1}}{\partial \zeta } =\frac{1-\zeta ^{2}}{(\zeta \zeta +1)^{2}} ,\frac{\partial x^{2}}{\partial \zeta } =\frac{1+\zeta ^{2}}{1(\zeta \zeta +1)^{2}} ,\frac{\partial x^{3}}{\partial \zeta } =\frac{2\zeta }{(\zeta \overline{\zeta } +1)^{2}}
+\end{equation*}
+根据链式法则：
+\begin{equation*}
+	L^{a}\frac{\partial }{\partial x^{a}} =-\frac{1}{\sqrt{2}}\left( \eta ^{-2}\frac{\partial x^{a}}{\partial \zeta } +\overline{\eta }^{-2}\frac{\partial x^{a}}{\partial \zeta }\right)\frac{\partial }{\partial x^{a}}
+\end{equation*}
+我们有：
+\begin{equation*}
+	\begin{aligned}
+		L^{0} & =0, & L^{1} & =\frac{\xi ^{2} +\overline{\xi }^{2} -\eta ^{2} -\overline{\eta }^{2}}{\sqrt{2} (\xi \overline{\xi } +\eta \overline{\eta } )^{2}} ,\\
+		L^{2} & =\frac{\xi ^{2} -\overline{\xi }^{2} +\eta ^{2} -\overline{\eta }^{2}}{\sqrt{2}\mathrm{i} (\xi \overline{\xi } +\eta \overline{\eta } )^{2}} , & L^{3} & =\frac{-\sqrt{2} (\xi \eta +\overline{\xi }\overline{\eta } )}{(\xi \xi +\eta \overline{\eta } )^{2}} .
+	\end{aligned}
+\end{equation*}
+我们容易发现$\boldsymbol{L}$的范数为
+\begin{equation*}
+	\| \boldsymbol{L} \| =L^{a} L^{b} \eta _{ab} =\frac{-2}{(\xi \overline{\xi } +\eta \overline{\eta } )^{2}} .
+\end{equation*}
+注意，这和\ref{eq:homogeneous coordinate of stereoprojection}式的分母一致，也就是我们用来构造$\boldsymbol{K} \equiv \overrightarrow{OR}$的比例因子。这意味着$\boldsymbol{L}$是单位矢量，当且仅当$\boldsymbol{K}$定义了一个在$S^{+}$上的点$P$。如果$( \xi ,\eta )$与$(\tilde{\xi } ,\tilde{\eta })$两点由洛伦兹变换连接，我们很容易发现$L^{a}$之间相差的并不是洛伦兹变换，因为$\boldsymbol{L}$垂直于$S^{+}$意味着与$t$轴正交，但洛伦兹变换显然不保持这个性质。但是，$\boldsymbol{K}$与$\boldsymbol{L}$构成的平面$\hat{\upPi }$却是不变的，即它与坐标无关，因此可以被看做作$\mathbb{V}$中的几何结构。
+
+\begin{figure}[h]
+	\centering
+	\input{null flag}
+	\caption{类光旗帜。注意这里$\boldsymbol{L}$并不是只有一个方向。}
+	\label{fig:null flag}
+\end{figure}
+
+这里，$\hat{\upPi }$中的向量为
+\begin{equation*}
+	a\boldsymbol{K} +b\boldsymbol{L} ,
+\end{equation*}
+而我们选择$b >0$并称这个半平面为$\upPi $。我们可以看到，$\upPi $可以将$( \xi ,\eta )$决定到只差一个符号：$\boldsymbol{K}$将$\eta ,\xi $决定到相差一个全局相位，而$\boldsymbol{L}$的方向告诉我们$\eta $的相位。我们称$\upPi $与$\boldsymbol{K}$为类光旗帜（null flag）而称$\boldsymbol{K}$为旗杆（flagpole），$ $$\upPi $为旗帜面（flag plane）。
+
+
+
+现在考虑一般的自旋变换对光旗的影响。考虑变换
+\begin{equation*}
+	( \xi ,\eta ) \mapsto ( \lambda \xi ,\lambda \eta ) ,\lambda \in \mathbb{C} \setminus \{0\} .
+\end{equation*}
+令$\lambda =r\mathrm{e}^{\mathrm{i} \theta }$，我们发现$\theta =0$时，旗帜面不变，旗杆变长$r^{2}$倍；当$r=1$时，旗杆不变，旗帜面旋转$2\theta $，因为$\boldsymbol{L}$与$\eta $呈二次相关性。
+
+
+
+现在，如果我们考虑一个连续的旋转$( \xi ,\eta ) \mapsto (\mathrm{e}^{\mathrm{i} \theta } \xi ,\mathrm{e}^{\mathrm{i} \theta } \eta )$，其中$\theta $从$0$旋转到$\pi $，我们给出
+\begin{equation*}
+	( \xi ,\eta ) \mapsto ( -\xi ,-\eta ) ,
+\end{equation*}
+但是我们的旗帜面旋转了$2\pi $。将$\theta $继续旋转到$2\pi $，我们会给出原来的点$( \xi ,\eta )$，但旗帜面旋转了$4\pi $，这意味着如果我们想要在$\mathbb{V}$中建立一个消除符号不确定性的局域几何结构是不可能的。因为我们想要在类光旗帜中间添加的$\mathbb{V}$中的每一个局域的几何结构在旋转了$2\pi $后都会回到原来的状态，但是$( \xi ,\eta )$却会多一个全局的负号。为了更清楚地看到这一点，不妨选择$( \xi ,\eta ) =( 0,1) \mapsto (0,\mathrm{e}^{\mathrm{i} \theta } )$。当$\theta $旋转到$\pi $时，自旋变换为$-\boldsymbol{I}$，但是洛伦兹变换却是单位元，这意味着任何$V$中的几何结构都会被这个洛伦兹变换转回到它原来的状态，即使$( \xi ,\eta )$已经变成了$( -\xi ,-\eta )$。
+
+
+
+这意味着我们应当扩充常规意义下的$\mathbb{V}$中的“几何”对象，这样的对象在旋转$2\pi $后并不回到原来的状态，当旋转$4\pi $时才回到原来的状态，这就是\textbf{旋量对象}（spinorial objects）。
+
+
+\section{旋量对象与自旋结构}
+
+众所周知，三维空间的旋转由$SO( 3)$描述，而其基本群$\pi _{1}( SO( 3)) =\mathbb{Z}_{2}$，这意味着即使\textbf{只}考虑$SO( 3)$群，我们也可以获得两种不同的“回到原点”的旋转，即旋转$2\pi $和旋转$4\pi $是$SO( 3)$的基本群中的两个元素。在$SO( 3)$的拓扑空间$\mathbb{R} P^{3}$中，旋转$2\pi $的曲线（圈）不可以被连续地变换到一个点，而旋转$4\pi $的曲线则可以。例如考虑狄拉克的皮带实验，这说明考虑旋转时不应仅仅考虑初末状态，还应该考虑\textbf{路径}。当然对于绝大多数拓扑平凡的物体以及其旋转来说，$2\pi $的旋转与$4\pi $的旋转没有区别。
+
+
+
+现在我们来考虑一个拓扑空间$T$的万有覆盖空间（universal covering space）$\tilde{T}$。考虑$T$中的原点$O$与任意一点$X$，从$O$到$X$有不同的路径的种类（class），每一类路径中的任意一条路径都可以连续变成其他路径，而不同类路径之间的路径之间没有连续变换。而$\tilde{T}$中的元素实际上是$T$中从$O$到$X$的\textbf{路径}，其中$X$要取遍$T$整个空间。例如，我们考虑$S^{1}$，其上任意一点用$\theta $参数化。那么到这一点的路径的等价类可以由“绕圆转了几圈”来刻画，也即$\mathbb{Z}$。当我们取遍$\theta \in ( 0,2\pi ]$时，所有的路径也就构成了整个实轴，整个过程就是把$S^{1}$展开（unwrap）的过程。因此，$T$的万有覆盖空间实际上就是把$T$从内到外展开后得到的拓扑空间。
+
+
+
+那么考虑$SO( 3)$，我们知道其中每一点的路径只有两类，那么其万有覆盖空间就是把$SO( 3)$双重展开（twofold unwrap）后的结果，也就是我们熟悉的$SU( 2)$。同样的，正时正规洛伦兹群$O_{+}^{\uparrow }( 1,3)$的二重覆盖群为$SL( 2,\mathbb{C})$。实际上，$O_{+}^{\uparrow }( 1,3)$的拓扑性质并不比$SO( 3)$复杂，因为每一个洛伦兹变换都可以由旋转与推动复合成，但是推动的“拓扑”是平凡的，只是拉伸，因此$O_{+}^{\uparrow }( 1,3)$的拓扑性质和$SO( 3)$的相同。现在，如果三维空间中，一个物体旋转$2\pi $没有回到原来的状态，而旋转$4\pi $才回到原来的状态，那么我们称这样的物体为旋量对象（spinorial objects）。
+
+
+
+现在我们可以给出自旋矢量的几何定义了。考虑$\mathbb{V}$中的光旗$Q$，全部光旗构成的空间为$\mathcal{C}$。下面我们会证明$\mathcal{C} \cong SO( 3) \times \mathbb{R}$，即$\pi _{1}(\mathcal{C}) =\mathbb{Z}_{2}$。我们知道$Q$可以由$P$点及$P$处切矢$\boldsymbol{L}$构造，如果我们在$P$处建立一个$3$维坐标系，$z$轴为$OP$，$x$轴朝着$\boldsymbol{L}$方向，用右手定则补齐$y$轴，我们发现这样一个坐标系对应了$SO( 3)$中的一个点。另一个参数为$\| \boldsymbol{L} \| $的长度，这在拓扑上是平凡的，等价于$\mathbb{R}$，这意味着$\mathcal{C} \cong SO( 3) \times \mathbb{R}$。那么我们称$\tilde{\mathcal{C}}$为旋量化的光旗，其中的元素可以与$\mathbb{V}$中的非零自旋矢量一一对应。每一个$\mathcal{C}$中的$Q$对应了两个自旋矢量$\pm \boldsymbol{\kappa }$。
+
+
+
+下面我们来考虑上面的内容如何影响了一个弯曲时空$\mathcal{M}$的\textbf{整体}拓扑结构。目前为止我们考虑的都是时空的局部特征，即我们讨论的光旗都是时空中一点上的。有些时空的背景流形的拓扑结构不平凡，意味着这对局域的拓扑结构有限制。一个很自然的问题是，如果一个时空全空间都能定义像自旋矢量这样的对象，会给出时空的整体拓扑什么约束？
+
+
+
+我们考虑这样一个空间$\mathcal{F}$，其中每一个点都代表了$\mathcal{M}$中的一个光旗，我们称这个空间为$\mathcal{M}$的光旗丛（null-flag bundle）。$\mathcal{F}$是一个八维空间，因为$\mathcal{M}$是四维空间，并且任意一点$P$的光旗空间$\mathcal{F}_{P}$也是四维的。现在我们不加证明地给出这样的结论：
+
+\begin{cond}[label={cond:condition of null flag bundle 1}]{流形存在光旗丛的条件}
+	如果$\mathcal{M}$上存在光旗丛$\mathcal{F}$，那么$\mathcal{M}$必须是在时间上可定向的。
+\end{cond}
+
+这是因为光旗只能在两个光锥中的一个上，我们将那一个光锥定义为指向未来的。
+
+除此之外，由于乘以$\mathrm{e}^{\mathrm{i} \theta }$会将光旗在某个意义下旋转，这意味着我们需要整个时空的定向，因此我们还需要条件：
+
+\begin{cond}[label={cond:condition of null flag bundle 2}]{流形存在光旗丛的条件}
+	如果$\mathcal{M}$上存在光旗丛$\mathcal{F}$，那么$\mathcal{M}$必须是在整个时空上是可定向的。
+\end{cond}
+
+注意，条件\ref{cond:condition of null flag bundle 1}和条件\ref{cond:condition of null flag bundle 2}是两个不同的条件。但仅仅是这两个条件还不够，$\mathcal{M}$上还应该需要能定义所谓的\textbf{自旋结构}（spin structure）。注意，这里的旋量结构和$\mathcal{M}$上是否能存在特定的旋量场是不一样的，后者更像是考虑例如$S^{2}$上是否能存在处处非零向量场这样的问题。粗略地说，存在自旋结构要求我们不仅在流形上某一点确定自旋矢量的方向，还需要能在流形的每一点确定。而且，即使存在，不同流形上的自旋结构可能不是唯一的。构造流形上的自旋结构有各种困难，但是人们还是证明了，$\mathcal{M}$上存在自旋结构的充要条件为拓扑不变量第二Stieffel-Whitney类$w_{2} =0$。这粗略等价于
+
+\begin{cond}[label={cond:condition of spin structure}]{流形存在自旋结构的条件}
+	对于流形$\mathcal{M}$（维数大于2）上任意闭的$2-$曲面$\mathcal{S}$，都存在一个$\mathcal{M}$的$n-1$个连续切向量场，且这些切向量在$\mathcal{S}$上每一点都是线性无关的。如果$\mathcal{M}$可定向（即$w_{1} =0$），那么$n-1$应该换成$n$。
+\end{cond}
+
+如果条件\ref{cond:condition of null flag bundle 1}，\ref{cond:condition of null flag bundle 2}，\ref{cond:condition of spin structure}都被满足，那么我们称这个流形上有所谓的\textbf{旋量结构}（spinor structure）。即，如果$\mathcal{M}$有旋量结构，那么我们之前所描述的基于光旗和自旋矢量的旋量系统都是存在的，也即$\mathcal{F}$的双重覆盖空间$\mathcal{F} '$是存在的。如果$\mathcal{M}$是单连通的，那么$\mathcal{F} '=\tilde{\mathcal{F}}$，但如果$\mathcal{M}$不是单连通的，旋量结构并不唯一，即$\mathcal{F} '\neq \tilde{\mathcal{F}}$。如果$\mathcal{M}$中有$k$个独立的圈（loop），那么实际上$\mathcal{M}$上有$2^{k}$种不同的旋量结构。
+
+除此之外，如果$\mathcal{M}$上没有闭合类时线，$\mathcal{M}$应当是非紧的流形，这种情况下我们有这样的定理：
+
+\begin{them}[label={them:condition of spin structure of non-compact spacetime}]{非紧空间存在旋量结构的条件}
+	如果$\mathcal{M}$是一个非紧的时空，那么这个时空存在旋量结构的充要条件是，在$\mathcal{M}$每一点的切空间上存在连续的闵氏标架场。
+\end{them}
+
+如果一个时空是非单连通的，虽然上面有多重旋量结构，但是随着定理 \ref{them:condition of spin structure of non-compact spacetime} 给出的标架场的选定，对应的旋量结构也被确定了。但即使$\mathcal{M}$是单连通的，闵氏标架场的选择仍然是不唯一的。
+
+
+
+我们需要指出，定理\ref{them:condition of spin structure of non-compact spacetime}中非紧的前提条件是非常有物理背景的，同时我们也有很多理由相信时空应当存在旋量结构。因为统计力学倾向于告诉我们时间是定向流动的，宇称（$P$对称性破缺）不守恒天然给我们了一个“空间方向”的定义，因此空间上的定向也很可能是存在的，同时，例如费米子场这样的旋量场在时空中的存在性意味着时空中很可能存在自旋结构，因此我们很倾向于相信存在一个在整个上时空定义的正时正规闵氏标架场。

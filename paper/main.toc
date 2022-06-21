@@ -1,0 +1,110 @@
+\contentsline {chapter}{\normalfont \sffamily 摘\hskip 1em\relax 要}{iii}{chapter*.2}%
+\contentsline {chapter}{\normalfont \sffamily Abstract}{iv}{chapter*.3}%
+\contentsline {chapter}{\normalfont \sffamily \numberline {第1章}引言}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}二分量旋量形式}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}彭罗斯-纽曼形式和微扰论}{2}{section.1.2}%
+\contentsline {chapter}{\normalfont \sffamily \numberline {第2章}矢量与旋量的几何}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}闵氏向量空间}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}类光矢量与自旋变换}{5}{section.2.2}%
+\contentsline {subsection}{\fdu@kai \numberline {2.2.1}洛伦兹变换与自旋变换*}{7}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}洛伦兹变换的性质*}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.4}类光旗帜与自旋矢量*}{12}{section.2.4}%
+\contentsline {subsection}{\fdu@kai \numberline {2.4.1}$S^{+}$上的描述}{13}{subsection.2.4.1}%
+\contentsline {subsection}{\fdu@kai \numberline {2.4.2}$\symbb {V}$上的表述}{14}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}旋量对象与自旋结构}{16}{section.2.5}%
+\contentsline {chapter}{\normalfont \sffamily \numberline {第3章}$\symfrak {S}$-模上的咏叹调——抽象指标以及旋量代数}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}抽象指标*}{19}{section.3.1}%
+\contentsline {subsection}{\fdu@kai \numberline {3.1.1}用抽象指标定义张量}{19}{subsection.3.1.1}%
+\contentsline {subsection}{\fdu@kai \numberline {3.1.2}张量操作}{23}{subsection.3.1.2}%
+\contentsline {subsection}{\fdu@kai \numberline {3.1.3}完全自反性的推论}{23}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}基}{25}{section.3.2}%
+\contentsline {section}{\numberline {3.3}旋量代数}{27}{section.3.3}%
+\contentsline {subsection}{\fdu@kai \numberline {3.3.1}$\mitepsilon $-旋量}{28}{subsection.3.3.1}%
+\contentsline {subsection}{\fdu@kai \numberline {3.3.2}复共轭}{30}{subsection.3.3.2}%
+\contentsline {subsection}{\fdu@kai \numberline {3.3.3}旋量基}{31}{subsection.3.3.3}%
+\contentsline {chapter}{\normalfont \sffamily \numberline {第4章}架起彩虹桥，我们友谊比天高——把张量当做旋量}{34}{chapter.4}%
+\contentsline {section}{\numberline {4.1}作为旋量的世界张量}{34}{section.4.1}%
+\contentsline {subsection}{\fdu@kai \numberline {4.1.1}自旋标架}{35}{subsection.4.1.1}%
+\contentsline {subsection}{\fdu@kai \numberline {4.1.2}英费尔德-范德瓦尔登符号}{38}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}光旗和类光矢量*}{40}{section.4.2}%
+\contentsline {subsection}{\fdu@kai \numberline {4.2.1}光旗}{40}{subsection.4.2.1}%
+\contentsline {subsection}{\fdu@kai \numberline {4.2.2}复类光矢量}{42}{subsection.4.2.2}%
+\contentsline {subsection}{\fdu@kai \numberline {4.2.3}厄米类光矢量}{43}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}对称化操作}{43}{section.4.3}%
+\contentsline {subsection}{\fdu@kai \numberline {4.3.1}对称化与反对称化}{43}{subsection.4.3.1}%
+\contentsline {subsection}{\fdu@kai \numberline {4.3.2}应用到旋量和张量上}{45}{subsection.4.3.2}%
+\contentsline {subsection}{\fdu@kai \numberline {4.3.3}对称旋量}{47}{subsection.4.3.3}%
+\contentsline {subsection}{\fdu@kai \numberline {4.3.4}可约性——又见杨图}{49}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}旋量操作的张量表示}{52}{section.4.4}%
+\contentsline {subsection}{\fdu@kai \numberline {4.4.1}迹反转}{52}{subsection.4.4.1}%
+\contentsline {subsection}{\fdu@kai \numberline {4.4.2}对偶化}{53}{subsection.4.4.2}%
+\contentsline {subsection}{\fdu@kai \numberline {4.4.3}一般转换流程}{56}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}流形上某点的张量和旋量*}{57}{section.4.5}%
+\contentsline {subsection}{\fdu@kai \numberline {4.5.1}主类光方向}{58}{subsection.4.5.1}%
+\contentsline {subsection}{\fdu@kai \numberline {4.5.2}反对称张量的单性}{60}{subsection.4.5.2}%
+\contentsline {chapter}{\normalfont \sffamily \numberline {第5章}重述广义相对论——导数与曲率}{63}{chapter.5}%
+\contentsline {section}{\numberline {5.1}流形}{63}{section.5.1}%
+\contentsline {subsection}{\fdu@kai \numberline {5.1.1}向量场}{64}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}协变导数}{67}{section.5.2}%
+\contentsline {subsection}{\fdu@kai \numberline {5.2.1}协变导数，曲率与挠率}{67}{subsection.5.2.1}%
+\contentsline {subsection}{\fdu@kai \numberline {5.2.2}导数算符的变换*}{70}{subsection.5.2.2}%
+\contentsline {subsection}{\fdu@kai \numberline {5.2.3}坐标导数}{71}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}不依赖联络的导数}{73}{section.5.3}%
+\contentsline {subsection}{\fdu@kai \numberline {5.3.1}外导数}{73}{subsection.5.3.1}%
+\contentsline {subsection}{\fdu@kai \numberline {5.3.2}李括号和李导数*}{75}{subsection.5.3.2}%
+\contentsline {subsection}{\fdu@kai \numberline {5.3.3}黎曼几何}{76}{subsection.5.3.3}%
+\contentsline {section}{\numberline {5.4}旋量的导数}{78}{section.5.4}%
+\contentsline {subsection}{\fdu@kai \numberline {5.4.1}唯一性*}{79}{subsection.5.4.1}%
+\contentsline {subsection}{\fdu@kai \numberline {5.4.2}存在性——构建旋量协变导数*}{81}{subsection.5.4.2}%
+\contentsline {subsection}{\fdu@kai \numberline {5.4.3}旋量微分方程的张量版本——狄拉克方程与四分量旋量}{83}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}对旋量分量的微分}{87}{section.5.5}%
+\contentsline {subsection}{\fdu@kai \numberline {5.5.1}自旋系数}{87}{subsection.5.5.1}%
+\contentsline {subsection}{\fdu@kai \numberline {5.5.2}自旋系数的表达式}{89}{subsection.5.5.2}%
+\contentsline {subsection}{\fdu@kai \numberline {5.5.3}与克氏符的关系}{91}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}曲率的旋量对应}{93}{section.5.6}%
+\contentsline {subsection}{\fdu@kai \numberline {5.6.1}曲率旋量}{93}{subsection.5.6.1}%
+\contentsline {subsection}{\fdu@kai \numberline {5.6.2}爱因斯坦方程}{95}{subsection.5.6.2}%
+\contentsline {subsection}{\fdu@kai \numberline {5.6.3}外尔张量与贝尔-罗宾逊张量*}{97}{subsection.5.6.3}%
+\contentsline {section}{\numberline {5.7}旋量形式的对易子}{98}{section.5.7}%
+\contentsline {section}{\numberline {5.8}比安基恒等式的旋量形式}{100}{section.5.8}%
+\contentsline {section}{\numberline {5.9}曲率旋量和自旋系数}{101}{section.5.9}%
+\contentsline {section}{\numberline {5.10}紧自旋系数（GHP）形式*}{104}{section.5.10}%
+\contentsline {subsection}{\fdu@kai \numberline {5.10.1}标量的权}{104}{subsection.5.10.1}%
+\contentsline {subsection}{\fdu@kai \numberline {5.10.2}权导数}{105}{subsection.5.10.2}%
+\contentsline {subsection}{\fdu@kai \numberline {5.10.3}紧方程}{107}{subsection.5.10.3}%
+\contentsline {section}{\numberline {5.11}嘉当法*}{109}{section.5.11}%
+\contentsline {subsection}{\fdu@kai \numberline {5.11.1}嘉当结构方程}{109}{subsection.5.11.1}%
+\contentsline {subsection}{\fdu@kai \numberline {5.11.2}与自旋系数的关系}{112}{subsection.5.11.2}%
+\contentsline {section}{\numberline {5.12}时空的分类}{113}{section.5.12}%
+\contentsline {subsection}{\fdu@kai \numberline {5.12.1}外尔旋量的类光结构}{113}{subsection.5.12.1}%
+\contentsline {subsection}{\fdu@kai \numberline {5.12.2}哥德堡-萨赫定理}{115}{subsection.5.12.2}%
+\contentsline {chapter}{\normalfont \sffamily \numberline {第6章}物理的东西——时空中的场}{118}{chapter.6}%
+\contentsline {section}{\numberline {6.1}电磁场及其导数}{118}{section.6.1}%
+\contentsline {section}{\numberline {6.2}带荷的场*}{118}{section.6.2}%
+\contentsline {subsection}{\fdu@kai \numberline {6.2.1}麦克斯韦场张量}{121}{subsection.6.2.1}%
+\contentsline {subsection}{\fdu@kai \numberline {6.2.2}电磁场旋量}{122}{subsection.6.2.2}%
+\contentsline {subsection}{\fdu@kai \numberline {6.2.3}与三矢量的关系*}{124}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}爱因斯坦-麦克斯韦方程的旋量形式*}{126}{section.6.3}%
+\contentsline {subsection}{\fdu@kai \numberline {6.3.1}麦克斯韦能动张量的正定性*}{127}{subsection.6.3.1}%
+\contentsline {subsection}{\fdu@kai \numberline {6.3.2}拉尼奇条件*}{129}{subsection.6.3.2}%
+\contentsline {paragraph}{微分拉尼奇条件}{130}{paragraph*.15}%
+\contentsline {section}{\numberline {6.4}共形重标度}{132}{section.6.4}%
+\contentsline {subsection}{\fdu@kai \numberline {6.4.1}共形密度}{133}{subsection.6.4.1}%
+\contentsline {subsection}{\fdu@kai \numberline {6.4.2}$\boldsymbol {\nabla }_{\boldsymbol {a}}$的变换}{133}{subsection.6.4.2}%
+\contentsline {subsection}{\fdu@kai \numberline {6.4.3}自旋系数的变换}{135}{subsection.6.4.3}%
+\contentsline {subsection}{\fdu@kai \numberline {6.4.4}共形不变的紧算符*}{136}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}无质量场}{138}{section.6.5}%
+\contentsline {subsection}{\fdu@kai \numberline {6.5.1}场与粒子}{138}{subsection.6.5.1}%
+\contentsline {subsection}{\fdu@kai \numberline {6.5.2}自旋2：引力扰动}{142}{subsection.6.5.2}%
+\contentsline {subsection}{\fdu@kai \numberline {6.5.3}共形不变性}{144}{subsection.6.5.3}%
+\contentsline {chapter}{\normalfont \sffamily \numberline {第7章}弯曲时空中的不自洽性——高自旋场}{146}{chapter.7}%
+\contentsline {section}{\numberline {7.1}用纽曼-彭罗斯形式处理时空扰动}{146}{section.7.1}%
+\contentsline {subsection}{\fdu@kai \numberline {7.1.1}狄拉克场与电磁场方程的NP形式}{146}{subsection.7.1.1}%
+\contentsline {subsection}{\fdu@kai \numberline {7.1.2}克尔时空中的物质波}{149}{subsection.7.1.2}%
+\contentsline {subsection}{\fdu@kai \numberline {7.1.3}克尔时空中的引力波}{152}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2}自洽条件}{155}{section.7.2}%
+\contentsline {subsection}{\fdu@kai \numberline {7.2.1}一般自旋场的约束}{155}{subsection.7.2.1}%
+\contentsline {subsection}{\fdu@kai \numberline {7.2.2}自旋$3/2$无质量场的约束}{158}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}里奇平坦时空中的RS场}{161}{section.7.3}%
+\contentsline {chapter}{\normalfont \sffamily 参考文献}{165}{chapter*.17}%
+\contentsline {chapter}{\normalfont \sffamily 致\hskip 1em\relax 谢}{170}{chapter*.18}%
