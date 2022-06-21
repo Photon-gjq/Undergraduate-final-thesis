@@ -10,12 +10,12 @@ This is my undergraduate thesis written in LaTeX. I copy Spinor and Spacetime Vo
 
 论文主体位于文档**paper**中。主代码为main.tex，其他为不同章节或者插入代码。
 
-**spinor and spacetime-note**包含了阅读《旋量与时空》最直接的笔记，由mathcha直接导出。也包含了毕业论文本体前六章（但不完全相同）。
-
-**文献**包含了毕业论文所引用的文章。
-
 **小程序**包含了文章中用来计算的小程序（包括kerr时空的自旋系数），和画图（可视化洛伦兹变换在黎曼球上的作用）的小程序。除此之外还包含了自动给mathcha导出的公式加编号\label{eq:x.xx}和将(xx)变为\ref{eq:x.xx}的python正则表达式。
 
 **mathcha logo**包含了在LaTeX中插入矢量mathcha-logo的代码。
 
-**文书工作**包含了需要向学校提交的文件，包括但不限于开题报告，中期报告等。
+**文书工作**包含了需要向学校提交的文件，包括但不限于开题报告，中期报告等。（由于文件过大暂未上传）
+
+**文献**包含了毕业论文所引用的文章。（由于文件过大暂未上传）
+
+**spinor and spacetime-note**包含了阅读《旋量与时空》最直接的笔记，由mathcha直接导出。也包含了毕业论文本体前六章（但不完全相同）。（由于文件过大暂未上传）
